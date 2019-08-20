@@ -1,6 +1,6 @@
 # openADR-ontology
 
-Repository for collaborative edition of the OpenADR ontology. T
+Repository for collaborative edition of the OpenADR ontology. 
 
 
 Current version of the ontology model
