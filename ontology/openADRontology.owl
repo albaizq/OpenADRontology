@@ -11,9 +11,9 @@
                                 <http://purl.org/dc/elements/1.1/creator> "Alba Fernández Izquierdo" ;
                                 owl:versionInfo "0.0.1" ;
                                 <http://purl.org/dc/elements/1.1/creator> "Andrea Cimmino" ;
-                                rdfs:comment "http://purl.org/NET/rdflicense/cc-by4.0" ,
-                                             "w3id.org/def/openadr" ,
-                                             "This ontology describes the openADR protocol based on the documentation provided by the openADR Profile B" ;
+                                rdfs:comment "http://purl.org/NET/rdflicense/cc-by4.0" ;
+                                <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
+                                rdfs:comment "This ontology describes the openADR protocol based on the documentation provided by the openADR Profile B" ;
                                 <http://purl.org/dc/elements/1.1/creator> <http://www.garcia-castro.com/foaf.rdf#me> ;
                                 <http://purl.org/dc/terms/title> "OpenADR ontology" .
 
@@ -88,8 +88,7 @@
 
 ###  https://w3id.org/def/openadr#hasPayloadReourceStatus
 :hasPayloadReourceStatus rdf:type owl:ObjectProperty ;
-                         rdfs:range :PayloadResourceStatus ,
-                                    :ReportPayload ;
+                         rdfs:range :PayloadResourceStatus ;
                          rdfs:label "has payload resource status" .
 
 
@@ -484,10 +483,6 @@
 
 ###  https://w3id.org/def/openadr#PayloadResourceStatus
 :PayloadResourceStatus rdf:type owl:Class ;
-                       rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                         owl:onProperty :hasPayloadReourceStatus ;
-                                         owl:allValuesFrom :PayloadResourceStatus
-                                       ] ;
                        rdfs:label "Payload resource status" .
 
 
