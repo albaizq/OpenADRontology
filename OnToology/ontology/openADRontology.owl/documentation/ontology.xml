@@ -13,10 +13,10 @@
         <dc:creator rdf:resource="http://www.garcia-castro.com/foaf.rdf#me"/>
         <dc:creator>Alba Fernández Izquierdo</dc:creator>
         <dc:creator>Andrea Cimmino</dc:creator>
+        <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
         <terms:title>OpenADR ontology</terms:title>
         <rdfs:comment>This ontology describes the openADR protocol based on the documentation provided by the openADR Profile B</rdfs:comment>
         <rdfs:comment>http://purl.org/NET/rdflicense/cc-by4.0</rdfs:comment>
-        <rdfs:comment>w3id.org/def/openadr</rdfs:comment>
         <owl:versionInfo>0.0.1</owl:versionInfo>
     </owl:Ontology>
     
@@ -156,7 +156,6 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#hasPayloadReourceStatus">
         <rdfs:range rdf:resource="https://w3id.org/def/openadr#PayloadResourceStatus"/>
-        <rdfs:range rdf:resource="https://w3id.org/def/openadr#ReportPayload"/>
         <rdfs:label>has payload resource status</rdfs:label>
     </owl:ObjectProperty>
     
@@ -827,12 +826,6 @@
 
 
     <owl:Class rdf:about="https://w3id.org/def/openadr#PayloadResourceStatus">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#hasPayloadReourceStatus"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/def/openadr#PayloadResourceStatus"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:label>Payload resource status</rdfs:label>
     </owl:Class>
     
