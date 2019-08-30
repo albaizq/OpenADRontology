@@ -432,6 +432,7 @@ _:genid11 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/openadr#
 # 
 # https://w3id.org/def/openadr#PayloadResourceStatus
 <https://w3id.org/def/openadr#PayloadResourceStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+
 <https://w3id.org/def/openadr#PayloadResourceStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Status of the payload resource" .
 <https://w3id.org/def/openadr#PayloadResourceStatus> <http://www.w3.org/2000/01/rdf-schema#label> "Payload resource status" .
 # 
@@ -469,8 +470,6 @@ _:genid18 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/openadr#reportName> .
 _:genid19 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#rational> .
-<https://w3id.org/def/openadr#Report> <http://www.w3.org/2000/01/rdf-schema#comment> "Report sent from a VEN to a VTN to report the energy consumption or the status of Resources connected to the VEN" .
-<https://w3id.org/def/openadr#Report> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OpenADR 2.0 Demand Response Program Implementation Guide" .
 <https://w3id.org/def/openadr#Report> <http://www.w3.org/2000/01/rdf-schema#label> "Report" .
 # 
 # https://w3id.org/def/openadr#ReportDescriptor
@@ -485,6 +484,7 @@ _:genid21 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/opena
 _:genid21 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/openadr#Target> .
 <https://w3id.org/def/openadr#ReportDescriptor> <http://www.w3.org/2000/01/rdf-schema#comment> "Part of the OpenADR report object that describes metadata about the report" .
 <https://w3id.org/def/openadr#ReportDescriptor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OpenADR 2.0 Demand Response Program Implementation Guide" .
+
 <https://w3id.org/def/openadr#ReportDescriptor> <http://www.w3.org/2000/01/rdf-schema#label> "Report descriptor" .
 # 
 # https://w3id.org/def/openadr#ReportPayload
@@ -517,6 +517,7 @@ _:genid26 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002
 _:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid27 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/openadr#manages> .
 _:genid27 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/openadr#Asset> .
+
 <https://w3id.org/def/openadr#Resource> <http://www.w3.org/2000/01/rdf-schema#comment> "Entity that is enrolled in the DR Programs and is capable of delivering some sort of change to their load profile in response to receiving a DR signal from a VTN." .
 <https://w3id.org/def/openadr#Resource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OpenADR 2.0 Demand Response Program Implementation Guide" .
 <https://w3id.org/def/openadr#Resource> <http://www.w3.org/2000/01/rdf-schema#label> "Resource" .
@@ -547,6 +548,7 @@ _:genid31 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/o
 _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid32 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/openadr#hasTarget> .
 _:genid32 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/openadr#Target> .
+
 <https://w3id.org/def/openadr#Signal> <http://www.w3.org/2000/01/rdf-schema#comment> "The actionable information contained in an event such as electricity pricing or specific levels of load shed requested that typically trigger some preprogrammed load shed behavior by the recipient of the event." .
 <https://w3id.org/def/openadr#Signal> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OpenADR 2.0 Demand Response Program Implementation Guide" .
 <https://w3id.org/def/openadr#Signal> <http://www.w3.org/2000/01/rdf-schema#label> "Signal" .
@@ -571,6 +573,8 @@ _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid35 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/openadr#contains> .
 _:genid35 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/openadr#VTN> .
 <https://w3id.org/def/openadr#Target> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Target of a signal or event" .
+
+
 <https://w3id.org/def/openadr#Target> <http://www.w3.org/2000/01/rdf-schema#label> "Target" .
 # 
 # https://w3id.org/def/openadr#TelemetryReport
@@ -594,8 +598,10 @@ _:genid35 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/o
 _:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid36 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/openadr#manages> .
 _:genid36 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/openadr#Resource> .
+
 <https://w3id.org/def/openadr#VEN> <http://www.w3.org/2000/01/rdf-schema#comment> "This is the OpenADR Virtual End Node that is used to interact with the VTN" .
 <https://w3id.org/def/openadr#VEN> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OpenADR 2.0 Demand Response Program Implementation Guide" .
+
 <https://w3id.org/def/openadr#VEN> <http://www.w3.org/2000/01/rdf-schema#label> "Virtual End Node (VEN)" .
 # 
 # https://w3id.org/def/openadr#VTN
@@ -610,8 +616,10 @@ _:genid36 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/o
 _:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid37 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/openadr#isMeasuredIn> .
 _:genid37 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure> .
+
 <https://w3id.org/def/openadr#Value> <http://www.w3.org/2000/01/rdf-schema#comment> "Value of a signal in a particular interval" .
 <https://w3id.org/def/openadr#Value> <http://www.w3.org/2000/01/rdf-schema#label> "Value" .
+
 # 
 # 
 # 

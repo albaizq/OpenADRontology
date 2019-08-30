@@ -495,6 +495,7 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
 ###  https://w3id.org/def/openadr#PayloadResourceStatus
 :PayloadResourceStatus rdf:type owl:Class ;
                        rdfs:comment "Status of the payload resource" ;
+
                        rdfs:label "Payload resource status" .
 
 
