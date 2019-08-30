@@ -199,6 +199,9 @@
     "VTN" : {
       "@id" : "https://w3id.org/def/openadr#VTN"
     },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
     "DistributeEvent" : {
       "@id" : "https://w3id.org/def/openadr#DistributeEvent"
     },

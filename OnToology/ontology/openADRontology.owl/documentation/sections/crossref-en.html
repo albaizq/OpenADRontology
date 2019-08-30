@@ -84,14 +84,10 @@ This section provides details for each class and property defined by OpenADR ont
          <a href="#Opt" title="https://w3id.org/def/openadr#Opt">Opt</a>
       </li>
       <li>
-         <a href="#OptIn" title="https://w3id.org/def/openadr#OptIn">
-            <span>opt in</span>
-         </a>
+         <a href="#OptIn" title="https://w3id.org/def/openadr#OptIn">Opt In</a>
       </li>
       <li>
-         <a href="#OptOut" title="https://w3id.org/def/openadr#OptOut">
-            <span>opt out</span>
-         </a>
+         <a href="#OptOut" title="https://w3id.org/def/openadr#OptOut">Opt Out</a>
       </li>
       <li>
          <a href="#PayloadResourceStatus"
@@ -133,9 +129,7 @@ This section provides details for each class and property defined by OpenADR ont
             title="https://w3id.org/def/openadr#TelemetryUsageReport">Telemetry usage report</a>
       </li>
       <li>
-         <a href="#Value" title="https://w3id.org/def/openadr#Value">
-            <span>value</span>
-         </a>
+         <a href="#Value" title="https://w3id.org/def/openadr#Value">Value</a>
       </li>
       <li>
          <a href="#VEN" title="https://w3id.org/def/openadr#VEN">Virtual End Node (VEN)</a>
@@ -151,6 +145,14 @@ This section provides details for each class and property defined by OpenADR ont
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/openadr#Asset</p>
+      <div class="comment">
+         <span class="markdown">A type of Resource that represents a specific collection of physical loads.
+Resources can be composed of Assets, and an Asset may be Resource, but Assets cannot be further decomposed into multiple Assets or Resources.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>https://w3id.org/def/openadr</dd>
+      </dl>
    </div>
    <div class="entity" id="BidEnergySignal">
       <h3>Bid energy signal<sup class="type-c" title="class">c</sup>
@@ -313,6 +315,13 @@ This section provides details for each class and property defined by OpenADR ont
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/openadr#Event</p>
+      <div class="comment">
+         <span class="markdown">An event is a notification from the utility to demand side resources requesting load shed starting at a specific time, over a specified duration, and may include targeting information designating specific resources that should participate in the event</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>https://w3id.org/def/openadr</dd>
+      </dl>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
@@ -330,6 +339,13 @@ This section provides details for each class and property defined by OpenADR ont
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/openadr#EventDescriptor</p>
+      <div class="comment">
+         <span class="markdown">Part of the OpenADR event object that describes metadata about the event, such as program name and event priority</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>https://w3id.org/def/openadr</dd>
+      </dl>
       <dl class="description">
          <dt>is in range of</dt>
          <dd>
@@ -345,6 +361,9 @@ This section provides details for each class and property defined by OpenADR ont
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/openadr#EventStatus</p>
+      <div class="comment">
+         <span class="markdown">Status of an OpenADR event</span>
+      </div>
       <dl class="description">
          <dt>has members</dt>
          <dd>
@@ -464,7 +483,7 @@ This section provides details for each class and property defined by OpenADR ont
       <p>
          <strong>IRI:</strong> https://w3id.org/def/openadr#ItemBase</p>
       <div class="comment">
-         <span class="markdown">units for the data in the report</span>
+         <span class="markdown">Units for the data in the report</span>
       </div>
       <dl class="description">
          <dt>has members</dt>
@@ -534,11 +553,18 @@ This section provides details for each class and property defined by OpenADR ont
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/openadr#Opt</p>
+      <div class="comment">
+         <span class="markdown">The expected response from the demand side resource owner upon receipt of an event.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>https://w3id.org/def/openadr</dd>
+      </dl>
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#OptIn" title="https://w3id.org/def/openadr#OptIn">opt in</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#OptOut" title="https://w3id.org/def/openadr#OptOut">opt out</a>
+            <a href="#OptIn" title="https://w3id.org/def/openadr#OptIn">Opt In</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#OptOut" title="https://w3id.org/def/openadr#OptOut">Opt Out</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in range of</dt>
@@ -549,7 +575,7 @@ This section provides details for each class and property defined by OpenADR ont
       </dl>
    </div>
    <div class="entity" id="OptIn">
-      <h3>opt in<sup class="type-c" title="class">c</sup>
+      <h3>Opt In<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
@@ -564,7 +590,7 @@ This section provides details for each class and property defined by OpenADR ont
       </dl>
    </div>
    <div class="entity" id="OptOut">
-      <h3>opt out<sup class="type-c" title="class">c</sup>
+      <h3>Opt Out<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
@@ -585,9 +611,10 @@ This section provides details for each class and property defined by OpenADR ont
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/openadr#PayloadResourceStatus</p>
+      <div class="comment">
+         <span class="markdown">Status of the payload resource</span>
+      </div>
       <dl class="description">
-         <dt>has super-classes</dt>
-         <dd/>
          <dt>is in range of</dt>
          <dd>
             <a href="#hasPayloadReourceStatus"
@@ -603,6 +630,13 @@ This section provides details for each class and property defined by OpenADR ont
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/openadr#Report</p>
+      <div class="comment">
+         <span class="markdown">Report sent from a VEN to a VTN to report the energy consumption or the status of Resources connected to the VEN</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>https://w3id.org/def/openadr</dd>
+      </dl>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
@@ -627,6 +661,13 @@ This section provides details for each class and property defined by OpenADR ont
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/openadr#ReportDescriptor</p>
+      <div class="comment">
+         <span class="markdown">Part of the OpenADR report object that describes metadata about the report</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>https://w3id.org/def/openadr</dd>
+      </dl>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
@@ -649,9 +690,7 @@ This section provides details for each class and property defined by OpenADR ont
          <dd/>
          <dt>is in range of</dt>
          <dd>
-            <a href="#hasPayloadReourceStatus"
-               title="https://w3id.org/def/openadr#hasPayloadReourceStatus">has payload resource status</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasReportPayload" title="https://w3id.org/def/openadr#hasReportPayload">has report payload</a>
+            <a href="#hasReportPayload" title="https://w3id.org/def/openadr#hasReportPayload">has report payload</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -663,6 +702,13 @@ This section provides details for each class and property defined by OpenADR ont
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/openadr#Resource</p>
+      <div class="comment">
+         <span class="markdown">Entity that is enrolled in the DR Programs and is capable of delivering some sort of change to their load profile in response to receiving a DR signal from a VTN.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>https://w3id.org/def/openadr</dd>
+      </dl>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
@@ -697,6 +743,13 @@ This section provides details for each class and property defined by OpenADR ont
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/openadr#Signal</p>
+      <div class="comment">
+         <span class="markdown">The actionable information contained in an event such as electricity pricing or specific levels of load shed requested that typically trigger some preprogrammed load shed behavior by the recipient of the event.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>https://w3id.org/def/openadr</dd>
+      </dl>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
@@ -749,6 +802,10 @@ This section provides details for each class and property defined by OpenADR ont
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/openadr#Target</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>https://w3id.org/def/openadr</dd>
+      </dl>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
@@ -813,12 +870,15 @@ This section provides details for each class and property defined by OpenADR ont
       </dl>
    </div>
    <div class="entity" id="Value">
-      <h3>value<sup class="type-c" title="class">c</sup>
+      <h3>Value<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/openadr#Value</p>
+      <div class="comment">
+         <span class="markdown">Value of a signal in a particular interval</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
@@ -836,6 +896,13 @@ This section provides details for each class and property defined by OpenADR ont
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/openadr#VEN</p>
+      <div class="comment">
+         <span class="markdown">This is the OpenADR Virtual End Node that is used to interact with the VTN</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>https://w3id.org/def/openadr</dd>
+      </dl>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
@@ -848,6 +915,13 @@ This section provides details for each class and property defined by OpenADR ont
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/openadr#VTN</p>
+      <div class="comment">
+         <span class="markdown">This is the OpenADR Virtual Top Node that is used to interact with the Resources enrolled in the DR Programs.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>https://w3id.org/def/openadr</dd>
+      </dl>
    </div>
 </div><div id="objectproperties">
    <h3 id="properties" class="list">Object Properties</h3>
@@ -1056,10 +1130,6 @@ This section provides details for each class and property defined by OpenADR ont
                   title="https://w3id.org/def/openadr#PayloadResourceStatus">Payload resource status</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
-            <dd>
-               <a href="#ReportPayload" title="https://w3id.org/def/openadr#ReportPayload">Report payload</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
          </dl>
       </div>
    </div>
@@ -1147,7 +1217,7 @@ This section provides details for each class and property defined by OpenADR ont
          <dl>
             <dt>has range</dt>
             <dd>
-               <a href="#Value" title="https://w3id.org/def/openadr#Value">value</a>
+               <a href="#Value" title="https://w3id.org/def/openadr#Value">Value</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>

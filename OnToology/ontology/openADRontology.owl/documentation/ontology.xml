@@ -13,10 +13,10 @@
         <dc:creator rdf:resource="http://www.garcia-castro.com/foaf.rdf#me"/>
         <dc:creator>Alba Fernández Izquierdo</dc:creator>
         <dc:creator>Andrea Cimmino</dc:creator>
+        <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
         <terms:title>OpenADR ontology</terms:title>
         <rdfs:comment>This ontology describes the openADR protocol based on the documentation provided by the openADR Profile B</rdfs:comment>
         <rdfs:comment>http://purl.org/NET/rdflicense/cc-by4.0</rdfs:comment>
-        <rdfs:comment>w3id.org/def/openadr</rdfs:comment>
         <owl:versionInfo>0.0.1</owl:versionInfo>
     </owl:Ontology>
     
@@ -156,7 +156,6 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#hasPayloadReourceStatus">
         <rdfs:range rdf:resource="https://w3id.org/def/openadr#PayloadResourceStatus"/>
-        <rdfs:range rdf:resource="https://w3id.org/def/openadr#ReportPayload"/>
         <rdfs:label>has payload resource status</rdfs:label>
     </owl:ObjectProperty>
     
@@ -528,6 +527,9 @@
 
 
     <owl:Class rdf:about="https://w3id.org/def/openadr#Asset">
+        <rdfs:comment>A type of Resource that represents a specific collection of physical loads.
+Resources can be composed of Assets, and an Asset may be Resource, but Assets cannot be further decomposed into multiple Assets or Resources.</rdfs:comment>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Program Implementation Guide</rdfs:isDefinedBy>
         <rdfs:label>Asset</rdfs:label>
     </owl:Class>
     
@@ -680,6 +682,8 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>An event is a notification from the utility to demand side resources requesting load shed starting at a specific time, over a specified duration, and may include targeting information designating specific resources that should participate in the event</rdfs:comment>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Program Implementation Guide</rdfs:isDefinedBy>
         <rdfs:label>Event</rdfs:label>
     </owl:Class>
     
@@ -689,6 +693,8 @@
 
 
     <owl:Class rdf:about="https://w3id.org/def/openadr#EventDescriptor">
+        <rdfs:comment>Part of the OpenADR event object that describes metadata about the event, such as program name and event priority</rdfs:comment>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Program Implementation Guide</rdfs:isDefinedBy>
         <rdfs:label>Event descriptor</rdfs:label>
     </owl:Class>
     
@@ -698,6 +704,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/def/openadr#EventStatus">
+        <rdfs:comment>Status of an OpenADR event</rdfs:comment>
         <rdfs:label>Event status</rdfs:label>
     </owl:Class>
     
@@ -760,7 +767,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/def/openadr#ItemBase">
-        <rdfs:comment>units for the data in the report</rdfs:comment>
+        <rdfs:comment>Units for the data in the report</rdfs:comment>
         <rdfs:label>Item base</rdfs:label>
     </owl:Class>
     
@@ -800,6 +807,8 @@
 
 
     <owl:Class rdf:about="https://w3id.org/def/openadr#Opt">
+        <rdfs:comment>The expected response from the demand side resource owner upon receipt of an event.</rdfs:comment>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Program Implementation Guide</rdfs:isDefinedBy>
         <rdfs:label>Opt</rdfs:label>
     </owl:Class>
     
@@ -810,6 +819,7 @@
 
     <owl:Class rdf:about="https://w3id.org/def/openadr#OptIn">
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#Opt"/>
+        <rdfs:label>Opt In</rdfs:label>
     </owl:Class>
     
 
@@ -819,6 +829,7 @@
 
     <owl:Class rdf:about="https://w3id.org/def/openadr#OptOut">
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#Opt"/>
+        <rdfs:label>Opt Out</rdfs:label>
     </owl:Class>
     
 
@@ -827,12 +838,8 @@
 
 
     <owl:Class rdf:about="https://w3id.org/def/openadr#PayloadResourceStatus">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#hasPayloadReourceStatus"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/def/openadr#PayloadResourceStatus"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+
+        <rdfs:comment>Status of the payload resource</rdfs:comment>
         <rdfs:label>Payload resource status</rdfs:label>
     </owl:Class>
     
@@ -890,6 +897,8 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Report sent from a VEN to a VTN to report the energy consumption or the status of Resources connected to the VEN</rdfs:comment>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Program Implementation Guide</rdfs:isDefinedBy>
         <rdfs:label>Report</rdfs:label>
     </owl:Class>
     
@@ -911,6 +920,8 @@
                 <owl:someValuesFrom rdf:resource="https://w3id.org/def/openadr#Target"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Part of the OpenADR report object that describes metadata about the report</rdfs:comment>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Program Implementation Guide</rdfs:isDefinedBy>
         <rdfs:label>Report descriptor</rdfs:label>
     </owl:Class>
     
@@ -965,6 +976,8 @@
                 <owl:someValuesFrom rdf:resource="https://w3id.org/def/openadr#Asset"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Entity that is enrolled in the DR Programs and is capable of delivering some sort of change to their load profile in response to receiving a DR signal from a VTN.</rdfs:comment>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Program Implementation Guide</rdfs:isDefinedBy>
         <rdfs:label>Resource</rdfs:label>
     </owl:Class>
     
@@ -1013,6 +1026,8 @@
                 <owl:someValuesFrom rdf:resource="https://w3id.org/def/openadr#Target"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>The actionable information contained in an event such as electricity pricing or specific levels of load shed requested that typically trigger some preprogrammed load shed behavior by the recipient of the event.</rdfs:comment>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Program Implementation Guide</rdfs:isDefinedBy>
         <rdfs:label>Signal</rdfs:label>
     </owl:Class>
     
@@ -1050,6 +1065,7 @@
                 <owl:someValuesFrom rdf:resource="https://w3id.org/def/openadr#VTN"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy>Target of a signal or event</rdfs:isDefinedBy>
         <rdfs:label>Target</rdfs:label>
     </owl:Class>
     
@@ -1095,6 +1111,8 @@
                 <owl:someValuesFrom rdf:resource="https://w3id.org/def/openadr#Resource"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>This is the OpenADR Virtual End Node that is used to interact with the VTN</rdfs:comment>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Program Implementation Guide</rdfs:isDefinedBy>
         <rdfs:label>Virtual End Node (VEN)</rdfs:label>
     </owl:Class>
     
@@ -1104,6 +1122,8 @@
 
 
     <owl:Class rdf:about="https://w3id.org/def/openadr#VTN">
+        <rdfs:comment>This is the OpenADR Virtual Top Node that is used to interact with the Resources enrolled in the DR Programs.</rdfs:comment>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Program Implementation Guide</rdfs:isDefinedBy>
         <rdfs:label>Virtual Top Node (VTN)</rdfs:label>
     </owl:Class>
     
@@ -1119,6 +1139,8 @@
                 <owl:someValuesFrom rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Value of a signal in a particular interval</rdfs:comment>
+        <rdfs:label>Value</rdfs:label>
     </owl:Class>
     
 
