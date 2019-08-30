@@ -10,10 +10,10 @@
                                 <http://purl.org/dc/elements/1.1/creator> <http://www.garcia-castro.com/foaf.rdf#me> ,
                                                                           "Alba Fernández Izquierdo" ,
                                                                           "Andrea Cimmino" ;
+                                <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                 <http://purl.org/dc/terms/title> "OpenADR ontology" ;
                                 rdfs:comment "This ontology describes the openADR protocol based on the documentation provided by the openADR Profile B" ,
-                                             "http://purl.org/NET/rdflicense/cc-by4.0" ,
-                                             "w3id.org/def/openadr" ;
+                                             "http://purl.org/NET/rdflicense/cc-by4.0" ;
                                 owl:versionInfo "0.0.1" .
 
 #################################################################
@@ -87,8 +87,7 @@
 
 ###  https://w3id.org/def/openadr#hasPayloadReourceStatus
 :hasPayloadReourceStatus rdf:type owl:ObjectProperty ;
-                         rdfs:range :PayloadResourceStatus ,
-                                    :ReportPayload ;
+                         rdfs:range :PayloadResourceStatus ;
                          rdfs:label "has payload resource status" .
 
 
@@ -302,6 +301,9 @@
 
 ###  https://w3id.org/def/openadr#Asset
 :Asset rdf:type owl:Class ;
+       rdfs:comment """A type of Resource that represents a specific collection of physical loads.
+Resources can be composed of Assets, and an Asset may be Resource, but Assets cannot be further decomposed into multiple Assets or Resources.""" ;
+       rdfs:isDefinedBy "OpenADR 2.0 Demand Response Program Implementation Guide" ;
        rdfs:label "Asset" .
 
 
@@ -396,16 +398,21 @@
                          owl:onProperty :version ;
                          owl:allValuesFrom owl:rational
                        ] ;
+       rdfs:comment "An event is a notification from the utility to demand side resources requesting load shed starting at a specific time, over a specified duration, and may include targeting information designating specific resources that should participate in the event" ;
+       rdfs:isDefinedBy "OpenADR 2.0 Demand Response Program Implementation Guide" ;
        rdfs:label "Event" .
 
 
 ###  https://w3id.org/def/openadr#EventDescriptor
 :EventDescriptor rdf:type owl:Class ;
+                 rdfs:comment "Part of the OpenADR event object that describes metadata about the event, such as program name and event priority" ;
+                 rdfs:isDefinedBy "OpenADR 2.0 Demand Response Program Implementation Guide" ;
                  rdfs:label "Event descriptor" .
 
 
 ###  https://w3id.org/def/openadr#EventStatus
 :EventStatus rdf:type owl:Class ;
+             rdfs:comment "Status of an OpenADR event" ;
              rdfs:label "Event status" .
 
 
@@ -444,7 +451,7 @@
 
 ###  https://w3id.org/def/openadr#ItemBase
 :ItemBase rdf:type owl:Class ;
-          rdfs:comment "units for the data in the report" ;
+          rdfs:comment "Units for the data in the report" ;
           rdfs:label "Item base" .
 
 
@@ -468,25 +475,26 @@
 
 ###  https://w3id.org/def/openadr#Opt
 :Opt rdf:type owl:Class ;
+     rdfs:comment "The expected response from the demand side resource owner upon receipt of an event." ;
+     rdfs:isDefinedBy "OpenADR 2.0 Demand Response Program Implementation Guide" ;
      rdfs:label "Opt" .
 
 
 ###  https://w3id.org/def/openadr#OptIn
 :OptIn rdf:type owl:Class ;
-       rdfs:subClassOf :Opt .
+       rdfs:subClassOf :Opt ;
+       rdfs:label "Opt In" .
 
 
 ###  https://w3id.org/def/openadr#OptOut
 :OptOut rdf:type owl:Class ;
-        rdfs:subClassOf :Opt .
+        rdfs:subClassOf :Opt ;
+        rdfs:label "Opt Out" .
 
 
 ###  https://w3id.org/def/openadr#PayloadResourceStatus
 :PayloadResourceStatus rdf:type owl:Class ;
-                       rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                         owl:onProperty :hasPayloadReourceStatus ;
-                                         owl:allValuesFrom :PayloadResourceStatus
-                                       ] ;
+                       rdfs:comment "Status of the payload resource" ;
                        rdfs:label "Payload resource status" .
 
 
@@ -524,6 +532,8 @@
                           owl:onProperty :reportName ;
                           owl:someValuesFrom owl:rational
                         ] ;
+        rdfs:comment "Report sent from a VEN to a VTN to report the energy consumption or the status of Resources connected to the VEN" ;
+        rdfs:isDefinedBy "OpenADR 2.0 Demand Response Program Implementation Guide" ;
         rdfs:label "Report" .
 
 
@@ -537,6 +547,8 @@
                                     owl:onProperty :reportDescriptor ;
                                     owl:someValuesFrom :Target
                                   ] ;
+                  rdfs:comment "Part of the OpenADR report object that describes metadata about the report" ;
+                  rdfs:isDefinedBy "OpenADR 2.0 Demand Response Program Implementation Guide" ;
                   rdfs:label "Report descriptor" .
 
 
@@ -571,6 +583,8 @@
                             owl:onProperty :manages ;
                             owl:someValuesFrom :Asset
                           ] ;
+          rdfs:comment "Entity that is enrolled in the DR Programs and is capable of delivering some sort of change to their load profile in response to receiving a DR signal from a VTN." ;
+          rdfs:isDefinedBy "OpenADR 2.0 Demand Response Program Implementation Guide" ;
           rdfs:label "Resource" .
 
 
@@ -601,6 +615,8 @@
                           owl:onProperty :hasTarget ;
                           owl:someValuesFrom :Target
                         ] ;
+        rdfs:comment "The actionable information contained in an event such as electricity pricing or specific levels of load shed requested that typically trigger some preprogrammed load shed behavior by the recipient of the event." ;
+        rdfs:isDefinedBy "OpenADR 2.0 Demand Response Program Implementation Guide" ;
         rdfs:label "Signal" .
 
 
@@ -624,6 +640,7 @@
                           owl:onProperty :contains ;
                           owl:someValuesFrom :VTN
                         ] ;
+        rdfs:isDefinedBy "Target of a signal or event" ;
         rdfs:label "Target" .
 
 
@@ -651,11 +668,15 @@
                        owl:onProperty :manages ;
                        owl:someValuesFrom :Resource
                      ] ;
+     rdfs:comment "This is the OpenADR Virtual End Node that is used to interact with the VTN" ;
+     rdfs:isDefinedBy "OpenADR 2.0 Demand Response Program Implementation Guide" ;
      rdfs:label "Virtual End Node (VEN)" .
 
 
 ###  https://w3id.org/def/openadr#VTN
 :VTN rdf:type owl:Class ;
+     rdfs:comment "This is the OpenADR Virtual Top Node that is used to interact with the Resources enrolled in the DR Programs." ;
+     rdfs:isDefinedBy "OpenADR 2.0 Demand Response Program Implementation Guide" ;
      rdfs:label "Virtual Top Node (VTN)" .
 
 
@@ -664,7 +685,9 @@
        rdfs:subClassOf [ rdf:type owl:Restriction ;
                          owl:onProperty :isMeasuredIn ;
                          owl:someValuesFrom <http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure>
-                       ] .
+                       ] ;
+       rdfs:comment "Value of a signal in a particular interval" ;
+       rdfs:label "Value" .
 
 
 #################################################################

@@ -58,6 +58,7 @@ node [shape = rectangle, color="orange"]; "http://www.w3.org/2006/time#Duration"
 	"NULL" -> "base:payloadFloat" [ label = "owl:onProperty" ];
 	"base:groupName" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
 	"https://w3id.org/def/openadr" -> "http://www.garcia-castro.com/foaf.rdf#me" [ label = ":creator" ];
+	"https://w3id.org/def/openadr" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = ":license" ];
 	"owl:Thing" -> "xsd:string" [ label = "base:confidence" ];
 	"owl:Thing" -> "xsd:dateTimeStamp" [ label = "base:dstart" ];
 	"owl:Thing" -> "xsd:string" [ label = "base:dataquality" ];

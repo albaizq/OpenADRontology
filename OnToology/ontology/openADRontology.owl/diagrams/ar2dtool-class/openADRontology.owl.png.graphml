@@ -5,7 +5,7 @@
    <key for="edge" id="d2" yfiles.type="edgegraphics" />
    <key attr.name="description" attr.type="string" for="edge" id="d3" />
    <key for="graphml" id="d4" yfiles.type="resources" />
-   <graph edgedefault="directed" id="G" parse.edges="84" parse.nodes="63" parse.order="free">
+   <graph edgedefault="directed" id="G" parse.edges="85" parse.nodes="64" parse.order="free">
       <node id="nid_NULL">
          <data key="d0">
             <y:ShapeNode>
@@ -1306,6 +1306,29 @@
          </data>
          <data key="d3" />
       </edge>
+      <node id="nid_http://purl.org/NET/rdflicense/cc-by4.0">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="390.0" x="0.0" y="0.0" />
+               <y:Fill color="#FFFFFF" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">http://purl.org/NET/rdflicense/cc-by4.0</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_:license56" source="nid_https://w3id.org/def/openadr" target="nid_http://purl.org/NET/rdflicense/cc-by4.0">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">:license</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
       <node id="nid_owl:Thing">
          <data key="d0">
             <y:ShapeNode>
@@ -1330,7 +1353,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_base:confidence56" source="nid_owl:Thing" target="nid_xsd:string">
+    <edge id="eid_base:confidence57" source="nid_owl:Thing" target="nid_xsd:string">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1353,7 +1376,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_base:dstart57" source="nid_owl:Thing" target="nid_xsd:dateTimeStamp">
+    <edge id="eid_base:dstart58" source="nid_owl:Thing" target="nid_xsd:dateTimeStamp">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1364,7 +1387,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:dataquality58" source="nid_owl:Thing" target="nid_xsd:string">
+    <edge id="eid_base:dataquality59" source="nid_owl:Thing" target="nid_xsd:string">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1375,7 +1398,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:hasTypicalValue59" source="nid_owl:Thing" target="nid_base:Value">
+    <edge id="eid_base:hasTypicalValue60" source="nid_owl:Thing" target="nid_base:Value">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1386,7 +1409,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:signalName60" source="nid_base:Signal" target="nid_xsd:string">
+    <edge id="eid_base:signalName61" source="nid_base:Signal" target="nid_xsd:string">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1409,7 +1432,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_base:payloadFloat61" source="nid_owl:Thing" target="nid_xsd:float">
+    <edge id="eid_base:payloadFloat62" source="nid_owl:Thing" target="nid_xsd:float">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1420,7 +1443,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:hasEvent62" source="nid_owl:Thing" target="nid_base:Event">
+    <edge id="eid_base:hasEvent63" source="nid_owl:Thing" target="nid_base:Event">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1431,7 +1454,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:oadrMinPeriod63" source="nid_owl:Thing" target="nid_http://www.w3.org/2006/time#Interval">
+    <edge id="eid_base:oadrMinPeriod64" source="nid_owl:Thing" target="nid_http://www.w3.org/2006/time#Interval">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1442,7 +1465,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:hasActivePeriod64" source="nid_owl:Thing" target="nid_http://www.w3.org/2006/time#Interval">
+    <edge id="eid_base:hasActivePeriod65" source="nid_owl:Thing" target="nid_http://www.w3.org/2006/time#Interval">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1453,7 +1476,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:intervalDuration65" source="nid_owl:Thing" target="nid_http://www.w3.org/2006/time#Duration">
+    <edge id="eid_base:intervalDuration66" source="nid_owl:Thing" target="nid_http://www.w3.org/2006/time#Duration">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1464,7 +1487,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:groupName66" source="nid_owl:Thing" target="nid_xsd:string">
+    <edge id="eid_base:groupName67" source="nid_owl:Thing" target="nid_xsd:string">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1475,7 +1498,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:marketContext67" source="nid_owl:Thing" target="nid_xsd:string">
+    <edge id="eid_base:marketContext68" source="nid_owl:Thing" target="nid_xsd:string">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1486,7 +1509,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:readingType68" source="nid_owl:Thing" target="nid_xsd:string">
+    <edge id="eid_base:readingType69" source="nid_owl:Thing" target="nid_xsd:string">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1497,7 +1520,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:hasTarget69" source="nid_owl:Thing" target="nid_base:Target">
+    <edge id="eid_base:hasTarget70" source="nid_owl:Thing" target="nid_base:Target">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1508,7 +1531,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:oadrMaxPeriod70" source="nid_owl:Thing" target="nid_http://www.w3.org/2006/time#Interval">
+    <edge id="eid_base:oadrMaxPeriod71" source="nid_owl:Thing" target="nid_http://www.w3.org/2006/time#Interval">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1519,7 +1542,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:hasSignal71" source="nid_owl:Thing" target="nid_base:Signal">
+    <edge id="eid_base:hasSignal72" source="nid_owl:Thing" target="nid_base:Signal">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1530,7 +1553,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:createdDateTime72" source="nid_owl:Thing" target="nid_xsd:dateTimeStamp">
+    <edge id="eid_base:createdDateTime73" source="nid_owl:Thing" target="nid_xsd:dateTimeStamp">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1541,7 +1564,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:expectedResponse73" source="nid_owl:Thing" target="nid_base:Opt">
+    <edge id="eid_base:expectedResponse74" source="nid_owl:Thing" target="nid_base:Opt">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1552,7 +1575,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:eventDescriptor74" source="nid_owl:Thing" target="nid_base:EventDescriptor">
+    <edge id="eid_base:eventDescriptor75" source="nid_owl:Thing" target="nid_base:EventDescriptor">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1575,7 +1598,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_base:reportName75" source="nid_base:Report" target="nid_xsd:string">
+    <edge id="eid_base:reportName76" source="nid_base:Report" target="nid_xsd:string">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1586,7 +1609,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:hasPayloadReourceStatus76" source="nid_owl:Thing" target="nid_base:PayloadResourceStatus">
+    <edge id="eid_base:hasPayloadReourceStatus77" source="nid_owl:Thing" target="nid_base:PayloadResourceStatus">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1597,7 +1620,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:version77" source="nid_owl:Thing" target="nid_xsd:string">
+    <edge id="eid_base:version78" source="nid_owl:Thing" target="nid_xsd:string">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1620,7 +1643,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_base:isOnChange78" source="nid_base:SamplingRate" target="nid_xsd:boolean">
+    <edge id="eid_base:isOnChange79" source="nid_base:SamplingRate" target="nid_xsd:boolean">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1631,7 +1654,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:hasDuration79" source="nid_owl:Thing" target="nid_http://www.w3.org/2006/time#Duration">
+    <edge id="eid_base:hasDuration80" source="nid_owl:Thing" target="nid_http://www.w3.org/2006/time#Duration">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1642,7 +1665,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:reportDescriptor80" source="nid_owl:Thing" target="nid_base:ReportDescriptor">
+    <edge id="eid_base:reportDescriptor81" source="nid_owl:Thing" target="nid_base:ReportDescriptor">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1653,7 +1676,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:hasSamplingRate81" source="nid_owl:Thing" target="nid_base:SamplingRate">
+    <edge id="eid_base:hasSamplingRate82" source="nid_owl:Thing" target="nid_base:SamplingRate">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1664,7 +1687,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:hasReportPayload82" source="nid_base:Report" target="nid_base:ReportPayload">
+    <edge id="eid_base:hasReportPayload83" source="nid_base:Report" target="nid_base:ReportPayload">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1675,7 +1698,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:accuracy83" source="nid_owl:Thing" target="nid_xsd:string">
+    <edge id="eid_base:accuracy84" source="nid_owl:Thing" target="nid_xsd:string">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
