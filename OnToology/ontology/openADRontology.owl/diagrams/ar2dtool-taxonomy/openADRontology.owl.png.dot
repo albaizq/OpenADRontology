@@ -4,8 +4,8 @@ size="1000"
 node [shape = rectangle, color="black"]; "base:SimpleSignal" "base:Signal" "base:Opt" "http://www.w3.org/2006/time#Instant" "base:GreenButtonReport" "base:DataReport" "base:TelemetryUsageReport" "base:BidEnergySignal" "base:ElectricityPriceSignal" "base:LoadControlSignal" "base:HistoryReport" "base:DemandChargeSignal" "base:OptIn" "base:LoadDispatchSignal" "base:OptOut" "base:EnergyPriceSignal" "base:TelemetryStatusReport" "base:BidPriceSignal" "http://www.w3.org/2006/time#Interval" "base:ChargeStateSignal" "http://www.w3.org/2006/time#TemporalEntity" "base:TelemetryReport" "base:BidLoadSignal" "base:MetadataReport" "base:HistoryUsageReport" "base:Report" ; /*classes style*/
 	"base:DataReport" -> "base:Report" [ label = "rdfs:subClassOf" ];
 	"base:EnergyPriceSignal" -> "base:Signal" [ label = "rdfs:subClassOf" ];
-	"base:TelemetryUsageReport" -> "base:TelemetryReport" [ label = "rdfs:subClassOf" ];
 	"base:SimpleSignal" -> "base:Signal" [ label = "rdfs:subClassOf" ];
+	"base:TelemetryUsageReport" -> "base:TelemetryReport" [ label = "rdfs:subClassOf" ];
 	"base:ChargeStateSignal" -> "base:Signal" [ label = "rdfs:subClassOf" ];
 	"base:HistoryReport" -> "base:DataReport" [ label = "rdfs:subClassOf" ];
 	"http://www.w3.org/2006/time#Interval" -> "http://www.w3.org/2006/time#TemporalEntity" [ label = "rdfs:subClassOf" ];

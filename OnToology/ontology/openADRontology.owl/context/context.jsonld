@@ -46,6 +46,10 @@
     "TelemetryReport" : {
       "@id" : "https://w3id.org/def/openadr#TelemetryReport"
     },
+    "vtnName" : {
+      "@id" : "https://w3id.org/def/openadr#vtnName",
+      "@type" : "http://www.w3.org/2002/07/owl#rational"
+    },
     "Asset" : {
       "@id" : "https://w3id.org/def/openadr#Asset"
     },
@@ -59,10 +63,6 @@
       "@id" : "https://w3id.org/def/openadr#hasPayloadReourceStatus",
       "@type" : "@id"
     },
-    "hasEvent" : {
-      "@id" : "https://w3id.org/def/openadr#hasEvent",
-      "@type" : "@id"
-    },
     "LoadControlSignal" : {
       "@id" : "https://w3id.org/def/openadr#LoadControlSignal"
     },
@@ -72,16 +72,8 @@
     "Instant" : {
       "@id" : "http://www.w3.org/2006/time#Instant"
     },
-    "send" : {
-      "@id" : "https://w3id.org/def/openadr#send",
-      "@type" : "@id"
-    },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
-    },
-    "contains" : {
-      "@id" : "https://w3id.org/def/openadr#contains",
-      "@type" : "@id"
     },
     "TelemetryStatusReport" : {
       "@id" : "https://w3id.org/def/openadr#TelemetryStatusReport"
@@ -120,10 +112,6 @@
       "@id" : "https://w3id.org/def/openadr#groupName",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
-    "hasDuration" : {
-      "@id" : "https://w3id.org/def/openadr#hasDuration",
-      "@type" : "@id"
-    },
     "dstart" : {
       "@id" : "https://w3id.org/def/openadr#dstart",
       "@type" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
@@ -151,15 +139,19 @@
     "TelemetryUsageReport" : {
       "@id" : "https://w3id.org/def/openadr#TelemetryUsageReport"
     },
+    "sendEvent" : {
+      "@id" : "https://w3id.org/def/openadr#sendEvent",
+      "@type" : "@id"
+    },
+    "eventName" : {
+      "@id" : "https://w3id.org/def/openadr#eventName",
+      "@type" : "http://www.w3.org/2002/07/owl#rational"
+    },
     "LoadDispatchSignal" : {
       "@id" : "https://w3id.org/def/openadr#LoadDispatchSignal"
     },
     "hasTarget" : {
       "@id" : "https://w3id.org/def/openadr#hasTarget",
-      "@type" : "@id"
-    },
-    "interval" : {
-      "@id" : "https://w3id.org/def/openadr#interval",
       "@type" : "@id"
     },
     "EventStatus" : {
@@ -182,15 +174,15 @@
       "@id" : "https://w3id.org/def/openadr#isOnChange",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
-    "hasInterval" : {
-      "@id" : "https://w3id.org/def/openadr#hasInterval",
-      "@type" : "@id"
-    },
     "DemandChargeSignal" : {
       "@id" : "https://w3id.org/def/openadr#DemandChargeSignal"
     },
     "Duration" : {
       "@id" : "http://www.w3.org/2006/time#Duration"
+    },
+    "hasEventStatus" : {
+      "@id" : "https://w3id.org/def/openadr#hasEventStatus",
+      "@type" : "@id"
     },
     "recovery" : {
       "@id" : "https://w3id.org/def/openadr#recovery",
@@ -202,11 +194,8 @@
     "isDefinedBy" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
     },
-    "DistributeEvent" : {
-      "@id" : "https://w3id.org/def/openadr#DistributeEvent"
-    },
-    "duration" : {
-      "@id" : "https://w3id.org/def/openadr#duration",
+    "hasSignalInterval" : {
+      "@id" : "https://w3id.org/def/openadr#hasSignalInterval",
       "@type" : "@id"
     },
     "title" : {
@@ -229,10 +218,6 @@
     "VEN" : {
       "@id" : "https://w3id.org/def/openadr#VEN"
     },
-    "intervalDuration" : {
-      "@id" : "https://w3id.org/def/openadr#intervalDuration",
-      "@type" : "@id"
-    },
     "hasSamplingRate" : {
       "@id" : "https://w3id.org/def/openadr#hasSamplingRate",
       "@type" : "@id"
@@ -251,6 +236,9 @@
     "hasTypicalValue" : {
       "@id" : "https://w3id.org/def/openadr#hasTypicalValue",
       "@type" : "@id"
+    },
+    "SignalInterval" : {
+      "@id" : "https://w3id.org/def/openadr#SignalInterval"
     },
     "Resource" : {
       "@id" : "https://w3id.org/def/openadr#Resource"
@@ -287,6 +275,10 @@
       "@id" : "https://w3id.org/def/openadr#reportDataSource",
       "@type" : "@id"
     },
+    "venName" : {
+      "@id" : "https://w3id.org/def/openadr#venName",
+      "@type" : "http://www.w3.org/2002/07/owl#rational"
+    },
     "reportSubject" : {
       "@id" : "https://w3id.org/def/openadr#reportSubject",
       "@type" : "@id"
@@ -305,6 +297,10 @@
     },
     "OptOut" : {
       "@id" : "https://w3id.org/def/openadr#OptOut"
+    },
+    "SignalIntervalDuration" : {
+      "@id" : "https://w3id.org/def/openadr#SignalIntervalDuration",
+      "@type" : "@id"
     },
     "preferredNamespaceUri" : {
       "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
