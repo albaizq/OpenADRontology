@@ -25,9 +25,6 @@ This ontology has the following classes and properties.</span>
       <a href="#DemandChargeSignal" title="https://w3id.org/def/openadr#DemandChargeSignal">Demand charge signal</a>
    </li>
    <li>
-      <a href="#DistributeEvent" title="https://w3id.org/def/openadr#DistributeEvent">Distribute event</a>
-   </li>
-   <li>
       <a href="#http://www.w3.org/2006/time#Duration" title="http://www.w3.org/2006/time#Duration">Duration</a>
    </li>
    <li>
@@ -66,7 +63,7 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#Interval" title="https://w3id.org/def/openadr#Interval">Interval</a>
+      <a href="#SignalInterval" title="https://w3id.org/def/openadr#SignalInterval">Interval</a>
    </li>
    <li>
       <a href="#ItemBase" title="https://w3id.org/def/openadr#ItemBase">Item base</a>
@@ -139,12 +136,6 @@ This ontology has the following classes and properties.</span>
    </li>
 </ul><h4>Object Properties</h4><ul class="hlist">
    <li>
-      <a href="#contains" title="https://w3id.org/def/openadr#contains">contains</a>
-   </li>
-   <li>
-      <a href="#duration" title="https://w3id.org/def/openadr#duration">duration</a>
-   </li>
-   <li>
       <a href="#eventDescriptor" title="https://w3id.org/def/openadr#eventDescriptor">event descriptor</a>
    </li>
    <li>
@@ -154,13 +145,10 @@ This ontology has the following classes and properties.</span>
       <a href="#hasActivePeriod" title="https://w3id.org/def/openadr#hasActivePeriod">has active period</a>
    </li>
    <li>
-      <a href="#hasDuration" title="https://w3id.org/def/openadr#hasDuration">has duration</a>
+      <a href="#hasEventStatus" title="https://w3id.org/def/openadr#hasEventStatus">has event</a>
    </li>
    <li>
-      <a href="#hasEvent" title="https://w3id.org/def/openadr#hasEvent">has event</a>
-   </li>
-   <li>
-      <a href="#hasInterval" title="https://w3id.org/def/openadr#hasInterval">has interval</a>
+      <a href="#hasSignalInterval" title="https://w3id.org/def/openadr#hasSignalInterval">has interval</a>
    </li>
    <li>
       <a href="#hasPayloadReourceStatus"
@@ -182,10 +170,8 @@ This ontology has the following classes and properties.</span>
       <a href="#hasTypicalValue" title="https://w3id.org/def/openadr#hasTypicalValue">has typical value</a>
    </li>
    <li>
-      <a href="#interval" title="https://w3id.org/def/openadr#interval">interval</a>
-   </li>
-   <li>
-      <a href="#intervalDuration" title="https://w3id.org/def/openadr#intervalDuration">interval duration</a>
+      <a href="#SignalIntervalDuration"
+         title="https://w3id.org/def/openadr#SignalIntervalDuration">interval duration</a>
    </li>
    <li>
       <a href="#isMeasuredIn" title="https://w3id.org/def/openadr#isMeasuredIn">is measured in</a>
@@ -215,7 +201,7 @@ This ontology has the following classes and properties.</span>
       <a href="#reportSubject" title="https://w3id.org/def/openadr#reportSubject">report subject</a>
    </li>
    <li>
-      <a href="#send" title="https://w3id.org/def/openadr#send">send</a>
+      <a href="#sendEvent" title="https://w3id.org/def/openadr#sendEvent">send</a>
    </li>
 </ul><h4>Data Properties</h4><ul class="hlist">
    <li>
@@ -232,6 +218,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#dstart" title="https://w3id.org/def/openadr#dstart">dstart</a>
+   </li>
+   <li>
+      <a href="#eventName" title="https://w3id.org/def/openadr#eventName">event name</a>
    </li>
    <li>
       <a href="#groupName" title="https://w3id.org/def/openadr#groupName">group name</a>
@@ -255,7 +244,13 @@ This ontology has the following classes and properties.</span>
       <a href="#signalName" title="https://w3id.org/def/openadr#signalName">signal name</a>
    </li>
    <li>
+      <a href="#venName" title="https://w3id.org/def/openadr#venName">VEN name</a>
+   </li>
+   <li>
       <a href="#version" title="https://w3id.org/def/openadr#version">version</a>
+   </li>
+   <li>
+      <a href="#vtnName" title="https://w3id.org/def/openadr#vtnName">VTN name</a>
    </li>
 </ul><h4>Named Individuals</h4><ul class="hlist">
    <li>
