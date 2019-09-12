@@ -3,19 +3,18 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix oadr: <https://w3id.org/def/openadr> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <https://w3id.org/def/openadr> .
 
 <https://w3id.org/def/openadr> rdf:type owl:Ontology ;
-                                <http://purl.org/dc/elements/1.1/creator> "Alba Fernández Izquierdo" ;
-                                owl:versionInfo "0.0.3" ;
-                                <http://purl.org/dc/elements/1.1/creator> "Andrea Cimmino" ;
-                                rdfs:comment "http://purl.org/NET/rdflicense/cc-by4.0" ;
+                                <http://purl.org/dc/elements/1.1/creator> <http://www.garcia-castro.com/foaf.rdf#me> ,
+                                                                          "Alba Fernández Izquierdo" ,
+                                                                          "Andrea Cimmino" ;
                                 <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
-                                rdfs:comment "This ontology describes the openADR protocol based on the documentation provided by the openADR Profile B" ;
-                                <http://purl.org/dc/elements/1.1/creator> <http://www.garcia-castro.com/foaf.rdf#me> ;
-                                <http://purl.org/dc/terms/title> "OpenADR ontology" .
+                                <http://purl.org/dc/terms/title> "OpenADR ontology" ;
+                                rdfs:comment "This ontology describes the openADR protocol based on the documentation provided by the openADR Profile B" ,
+                                             "http://purl.org/NET/rdflicense/cc-by4.0" ;
+                                owl:versionInfo "0.0.3" .
 
 #################################################################
 #    Annotation properties
@@ -70,8 +69,8 @@
 
 ###  https://w3id.org/def/openadr#hasEventStatus
 :hasEventStatus rdf:type owl:ObjectProperty ;
-                rdfs:range :Event ;
-                rdfs:label "has event" .
+                rdfs:range :EventStatus ;
+                rdfs:label "has event status" .
 
 
 ###  https://w3id.org/def/openadr#hasPayloadReourceStatus
@@ -399,11 +398,11 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
                        ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :createdDateTime ;
-                         owl:someValuesFrom owl:rational
+                         owl:someValuesFrom xsd:dateTimeStamp
                        ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :version ;
-                         owl:allValuesFrom owl:rational
+                         owl:allValuesFrom xsd:string
                        ] ;
        rdfs:comment "An event is a notification from the utility to demand side resources requesting load shed starting at a specific time, over a specified duration, and may include targeting information designating specific resources that should participate in the event" ;
        rdfs:isDefinedBy "OpenADR 2.0 Demand Response Program Implementation Guide" ;
@@ -510,15 +509,15 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :createdDateTime ;
-                          owl:someValuesFrom owl:rational
+                          owl:someValuesFrom xsd:dateTimeStamp
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :dstart ;
-                          owl:someValuesFrom owl:rational
+                          owl:someValuesFrom xsd:dateTimeStamp
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :reportName ;
-                          owl:someValuesFrom owl:rational
+                          owl:someValuesFrom xsd:string
                         ] ;
         rdfs:comment "Report sent from a VEN to a VTN to report the energy consumption or the status of Resources connected to the VEN" ;
         rdfs:isDefinedBy "OpenADR 2.0 Demand Response Program Implementation Guide" ;
@@ -548,19 +547,15 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :accuracy ;
-                                 owl:someValuesFrom owl:rational
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :confidence ;
-                                 owl:someValuesFrom owl:rational
+                                 owl:someValuesFrom xsd:string
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :dataquality ;
-                                 owl:someValuesFrom owl:rational
+                                 owl:someValuesFrom xsd:string
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :payloadFloat ;
-                                 owl:someValuesFrom owl:rational
+                                 owl:someValuesFrom xsd:float
                                ] ;
                rdfs:label "Report payload" .
 
@@ -588,7 +583,7 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :isOnChange ;
-                                owl:someValuesFrom owl:rational
+                                owl:someValuesFrom xsd:boolean
                               ] ;
               rdfs:label "Sampling rate" .
 
@@ -754,4 +749,4 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
                   :ItemBase .
 
 
-###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi
