@@ -61,7 +61,7 @@
 ###  http://example.es/def/openadrtest#Test10
 <http://example.es/def/openadrtest#Test10> rdf:type owl:NamedIndividual ,
                                                     <http://w3id.org/def/vtc#TestCaseDesign> ;
-                                           <http://w3id.org/def/vtc#desiredBehaviour> "Asset subclassOf PhysicalEntity"^^xsd:string ;
+                                           <http://w3id.org/def/vtc#desiredBehaviour> "Asset subclassOf SpatialThing"^^xsd:string ;
                                            <http://purl.org/dc/elements/1.1/description> "Assets are physical entities" ;
                                            <http://w3id.org/def/vtc#belongsTo> <http://example.es/def/openadrtest#TestsuiteOpenADR> .
 
@@ -213,7 +213,7 @@
 ###  http://example.es/def/openadrtest#Test34
 <http://example.es/def/openadrtest#Test34> rdf:type owl:NamedIndividual ,
                                                     <http://w3id.org/def/vtc#TestCaseDesign> ;
-                                           <http://w3id.org/def/vtc#desiredBehaviour> "EventDescription subClassOf randomization only string"^^xsd:string ;
+                                           <http://w3id.org/def/vtc#desiredBehaviour> "EventDescriptor subClassOf randomization only string"^^xsd:string ;
                                            <http://purl.org/dc/elements/1.1/description> "The event also defines a randomization time window" ;
                                            <http://w3id.org/def/vtc#belongsTo> <http://example.es/def/openadrtest#TestsuiteOpenADR> .
 
@@ -221,7 +221,7 @@
 ###  http://example.es/def/openadrtest#Test35
 <http://example.es/def/openadrtest#Test35> rdf:type owl:NamedIndividual ,
                                                     <http://w3id.org/def/vtc#TestCaseDesign> ;
-                                           <http://w3id.org/def/vtc#desiredBehaviour> "ActivePeriod type Class"^^xsd:string ;
+                                           <http://w3id.org/def/vtc#desiredBehaviour> "Event subclassOf hasActivePeriod only TemporalEntity"^^xsd:string ;
                                            <http://purl.org/dc/elements/1.1/description> "A active period defines the start time and duration of the event" ;
                                            <http://w3id.org/def/vtc#belongsTo> <http://example.es/def/openadrtest#TestsuiteOpenADR> .
 
@@ -282,8 +282,8 @@
 ###  http://example.es/def/openadrtest#Test50
 <http://example.es/def/openadrtest#Test50> rdf:type owl:NamedIndividual ,
                                                     <http://w3id.org/def/vtc#TestCaseDesign> ;
-                                           <http://w3id.org/def/vtc#desiredBehaviour> "Target subclassOf contain some Resource"^^xsd:string ,
-                                                                                      "Target subclassOf contain some VEN" ;
+                                           <http://w3id.org/def/vtc#desiredBehaviour> "Target subclassOf contains some Resource"^^xsd:string ,
+                                                                                      "Target subclassOf contains some VEN" ;
                                            <http://purl.org/dc/elements/1.1/description> "A target includes a resource and its VEN" ;
                                            <http://w3id.org/def/vtc#belongsTo> <http://example.es/def/openadrtest#TestsuiteOpenADR> .
 
