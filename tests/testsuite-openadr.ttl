@@ -1,12 +1,12 @@
-@prefix : <urn:default:baseUri:> .
+@prefix : <http://delta.iot.linkeddata.es/tests/testuite-openadr.ttl> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <urn:default:baseUri:> .
+@base <http://delta.iot.linkeddata.es/tests/testuite-openadr.ttl> .
 
-<urn:default:baseUri:> rdf:type owl:Ontology ;
+<http://delta.iot.linkeddata.es/tests/testuite-openadr.ttl> rdf:type owl:Ontology ;
                         rdfs:comment "This is the set of tests extracted from the requirements identified for the openADR  ontology." ;
                         rdfs:seeAlso "OpenADR 2.0 Profile Specification B Profile" .
 
