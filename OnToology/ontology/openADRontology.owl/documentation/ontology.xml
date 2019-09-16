@@ -85,6 +85,16 @@
     
 
 
+    <!-- https://w3id.org/def/openadr#contains -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#contains">
+        <rdfs:comment>Relation between a target and its components</rdfs:comment>
+        <rdfs:label>contains</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/def/openadr#eventDescriptor -->
 
 
@@ -117,12 +127,31 @@
     
 
 
+    <!-- https://w3id.org/def/openadr#hasDuration -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#hasDuration">
+        <rdfs:label>has duration</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/def/openadr#hasEventStatus -->
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#hasEventStatus">
         <rdfs:range rdf:resource="https://w3id.org/def/openadr#EventStatus"/>
         <rdfs:label>has event status</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/openadr#hasItemBase -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#hasItemBase">
+        <rdfs:range rdf:resource="https://w3id.org/def/openadr#ItemBase"/>
+        <rdfs:label>has item base</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -323,6 +352,16 @@
     
 
 
+    <!-- https://w3id.org/def/openadr#comment -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/openadr#comment">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>comment</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/def/openadr#confidence -->
 
 
@@ -338,7 +377,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/def/openadr#createdDateTime">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
-        <rdfs:label>createdDateTime</rdfs:label>
+        <rdfs:label>created date time</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -392,7 +431,29 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/def/openadr#isOnChange">
         <rdfs:domain rdf:resource="https://w3id.org/def/openadr#SamplingRate"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Attribute to determine whether or not data is sampled as it changes</rdfs:comment>
         <rdfs:label>is on change</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/openadr#isResponseRequired -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/openadr#isResponseRequired">
+        <rdfs:domain rdf:resource="https://w3id.org/def/openadr#EventDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/openadr#isTestEvent -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/openadr#isTestEvent">
+        <rdfs:domain rdf:resource="https://w3id.org/def/openadr#EventDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label>is test event</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -407,12 +468,63 @@
     
 
 
+    <!-- https://w3id.org/def/openadr#modificationDateTime -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/openadr#modificationDateTime">
+        <rdfs:domain rdf:resource="https://w3id.org/def/openadr#EventDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:label>modification date time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/openadr#modificationNumber -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/openadr#modificationNumber">
+        <rdfs:domain rdf:resource="https://w3id.org/def/openadr#EventDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/openadr#modificationReason -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/openadr#modificationReason">
+        <rdfs:domain rdf:resource="https://w3id.org/def/openadr#EventDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/def/openadr#payloadFloat -->
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/def/openadr#payloadFloat">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:label>paylaod float</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/openadr#priority -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/openadr#priority">
+        <rdfs:domain rdf:resource="https://w3id.org/def/openadr#EventDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/openadr#randomization -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/openadr#randomization">
+        <rdfs:domain rdf:resource="https://w3id.org/def/openadr#EventDescriptor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -493,6 +605,17 @@
     
 
 
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
+        <rdfs:comment>Anything with spatial extent, i.e. size, shape, or position. e.g. people, places, bowling balls, as well as abstract areas like cubes</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
+        <rdfs:label>Spatial thing</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3.org/2006/time#Duration -->
 
 
@@ -538,6 +661,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/def/openadr#Asset">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
         <rdfs:comment>A type of Resource that represents a specific collection of physical loads.
 Resources can be composed of Assets, and an Asset may be Resource, but Assets cannot be further decomposed into multiple Assets or Resources.</rdfs:comment>
         <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Program Implementation Guide</rdfs:isDefinedBy>
@@ -841,6 +965,12 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#hasDuration"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#Duration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/def/openadr#hasSamplingRate"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/def/openadr#SamplingRate"/>
             </owl:Restriction>
@@ -1030,6 +1160,18 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
 
 
     <owl:Class rdf:about="https://w3id.org/def/openadr#Target">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#contains"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/openadr#Resource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#contains"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/openadr#VEN"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:isDefinedBy>Target of a signal or event</rdfs:isDefinedBy>
         <rdfs:label>Target</rdfs:label>
     </owl:Class>
@@ -1107,7 +1249,7 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/def/openadr#isMeasuredIn"/>
-                <owl:someValuesFrom rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/openadr#ItemBase"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Value of a signal in a particular interval</rdfs:comment>

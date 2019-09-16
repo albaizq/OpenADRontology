@@ -1,0 +1,28 @@
+{
+  "@context" : {
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/description"
+    },
+    "belongsTo" : {
+      "@id" : "http://w3id.org/def/vtc#belongsTo"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "source" : {
+      "@id" : "http://purl.org/dc/terms/source"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "desiredBehaviour" : {
+      "@id" : "http://w3id.org/def/vtc#desiredBehaviour"
+    },
+    "TestCaseDesign" : {
+      "@id" : "http://w3id.org/def/vtc#TestCaseDesign"
+    },
+    "TestSuite" : {
+      "@id" : "http://w3id.org/def/vtc#TestSuite"
+    }
+  }
+}
