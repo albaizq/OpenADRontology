@@ -1,0 +1,450 @@
+[ {
+  "@id" : "http://example.es/def/openadrtest#Test1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "Each interval in a signal is related to a typical value"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "SignalInterval subClassOf hasTypicalValue only Value"
+  } ]
+}, {
+  "@id" : "http://example.es/def/openadrtest#Test10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "Assets are physical entities"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Asset subclassOf PhysicalEntity"
+  } ]
+}, {
+  "@id" : "http://example.es/def/openadrtest#Test11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "Each signal has the following attributes: name, type and item base"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Signal subclassOf hasItemBase some ItemBase"
+  }, {
+    "@value" : "Signal subclassOf hasSignalInterval only SignalInterval"
+  }, {
+    "@value" : "Signal subclassOf signalName only string"
+  } ]
+}, {
+  "@id" : "http://example.es/def/openadrtest#Test14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "Each signal element contains a signalType such as level or price"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "EnergyPriceSignal subClassOf Signal"
+  } ]
+}, {
+  "@id" : "http://example.es/def/openadrtest#Test15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "The type of schedules that a VEN is allowed to issue: optIn, optOut, or both"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "OptIn subClassOf Opt"
+  }, {
+    "@value" : "OptOut subClassOf Opt"
+  } ]
+}, {
+  "@id" : "http://example.es/def/openadrtest#Test17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "A sampling rate has an attribute to determine whether or not data is sampled as it changes"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "SamplingRate subClassOf isOnChange some boolean"
+  } ]
+}, {
+  "@id" : "http://example.es/def/openadrtest#Test18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "A sampling rate has a minimum and maximum period"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "SamplingRate subClassOf oadrMaxPeriod only TemporalEntity"
+  }, {
+    "@value" : "SamplingRate subClassOf oadrMinPeriod only TemporalEntity"
+  } ]
+}, {
+  "@id" : "http://example.es/def/openadrtest#Test2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "A signal  can have more than one interval"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Signal subClassOf hasSignalInterval min 1 SignalInterval"
+  } ]
+}, {
+  "@id" : "http://example.es/def/openadrtest#Test20",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "A report defines a sampling rate"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Report subClassOf hasSamplingRate only SamplingRate"
+  } ]
+}, {
+  "@id" : "http://example.es/def/openadrtest#Test21",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "A report includes the following atributes: id and duration"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Report subClassOf hasDuration only Duration"
+  } ]
+}, {
+  "@id" : "http://example.es/def/openadrtest#Test22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "The data report can be of type history report and  telemetry report"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "HistoryReport subclassOf Report"
+  }, {
+    "@value" : "TelemetryReport subclassOf Report"
+  } ]
+}, {
+  "@id" : "http://example.es/def/openadrtest#Test24",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "There are three two types of reports: metada and data report"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "DataReport subClassOf Report"
+  }, {
+    "@value" : "MetadataReport subClassOf Report"
+  } ]
+}, {
+  "@id" : "http://example.es/def/openadrtest#Test26",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "There are different types of signals"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "BidLoadSignal subclassOf Signal"
+  }, {
+    "@value" : "EnergyPriceSignal subClassOf Signal"
+  } ]
+}, {
+  "@id" : "http://example.es/def/openadrtest#Test28",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "A VEN is a communication endpoint that represents one or more logical resources"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "VEN type Class"
+  } ]
+}, {
+  "@id" : "http://example.es/def/openadrtest#Test29",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "Event signals may contain target elements"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Signal subClassOf hasTarget only Target"
+  } ]
+}, {
+  "@id" : "http://example.es/def/openadrtest#Test3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "A report can have more than one report descriptors"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Report subClassOf reportDescriptor min 1 ReportDescriptor"
+  } ]
+}, {
+  "@id" : "http://example.es/def/openadrtest#Test30",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "Events may contain multiple event signals"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Event subClassOf hasSignal min 1 Signal"
+  } ]
+}, {
+  "@id" : "http://example.es/def/openadrtest#Test31",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "An event also defines a ramp up and recovery period"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Event subClassOf ramp_up some Duration"
+  }, {
+    "@value" : "Event subClassOf recovery some Duration"
+  } ]
+}, {
+  "@id" : "http://example.es/def/openadrtest#Test33",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "An event includes a signal"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Event subClassOf hasSignal only Signal"
+  } ]
+}, {
+  "@id" : "http://example.es/def/openadrtest#Test34",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "The event also defines a randomization time window"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "EventDescription subClassOf randomization only string"
+  } ]
+}, {
+  "@id" : "http://example.es/def/openadrtest#Test35",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "A active period defines the start time and duration of the event"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "ActivePeriod type Class"
+  } ]
+}, {
+  "@id" : "http://example.es/def/openadrtest#Test36",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "An event includes the following attributes: modificationNumber, modificationDateTime, modificationReason, priority, marketContext, createdDateTime, eventStatus, testEvent, comment"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Event subclassOf eventDescriptor only EventDescriptor"
+  }, {
+    "@value" : "EventDescriptor subclassOf comment only string"
+  }, {
+    "@value" : "EventDescriptor subclassOf createdDateTime only date"
+  }, {
+    "@value" : "EventDescriptor subclassOf eventStatus only string"
+  }, {
+    "@value" : "EventDescriptor subclassOf isTestEvent only boolean"
+  }, {
+    "@value" : "EventDescriptor subclassOf marketContext only string"
+  }, {
+    "@value" : "EventDescriptor subclassOf modificationDateTime only date"
+  }, {
+    "@value" : "EventDescriptor subclassOf modificationNumber only string"
+  }, {
+    "@value" : "EventDescriptor subclassOf modificationReason only string"
+  }, {
+    "@value" : "EventDescriptor subclassOf priority only integer"
+  } ]
+}, {
+  "@id" : "http://example.es/def/openadrtest#Test4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "An event can have more than one event descriptros"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Event subclassOf eventDescriptor min 1 EventDescriptor"
+  } ]
+}, {
+  "@id" : "http://example.es/def/openadrtest#Test46",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "Events are included in the distribute event"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "DistributeEvent subclassOf containsEvent only Event"
+  } ]
+}, {
+  "@id" : "http://example.es/def/openadrtest#Test47",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "Ia response is required, the VEN acknowledges its opt-in or out-out disposition"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Event subClassOf expectedResponse only Opt"
+  }, {
+    "@value" : "OptIn type Class"
+  }, {
+    "@value" : "OptOut type Class"
+  } ]
+}, {
+  "@id" : "http://example.es/def/openadrtest#Test5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "Each signal, event and report has a market context"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Event subClassOf marketContext only string"
+  }, {
+    "@value" : "Report subClassOf marketContext only string"
+  }, {
+    "@value" : "Signal subClassOf marketContext only string"
+  } ]
+}, {
+  "@id" : "http://example.es/def/openadrtest#Test50",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "A target includes a resource and its VEN"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Target subclassOf contain some Resource"
+  }, {
+    "@value" : "Target subclassOf contain some VEN"
+  } ]
+}, {
+  "@id" : "http://example.es/def/openadrtest#Test52",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "Events are sent to targets"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Event subClassOf hasTarget only Target"
+  } ]
+}, {
+  "@id" : "http://example.es/def/openadrtest#Test53",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "Events are generated by the VTN"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "VTN subClassOf sendEvent some Event"
+  } ]
+}, {
+  "@id" : "http://example.es/def/openadrtest#Test8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "An resource may be managet by the VEN"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "VEN subClassOf manages some Resource"
+  } ]
+}, {
+  "@id" : "http://example.es/def/openadrtest#Test9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "An asset comprise a resource"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Resource subClassOf manages some Asset"
+  } ]
+}, {
+  "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestSuite" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@id" : "https://w3id.org/def/openadr#"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/source",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://w3id.org/def/vtc#TestCaseDesign",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/def/vtc#TestSuite",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/def/vtc#belongsTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://w3id.org/def/vtc#desiredBehaviour",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "urn:default:baseUri:",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This is the set of tests extracted from the requirements identified for the openADR  ontology."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "OpenADR 2.0 Profile Specification B Profile"
+  } ]
+} ]

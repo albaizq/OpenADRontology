@@ -1,8 +1,10 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "base:SignalInterval" "http://www.w3.org/2006/time#Duration" "base:VEN" "base:Signal" "base:Opt" "http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure" "base:EventStatus" "base:ReportDescriptor" "base:SamplingRate" "base:VTN" "base:Target" "base:Asset" "base:Event" "base:Value" "http://www.w3.org/2006/time#Interval" "http://www.w3.org/2006/time#TemporalEntity" "base:Resource" "base:EventDescriptor" "base:ReportPayload" "base:PayloadResourceStatus" "base:Report" ; /*classes style*/
+node [shape = rectangle, color="orange"]; "base:SignalInterval" "http://www.w3.org/2006/time#Duration" "base:VEN" "base:Signal" "base:Opt" "base:ItemBase" "base:EventStatus" "base:ReportDescriptor" "base:SamplingRate" "base:VTN" "base:Target" "base:Asset" "base:Event" "base:Value" "http://www.w3.org/2006/time#Interval" "http://www.w3.org/2006/time#TemporalEntity" "base:Resource" "base:EventDescriptor" "base:ReportPayload" "base:PayloadResourceStatus" "base:Report" ; /*classes style*/
+	"base:groupName" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
 	"NULL" -> "base:EventStatus" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "base:hasDuration" [ label = "owl:onProperty" ];
 	"NULL" -> "base:Signal" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:eventDescriptor" [ label = "owl:onProperty" ];
 	"NULL" -> "base:Resource" [ label = "owl:someValuesFrom" ];
@@ -30,21 +32,24 @@ node [shape = rectangle, color="orange"]; "base:SignalInterval" "http://www.w3.o
 	"NULL" -> "base:hasPayloadReourceStatus" [ label = "owl:onProperty" ];
 	"NULL" -> "base:hasTypicalValue" [ label = "owl:onProperty" ];
 	"NULL" -> "base:hasSignalInterval" [ label = "owl:onProperty" ];
+	"NULL" -> "base:contains" [ label = "owl:onProperty" ];
 	"NULL" -> "base:oadrMaxPeriod" [ label = "owl:onProperty" ];
 	"NULL" -> "base:SamplingRate" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "base:SignalIntervalDuration" [ label = "owl:onProperty" ];
 	"NULL" -> "base:hasEventStatus" [ label = "owl:onProperty" ];
 	"NULL" -> "base:hasTarget" [ label = "owl:onProperty" ];
+	"NULL" -> "base:ItemBase" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:manages" [ label = "owl:onProperty" ];
 	"NULL" -> "base:isOnChange" [ label = "owl:onProperty" ];
+	"NULL" -> "base:VEN" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:SignalInterval" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:PayloadResourceStatus" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "base:createdDateTime" [ label = "owl:onProperty" ];
 	"NULL" -> "base:hasSignal" [ label = "owl:onProperty" ];
+	"NULL" -> "http://www.w3.org/2006/time#Duration" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "base:Value" [ label = "owl:onClass" ];
 	"NULL" -> "base:Opt" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:oadrMinPeriod" [ label = "owl:onProperty" ];
-	"NULL" -> "http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:ReportPayload" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:Asset" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:accuracy" [ label = "owl:onProperty" ];
@@ -55,7 +60,6 @@ node [shape = rectangle, color="orange"]; "base:SignalInterval" "http://www.w3.o
 	"NULL" -> "base:SignalInterval" [ label = "owl:onClass" ];
 	"NULL" -> "xsd:string" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:payloadFloat" [ label = "owl:onProperty" ];
-	"base:groupName" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
 	"https://w3id.org/def/openadr" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = ":license" ];
 	"https://w3id.org/def/openadr" -> "http://www.garcia-castro.com/foaf.rdf#me" [ label = ":creator" ];
 	"owl:Thing" -> "xsd:string" [ label = "base:confidence" ];
@@ -63,31 +67,40 @@ node [shape = rectangle, color="orange"]; "base:SignalInterval" "http://www.w3.o
 	"owl:Thing" -> "xsd:string" [ label = "base:dataquality" ];
 	"base:SignalInterval" -> "base:Value" [ label = "base:hasTypicalValue" ];
 	"base:Signal" -> "xsd:string" [ label = "base:signalName" ];
+	"owl:Thing" -> "base:ItemBase" [ label = "base:hasItemBase" ];
+	"owl:Thing" -> "xsd:string" [ label = "base:comment" ];
+	"base:EventDescriptor" -> "xsd:dateTimeStamp" [ label = "base:modificationDateTime" ];
 	"owl:Thing" -> "xsd:float" [ label = "base:payloadFloat" ];
 	"owl:Thing" -> "http://www.w3.org/2006/time#Interval" [ label = "base:oadrMinPeriod" ];
 	"owl:Thing" -> "http://www.w3.org/2006/time#Interval" [ label = "base:hasActivePeriod" ];
 	"owl:Thing" -> "xsd:string" [ label = "base:groupName" ];
 	"owl:Thing" -> "xsd:string" [ label = "base:marketContext" ];
+	"base:EventDescriptor" -> "xsd:integer" [ label = "base:modificationNumber" ];
+	"base:EventDescriptor" -> "xsd:boolean" [ label = "base:isResponseRequired" ];
 	"owl:Thing" -> "xsd:string" [ label = "base:readingType" ];
 	"owl:Thing" -> "base:Target" [ label = "base:hasTarget" ];
-	"owl:Thing" -> "http://www.w3.org/2006/time#Interval" [ label = "base:oadrMaxPeriod" ];
 	"owl:Thing" -> "base:Signal" [ label = "base:hasSignal" ];
+	"base:EventDescriptor" -> "xsd:boolean" [ label = "base:isTestEvent" ];
+	"owl:Thing" -> "http://www.w3.org/2006/time#Interval" [ label = "base:oadrMaxPeriod" ];
 	"owl:Thing" -> "base:SignalInterval" [ label = "base:hasSignalInterval" ];
-	"base:VTN" -> "owl:rational" [ label = "base:vtnName" ];
 	"owl:Thing" -> "xsd:dateTimeStamp" [ label = "base:createdDateTime" ];
 	"owl:Thing" -> "base:Opt" [ label = "base:expectedResponse" ];
+	"base:VTN" -> "owl:rational" [ label = "base:vtnName" ];
 	"owl:Thing" -> "base:EventDescriptor" [ label = "base:eventDescriptor" ];
 	"base:VEN" -> "owl:rational" [ label = "base:venName" ];
 	"base:Report" -> "xsd:string" [ label = "base:reportName" ];
 	"owl:Thing" -> "base:EventStatus" [ label = "base:hasEventStatus" ];
 	"owl:Thing" -> "base:PayloadResourceStatus" [ label = "base:hasPayloadReourceStatus" ];
-	"owl:Thing" -> "xsd:string" [ label = "base:version" ];
 	"base:SamplingRate" -> "xsd:boolean" [ label = "base:isOnChange" ];
+	"owl:Thing" -> "xsd:string" [ label = "base:version" ];
+	"base:EventDescriptor" -> "xsd:string" [ label = "base:modificationReason" ];
 	"owl:Thing" -> "base:ReportDescriptor" [ label = "base:reportDescriptor" ];
 	"base:Report" -> "base:SamplingRate" [ label = "base:hasSamplingRate" ];
 	"base:Report" -> "base:ReportPayload" [ label = "base:hasReportPayload" ];
 	"base:Event" -> "owl:rational" [ label = "base:eventName" ];
-	"owl:Thing" -> "xsd:string" [ label = "base:accuracy" ];
+	"base:EventDescriptor" -> "xsd:string" [ label = "base:randomization" ];
 	"owl:Thing" -> "http://www.w3.org/2006/time#Duration" [ label = "base:SignalIntervalDuration" ];
+	"owl:Thing" -> "xsd:string" [ label = "base:accuracy" ];
+	"base:EventDescriptor" -> "xsd:integer" [ label = "base:priority" ];
 
 }

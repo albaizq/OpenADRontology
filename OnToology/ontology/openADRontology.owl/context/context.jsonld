@@ -36,6 +36,10 @@
       "@id" : "https://w3id.org/def/openadr#oadrMinPeriod",
       "@type" : "@id"
     },
+    "isResponseRequired" : {
+      "@id" : "https://w3id.org/def/openadr#isResponseRequired",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "license" : {
       "@id" : "http://purl.org/dc/terms/license"
     },
@@ -46,9 +50,17 @@
     "TelemetryReport" : {
       "@id" : "https://w3id.org/def/openadr#TelemetryReport"
     },
+    "priority" : {
+      "@id" : "https://w3id.org/def/openadr#priority",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
     "vtnName" : {
       "@id" : "https://w3id.org/def/openadr#vtnName",
       "@type" : "http://www.w3.org/2002/07/owl#rational"
+    },
+    "isTestEvent" : {
+      "@id" : "https://w3id.org/def/openadr#isTestEvent",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "Asset" : {
       "@id" : "https://w3id.org/def/openadr#Asset"
@@ -69,11 +81,19 @@
     "BidPriceSignal" : {
       "@id" : "https://w3id.org/def/openadr#BidPriceSignal"
     },
+    "modificationNumber" : {
+      "@id" : "https://w3id.org/def/openadr#modificationNumber",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
     "Instant" : {
       "@id" : "http://www.w3.org/2006/time#Instant"
     },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "contains" : {
+      "@id" : "https://w3id.org/def/openadr#contains",
+      "@type" : "@id"
     },
     "TelemetryStatusReport" : {
       "@id" : "https://w3id.org/def/openadr#TelemetryStatusReport"
@@ -111,6 +131,10 @@
     "groupName" : {
       "@id" : "https://w3id.org/def/openadr#groupName",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasDuration" : {
+      "@id" : "https://w3id.org/def/openadr#hasDuration",
+      "@type" : "@id"
     },
     "dstart" : {
       "@id" : "https://w3id.org/def/openadr#dstart",
@@ -150,12 +174,20 @@
     "LoadDispatchSignal" : {
       "@id" : "https://w3id.org/def/openadr#LoadDispatchSignal"
     },
+    "modificationReason" : {
+      "@id" : "https://w3id.org/def/openadr#modificationReason",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
     "hasTarget" : {
       "@id" : "https://w3id.org/def/openadr#hasTarget",
       "@type" : "@id"
     },
     "EventStatus" : {
       "@id" : "https://w3id.org/def/openadr#EventStatus"
+    },
+    "randomization" : {
+      "@id" : "https://w3id.org/def/openadr#randomization",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "DataReport" : {
       "@id" : "https://w3id.org/def/openadr#DataReport"
@@ -198,6 +230,10 @@
       "@id" : "https://w3id.org/def/openadr#hasSignalInterval",
       "@type" : "@id"
     },
+    "hasItemBase" : {
+      "@id" : "https://w3id.org/def/openadr#hasItemBase",
+      "@type" : "@id"
+    },
     "title" : {
       "@id" : "http://purl.org/dc/terms/title"
     },
@@ -217,6 +253,10 @@
     },
     "VEN" : {
       "@id" : "https://w3id.org/def/openadr#VEN"
+    },
+    "modificationDateTime" : {
+      "@id" : "https://w3id.org/def/openadr#modificationDateTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
     },
     "hasSamplingRate" : {
       "@id" : "https://w3id.org/def/openadr#hasSamplingRate",
@@ -247,11 +287,15 @@
       "@id" : "https://w3id.org/def/openadr#marketContext",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
+    "SpatialThing" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+    },
     "Target" : {
       "@id" : "https://w3id.org/def/openadr#Target"
     },
     "comment" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+      "@id" : "https://w3id.org/def/openadr#comment",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "HistoryUsageReport" : {
       "@id" : "https://w3id.org/def/openadr#HistoryUsageReport"
