@@ -1,6 +1,6 @@
 # openADR-ontology
 
-Repository for collaborative edition of the OpenADR ontology. 
+Repository for collaborative edition of the OpenADR ontology. The ontology is published at https://w3id.org/def/openadr#. 
 
 
 Current version of the ontology model
