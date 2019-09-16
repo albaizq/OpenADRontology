@@ -47,6 +47,12 @@
                         rdfs:label "interval duration" .
 
 
+###  https://w3id.org/def/openadr#contains
+:contains rdf:type owl:ObjectProperty ;
+          rdfs:comment "Relation between a target and its components" ;
+          rdfs:label "contains" .
+
+
 ###  https://w3id.org/def/openadr#eventDescriptor
 :eventDescriptor rdf:type owl:ObjectProperty ;
                  rdfs:range :EventDescriptor ;
@@ -67,10 +73,21 @@
                  rdfs:label "has active period" .
 
 
+###  https://w3id.org/def/openadr#hasDuration
+:hasDuration rdf:type owl:ObjectProperty ;
+             rdfs:label "has duration" .
+
+
 ###  https://w3id.org/def/openadr#hasEventStatus
 :hasEventStatus rdf:type owl:ObjectProperty ;
                 rdfs:range :EventStatus ;
                 rdfs:label "has event status" .
+
+
+###  https://w3id.org/def/openadr#hasItemBase
+:hasItemBase rdf:type owl:ObjectProperty ;
+             rdfs:range :ItemBase ;
+             rdfs:label "has item base" .
 
 
 ###  https://w3id.org/def/openadr#hasPayloadReourceStatus
@@ -189,6 +206,12 @@
           rdfs:label "accuracy" .
 
 
+###  https://w3id.org/def/openadr#comment
+:comment rdf:type owl:DatatypeProperty ;
+         rdfs:range xsd:string ;
+         rdfs:label "comment" .
+
+
 ###  https://w3id.org/def/openadr#confidence
 :confidence rdf:type owl:DatatypeProperty ;
             rdfs:range xsd:string ;
@@ -198,7 +221,7 @@
 ###  https://w3id.org/def/openadr#createdDateTime
 :createdDateTime rdf:type owl:DatatypeProperty ;
                  rdfs:range xsd:dateTimeStamp ;
-                 rdfs:label "createdDateTime" .
+                 rdfs:label "created date time" .
 
 
 ###  https://w3id.org/def/openadr#dataquality
@@ -232,7 +255,21 @@
 :isOnChange rdf:type owl:DatatypeProperty ;
             rdfs:domain :SamplingRate ;
             rdfs:range xsd:boolean ;
+            rdfs:comment "Attribute to determine whether or not data is sampled as it changes" ;
             rdfs:label "is on change" .
+
+
+###  https://w3id.org/def/openadr#isResponseRequired
+:isResponseRequired rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :EventDescriptor ;
+                    rdfs:range xsd:boolean .
+
+
+###  https://w3id.org/def/openadr#isTestEvent
+:isTestEvent rdf:type owl:DatatypeProperty ;
+             rdfs:domain :EventDescriptor ;
+             rdfs:range xsd:boolean ;
+             rdfs:label "is test event" .
 
 
 ###  https://w3id.org/def/openadr#marketContext
@@ -241,10 +278,41 @@
                rdfs:label "market context" .
 
 
+###  https://w3id.org/def/openadr#modificationDateTime
+:modificationDateTime rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :EventDescriptor ;
+                      rdfs:range xsd:dateTimeStamp ;
+                      rdfs:label "modification date time" .
+
+
+###  https://w3id.org/def/openadr#modificationNumber
+:modificationNumber rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :EventDescriptor ;
+                    rdfs:range xsd:integer .
+
+
+###  https://w3id.org/def/openadr#modificationReason
+:modificationReason rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :EventDescriptor ;
+                    rdfs:range xsd:string .
+
+
 ###  https://w3id.org/def/openadr#payloadFloat
 :payloadFloat rdf:type owl:DatatypeProperty ;
               rdfs:range xsd:float ;
               rdfs:label "paylaod float" .
+
+
+###  https://w3id.org/def/openadr#priority
+:priority rdf:type owl:DatatypeProperty ;
+          rdfs:domain :EventDescriptor ;
+          rdfs:range xsd:integer .
+
+
+###  https://w3id.org/def/openadr#randomization
+:randomization rdf:type owl:DatatypeProperty ;
+               rdfs:domain :EventDescriptor ;
+               rdfs:range xsd:string .
 
 
 ###  https://w3id.org/def/openadr#readingType
@@ -291,6 +359,13 @@
 #    Classes
 #################################################################
 
+###  http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> rdf:type owl:Class ;
+                                                       rdfs:comment "Anything with spatial extent, i.e. size, shape, or position. e.g. people, places, bowling balls, as well as abstract areas like cubes" ;
+                                                       rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> ;
+                                                       rdfs:label "Spatial thing" .
+
+
 ###  http://www.w3.org/2006/time#Duration
 <http://www.w3.org/2006/time#Duration> rdf:type owl:Class ;
                                        rdfs:label "Duration" .
@@ -316,6 +391,7 @@
 
 ###  https://w3id.org/def/openadr#Asset
 :Asset rdf:type owl:Class ;
+       rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
        rdfs:comment """A type of Resource that represents a specific collection of physical loads.
 Resources can be composed of Assets, and an Asset may be Resource, but Assets cannot be further decomposed into multiple Assets or Resources.""" ;
        rdfs:isDefinedBy "OpenADR 2.0 Demand Response Program Implementation Guide" ;
@@ -504,6 +580,10 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
                           owl:someValuesFrom :ReportDescriptor
                         ] ,
                         [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasDuration ;
+                          owl:allValuesFrom <http://www.w3.org/2006/time#Duration>
+                        ] ,
+                        [ rdf:type owl:Restriction ;
                           owl:onProperty :hasSamplingRate ;
                           owl:allValuesFrom :SamplingRate
                         ] ,
@@ -626,6 +706,14 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
 
 ###  https://w3id.org/def/openadr#Target
 :Target rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :contains ;
+                          owl:someValuesFrom :Resource
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :contains ;
+                          owl:someValuesFrom :VEN
+                        ] ;
         rdfs:isDefinedBy "Target of a signal or event" ;
         rdfs:label "Target" .
 
@@ -674,7 +762,7 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
 :Value rdf:type owl:Class ;
        rdfs:subClassOf [ rdf:type owl:Restriction ;
                          owl:onProperty :isMeasuredIn ;
-                         owl:someValuesFrom <http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure>
+                         owl:someValuesFrom :ItemBase
                        ] ;
        rdfs:comment "Value of a signal in a particular interval" ;
        rdfs:label "Value" .
