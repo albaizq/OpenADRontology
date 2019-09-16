@@ -1,4 +1,13 @@
 [ {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testuite-openadr.ttl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This is the set of tests extracted from the requirements identified for the openADR  ontology."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "OpenADR 2.0 Profile Specification B Profile"
+  } ]
+}, {
   "@id" : "http://example.es/def/openadrtest#Test1",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
   "http://purl.org/dc/elements/1.1/description" : [ {
@@ -20,7 +29,7 @@
     "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
   } ],
   "http://w3id.org/def/vtc#desiredBehaviour" : [ {
-    "@value" : "Asset subclassOf PhysicalEntity"
+    "@value" : "Asset subclassOf SpatialThing"
   } ]
 }, {
   "@id" : "http://example.es/def/openadrtest#Test11",
@@ -252,7 +261,7 @@
     "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
   } ],
   "http://w3id.org/def/vtc#desiredBehaviour" : [ {
-    "@value" : "EventDescription subClassOf randomization only string"
+    "@value" : "EventDescriptor subClassOf randomization only string"
   } ]
 }, {
   "@id" : "http://example.es/def/openadrtest#Test35",
@@ -264,7 +273,7 @@
     "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
   } ],
   "http://w3id.org/def/vtc#desiredBehaviour" : [ {
-    "@value" : "ActivePeriod type Class"
+    "@value" : "Event subclassOf hasActivePeriod only TemporalEntity"
   } ]
 }, {
   "@id" : "http://example.es/def/openadrtest#Test36",
@@ -362,9 +371,9 @@
     "@id" : "http://example.es/def/openadrtest#TestsuiteOpenADR"
   } ],
   "http://w3id.org/def/vtc#desiredBehaviour" : [ {
-    "@value" : "Target subclassOf contain some Resource"
+    "@value" : "Target subclassOf contains some Resource"
   }, {
-    "@value" : "Target subclassOf contain some VEN"
+    "@value" : "Target subclassOf contains some VEN"
   } ]
 }, {
   "@id" : "http://example.es/def/openadrtest#Test52",
@@ -438,13 +447,4 @@
 }, {
   "@id" : "http://w3id.org/def/vtc#desiredBehaviour",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
-}, {
-  "@id" : "urn:default:baseUri:",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This is the set of tests extracted from the requirements identified for the openADR  ontology."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "OpenADR 2.0 Profile Specification B Profile"
-  } ]
 } ]

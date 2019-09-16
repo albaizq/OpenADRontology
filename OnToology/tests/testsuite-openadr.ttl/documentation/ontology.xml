@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="urn:default:baseUri:#"
-     xml:base="urn:default:baseUri:"
+<rdf:RDF xmlns="http://delta.iot.linkeddata.es/tests/testuite-openadr.ttl#"
+     xml:base="http://delta.iot.linkeddata.es/tests/testuite-openadr.ttl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -9,7 +9,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="urn:default:baseUri:">
+    <owl:Ontology rdf:about="http://delta.iot.linkeddata.es/tests/testuite-openadr.ttl">
         <rdfs:comment>This is the set of tests extracted from the requirements identified for the openADR  ontology.</rdfs:comment>
         <rdfs:seeAlso>OpenADR 2.0 Profile Specification B Profile</rdfs:seeAlso>
     </owl:Ontology>
@@ -123,7 +123,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.es/def/openadrtest#Test10">
         <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
-        <vtc:desiredBehaviour>Asset subclassOf PhysicalEntity</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Asset subclassOf SpatialThing</vtc:desiredBehaviour>
         <dc:description>Assets are physical entities</dc:description>
         <vtc:belongsTo rdf:resource="http://example.es/def/openadrtest#TestsuiteOpenADR"/>
     </owl:NamedIndividual>
@@ -347,7 +347,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.es/def/openadrtest#Test34">
         <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
-        <vtc:desiredBehaviour>EventDescription subClassOf randomization only string</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>EventDescriptor subClassOf randomization only string</vtc:desiredBehaviour>
         <dc:description>The event also defines a randomization time window</dc:description>
         <vtc:belongsTo rdf:resource="http://example.es/def/openadrtest#TestsuiteOpenADR"/>
     </owl:NamedIndividual>
@@ -359,7 +359,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.es/def/openadrtest#Test35">
         <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
-        <vtc:desiredBehaviour>ActivePeriod type Class</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Event subclassOf hasActivePeriod only TemporalEntity</vtc:desiredBehaviour>
         <dc:description>A active period defines the start time and duration of the event</dc:description>
         <vtc:belongsTo rdf:resource="http://example.es/def/openadrtest#TestsuiteOpenADR"/>
     </owl:NamedIndividual>
@@ -444,8 +444,8 @@
 
     <owl:NamedIndividual rdf:about="http://example.es/def/openadrtest#Test50">
         <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
-        <vtc:desiredBehaviour>Target subclassOf contain some Resource</vtc:desiredBehaviour>
-        <vtc:desiredBehaviour>Target subclassOf contain some VEN</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Target subclassOf contains some Resource</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Target subclassOf contains some VEN</vtc:desiredBehaviour>
         <dc:description>A target includes a resource and its VEN</dc:description>
         <vtc:belongsTo rdf:resource="http://example.es/def/openadrtest#TestsuiteOpenADR"/>
     </owl:NamedIndividual>
