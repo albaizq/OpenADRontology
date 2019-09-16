@@ -112,6 +112,10 @@ This section provides details for each class and property defined by OpenADR ont
          <a href="#SimpleSignal" title="https://w3id.org/def/openadr#SimpleSignal">Simple signal</a>
       </li>
       <li>
+         <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+            title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">Spatial thing</a>
+      </li>
+      <li>
          <a href="#Target" title="https://w3id.org/def/openadr#Target">Target</a>
       </li>
       <li>
@@ -149,6 +153,14 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
       <dl class="definedBy">
          <dt>Is defined by</dt>
          <dd>https://w3id.org/def/openadr</dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+               title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">Spatial thing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="BidEnergySignal">
@@ -332,6 +344,18 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
          <dd>https://w3id.org/def/openadr</dd>
       </dl>
       <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#isResponseRequired" title="https://w3id.org/def/openadr#isResponseRequired">is response required</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#isTestEvent" title="https://w3id.org/def/openadr#isTestEvent">is test event</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#modificationDateTime"
+               title="https://w3id.org/def/openadr#modificationDateTime">modification date time</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#modificationNumber" title="https://w3id.org/def/openadr#modificationNumber">modification number</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#modificationReason" title="https://w3id.org/def/openadr#modificationReason">modification reason</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#priority" title="https://w3id.org/def/openadr#priority">priority</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#randomization" title="https://w3id.org/def/openadr#randomization">randomization</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#eventDescriptor" title="https://w3id.org/def/openadr#eventDescriptor">event descriptor</a>
@@ -486,6 +510,11 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
          <span class="markdown">Units for the data in the report</span>
       </div>
       <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasItemBase" title="https://w3id.org/def/openadr#hasItemBase">has item base</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
          <dt>has members</dt>
          <dd>
             <a href="#Current" title="https://w3id.org/def/openadr#Current">current</a>
@@ -796,6 +825,30 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
          </dd>
       </dl>
    </div>
+   <div class="entity" id="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
+      <h3>Spatial thing<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing</p>
+      <div class="comment">
+         <span class="markdown">Anything with spatial extent, i.e. size, shape, or position. e.g. people, places, bowling balls, as well as abstract areas like cubes</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/2003/01/geo/wgs84_pos#">http://www.w3.org/2003/01/geo/wgs84_pos#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Asset" title="https://w3id.org/def/openadr#Asset">Asset</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="Target">
       <h3>Target<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -808,6 +861,8 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
          <dd>https://w3id.org/def/openadr</dd>
       </dl>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
          <dt>is in range of</dt>
          <dd>
             <a href="#hasTarget" title="https://w3id.org/def/openadr#hasTarget">has target</a>
@@ -940,6 +995,9 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
+         <a href="#contains" title="https://w3id.org/def/openadr#contains">contains</a>
+      </li>
+      <li>
          <a href="#eventDescriptor" title="https://w3id.org/def/openadr#eventDescriptor">event descriptor</a>
       </li>
       <li>
@@ -949,10 +1007,16 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
          <a href="#hasActivePeriod" title="https://w3id.org/def/openadr#hasActivePeriod">has active period</a>
       </li>
       <li>
+         <a href="#hasDuration" title="https://w3id.org/def/openadr#hasDuration">has duration</a>
+      </li>
+      <li>
          <a href="#hasEventStatus" title="https://w3id.org/def/openadr#hasEventStatus">has event status</a>
       </li>
       <li>
          <a href="#hasSignalInterval" title="https://w3id.org/def/openadr#hasSignalInterval">has interval</a>
+      </li>
+      <li>
+         <a href="#hasItemBase" title="https://w3id.org/def/openadr#hasItemBase">has item base</a>
       </li>
       <li>
          <a href="#hasPayloadReourceStatus"
@@ -1008,6 +1072,17 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
          <a href="#sendEvent" title="https://w3id.org/def/openadr#sendEvent">send</a>
       </li>
    </ul>
+   <div class="entity" id="contains">
+      <h3>contains<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#contains</p>
+      <div class="comment">
+         <span class="markdown">Relation between a target and its components</span>
+      </div>
+   </div>
    <div class="entity" id="eventDescriptor">
       <h3>event descriptor<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1065,6 +1140,14 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasDuration">
+      <h3>has duration<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#hasDuration</p>
+   </div>
    <div class="entity" id="hasEventStatus">
       <h3>has event status<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1094,6 +1177,23 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
             <dt>has range</dt>
             <dd>
                <a href="#SignalInterval" title="https://w3id.org/def/openadr#SignalInterval">Interval</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasItemBase">
+      <h3>has item base<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#hasItemBase</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ItemBase" title="https://w3id.org/def/openadr#ItemBase">Item base</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -1375,10 +1475,13 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
          <a href="#accuracy" title="https://w3id.org/def/openadr#accuracy">accuracy</a>
       </li>
       <li>
+         <a href="#comment" title="https://w3id.org/def/openadr#comment">comment</a>
+      </li>
+      <li>
          <a href="#confidence" title="https://w3id.org/def/openadr#confidence">confidence</a>
       </li>
       <li>
-         <a href="#createdDateTime" title="https://w3id.org/def/openadr#createdDateTime">createdDateTime</a>
+         <a href="#createdDateTime" title="https://w3id.org/def/openadr#createdDateTime">created date time</a>
       </li>
       <li>
          <a href="#dataquality" title="https://w3id.org/def/openadr#dataquality">data quality</a>
@@ -1396,10 +1499,42 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
          <a href="#isOnChange" title="https://w3id.org/def/openadr#isOnChange">is on change</a>
       </li>
       <li>
+         <a href="#isResponseRequired" title="https://w3id.org/def/openadr#isResponseRequired">
+            <span>is response required</span>
+         </a>
+      </li>
+      <li>
+         <a href="#isTestEvent" title="https://w3id.org/def/openadr#isTestEvent">is test event</a>
+      </li>
+      <li>
          <a href="#marketContext" title="https://w3id.org/def/openadr#marketContext">market context</a>
       </li>
       <li>
+         <a href="#modificationDateTime"
+            title="https://w3id.org/def/openadr#modificationDateTime">modification date time</a>
+      </li>
+      <li>
+         <a href="#modificationNumber" title="https://w3id.org/def/openadr#modificationNumber">
+            <span>modification number</span>
+         </a>
+      </li>
+      <li>
+         <a href="#modificationReason" title="https://w3id.org/def/openadr#modificationReason">
+            <span>modification reason</span>
+         </a>
+      </li>
+      <li>
          <a href="#payloadFloat" title="https://w3id.org/def/openadr#payloadFloat">paylaod float</a>
+      </li>
+      <li>
+         <a href="#priority" title="https://w3id.org/def/openadr#priority">
+            <span>priority</span>
+         </a>
+      </li>
+      <li>
+         <a href="#randomization" title="https://w3id.org/def/openadr#randomization">
+            <span>randomization</span>
+         </a>
       </li>
       <li>
          <a href="#readingType" title="https://w3id.org/def/openadr#readingType">reading type</a>
@@ -1436,6 +1571,22 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
          </dl>
       </div>
    </div>
+   <div class="entity" id="comment">
+      <h3>comment<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#comment</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="confidence">
       <h3>confidence<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -1453,7 +1604,7 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
       </div>
    </div>
    <div class="entity" id="createdDateTime">
-      <h3>createdDateTime<sup class="type-dp" title="data property">dp</sup>
+      <h3>created date time<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
@@ -1551,11 +1702,56 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/openadr#isOnChange</p>
+      <div class="comment">
+         <span class="markdown">Attribute to determine whether or not data is sampled as it changes</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
                <a href="#SamplingRate" title="https://w3id.org/def/openadr#SamplingRate">Sampling rate</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isResponseRequired">
+      <h3>is response required<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#isResponseRequired</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#EventDescriptor" title="https://w3id.org/def/openadr#EventDescriptor">Event descriptor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isTestEvent">
+      <h3>is test event<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#isTestEvent</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#EventDescriptor" title="https://w3id.org/def/openadr#EventDescriptor">Event descriptor</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1581,6 +1777,69 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
          </dl>
       </div>
    </div>
+   <div class="entity" id="modificationDateTime">
+      <h3>modification date time<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#modificationDateTime</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#EventDescriptor" title="https://w3id.org/def/openadr#EventDescriptor">Event descriptor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTimeStamp">date time stamp</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="modificationNumber">
+      <h3>modification number<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#modificationNumber</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#EventDescriptor" title="https://w3id.org/def/openadr#EventDescriptor">Event descriptor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="modificationReason">
+      <h3>modification reason<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#modificationReason</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#EventDescriptor" title="https://w3id.org/def/openadr#EventDescriptor">Event descriptor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="payloadFloat">
       <h3>paylaod float<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -1593,6 +1852,48 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="priority">
+      <h3>priority<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#priority</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#EventDescriptor" title="https://w3id.org/def/openadr#EventDescriptor">Event descriptor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="randomization">
+      <h3>randomization<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#randomization</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#EventDescriptor" title="https://w3id.org/def/openadr#EventDescriptor">Event descriptor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
             </dd>
          </dl>
       </div>
