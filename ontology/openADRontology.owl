@@ -14,7 +14,7 @@
                                 <http://purl.org/dc/terms/title> "OpenADR ontology" ;
                                 rdfs:comment "This ontology describes the openADR protocol based on the documentation provided by the openADR Profile B" ,
                                              "http://purl.org/NET/rdflicense/cc-by4.0" ;
-                                owl:versionInfo "0.1.1" .
+                                owl:versionInfo "0.1.2" .
 
 #################################################################
 #    Annotation properties
@@ -299,7 +299,7 @@
 
 ###  https://w3id.org/def/openadr#marketContext
 :marketContext rdf:type owl:DatatypeProperty ;
-               rdfs:range xsd:string ;
+               rdfs:range xsd:anyURI ;
                rdfs:label "market context" .
 
 
