@@ -25,6 +25,9 @@ This section provides details for each class and property defined by OpenADR ont
          <a href="#DemandChargeSignal" title="https://w3id.org/def/openadr#DemandChargeSignal">Demand charge signal</a>
       </li>
       <li>
+         <a href="#DistributeEvent" title="https://w3id.org/def/openadr#DistributeEvent">Distribute Event</a>
+      </li>
+      <li>
          <a href="#http://www.w3.org/2006/time#Duration" title="http://www.w3.org/2006/time#Duration">Duration</a>
       </li>
       <li>
@@ -275,6 +278,24 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
          </dd>
       </dl>
    </div>
+   <div class="entity" id="DistributeEvent">
+      <h3>Distribute Event<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#DistributeEvent</p>
+      <div class="comment">
+         <span class="markdown">Resource that contains a set of new of modified events</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#containsEvent" title="https://w3id.org/def/openadr#containsEvent">contains event</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="http://www.w3.org/2006/time#Duration">
       <h3>Duration<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -345,7 +366,8 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#sendEvent" title="https://w3id.org/def/openadr#sendEvent">send</a>
+            <a href="#containsEvent" title="https://w3id.org/def/openadr#containsEvent">contains event</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#sendEvent" title="https://w3id.org/def/openadr#sendEvent">send</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -1171,6 +1193,9 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
          <a href="#contains" title="https://w3id.org/def/openadr#contains">contains</a>
       </li>
       <li>
+         <a href="#containsEvent" title="https://w3id.org/def/openadr#containsEvent">contains event</a>
+      </li>
+      <li>
          <a href="#eventDescriptor" title="https://w3id.org/def/openadr#eventDescriptor">event descriptor</a>
       </li>
       <li>
@@ -1295,6 +1320,28 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
          <strong>IRI:</strong> https://w3id.org/def/openadr#contains</p>
       <div class="comment">
          <span class="markdown">Relation between a target and its components</span>
+      </div>
+   </div>
+   <div class="entity" id="containsEvent">
+      <h3>contains event<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#containsEvent</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DistributeEvent" title="https://w3id.org/def/openadr#DistributeEvent">Distribute Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Event" title="https://w3id.org/def/openadr#Event">Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
       </div>
    </div>
    <div class="entity" id="eventDescriptor">

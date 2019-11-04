@@ -455,7 +455,7 @@
     "@value" : "http://purl.org/NET/rdflicense/cc-by4.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.1.2"
+    "@value" : "0.1.3"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#Active",
@@ -540,6 +540,15 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/openadr#Signal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#DistributeEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Resource that contains a set of new of modified events"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Distribute Event"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#ElectricityPriceSignal",
@@ -1065,6 +1074,18 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "contains"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#containsEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/openadr#DistributeEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "contains event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/def/openadr#Event"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#createdDateTime",
