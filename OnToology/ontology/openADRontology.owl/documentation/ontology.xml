@@ -17,7 +17,7 @@
         <terms:title>OpenADR ontology</terms:title>
         <rdfs:comment>This ontology describes the openADR protocol based on the documentation provided by the openADR Profile B</rdfs:comment>
         <rdfs:comment>http://purl.org/NET/rdflicense/cc-by4.0</rdfs:comment>
-        <owl:versionInfo>0.1.2</owl:versionInfo>
+        <owl:versionInfo>0.1.3</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -126,6 +126,17 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#contains">
         <rdfs:comment>Relation between a target and its components</rdfs:comment>
         <rdfs:label>contains</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/openadr#containsEvent -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#containsEvent">
+        <rdfs:domain rdf:resource="https://w3id.org/def/openadr#DistributeEvent"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/openadr#Event"/>
+        <rdfs:label>contains event</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -829,6 +840,16 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
     <owl:Class rdf:about="https://w3id.org/def/openadr#DemandChargeSignal">
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#Signal"/>
         <rdfs:label>Demand charge signal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/openadr#DistributeEvent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/openadr#DistributeEvent">
+        <rdfs:comment>Resource that contains a set of new of modified events</rdfs:comment>
+        <rdfs:label>Distribute Event</rdfs:label>
     </owl:Class>
     
 
