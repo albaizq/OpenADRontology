@@ -6,7 +6,7 @@
 <https://w3id.org/def/openadr> <http://purl.org/dc/terms/title> "OpenADR ontology" .
 <https://w3id.org/def/openadr> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology describes the openADR protocol based on the documentation provided by the openADR Profile B" .
 <https://w3id.org/def/openadr> <http://www.w3.org/2000/01/rdf-schema#comment> "http://purl.org/NET/rdflicense/cc-by4.0" .
-<https://w3id.org/def/openadr> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.2" .
+<https://w3id.org/def/openadr> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.3" .
 # 
 # 
 # #################################################################
@@ -64,6 +64,12 @@
 <https://w3id.org/def/openadr#contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/openadr#contains> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a target and its components" .
 <https://w3id.org/def/openadr#contains> <http://www.w3.org/2000/01/rdf-schema#label> "contains" .
+# 
+# https://w3id.org/def/openadr#containsEvent
+<https://w3id.org/def/openadr#containsEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/openadr#containsEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/openadr#DistributeEvent> .
+<https://w3id.org/def/openadr#containsEvent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/openadr#Event> .
+<https://w3id.org/def/openadr#containsEvent> <http://www.w3.org/2000/01/rdf-schema#label> "contains event" .
 # 
 # https://w3id.org/def/openadr#eventDescriptor
 <https://w3id.org/def/openadr#eventDescriptor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -437,6 +443,11 @@ _:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2003/0
 <https://w3id.org/def/openadr#DemandChargeSignal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/openadr#DemandChargeSignal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/openadr#Signal> .
 <https://w3id.org/def/openadr#DemandChargeSignal> <http://www.w3.org/2000/01/rdf-schema#label> "Demand charge signal" .
+# 
+# https://w3id.org/def/openadr#DistributeEvent
+<https://w3id.org/def/openadr#DistributeEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/openadr#DistributeEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Resource that contains a set of new of modified events" .
+<https://w3id.org/def/openadr#DistributeEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Distribute Event" .
 # 
 # https://w3id.org/def/openadr#ElectricityPriceSignal
 <https://w3id.org/def/openadr#ElectricityPriceSignal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

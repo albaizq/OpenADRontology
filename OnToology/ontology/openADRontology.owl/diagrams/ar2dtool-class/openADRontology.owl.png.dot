@@ -1,7 +1,7 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "base:SignalInterval" "http://www.w3.org/2006/time#Duration" "base:VEN" "base:Signal" "base:Opt" "base:ItemBase" "base:EventStatus" "base:ServiceArea" "base:ReportDescriptor" "base:SamplingRate" "base:VTN" "http://www.opengis.net/ont/geosparql#Geometry" "base:Target" "base:Asset" "http://www.opengis.net/ont/geosparql#SpatialObject" "base:Event" "base:Value" "http://www.w3.org/2006/time#Interval" "http://www.w3.org/2006/time#TemporalEntity" "base:Resource" "base:EventDescriptor" "http://www.opengis.net/ont/geosparql#Feature" "base:ReportPayload" "http://www.w3.org/2003/01/geo/wgs84_pos#Point" "base:PayloadResourceStatus" "base:Report" ; /*classes style*/
+node [shape = rectangle, color="orange"]; "base:SignalInterval" "http://www.w3.org/2006/time#Duration" "base:VEN" "base:Signal" "base:Opt" "base:ItemBase" "base:EventStatus" "base:DistributeEvent" "base:ServiceArea" "base:ReportDescriptor" "base:SamplingRate" "base:VTN" "http://www.opengis.net/ont/geosparql#Geometry" "base:Target" "base:Asset" "http://www.opengis.net/ont/geosparql#SpatialObject" "base:Event" "base:Value" "http://www.w3.org/2006/time#Interval" "http://www.w3.org/2006/time#TemporalEntity" "base:Resource" "base:EventDescriptor" "http://www.opengis.net/ont/geosparql#Feature" "base:ReportPayload" "http://www.w3.org/2003/01/geo/wgs84_pos#Point" "base:PayloadResourceStatus" "base:Report" ; /*classes style*/
 	"NULL" -> "base:hasDuration" [ label = "owl:onProperty" ];
 	"NULL" -> "base:Signal" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:eventDescriptor" [ label = "owl:onProperty" ];
@@ -30,18 +30,18 @@ node [shape = rectangle, color="orange"]; "base:SignalInterval" "http://www.w3.o
 	"NULL" -> "base:hasSignalInterval" [ label = "owl:onProperty" ];
 	"NULL" -> "base:contains" [ label = "owl:onProperty" ];
 	"NULL" -> "base:oadrMaxPeriod" [ label = "owl:onProperty" ];
-	"NULL" -> "http://www.opengis.net/ont/geosparql#SpatialObject" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "base:SamplingRate" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "http://www.opengis.net/ont/geosparql#SpatialObject" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "base:SignalIntervalDuration" [ label = "owl:onProperty" ];
 	"NULL" -> "base:hasTarget" [ label = "owl:onProperty" ];
 	"NULL" -> "http://www.w3.org/2003/01/geo/wgs84_pos#Point" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "base:ItemBase" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:manages" [ label = "owl:onProperty" ];
-	"NULL" -> "http://www.opengis.net/ont/geosparql#Geometry" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "base:ServiceArea" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "http://www.opengis.net/ont/geosparql#Geometry" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "base:SignalInterval" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:VEN" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:isOnChange" [ label = "owl:onProperty" ];
-	"NULL" -> "base:SignalInterval" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:PayloadResourceStatus" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "base:createdDateTime" [ label = "owl:onProperty" ];
 	"NULL" -> "base:hasSignal" [ label = "owl:onProperty" ];
@@ -73,6 +73,7 @@ node [shape = rectangle, color="orange"]; "base:SignalInterval" "http://www.w3.o
 	"http://www.opengis.net/ont/geosparql#SpatialObject" -> "http://www.opengis.net/ont/geosparql#SpatialObject" [ label = "http://www.opengis.net/ont/geosparql#sfContains" ];
 	"owl:Thing" -> "xsd:string" [ label = "base:groupName" ];
 	"owl:Thing" -> "xsd:anyURI" [ label = "base:marketContext" ];
+	"base:DistributeEvent" -> "base:Event" [ label = "base:containsEvent" ];
 	"base:EventDescriptor" -> "xsd:boolean" [ label = "base:isResponseRequired" ];
 	"base:EventDescriptor" -> "xsd:integer" [ label = "base:modificationNumber" ];
 	"owl:Thing" -> "xsd:string" [ label = "base:readingType" ];
