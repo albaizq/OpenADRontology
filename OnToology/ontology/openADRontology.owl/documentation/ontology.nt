@@ -188,6 +188,10 @@
 <https://w3id.org/def/openadr#reportSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "Subject of a report" .
 <https://w3id.org/def/openadr#reportSubject> <http://www.w3.org/2000/01/rdf-schema#label> "report subject" .
 # 
+# https://w3id.org/def/openadr#responseRequired
+<https://w3id.org/def/openadr#responseRequired> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/openadr#responseRequired> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/openadr#Event> .
+# 
 # https://w3id.org/def/openadr#sendEvent
 <https://w3id.org/def/openadr#sendEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/openadr#sendEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/openadr#VTN> .
@@ -246,6 +250,12 @@
 <https://w3id.org/def/openadr#groupName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
 <https://w3id.org/def/openadr#groupName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/def/openadr#groupName> <http://www.w3.org/2000/01/rdf-schema#label> "group name" .
+# 
+# https://w3id.org/def/openadr#hasSignalType
+<https://w3id.org/def/openadr#hasSignalType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/openadr#hasSignalType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/openadr#Signal> .
+<https://w3id.org/def/openadr#hasSignalType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/openadr#hasSignalType> <http://www.w3.org/2000/01/rdf-schema#label> "has signal type" .
 # 
 # https://w3id.org/def/openadr#isOnChange
 <https://w3id.org/def/openadr#isOnChange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -311,6 +321,10 @@
 <https://w3id.org/def/openadr#reportName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/openadr#Report> .
 <https://w3id.org/def/openadr#reportName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/def/openadr#reportName> <http://www.w3.org/2000/01/rdf-schema#label> "report name" .
+# 
+# https://w3id.org/def/openadr#responseRequired
+<https://w3id.org/def/openadr#responseRequired> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/openadr#responseRequired> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 # 
 # https://w3id.org/def/openadr#signalName
 <https://w3id.org/def/openadr#signalName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
