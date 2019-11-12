@@ -220,6 +220,11 @@
                rdfs:label "report subject" .
 
 
+###  https://w3id.org/def/openadr#responseRequired
+:responseRequired rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Event .
+
+
 ###  https://w3id.org/def/openadr#sendEvent
 :sendEvent rdf:type owl:ObjectProperty ;
            rdfs:domain :VTN ;
@@ -281,6 +286,13 @@
            rdfs:subPropertyOf owl:topDataProperty ;
            rdfs:range xsd:string ;
            rdfs:label "group name" .
+
+
+###  https://w3id.org/def/openadr#hasSignalType
+:hasSignalType rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Signal ;
+               rdfs:range xsd:string ;
+               rdfs:label "has signal type" .
 
 
 ###  https://w3id.org/def/openadr#isOnChange
@@ -358,6 +370,12 @@
             rdfs:domain :Report ;
             rdfs:range xsd:string ;
             rdfs:label "report name" .
+
+
+###  https://w3id.org/def/openadr#responseRequired
+:responseRequired rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Event ;
+                  rdfs:range xsd:string .
 
 
 ###  https://w3id.org/def/openadr#signalName
