@@ -811,46 +811,6 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
     
 
 
-    <!-- https://w3id.org/def/openadr#BidEnergySignal -->
-
-
-    <owl:Class rdf:about="https://w3id.org/def/openadr#BidEnergySignal">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#Signal"/>
-        <rdfs:label>Bid energy signal</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/openadr#BidLoadSignal -->
-
-
-    <owl:Class rdf:about="https://w3id.org/def/openadr#BidLoadSignal">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#Signal"/>
-        <rdfs:label>Bid load signal</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/openadr#BidPriceSignal -->
-
-
-    <owl:Class rdf:about="https://w3id.org/def/openadr#BidPriceSignal">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#Signal"/>
-        <rdfs:label>Bid price signal</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/openadr#ChargeStateSignal -->
-
-
-    <owl:Class rdf:about="https://w3id.org/def/openadr#ChargeStateSignal">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#Signal"/>
-        <rdfs:label>Charge state signal</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/def/openadr#DataReport -->
 
 
@@ -863,42 +823,12 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
     
 
 
-    <!-- https://w3id.org/def/openadr#DemandChargeSignal -->
-
-
-    <owl:Class rdf:about="https://w3id.org/def/openadr#DemandChargeSignal">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#Signal"/>
-        <rdfs:label>Demand charge signal</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/def/openadr#DistributeEvent -->
 
 
     <owl:Class rdf:about="https://w3id.org/def/openadr#DistributeEvent">
         <rdfs:comment>Resource that contains a set of new of modified events</rdfs:comment>
         <rdfs:label>Distribute Event</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/openadr#ElectricityPriceSignal -->
-
-
-    <owl:Class rdf:about="https://w3id.org/def/openadr#ElectricityPriceSignal">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#Signal"/>
-        <rdfs:label>Electricity price signal</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/openadr#EnergyPriceSignal -->
-
-
-    <owl:Class rdf:about="https://w3id.org/def/openadr#EnergyPriceSignal">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#Signal"/>
-        <rdfs:label>Energy price signal</rdfs:label>
     </owl:Class>
     
 
@@ -1021,26 +951,6 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
         <rdfs:comment>Units for the data in the report</rdfs:comment>
         <rdfs:isDefinedBy>OASIS Energy Market Information Exchange (eMIX) standard</rdfs:isDefinedBy>
         <rdfs:label>Item base</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/openadr#LoadControlSignal -->
-
-
-    <owl:Class rdf:about="https://w3id.org/def/openadr#LoadControlSignal">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#Signal"/>
-        <rdfs:label>Load control signal</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/openadr#LoadDispatchSignal -->
-
-
-    <owl:Class rdf:about="https://w3id.org/def/openadr#LoadDispatchSignal">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#Signal"/>
-        <rdfs:label>Load dispatch signal</rdfs:label>
     </owl:Class>
     
 
@@ -1286,16 +1196,6 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
         </rdfs:subClassOf>
         <rdfs:comment>Interval of time where a signal is active</rdfs:comment>
         <rdfs:label>Interval</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/openadr#SimpleSignal -->
-
-
-    <owl:Class rdf:about="https://w3id.org/def/openadr#SimpleSignal">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#Signal"/>
-        <rdfs:label>Simple signal</rdfs:label>
     </owl:Class>
     
 

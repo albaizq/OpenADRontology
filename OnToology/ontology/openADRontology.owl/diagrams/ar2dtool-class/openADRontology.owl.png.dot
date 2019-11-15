@@ -21,8 +21,8 @@ node [shape = rectangle, color="orange"]; "base:SignalInterval" "http://www.w3.o
 	"NULL" -> "base:isMeasuredIn" [ label = "owl:onProperty" ];
 	"NULL" -> "xsd:boolean" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:version" [ label = "owl:onProperty" ];
-	"NULL" -> "base:expectedResponse" [ label = "owl:onProperty" ];
 	"NULL" -> "base:hasActivePeriod" [ label = "owl:onProperty" ];
+	"NULL" -> "base:expectedResponse" [ label = "owl:onProperty" ];
 	"NULL" -> "base:dstart" [ label = "owl:onProperty" ];
 	"NULL" -> "http://www.w3.org/2003/01/geo/wgs84_pos#location" [ label = "owl:onProperty" ];
 	"NULL" -> "base:recovery" [ label = "owl:onProperty" ];

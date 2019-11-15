@@ -26,9 +26,6 @@
     "Opt" : {
       "@id" : "https://w3id.org/def/openadr#Opt"
     },
-    "SimpleSignal" : {
-      "@id" : "https://w3id.org/def/openadr#SimpleSignal"
-    },
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
     },
@@ -75,12 +72,6 @@
       "@id" : "https://w3id.org/def/openadr#hasPayloadReourceStatus",
       "@type" : "@id"
     },
-    "LoadControlSignal" : {
-      "@id" : "https://w3id.org/def/openadr#LoadControlSignal"
-    },
-    "BidPriceSignal" : {
-      "@id" : "https://w3id.org/def/openadr#BidPriceSignal"
-    },
     "Geometry" : {
       "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
     },
@@ -113,9 +104,6 @@
     },
     "ReportPayload" : {
       "@id" : "https://w3id.org/def/openadr#ReportPayload"
-    },
-    "EnergyPriceSignal" : {
-      "@id" : "https://w3id.org/def/openadr#EnergyPriceSignal"
     },
     "OptIn" : {
       "@id" : "https://w3id.org/def/openadr#OptIn"
@@ -164,9 +152,6 @@
     "Report" : {
       "@id" : "https://w3id.org/def/openadr#Report"
     },
-    "ChargeStateSignal" : {
-      "@id" : "https://w3id.org/def/openadr#ChargeStateSignal"
-    },
     "creator" : {
       "@id" : "http://purl.org/dc/elements/1.1/creator"
     },
@@ -184,9 +169,6 @@
     "eventName" : {
       "@id" : "https://w3id.org/def/openadr#eventName",
       "@type" : "http://www.w3.org/2002/07/owl#rational"
-    },
-    "LoadDispatchSignal" : {
-      "@id" : "https://w3id.org/def/openadr#LoadDispatchSignal"
     },
     "modificationReason" : {
       "@id" : "https://w3id.org/def/openadr#modificationReason",
@@ -223,9 +205,6 @@
     "isOnChange" : {
       "@id" : "https://w3id.org/def/openadr#isOnChange",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
-    },
-    "DemandChargeSignal" : {
-      "@id" : "https://w3id.org/def/openadr#DemandChargeSignal"
     },
     "Duration" : {
       "@id" : "http://www.w3.org/2006/time#Duration"
@@ -355,9 +334,6 @@
       "@id" : "https://w3id.org/def/openadr#hasSignal",
       "@type" : "@id"
     },
-    "ElectricityPriceSignal" : {
-      "@id" : "https://w3id.org/def/openadr#ElectricityPriceSignal"
-    },
     "reportDataSource" : {
       "@id" : "https://w3id.org/def/openadr#reportDataSource",
       "@type" : "@id"
@@ -372,12 +348,6 @@
     "reportSubject" : {
       "@id" : "https://w3id.org/def/openadr#reportSubject",
       "@type" : "@id"
-    },
-    "BidEnergySignal" : {
-      "@id" : "https://w3id.org/def/openadr#BidEnergySignal"
-    },
-    "BidLoadSignal" : {
-      "@id" : "https://w3id.org/def/openadr#BidLoadSignal"
     },
     "Unit_of_measure" : {
       "@id" : "http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"

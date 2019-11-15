@@ -488,30 +488,6 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
        rdfs:label "Asset" .
 
 
-###  https://w3id.org/def/openadr#BidEnergySignal
-:BidEnergySignal rdf:type owl:Class ;
-                 rdfs:subClassOf :Signal ;
-                 rdfs:label "Bid energy signal" .
-
-
-###  https://w3id.org/def/openadr#BidLoadSignal
-:BidLoadSignal rdf:type owl:Class ;
-               rdfs:subClassOf :Signal ;
-               rdfs:label "Bid load signal" .
-
-
-###  https://w3id.org/def/openadr#BidPriceSignal
-:BidPriceSignal rdf:type owl:Class ;
-                rdfs:subClassOf :Signal ;
-                rdfs:label "Bid price signal" .
-
-
-###  https://w3id.org/def/openadr#ChargeStateSignal
-:ChargeStateSignal rdf:type owl:Class ;
-                   rdfs:subClassOf :Signal ;
-                   rdfs:label "Charge state signal" .
-
-
 ###  https://w3id.org/def/openadr#DataReport
 :DataReport rdf:type owl:Class ;
             rdfs:subClassOf :Report ;
@@ -520,28 +496,10 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
             rdfs:label "Data report" .
 
 
-###  https://w3id.org/def/openadr#DemandChargeSignal
-:DemandChargeSignal rdf:type owl:Class ;
-                    rdfs:subClassOf :Signal ;
-                    rdfs:label "Demand charge signal" .
-
-
 ###  https://w3id.org/def/openadr#DistributeEvent
 :DistributeEvent rdf:type owl:Class ;
                  rdfs:comment "Resource that contains a set of new of modified events" ;
                  rdfs:label "Distribute Event" .
-
-
-###  https://w3id.org/def/openadr#ElectricityPriceSignal
-:ElectricityPriceSignal rdf:type owl:Class ;
-                        rdfs:subClassOf :Signal ;
-                        rdfs:label "Electricity price signal" .
-
-
-###  https://w3id.org/def/openadr#EnergyPriceSignal
-:EnergyPriceSignal rdf:type owl:Class ;
-                   rdfs:subClassOf :Signal ;
-                   rdfs:label "Energy price signal" .
 
 
 ###  https://w3id.org/def/openadr#Event
@@ -622,18 +580,6 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
           rdfs:comment "Units for the data in the report" ;
           rdfs:isDefinedBy "OASIS Energy Market Information Exchange (eMIX) standard" ;
           rdfs:label "Item base" .
-
-
-###  https://w3id.org/def/openadr#LoadControlSignal
-:LoadControlSignal rdf:type owl:Class ;
-                   rdfs:subClassOf :Signal ;
-                   rdfs:label "Load control signal" .
-
-
-###  https://w3id.org/def/openadr#LoadDispatchSignal
-:LoadDispatchSignal rdf:type owl:Class ;
-                    rdfs:subClassOf :Signal ;
-                    rdfs:label "Load dispatch signal" .
 
 
 ###  https://w3id.org/def/openadr#MetadataReport
@@ -793,12 +739,6 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
                                 ] ;
                 rdfs:comment "Interval of time where a signal is active" ;
                 rdfs:label "Interval" .
-
-
-###  https://w3id.org/def/openadr#SimpleSignal
-:SimpleSignal rdf:type owl:Class ;
-              rdfs:subClassOf :Signal ;
-              rdfs:label "Simple signal" .
 
 
 ###  https://w3id.org/def/openadr#Target

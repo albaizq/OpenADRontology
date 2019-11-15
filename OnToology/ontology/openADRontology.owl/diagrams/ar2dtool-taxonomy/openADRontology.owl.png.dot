@@ -1,31 +1,21 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; "base:SimpleSignal" "base:Signal" "base:Opt" "http://www.w3.org/2006/time#Instant" "base:GreenButtonReport" "base:DataReport" "base:TelemetryUsageReport" "base:BidEnergySignal" "base:ElectricityPriceSignal" "base:LoadControlSignal" "base:ServiceArea" "base:HistoryReport" "base:DemandChargeSignal" "base:OptIn" "base:LoadDispatchSignal" "base:OptOut" "base:EnergyPriceSignal" "base:TelemetryStatusReport" "base:BidPriceSignal" "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" "base:Asset" "http://www.opengis.net/ont/geosparql#SpatialObject" "http://www.w3.org/2006/time#Interval" "base:ChargeStateSignal" "http://www.w3.org/2006/time#TemporalEntity" "base:TelemetryReport" "base:BidLoadSignal" "http://www.opengis.net/ont/geosparql#Feature" "base:MetadataReport" "base:HistoryUsageReport" "base:Report" ; /*classes style*/
+node [shape = rectangle, color="black"]; "base:Opt" "http://www.w3.org/2006/time#Instant" "base:GreenButtonReport" "base:DataReport" "base:TelemetryUsageReport" "base:ServiceArea" "base:HistoryReport" "base:OptIn" "base:OptOut" "base:TelemetryStatusReport" "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" "base:Asset" "http://www.opengis.net/ont/geosparql#SpatialObject" "http://www.w3.org/2006/time#Interval" "http://www.w3.org/2006/time#TemporalEntity" "base:TelemetryReport" "http://www.opengis.net/ont/geosparql#Feature" "base:MetadataReport" "base:HistoryUsageReport" "base:Report" ; /*classes style*/
 	"base:Asset" -> "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" [ label = "rdfs:subClassOf" ];
 	"base:DataReport" -> "base:Report" [ label = "rdfs:subClassOf" ];
-	"base:EnergyPriceSignal" -> "base:Signal" [ label = "rdfs:subClassOf" ];
 	"base:TelemetryUsageReport" -> "base:TelemetryReport" [ label = "rdfs:subClassOf" ];
-	"base:SimpleSignal" -> "base:Signal" [ label = "rdfs:subClassOf" ];
-	"base:ChargeStateSignal" -> "base:Signal" [ label = "rdfs:subClassOf" ];
 	"base:HistoryReport" -> "base:DataReport" [ label = "rdfs:subClassOf" ];
 	"http://www.w3.org/2006/time#Interval" -> "http://www.w3.org/2006/time#TemporalEntity" [ label = "rdfs:subClassOf" ];
 	"base:GreenButtonReport" -> "base:HistoryReport" [ label = "rdfs:subClassOf" ];
-	"base:BidLoadSignal" -> "base:Signal" [ label = "rdfs:subClassOf" ];
 	"base:ServiceArea" -> "http://www.opengis.net/ont/geosparql#Feature" [ label = "rdfs:subClassOf" ];
 	"http://www.opengis.net/ont/geosparql#Feature" -> "http://www.opengis.net/ont/geosparql#SpatialObject" [ label = "rdfs:subClassOf" ];
-	"base:LoadControlSignal" -> "base:Signal" [ label = "rdfs:subClassOf" ];
 	"base:OptOut" -> "base:Opt" [ label = "rdfs:subClassOf" ];
-	"base:BidEnergySignal" -> "base:Signal" [ label = "rdfs:subClassOf" ];
-	"base:BidPriceSignal" -> "base:Signal" [ label = "rdfs:subClassOf" ];
-	"base:ElectricityPriceSignal" -> "base:Signal" [ label = "rdfs:subClassOf" ];
 	"base:OptIn" -> "base:Opt" [ label = "rdfs:subClassOf" ];
 	"base:MetadataReport" -> "base:Report" [ label = "rdfs:subClassOf" ];
 	"http://www.w3.org/2006/time#Instant" -> "http://www.w3.org/2006/time#TemporalEntity" [ label = "rdfs:subClassOf" ];
 	"base:TelemetryReport" -> "base:DataReport" [ label = "rdfs:subClassOf" ];
-	"base:LoadDispatchSignal" -> "base:Signal" [ label = "rdfs:subClassOf" ];
 	"base:TelemetryStatusReport" -> "base:TelemetryReport" [ label = "rdfs:subClassOf" ];
 	"base:HistoryUsageReport" -> "base:HistoryReport" [ label = "rdfs:subClassOf" ];
-	"base:DemandChargeSignal" -> "base:Signal" [ label = "rdfs:subClassOf" ];
 
 }

@@ -476,44 +476,8 @@
     "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/openadr#BidEnergySignal",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Bid energy signal"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/def/openadr#Signal"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/openadr#BidLoadSignal",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Bid load signal"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/def/openadr#Signal"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/openadr#BidPriceSignal",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Bid price signal"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/def/openadr#Signal"
-  } ]
-}, {
   "@id" : "https://w3id.org/def/openadr#Canceled",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#EventStatus" ]
-}, {
-  "@id" : "https://w3id.org/def/openadr#ChargeStateSignal",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Charge state signal"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/def/openadr#Signal"
-  } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#Current",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#ItemBase" ]
@@ -533,15 +497,6 @@
     "@id" : "https://w3id.org/def/openadr#Report"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/openadr#DemandChargeSignal",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Demand charge signal"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/def/openadr#Signal"
-  } ]
-}, {
   "@id" : "https://w3id.org/def/openadr#DistributeEvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -551,26 +506,8 @@
     "@value" : "Distribute Event"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/openadr#ElectricityPriceSignal",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Electricity price signal"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/def/openadr#Signal"
-  } ]
-}, {
   "@id" : "https://w3id.org/def/openadr#EnergyAppartent",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#ItemBase" ]
-}, {
-  "@id" : "https://w3id.org/def/openadr#EnergyPriceSignal",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Energy price signal"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/def/openadr#Signal"
-  } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#EnergyReactive",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#ItemBase" ]
@@ -687,24 +624,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Item base"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/openadr#LoadControlSignal",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Load control signal"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/def/openadr#Signal"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/openadr#LoadDispatchSignal",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Load dispatch signal"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/def/openadr#Signal"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#MetadataReport",
@@ -918,15 +837,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "interval duration"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/openadr#SimpleSignal",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Simple signal"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/def/openadr#Signal"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#Target",
