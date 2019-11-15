@@ -149,6 +149,10 @@
     "Interval" : {
       "@id" : "http://www.w3.org/2006/time#Interval"
     },
+    "responseRequired" : {
+      "@id" : "https://w3id.org/def/openadr#responseRequired",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
     "dataquality" : {
       "@id" : "https://w3id.org/def/openadr#dataquality",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
@@ -321,6 +325,10 @@
     "marketContext" : {
       "@id" : "https://w3id.org/def/openadr#marketContext",
       "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "hasSignalType" : {
+      "@id" : "https://w3id.org/def/openadr#hasSignalType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "SpatialThing" : {
       "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
