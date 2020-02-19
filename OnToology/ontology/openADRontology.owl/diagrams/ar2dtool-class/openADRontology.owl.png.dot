@@ -1,9 +1,10 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "base:SignalInterval" "http://www.w3.org/2006/time#Duration" "base:VEN" "base:Signal" "base:Opt" "base:ItemBase" "base:EventStatus" "base:DistributeEvent" "base:ServiceArea" "base:ReportDescriptor" "base:SamplingRate" "base:Group" "base:Node" "base:VTN" "http://www.opengis.net/ont/geosparql#Geometry" "base:Asset" "http://www.opengis.net/ont/geosparql#SpatialObject" "base:Event" "http://www.w3.org/2006/time#Interval" "http://www.w3.org/2006/time#TemporalEntity" "base:Resource" "base:EventDescriptor" "http://www.opengis.net/ont/geosparql#Feature" "base:ReportPayload" "http://www.w3.org/2003/01/geo/wgs84_pos#Point" "base:PayloadResourceStatus" "base:Report" ; /*classes style*/
+node [shape = rectangle, color="orange"]; "base:SignalInterval" "http://www.w3.org/2006/time#Duration" "base:VEN" "base:Signal" "base:Opt" "base:ItemBase" "base:EventStatus" "base:ReportSpecifier" "base:ServiceArea" "base:ReportDescriptor" "base:SamplingRate" "base:Group" "base:Node" "base:VTN" "http://www.opengis.net/ont/geosparql#Geometry" "base:Asset" "base:SpecifierPayload" "http://www.opengis.net/ont/geosparql#SpatialObject" "base:Event" "http://www.w3.org/2006/time#Interval" "http://www.w3.org/2006/time#TemporalEntity" "base:SignalPayload" "base:Resource" "base:EventDescriptor" "http://www.opengis.net/ont/geosparql#Feature" "base:ReportPayload" "http://www.w3.org/2003/01/geo/wgs84_pos#Point" "base:MetadataReport" "base:PayloadResourceStatus" "base:Report" ; /*classes style*/
 	"http://www.opengis.net/ont/geosparql#Feature" -> "http://www.opengis.net/ont/geosparql#Geometry" [ label = "owl:disjointWith" ];
 	"base:groupName" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
+	"base:hasPayloadReourceStatus" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
 	"NULL" -> "base:hasDuration" [ label = "owl:onProperty" ];
 	"NULL" -> "base:Signal" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:eventDescriptor" [ label = "owl:onProperty" ];
@@ -30,20 +31,22 @@ node [shape = rectangle, color="orange"]; "base:SignalInterval" "http://www.w3.o
 	"NULL" -> "base:sendEvent" [ label = "owl:onProperty" ];
 	"NULL" -> "base:hasPayloadReourceStatus" [ label = "owl:onProperty" ];
 	"NULL" -> "base:contains" [ label = "owl:onProperty" ];
+	"NULL" -> "base:Report" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:oadrMaxPeriod" [ label = "owl:onProperty" ];
-	"NULL" -> "base:SamplingRate" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "http://www.opengis.net/ont/geosparql#SpatialObject" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "base:SamplingRate" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "base:SignalIntervalDuration" [ label = "owl:onProperty" ];
 	"NULL" -> "base:hasTarget" [ label = "owl:onProperty" ];
 	"NULL" -> "http://www.w3.org/2003/01/geo/wgs84_pos#Point" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "base:ItemBase" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:manages" [ label = "owl:onProperty" ];
-	"NULL" -> "base:ServiceArea" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "http://www.opengis.net/ont/geosparql#Geometry" [ label = "owl:allValuesFrom" ];
-	"NULL" -> "base:VEN" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "base:ServiceArea" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "base:hasItemBase" [ label = "owl:onProperty" ];
 	"NULL" -> "base:isOnChange" [ label = "owl:onProperty" ];
+	"NULL" -> "base:VEN" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:SignalInterval" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:PayloadResourceStatus" [ label = "owl:allValuesFrom" ];
-	"NULL" -> "base:DistributeEvent" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:createdDateTime" [ label = "owl:onProperty" ];
 	"NULL" -> "http://www.w3.org/2006/time#Duration" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "base:Opt" [ label = "owl:someValuesFrom" ];
@@ -54,11 +57,14 @@ node [shape = rectangle, color="orange"]; "base:SignalInterval" "http://www.w3.o
 	"NULL" -> "base:isActiveDuringPeriod" [ label = "owl:onProperty" ];
 	"NULL" -> "base:accuracy" [ label = "owl:onProperty" ];
 	"NULL" -> "http://www.w3.org/2006/time#Interval" [ label = "owl:someValuesFrom" ];
-	"NULL" -> "base:SignalInterval" [ label = "owl:onClass" ];
 	"NULL" -> "xsd:string" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "base:SignalInterval" [ label = "owl:onClass" ];
 	"NULL" -> "base:payloadFloat" [ label = "owl:onProperty" ];
+	"base:hasSignalPayload" -> "base:hasPayload" [ label = "rdfs:subPropertyOf" ];
+	"base:hasReportPayload" -> "base:hasPayload" [ label = "rdfs:subPropertyOf" ];
 	"https://w3id.org/def/openadr" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = ":license" ];
 	"https://w3id.org/def/openadr" -> "http://www.garcia-castro.com/foaf.rdf#me" [ label = ":creator" ];
+	"base:hasSpecifierPayload" -> "base:hasPayload" [ label = "rdfs:subPropertyOf" ];
 	"owl:Thing" -> "xsd:string" [ label = "base:confidence" ];
 	"owl:Thing" -> "xsd:dateTimeStamp" [ label = "base:dstart" ];
 	"base:Report" -> "owl:Thing" [ label = "base:reportSubject" ];
@@ -72,7 +78,8 @@ node [shape = rectangle, color="orange"]; "base:SignalInterval" "http://www.w3.o
 	"base:Event" -> "xsd:string" [ label = "base:responseRequired" ];
 	"owl:Thing" -> "xsd:string" [ label = "base:groupName" ];
 	"owl:Thing" -> "xsd:anyURI" [ label = "base:marketContext" ];
-	"base:DistributeEvent" -> "base:Event" [ label = "base:containsEvent" ];
+	"owl:Thing" -> "base:Event" [ label = "base:containsEvent" ];
+	"base:MetadataReport" -> "base:ReportSpecifier" [ label = "base:specifies" ];
 	"base:EventDescriptor" -> "xsd:integer" [ label = "base:modificationNumber" ];
 	"base:EventDescriptor" -> "xsd:boolean" [ label = "base:isResponseRequired" ];
 	"owl:Thing" -> "xsd:string" [ label = "base:readingType" ];
@@ -80,6 +87,7 @@ node [shape = rectangle, color="orange"]; "base:SignalInterval" "http://www.w3.o
 	"owl:Thing" -> "xsd:dateTimeStamp" [ label = "base:createdDateTime" ];
 	"base:Event" -> "base:EventDescriptor" [ label = "base:eventDescriptor" ];
 	"base:Report" -> "xsd:string" [ label = "base:reportName" ];
+	"base:Signal" -> "base:SignalPayload" [ label = "base:hasSignalPayload" ];
 	"base:Event" -> "base:EventStatus" [ label = "base:hasEventStatus" ];
 	"base:Node" -> "owl:rational" [ label = "base:nodeName" ];
 	"base:SamplingRate" -> "xsd:boolean" [ label = "base:isOnChange" ];
@@ -92,6 +100,7 @@ node [shape = rectangle, color="orange"]; "base:SignalInterval" "http://www.w3.o
 	"owl:Thing" -> "base:SignalInterval" [ label = "base:isDefinedIn" ];
 	"base:Report" -> "base:ReportPayload" [ label = "base:hasReportPayload" ];
 	"base:Event" -> "owl:rational" [ label = "base:eventName" ];
+	"base:ReportSpecifier" -> "base:SpecifierPayload" [ label = "base:hasSpecifierPayload" ];
 	"base:EventDescriptor" -> "xsd:string" [ label = "base:randomization" ];
 	"owl:Thing" -> "xsd:string" [ label = "base:accuracy" ];
 	"base:VTN" -> "base:Event" [ label = "base:sendEvent" ];

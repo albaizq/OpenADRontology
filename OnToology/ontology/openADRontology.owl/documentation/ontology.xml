@@ -17,7 +17,7 @@
         <terms:title>OpenADR ontology</terms:title>
         <rdfs:comment>This ontology describes the openADR protocol based on the documentation provided by the openADR Profile B</rdfs:comment>
         <rdfs:comment>http://purl.org/NET/rdflicense/cc-by4.0</rdfs:comment>
-        <owl:versionInfo>0.1.4</owl:versionInfo>
+        <owl:versionInfo>0.1.5</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -134,7 +134,6 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#containsEvent">
-        <rdfs:domain rdf:resource="https://w3id.org/def/openadr#DistributeEvent"/>
         <rdfs:range rdf:resource="https://w3id.org/def/openadr#Event"/>
         <rdfs:label>contains event</rdfs:label>
     </owl:ObjectProperty>
@@ -194,10 +193,20 @@
     
 
 
+    <!-- https://w3id.org/def/openadr#hasPayload -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#hasPayload">
+        <rdfs:label>has payload</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/def/openadr#hasPayloadReourceStatus -->
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#hasPayloadReourceStatus">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:comment>Relation between an entity and the payload resource status</rdfs:comment>
         <rdfs:label>has payload resource status</rdfs:label>
     </owl:ObjectProperty>
@@ -208,6 +217,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#hasReportPayload">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/def/openadr#hasPayload"/>
         <rdfs:domain rdf:resource="https://w3id.org/def/openadr#Report"/>
         <rdfs:range rdf:resource="https://w3id.org/def/openadr#ReportPayload"/>
         <rdfs:comment>Relation between a report and its payload</rdfs:comment>
@@ -222,6 +232,32 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#hasSamplingRate">
         <rdfs:comment>Indicates the sampling rate of a report</rdfs:comment>
         <rdfs:label>has sampling rate</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/openadr#hasSignalPayload -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#hasSignalPayload">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/def/openadr#hasPayload"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/openadr#Signal"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/openadr#SignalPayload"/>
+        <rdfs:comment>Relation between a signal and its payload</rdfs:comment>
+        <rdfs:label>has signal payload</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/openadr#hasSpecifierPayload -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#hasSpecifierPayload">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/def/openadr#hasPayload"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/openadr#ReportSpecifier"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/openadr#SpecifierPayload"/>
+        <rdfs:comment>Relation between the specification of a report and its payload</rdfs:comment>
+        <rdfs:label>has specifier payload</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -385,6 +421,18 @@
         <rdfs:range rdf:resource="https://w3id.org/def/openadr#Event"/>
         <rdfs:comment>A link between a VTN and the event it sends</rdfs:comment>
         <rdfs:label>send</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/openadr#specifies -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#specifies">
+        <rdfs:domain rdf:resource="https://w3id.org/def/openadr#MetadataReport"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/openadr#ReportSpecifier"/>
+        <rdfs:label>relation between the report and its specification</rdfs:label>
+        <rdfs:label>specifies</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -839,16 +887,6 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
     
 
 
-    <!-- https://w3id.org/def/openadr#DistributeEvent -->
-
-
-    <owl:Class rdf:about="https://w3id.org/def/openadr#DistributeEvent">
-        <rdfs:comment>Resource that contains a set of new of modified events</rdfs:comment>
-        <rdfs:label>Distributed Event</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/def/openadr#Event -->
 
 
@@ -1020,7 +1058,20 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
     <!-- https://w3id.org/def/openadr#Node -->
 
 
-    <owl:Class rdf:about="https://w3id.org/def/openadr#Node"/>
+    <owl:Class rdf:about="https://w3id.org/def/openadr#Node">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#sendEvent"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/openadr#Opt"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#sendEvent"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/openadr#Report"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
@@ -1153,6 +1204,17 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
     
 
 
+    <!-- https://w3id.org/def/openadr#ReportSpecifier -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/openadr#ReportSpecifier">
+        <rdfs:comment>Each report specification specifies reporting capabilities</rdfs:comment>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Program Implementation Guide</rdfs:isDefinedBy>
+        <rdfs:label>Report Specifier</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/def/openadr#Resource -->
 
 
@@ -1174,6 +1236,12 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
 
 
     <owl:Class rdf:about="https://w3id.org/def/openadr#SamplingRate">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#hasItemBase"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/openadr#ItemBase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/def/openadr#oadrMaxPeriod"/>
@@ -1250,6 +1318,25 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
     
 
 
+    <!-- https://w3id.org/def/openadr#SignalPayload -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/openadr#SignalPayload">
+        <rdfs:label>Signal Payload</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/openadr#SpecifierPayload -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/openadr#SpecifierPayload">
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Program Implementation Guide</rdfs:isDefinedBy>
+        <rdfs:label>Specifier Payload</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/def/openadr#TelemetryReport -->
 
 
@@ -1309,12 +1396,6 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
 
     <owl:Class rdf:about="https://w3id.org/def/openadr#VTN">
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#Node"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#sendEvent"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/def/openadr#DistributeEvent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment>This is the OpenADR Virtual Top Node that is used to interact with the Resources enrolled in the DR Programs.</rdfs:comment>
         <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Program Implementation Guide</rdfs:isDefinedBy>
         <rdfs:label>Virtual Top Node (VTN)</rdfs:label>
