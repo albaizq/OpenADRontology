@@ -14,7 +14,7 @@
                                 <http://purl.org/dc/terms/title> "OpenADR ontology" ;
                                 rdfs:comment "This ontology describes the openADR protocol based on the documentation provided by the openADR Profile B" ,
                                              "http://purl.org/NET/rdflicense/cc-by4.0" ;
-                                owl:versionInfo "0.1.4" .
+                                owl:versionInfo "0.1.5" .
 
 #################################################################
 #    Annotation properties
@@ -76,7 +76,6 @@
 
 ###  https://w3id.org/def/openadr#containsEvent
 :containsEvent rdf:type owl:ObjectProperty ;
-               rdfs:domain :DistributeEvent ;
                rdfs:range :Event ;
                rdfs:label "contains event" .
 
@@ -114,14 +113,21 @@
              rdfs:label "has item base" .
 
 
+###  https://w3id.org/def/openadr#hasPayload
+:hasPayload rdf:type owl:ObjectProperty ;
+            rdfs:label "has payload" .
+
+
 ###  https://w3id.org/def/openadr#hasPayloadReourceStatus
 :hasPayloadReourceStatus rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf owl:topObjectProperty ;
                          rdfs:comment "Relation between an entity and the payload resource status" ;
                          rdfs:label "has payload resource status" .
 
 
 ###  https://w3id.org/def/openadr#hasReportPayload
 :hasReportPayload rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :hasPayload ;
                   rdfs:domain :Report ;
                   rdfs:range :ReportPayload ;
                   rdfs:comment "Relation between a report and its payload" ;
@@ -132,6 +138,24 @@
 :hasSamplingRate rdf:type owl:ObjectProperty ;
                  rdfs:comment "Indicates the sampling rate of a report" ;
                  rdfs:label "has sampling rate" .
+
+
+###  https://w3id.org/def/openadr#hasSignalPayload
+:hasSignalPayload rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :hasPayload ;
+                  rdfs:domain :Signal ;
+                  rdfs:range :SignalPayload ;
+                  rdfs:comment "Relation between a signal and its payload" ;
+                  rdfs:label "has signal payload" .
+
+
+###  https://w3id.org/def/openadr#hasSpecifierPayload
+:hasSpecifierPayload rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasPayload ;
+                     rdfs:domain :ReportSpecifier ;
+                     rdfs:range :SpecifierPayload ;
+                     rdfs:comment "Relation between the specification of a report and its payload" ;
+                     rdfs:label "has specifier payload" .
 
 
 ###  https://w3id.org/def/openadr#hasTarget
@@ -231,6 +255,14 @@
            rdfs:range :Event ;
            rdfs:comment "A link between a VTN and the event it sends" ;
            rdfs:label "send" .
+
+
+###  https://w3id.org/def/openadr#specifies
+:specifies rdf:type owl:ObjectProperty ;
+           rdfs:domain :MetadataReport ;
+           rdfs:range :ReportSpecifier ;
+           rdfs:label "relation between the report and its specification" ,
+                      "specifies" .
 
 
 ###  https://w3id.org/saref#isMeasuredIn
@@ -351,6 +383,13 @@
                     rdfs:range xsd:string .
 
 
+###  https://w3id.org/def/openadr#nodeName
+:nodeName rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Node ;
+          rdfs:range owl:rational ;
+          rdfs:label "Node name" .
+
+
 ###  https://w3id.org/def/openadr#payloadFloat
 :payloadFloat rdf:type owl:DatatypeProperty ;
               rdfs:range xsd:float ;
@@ -400,18 +439,10 @@
             rdfs:label "signal name" .
 
 
-###  https://w3id.org/def/openadr#nodeName
-:nodeName rdf:type owl:DatatypeProperty ;
-         rdfs:domain :Node ;
-         rdfs:range owl:rational ;
-         rdfs:label "Node name" .
-
-
 ###  https://w3id.org/def/openadr#version
 :version rdf:type owl:DatatypeProperty ;
          rdfs:range xsd:string ;
          rdfs:label "version" .
-
 
 
 #################################################################
@@ -504,12 +535,6 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
             rdfs:comment "These reports are used to report actual data that may be measured or calculated." ;
             rdfs:isDefinedBy "OpenADR 2.0 Demand Response Specification Profile B" ;
             rdfs:label "Data report" .
-
-
-###  https://w3id.org/def/openadr#DistributeEvent
-:DistributeEvent rdf:type owl:Class ;
-                 rdfs:comment "Resource that contains a set of new of modified events" ;
-                 rdfs:label "Distributed Event" .
 
 
 ###  https://w3id.org/def/openadr#Event
@@ -623,7 +648,15 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
 
 
 ###  https://w3id.org/def/openadr#Node
-:Node rdf:type owl:Class .
+:Node rdf:type owl:Class ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty :sendEvent ;
+                        owl:someValuesFrom :Opt
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :sendEvent ;
+                        owl:someValuesFrom :Report
+                      ] .
 
 
 ###  https://w3id.org/def/openadr#Opt
@@ -709,6 +742,13 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
                rdfs:label "Report payload" .
 
 
+###  https://w3id.org/def/openadr#ReportSpecifier
+:ReportSpecifier rdf:type owl:Class ;
+                 rdfs:comment "Each report specification specifies reporting capabilities" ;
+                 rdfs:isDefinedBy "OpenADR 2.0 Demand Response Program Implementation Guide" ;
+                 rdfs:label "Report Specifier" .
+
+
 ###  https://w3id.org/def/openadr#Resource
 :Resource rdf:type owl:Class ;
           rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -723,6 +763,10 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
 ###  https://w3id.org/def/openadr#SamplingRate
 :SamplingRate rdf:type owl:Class ;
               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasItemBase ;
+                                owl:someValuesFrom :ItemBase
+                              ] ,
+                              [ rdf:type owl:Restriction ;
                                 owl:onProperty :oadrMaxPeriod ;
                                 owl:allValuesFrom <http://www.w3.org/2006/time#TemporalEntity>
                               ] ,
@@ -772,6 +816,17 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
                 rdfs:label "Interval" .
 
 
+###  https://w3id.org/def/openadr#SignalPayload
+:SignalPayload rdf:type owl:Class ;
+               rdfs:label "Signal Payload" .
+
+
+###  https://w3id.org/def/openadr#SpecifierPayload
+:SpecifierPayload rdf:type owl:Class ;
+                  rdfs:isDefinedBy "OpenADR 2.0 Demand Response Program Implementation Guide" ;
+                  rdfs:label "Specifier Payload" .
+
+
 ###  https://w3id.org/def/openadr#TelemetryReport
 :TelemetryReport rdf:type owl:Class ;
                  rdfs:subClassOf :DataReport ;
@@ -810,11 +865,7 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
 
 ###  https://w3id.org/def/openadr#VTN
 :VTN rdf:type owl:Class ;
-     rdfs:subClassOf :Node ,
-                     [ rdf:type owl:Restriction ;
-                       owl:onProperty :sendEvent ;
-                       owl:someValuesFrom :DistributeEvent
-                     ] ;
+     rdfs:subClassOf :Node ;
      rdfs:comment "This is the OpenADR Virtual Top Node that is used to interact with the Resources enrolled in the DR Programs." ;
      rdfs:isDefinedBy "OpenADR 2.0 Demand Response Program Implementation Guide" ;
      rdfs:label "Virtual Top Node (VTN)" .
@@ -848,4 +899,4 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
                :EventStatus .
 
 
-###  Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
