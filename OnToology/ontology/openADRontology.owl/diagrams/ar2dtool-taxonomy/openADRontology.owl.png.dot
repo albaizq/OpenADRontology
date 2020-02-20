@@ -11,8 +11,8 @@ node [shape = rectangle, color="black"]; "base:VEN" "base:Opt" "http://www.w3.or
 	"base:GreenButtonReport" -> "base:HistoryReport" [ label = "rdfs:subClassOf" ];
 	"base:ServiceArea" -> "http://www.opengis.net/ont/geosparql#Feature" [ label = "rdfs:subClassOf" ];
 	"http://www.opengis.net/ont/geosparql#Feature" -> "http://www.opengis.net/ont/geosparql#SpatialObject" [ label = "rdfs:subClassOf" ];
-	"base:VEN" -> "base:Node" [ label = "rdfs:subClassOf" ];
 	"base:OptOut" -> "base:Opt" [ label = "rdfs:subClassOf" ];
+	"base:VEN" -> "base:Node" [ label = "rdfs:subClassOf" ];
 	"base:OptIn" -> "base:Opt" [ label = "rdfs:subClassOf" ];
 	"base:MetadataReport" -> "base:Report" [ label = "rdfs:subClassOf" ];
 	"http://www.w3.org/2006/time#Instant" -> "http://www.w3.org/2006/time#TemporalEntity" [ label = "rdfs:subClassOf" ];
