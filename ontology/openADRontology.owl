@@ -14,7 +14,7 @@
                                 <http://purl.org/dc/terms/title> "OpenADR ontology" ;
                                 rdfs:comment "This ontology describes the openADR protocol based on the documentation provided by the openADR Profile B" ,
                                              "http://purl.org/NET/rdflicense/cc-by4.0" ;
-                                owl:versionInfo "0.1.5" .
+                                owl:versionInfo "0.1.6" .
 
 #################################################################
 #    Annotation properties
@@ -46,6 +46,7 @@
 
 ###  http://www.opengis.net/ont/geosparql#sfContains
 <http://www.opengis.net/ont/geosparql#sfContains> rdf:type owl:ObjectProperty ;
+                                                  owl:inverseOf :belongsTo ;
                                                   rdfs:domain <http://www.opengis.net/ont/geosparql#SpatialObject> ;
                                                   rdfs:range <http://www.opengis.net/ont/geosparql#SpatialObject> ;
                                                   rdfs:comment "Exists if the subject SpatialObject spatially contains the object SpatialObject" ;
@@ -68,16 +69,16 @@
            rdfs:label "applies to" .
 
 
+###  https://w3id.org/def/openadr#belongsTo
+:belongsTo rdf:type owl:ObjectProperty ;
+           rdfs:comment "Relationship between a VE, Resource or Asset with the Group of targets associated" ;
+           rdfs:label "belongs to" .
+
+
 ###  https://w3id.org/def/openadr#contains
 :contains rdf:type owl:ObjectProperty ;
           rdfs:comment "Relation between a target and its components" ;
           rdfs:label "contains" .
-
-
-###  https://w3id.org/def/openadr#containsEvent
-:containsEvent rdf:type owl:ObjectProperty ;
-               rdfs:range :Event ;
-               rdfs:label "contains event" .
 
 
 ###  https://w3id.org/def/openadr#eventDescriptor
@@ -107,10 +108,25 @@
                 rdfs:label "has event status" .
 
 
+###  https://w3id.org/def/openadr#hasGranularity
+:hasGranularity rdf:type owl:ObjectProperty ;
+                rdfs:label "has granularity" .
+
+
 ###  https://w3id.org/def/openadr#hasItemBase
 :hasItemBase rdf:type owl:ObjectProperty ;
              rdfs:range :ItemBase ;
              rdfs:label "has item base" .
+
+
+###  https://w3id.org/def/openadr#hasMaxPeriod
+:hasMaxPeriod rdf:type owl:ObjectProperty ;
+              rdfs:label "has max period" .
+
+
+###  https://w3id.org/def/openadr#hasMinPeriod
+:hasMinPeriod rdf:type owl:ObjectProperty ;
+              rdfs:label "has min period" .
 
 
 ###  https://w3id.org/def/openadr#hasPayload
@@ -120,9 +136,13 @@
 
 ###  https://w3id.org/def/openadr#hasPayloadReourceStatus
 :hasPayloadReourceStatus rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf owl:topObjectProperty ;
                          rdfs:comment "Relation between an entity and the payload resource status" ;
                          rdfs:label "has payload resource status" .
+
+
+###  https://w3id.org/def/openadr#hasReportBackDuration
+:hasReportBackDuration rdf:type owl:ObjectProperty ;
+                       rdfs:label "has report back duration" .
 
 
 ###  https://w3id.org/def/openadr#hasReportPayload
@@ -176,10 +196,22 @@
                 rdfs:label "has signal" .
 
 
+###  https://w3id.org/def/openadr#involvesSubject
+:involvesSubject rdf:type owl:ObjectProperty ;
+                 rdfs:comment "Relation between the report and its subject" ;
+                 rdfs:label "involves subject" .
+
+
 ###  https://w3id.org/def/openadr#isActiveDuringPeriod
 :isActiveDuringPeriod rdf:type owl:ObjectProperty ;
                       rdfs:comment "Relation between an entity an its available period" ;
                       rdfs:label "has active period" .
+
+
+###  https://w3id.org/def/openadr#isAvailableDuring
+:isAvailableDuring rdf:type owl:ObjectProperty ;
+                   rdfs:comment "Availability of a target" ;
+                   rdfs:label "is available during" .
 
 
 ###  https://w3id.org/def/openadr#isDefinedIn
@@ -189,26 +221,40 @@
              rdfs:label "has interval" .
 
 
+###  https://w3id.org/def/openadr#isManagedBy
+:isManagedBy rdf:type owl:ObjectProperty ;
+             owl:inverseOf :manages ;
+             rdfs:comment "Relation between a Resource and a VEN" ;
+             rdfs:label "is managed by" .
+
+
 ###  https://w3id.org/def/openadr#isMeasuredIn
 :isMeasuredIn rdf:type owl:ObjectProperty ;
               rdfs:comment "Relation to indicate the units of a measurement" ;
               rdfs:label "is measured in" .
 
 
+###  https://w3id.org/def/openadr#isReportedDuringInterval
+:isReportedDuringInterval rdf:type owl:ObjectProperty ;
+                          rdfs:label "is reported during interval" .
+
+
+###  https://w3id.org/def/openadr#isUnavailableDuring
+:isUnavailableDuring rdf:type owl:ObjectProperty ;
+                     rdfs:label "Unavailability of a target" ,
+                                "is unavailable during" .
+
+
 ###  https://w3id.org/def/openadr#manages
 :manages rdf:type owl:ObjectProperty ;
-         rdfs:comment "Relation between a DVN and its FEID" ;
+         rdfs:comment "Relation between a VEN and a Resource" ;
          rdfs:label "manages" .
 
 
-###  https://w3id.org/def/openadr#oadrMaxPeriod
-:oadrMaxPeriod rdf:type owl:ObjectProperty ;
-               rdfs:label "max period" .
-
-
-###  https://w3id.org/def/openadr#oadrMinPeriod
-:oadrMinPeriod rdf:type owl:ObjectProperty ;
-               rdfs:label "min period" .
+###  https://w3id.org/def/openadr#plans
+:plans rdf:type owl:ObjectProperty ;
+       rdfs:comment "Relation between Opt and the planification of a target" ;
+       rdfs:label "plans" .
 
 
 ###  https://w3id.org/def/openadr#ramp_up
@@ -219,6 +265,12 @@
 ###  https://w3id.org/def/openadr#recovery
 :recovery rdf:type owl:ObjectProperty ;
           rdfs:label "recovery" .
+
+
+###  https://w3id.org/def/openadr#refersToTarget
+:refersToTarget rdf:type owl:ObjectProperty ;
+                rdfs:comment "Relation between a target and its availability" ;
+                rdfs:label "refers to target" .
 
 
 ###  https://w3id.org/def/openadr#reportDataSource
@@ -257,12 +309,12 @@
            rdfs:label "send" .
 
 
-###  https://w3id.org/def/openadr#specifies
-:specifies rdf:type owl:ObjectProperty ;
-           rdfs:domain :MetadataReport ;
-           rdfs:range :ReportSpecifier ;
-           rdfs:label "relation between the report and its specification" ,
-                      "specifies" .
+###  https://w3id.org/def/openadr#specifiesReport
+:specifiesReport rdf:type owl:ObjectProperty ;
+                 rdfs:domain :MetadataReport ;
+                 rdfs:range :ReportSpecifier ;
+                 rdfs:label "relation between the report and its specification" ,
+                            "specifies report" .
 
 
 ###  https://w3id.org/saref#isMeasuredIn
@@ -529,6 +581,24 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
        rdfs:label "Asset" .
 
 
+###  https://w3id.org/def/openadr#Availability
+:Availability rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty :isAvailableDuring ;
+                                owl:someValuesFrom <http://www.w3.org/2006/time#Interval>
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :isUnavailableDuring ;
+                                owl:someValuesFrom <http://www.w3.org/2006/time#Interval>
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :refersToTarget ;
+                                owl:someValuesFrom :Group
+                              ] ;
+              rdfs:comment "Availability of a target" ;
+              rdfs:label "Availability" .
+
+
 ###  https://w3id.org/def/openadr#DataReport
 :DataReport rdf:type owl:Class ;
             rdfs:subClassOf :Report ;
@@ -613,7 +683,7 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
                          owl:someValuesFrom :VEN
                        ] ;
        rdfs:isDefinedBy "Target of a signal or event" ;
-       rdfs:label "Target" .
+       rdfs:label "Group" .
 
 
 ###  https://w3id.org/def/openadr#HistoryReport
@@ -661,6 +731,10 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
 
 ###  https://w3id.org/def/openadr#Opt
 :Opt rdf:type owl:Class ;
+     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                       owl:onProperty :plans ;
+                       owl:someValuesFrom :Availability
+                     ] ;
      rdfs:comment "The expected response from the demand side resource owner upon receipt of an event." ;
      rdfs:isDefinedBy "OpenADR 2.0 Demand Response Program Implementation Guide" ;
      rdfs:label "Opt" .
@@ -712,6 +786,10 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
 ###  https://w3id.org/def/openadr#ReportDescriptor
 :ReportDescriptor rdf:type owl:Class ;
                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty :involvesSubject ;
+                                    owl:someValuesFrom :Group
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty :hasSamplingRate ;
                                     owl:allValuesFrom :SamplingRate
                                   ] ;
@@ -744,9 +822,21 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
 
 ###  https://w3id.org/def/openadr#ReportSpecifier
 :ReportSpecifier rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasGranularity ;
+                                   owl:allValuesFrom <http://www.w3.org/2006/time#TemporalEntity>
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasReportBackDuration ;
+                                   owl:allValuesFrom <http://www.w3.org/2006/time#TemporalEntity>
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :isReportedDuringInterval ;
+                                   owl:allValuesFrom <http://www.w3.org/2006/time#Interval>
+                                 ] ;
                  rdfs:comment "Each report specification specifies reporting capabilities" ;
                  rdfs:isDefinedBy "OpenADR 2.0 Demand Response Program Implementation Guide" ;
-                 rdfs:label "Report Specifier" .
+                 rdfs:label "Report specifier" .
 
 
 ###  https://w3id.org/def/openadr#Resource
@@ -767,11 +857,11 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
                                 owl:someValuesFrom :ItemBase
                               ] ,
                               [ rdf:type owl:Restriction ;
-                                owl:onProperty :oadrMaxPeriod ;
+                                owl:onProperty :hasMaxPeriod ;
                                 owl:allValuesFrom <http://www.w3.org/2006/time#TemporalEntity>
                               ] ,
                               [ rdf:type owl:Restriction ;
-                                owl:onProperty :oadrMinPeriod ;
+                                owl:onProperty :hasMinPeriod ;
                                 owl:allValuesFrom <http://www.w3.org/2006/time#TemporalEntity>
                               ] ,
                               [ rdf:type owl:Restriction ;
@@ -813,7 +903,7 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
                                   owl:onClass :SignalInterval
                                 ] ;
                 rdfs:comment "Interval of time where a signal is active" ;
-                rdfs:label "Interval" .
+                rdfs:label "Signal Interval" .
 
 
 ###  https://w3id.org/def/openadr#SignalPayload
