@@ -1,5 +1,9 @@
 {
   "@context" : {
+    "belongsTo" : {
+      "@id" : "https://w3id.org/def/openadr#belongsTo",
+      "@type" : "@id"
+    },
     "ramp_up" : {
       "@id" : "https://w3id.org/def/openadr#ramp_up",
       "@type" : "@id"
@@ -23,6 +27,10 @@
       "@id" : "https://w3id.org/def/openadr#signalName",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
+    "hasReportBackDuration" : {
+      "@id" : "https://w3id.org/def/openadr#hasReportBackDuration",
+      "@type" : "@id"
+    },
     "eventDescriptor" : {
       "@id" : "https://w3id.org/def/openadr#eventDescriptor",
       "@type" : "@id"
@@ -33,8 +41,8 @@
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
     },
-    "oadrMinPeriod" : {
-      "@id" : "https://w3id.org/def/openadr#oadrMinPeriod",
+    "hasMaxPeriod" : {
+      "@id" : "https://w3id.org/def/openadr#hasMaxPeriod",
       "@type" : "@id"
     },
     "isResponseRequired" : {
@@ -43,6 +51,10 @@
     },
     "license" : {
       "@id" : "http://purl.org/dc/terms/license"
+    },
+    "specifiesReport" : {
+      "@id" : "https://w3id.org/def/openadr#specifiesReport",
+      "@type" : "@id"
     },
     "manages" : {
       "@id" : "https://w3id.org/def/openadr#manages",
@@ -62,8 +74,19 @@
     "Asset" : {
       "@id" : "https://w3id.org/def/openadr#Asset"
     },
+    "SpecifierPayload" : {
+      "@id" : "https://w3id.org/def/openadr#SpecifierPayload"
+    },
     "appliesTo" : {
       "@id" : "https://w3id.org/def/openadr#appliesTo",
+      "@type" : "@id"
+    },
+    "hasGranularity" : {
+      "@id" : "https://w3id.org/def/openadr#hasGranularity",
+      "@type" : "@id"
+    },
+    "isReportedDuringInterval" : {
+      "@id" : "https://w3id.org/def/openadr#isReportedDuringInterval",
       "@type" : "@id"
     },
     "MetadataReport" : {
@@ -86,14 +109,26 @@
     "Instant" : {
       "@id" : "http://www.w3.org/2006/time#Instant"
     },
+    "hasPayload" : {
+      "@id" : "https://w3id.org/def/openadr#hasPayload",
+      "@type" : "@id"
+    },
     "Feature" : {
       "@id" : "http://www.opengis.net/ont/geosparql#Feature"
     },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
+    "isUnavailableDuring" : {
+      "@id" : "https://w3id.org/def/openadr#isUnavailableDuring",
+      "@type" : "@id"
+    },
     "contains" : {
       "@id" : "https://w3id.org/def/openadr#contains",
+      "@type" : "@id"
+    },
+    "isManagedBy" : {
+      "@id" : "https://w3id.org/def/openadr#isManagedBy",
       "@type" : "@id"
     },
     "TelemetryStatusReport" : {
@@ -200,8 +235,8 @@
     "DataReport" : {
       "@id" : "https://w3id.org/def/openadr#DataReport"
     },
-    "oadrMaxPeriod" : {
-      "@id" : "https://w3id.org/def/openadr#oadrMaxPeriod",
+    "refersToTarget" : {
+      "@id" : "https://w3id.org/def/openadr#refersToTarget",
       "@type" : "@id"
     },
     "scaleCode" : {
@@ -214,6 +249,17 @@
     "isOnChange" : {
       "@id" : "https://w3id.org/def/openadr#isOnChange",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "SignalPayload" : {
+      "@id" : "https://w3id.org/def/openadr#SignalPayload"
+    },
+    "involvesSubject" : {
+      "@id" : "https://w3id.org/def/openadr#involvesSubject",
+      "@type" : "@id"
+    },
+    "isAvailableDuring" : {
+      "@id" : "https://w3id.org/def/openadr#isAvailableDuring",
+      "@type" : "@id"
     },
     "Duration" : {
       "@id" : "http://www.w3.org/2006/time#Duration"
@@ -230,10 +276,6 @@
       "@id" : "https://w3id.org/def/openadr#recovery",
       "@type" : "@id"
     },
-    "containsEvent" : {
-      "@id" : "https://w3id.org/def/openadr#containsEvent",
-      "@type" : "@id"
-    },
     "VTN" : {
       "@id" : "https://w3id.org/def/openadr#VTN"
     },
@@ -246,9 +288,6 @@
     "hasItemBase" : {
       "@id" : "https://w3id.org/def/openadr#hasItemBase",
       "@type" : "@id"
-    },
-    "DistributeEvent" : {
-      "@id" : "https://w3id.org/def/openadr#DistributeEvent"
     },
     "hasGeometry" : {
       "@id" : "http://www.opengis.net/ont/geosparql#hasGeometry",
@@ -321,9 +360,17 @@
     "SpatialThing" : {
       "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
     },
+    "hasMinPeriod" : {
+      "@id" : "https://w3id.org/def/openadr#hasMinPeriod",
+      "@type" : "@id"
+    },
     "comment" : {
       "@id" : "https://w3id.org/def/openadr#comment",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "plans" : {
+      "@id" : "https://w3id.org/def/openadr#plans",
+      "@type" : "@id"
     },
     "HistoryUsageReport" : {
       "@id" : "https://w3id.org/def/openadr#HistoryUsageReport"
@@ -334,6 +381,10 @@
     "accuracy" : {
       "@id" : "https://w3id.org/def/openadr#accuracy",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasSpecifierPayload" : {
+      "@id" : "https://w3id.org/def/openadr#hasSpecifierPayload",
+      "@type" : "@id"
     },
     "reportDataSource" : {
       "@id" : "https://w3id.org/def/openadr#reportDataSource",
@@ -349,6 +400,9 @@
       "@id" : "https://w3id.org/def/openadr#reportSubject",
       "@type" : "@id"
     },
+    "Availability" : {
+      "@id" : "https://w3id.org/def/openadr#Availability"
+    },
     "Unit_of_measure" : {
       "@id" : "http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"
     },
@@ -362,12 +416,19 @@
     "OptOut" : {
       "@id" : "https://w3id.org/def/openadr#OptOut"
     },
+    "ReportSpecifier" : {
+      "@id" : "https://w3id.org/def/openadr#ReportSpecifier"
+    },
     "SignalIntervalDuration" : {
       "@id" : "https://w3id.org/def/openadr#SignalIntervalDuration",
       "@type" : "@id"
     },
     "preferredNamespaceUri" : {
       "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "hasSignalPayload" : {
+      "@id" : "https://w3id.org/def/openadr#hasSignalPayload",
+      "@type" : "@id"
     },
     "GreenButtonReport" : {
       "@id" : "https://w3id.org/def/openadr#GreenButtonReport"
