@@ -714,6 +714,14 @@
         sh:nodeKind       sh:IRI ;
         sh:targetClass    :EventStatus .
 
+<https://astrea.linkeddata.es/shapes#090f8a6f31379ec1d356d7b448ff7254>
+        a            sh:PropertyShape ;
+        rdfs:label   "registration number" ;
+        sh:datatype  xsd:string ;
+        sh:name      "registration number" ;
+        sh:nodeKind  sh:Literal ;
+        sh:pattern   ".*" .
+
 <https://astrea.linkeddata.es/shapes#67619bc4e9878833e229a0c101266b52>
         a                 sh:NodeShape ;
         rdfs:isDefinedBy  "OpenADR 2.0 Demand Response Program Implementation Guide" ;
