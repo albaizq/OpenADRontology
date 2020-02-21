@@ -1,0 +1,1111 @@
+@prefix :      <https://w3id.org/def/openadr#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://astrea.linkeddata.es/shapes#76ad0bd0a09c0e8abee2e0e40ad7e58c>
+        a               sh:PropertyShape ;
+        rdfs:label      "is available during" , "Availability of a target" ;
+        sh:description  "Availability of a target" ;
+        sh:name         "is available during" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#ba034472bfa322b258bd14f1472355e6>
+        a               sh:PropertyShape ;
+        rdfs:label      "has typical value" , "Typical value of an interval" ;
+        sh:description  "Typical value of an interval" ;
+        sh:name         "has typical value" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#1060f31bb77710178ed8201af7ef9e56>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <https://w3id.org/saref> ;
+        sh:nodeKind       sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#83fb8c5b5ed395573202996919eee9e6>
+        a               sh:NodeShape ;
+        rdfs:label      "Report payload" ;
+        sh:description  "Payload associated to every report" ;
+        sh:name         "Report payload" ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#4570d4ab313ee7376d896f5cac207e6f> , <https://astrea.linkeddata.es/shapes#9cb413cb4609b94c98e2559d8a0e5220> , <https://astrea.linkeddata.es/shapes#6c4e74a1f8ac5b9d2b78c328f42c3bd1> , <https://astrea.linkeddata.es/shapes#51e5a462ec9af0c3f8894fc01438ab79> ;
+        sh:targetClass  :ReportPayload .
+
+<https://astrea.linkeddata.es/shapes#06e5c6cdff21342ebcf1ac7a12cb4ed4>
+        a               sh:PropertyShape ;
+        rdfs:label      "reading type" , "Metadata about the Readings, such as mean or derived" ;
+        sh:datatype     xsd:string ;
+        sh:description  "Metadata about the Readings, such as mean or derived" ;
+        sh:name         "reading type" ;
+        sh:nodeKind     sh:Literal ;
+        sh:pattern      ".*" .
+
+<https://astrea.linkeddata.es/shapes#200e5a52deea60eb19a89b55f2fc63dd>
+        a            sh:PropertyShape ;
+        rdfs:label   "report name" ;
+        sh:datatype  xsd:string ;
+        sh:name      "report name" ;
+        sh:nodeKind  sh:Literal ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#1ce8aa75bcad9b4023485ecb9f9a7896>
+        a            sh:PropertyShape ;
+        rdfs:label   "applies to" ;
+        sh:name      "applies to" ;
+        sh:nodeKind  sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#bd851bd791b544c23ccdcb0180fd0e3b>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <http://www.w3.org/2006/time> ;
+        rdfs:label        "Duration" ;
+        sh:name           "Duration" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <http://www.w3.org/2006/time#Duration> .
+
+<https://astrea.linkeddata.es/shapes#000f341f6c473c4eb5bc2495d9e8bed5>
+        a            sh:PropertyShape ;
+        rdfs:label   "version" ;
+        sh:datatype  xsd:string ;
+        sh:name      "version" ;
+        sh:nodeKind  sh:Literal ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#7d6a3657bad33da9742576423d6ebf7d>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  "OpenADR 2.0 Demand Response Profile B" ;
+        rdfs:label        "Opt In" ;
+        sh:name           "Opt In" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    :OptIn .
+
+<https://astrea.linkeddata.es/shapes#498ecea4906de70915739bdbdf3d1bc0>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <http://www.opengis.net/ont/geosparql> ;
+        rdfs:label        "SpatialObject" ;
+        sh:description    "The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry." ;
+        sh:name           "SpatialObject" ;
+        sh:nodeKind       sh:IRI ;
+        sh:property       <https://astrea.linkeddata.es/shapes#e7b516b5764ab14aac9d4b2dcbe92e80> , <https://astrea.linkeddata.es/shapes#561d7681316bbbc7f832f6f814fa96dd> ;
+        sh:targetClass    <http://www.opengis.net/ont/geosparql#SpatialObject> .
+
+<https://astrea.linkeddata.es/shapes#4570d4ab313ee7376d896f5cac207e6f>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :payloadFloat .
+
+<https://astrea.linkeddata.es/shapes#fb0788b13f35d1a26a098d460f7fe328>
+        a            sh:PropertyShape ;
+        rdfs:label   "comment" ;
+        sh:datatype  xsd:string ;
+        sh:name      "comment" ;
+        sh:nodeKind  sh:Literal ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#830f6c599626c2d56e9579e22951ee8b>
+        a               sh:PropertyShape ;
+        rdfs:label      "priority" , "The priority of the event in relation to other events (The lower the number\nhigher the priority. A value of zero (0) indicates no priority, which is the lowest priority by default)." ;
+        sh:datatype     xsd:integer ;
+        sh:description  "The priority of the event in relation to other events (The lower the number\nhigher the priority. A value of zero (0) indicates no priority, which is the lowest priority by default)." ;
+        sh:name         "priority" ;
+        sh:nodeKind     sh:Literal ;
+        sh:pattern      "[\\-+]?[0-9]+" .
+
+<https://astrea.linkeddata.es/shapes#9bc46ffbac9f3ad0be4d5a5a845dd699>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :createdDateTime .
+
+<https://astrea.linkeddata.es/shapes#63fadcd9f02ded96d012ddd437781d20>
+        a               sh:NodeShape ;
+        rdfs:label      "Payload resource status" ;
+        sh:description  "Status of the payload resource" ;
+        sh:name         "Payload resource status" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :PayloadResourceStatus .
+
+<https://astrea.linkeddata.es/shapes#8c9f0a3ef50fe390869f7c693885d425>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <http://www.opengis.net/ont/geosparql> ;
+        rdfs:label        "Feature" ;
+        sh:description    "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types" ;
+        sh:disjoint       <http://www.opengis.net/ont/geosparql#Geometry> ;
+        sh:name           "Feature" ;
+        sh:nodeKind       sh:IRI ;
+        sh:property       <https://astrea.linkeddata.es/shapes#3f6891594ac2d163a004bec00f8db48a> ;
+        sh:targetClass    <http://www.opengis.net/ont/geosparql#Feature> .
+
+<https://astrea.linkeddata.es/shapes#8cac59f974cb959c2f76daabb90b5ba2>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :version .
+
+<https://astrea.linkeddata.es/shapes#508f40d01f1e37d9393250df8cf4099d>
+        a               sh:PropertyShape ;
+        rdfs:label      "has signal" , "Relation between an entity and its signal" ;
+        sh:description  "Relation between an entity and its signal" ;
+        sh:name         "has signal" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#792f722c19c69d1d86c3fe5400d2a193>
+        a            sh:PropertyShape ;
+        rdfs:label   "node name" ;
+        sh:datatype  owl:rational ;
+        sh:name      "node name" ;
+        sh:nodeKind  sh:Literal .
+
+<https://astrea.linkeddata.es/shapes#8c8f5b3bfbbb193efd684afd73359ab7>
+        a               sh:NodeShape ;
+        rdfs:label      "Sampling rate" ;
+        sh:description  "The average number of samples obtained in one second" ;
+        sh:name         "Sampling rate" ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#2ca6e10e1afb9f58c83243900d990fc4> , <https://astrea.linkeddata.es/shapes#d40d8a043b648895554a54ba857b1e5a> , <https://astrea.linkeddata.es/shapes#0fa989daa82a0862447b78e1b6958cc3> , <https://astrea.linkeddata.es/shapes#56fadafc5c7b566d6f6f0e0b0dac76b4> ;
+        sh:targetClass  :SamplingRate .
+
+<https://astrea.linkeddata.es/shapes#6ace7559c09873d57bb26d2909a563c6>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <http://www.w3.org/2003/01/geo/wgs84_pos#> ;
+        rdfs:label        "Spatial thing" ;
+        sh:description    "Anything with spatial extent, i.e. size, shape, or position. e.g. people, places, bowling balls, as well as abstract areas like cubes" ;
+        sh:name           "Spatial thing" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+
+<https://astrea.linkeddata.es/shapes#69b7f09cce333ed7e9a0ba0253d822a7>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :manages .
+
+<https://astrea.linkeddata.es/shapes#07329727a6c914bec20d71286536d543>
+        a                       sh:PropertyShape ;
+        sh:nodeKind             sh:IRIOrLiteral ;
+        sh:path                 :SignalIntervalDuration ;
+        sh:qualifiedMaxCount    "1"^^xsd:nonNegativeInteger ;
+        sh:qualifiedMinCount    "1"^^xsd:nonNegativeInteger ;
+        sh:qualifiedValueShape  [ sh:class  :SignalInterval ] .
+
+<https://astrea.linkeddata.es/shapes#3e18b0f9fac2d3bdcd51a2fdadcbda53>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <http://www.w3.org/2006/time> ;
+        rdfs:label        "Temporal Entity" ;
+        sh:name           "Temporal Entity" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <http://www.w3.org/2006/time#TemporalEntity> .
+
+<https://astrea.linkeddata.es/shapes#88fb339f39e9b91ee4c488eec47705c3>
+        a               sh:PropertyShape ;
+        rdfs:label      "is on change" , "Attribute to determine whether or not data is sampled as it changes" ;
+        sh:datatype     xsd:boolean ;
+        sh:description  "Attribute to determine whether or not data is sampled as it changes" ;
+        sh:name         "is on change" ;
+        sh:nodeKind     sh:Literal ;
+        sh:pattern      "true|false|0|1" .
+
+<https://astrea.linkeddata.es/shapes#20372a55a5e5ea4af7713e1601387ae8>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :hasTarget .
+
+<https://astrea.linkeddata.es/shapes#d753265b3d8a20ea903355d07a8bb256>
+        a            sh:PropertyShape ;
+        rdfs:label   "expected response" ;
+        sh:name      "expected response" ;
+        sh:nodeKind  sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#a1a9e1202c0c9208afee98011e8ce6b9>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :refersToTarget .
+
+<https://astrea.linkeddata.es/shapes#efae60444b11e53deada6fc1dcff6f6b>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  "OpenADR 2.0 Demand Response Program Implementation Guide" ;
+        rdfs:label        "Event" ;
+        sh:description    "An event is a notification from the utility to demand side resources requesting load shed starting at a specific time, over a specified duration, and may include targeting information designating specific resources that should participate in the event" ;
+        sh:name           "Event" ;
+        sh:nodeKind       sh:IRI ;
+        sh:property       <https://astrea.linkeddata.es/shapes#9bc46ffbac9f3ad0be4d5a5a845dd699> , <https://astrea.linkeddata.es/shapes#9820d9b5dfd2c9e5763a14e3593a1f25> , <https://astrea.linkeddata.es/shapes#1cb0a1024e84e09991f2a0522da55a21> , <https://astrea.linkeddata.es/shapes#17255396a5eb2c139783dc47a4deff9e> , <https://astrea.linkeddata.es/shapes#ff5051b5afd6b08f41598452177db18b> , <https://astrea.linkeddata.es/shapes#5caf04389ee30f7267309f4595b758dd> , <https://astrea.linkeddata.es/shapes#8cac59f974cb959c2f76daabb90b5ba2> ;
+        sh:targetClass    :Event .
+
+<https://astrea.linkeddata.es/shapes#5dba68c773f2ac1bfa2cb894767735e2>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  "OpenADR 2.0 Demand Response Program Implementation Guide" ;
+        rdfs:label        "Report specifier" ;
+        sh:description    "Each report specification specifies reporting capabilities" ;
+        sh:name           "Report specifier" ;
+        sh:nodeKind       sh:IRI ;
+        sh:property       <https://astrea.linkeddata.es/shapes#b6161cc0569b9e5988b3b743c4820485> , <https://astrea.linkeddata.es/shapes#1cd352c4c51dcd638c89b4de7937efbd> , <https://astrea.linkeddata.es/shapes#ba7c21b062c212fc6629618be14e32ef> ;
+        sh:targetClass    :ReportSpecifier .
+
+<https://astrea.linkeddata.es/shapes#ef496c183d45dc19a639538c7a9bfba0>
+        a               sh:PropertyShape ;
+        rdfs:label      "involves subject" , "Relation between the report and its subject" ;
+        sh:description  "Relation between the report and its subject" ;
+        sh:name         "involves subject" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#f6f2b65301484d98cb89f4da714d02d7>
+        a               sh:PropertyShape ;
+        rdfs:label      "has target" , "Relation between an entity and its target" ;
+        sh:description  "Relation between an entity and its target" ;
+        sh:name         "has target" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#6248d50c6907fde04303bcd5ac1344a9>
+        a               sh:PropertyShape ;
+        rdfs:label      "has max period" , "Maximum period of time" ;
+        sh:description  "Maximum period of time" ;
+        sh:name         "has max period" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#17f7812bb16e8487a39c921750370a05>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  "OpenADR 2.0 Demand Response Specification Profile B" ;
+        rdfs:label        "Data report" ;
+        sh:description    "These reports are used to report actual data that may be measured or calculated." ;
+        sh:name           "Data report" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    :DataReport .
+
+<https://astrea.linkeddata.es/shapes#4b54e26d2161d25dad330cd6f307c184>
+        a               sh:PropertyShape ;
+        rdfs:label      "plans" , "Relation between Opt and the planification of a target" ;
+        sh:description  "Relation between Opt and the planification of a target" ;
+        sh:name         "plans" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#90d0012470ff100a1ba6c6e721bd931e>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  "OASIS Energy Market Information Exchange (eMIX) standard" ;
+        rdfs:label        "Item base" ;
+        sh:description    "Units for the data in the report" ;
+        sh:name           "Item base" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    :ItemBase .
+
+<https://astrea.linkeddata.es/shapes#d00afdd6c388b73b21fbf6d7965b7cc1>
+        a            sh:PropertyShape ;
+        rdfs:label   "data quality" ;
+        sh:datatype  xsd:string ;
+        sh:name      "data quality" ;
+        sh:nodeKind  sh:Literal ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#34a864f335a12a13b65a86682d066cbb>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :contains .
+
+<https://astrea.linkeddata.es/shapes#6320678fd18b98e3804390bebf11325c>
+        a               sh:PropertyShape ;
+        rdfs:label      "has active period" , "Relation between an entity an its available period" ;
+        sh:description  "Relation between an entity an its available period" ;
+        sh:name         "has active period" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#420f3e3cf12dcbfc4eadd72dab28afe7>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  "OpenADR 2.0 Demand Response Profile B" ;
+        rdfs:label        "Opt Out" ;
+        sh:name           "Opt Out" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    :OptOut .
+
+<https://astrea.linkeddata.es/shapes#86cad30ad540a4059f570fdc7164e3bb>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#56e6de9839822f827053c65b43422bdd>
+        a            sh:PropertyShape ;
+        rdfs:label   "is test event" ;
+        sh:datatype  xsd:boolean ;
+        sh:name      "is test event" ;
+        sh:nodeKind  sh:Literal ;
+        sh:pattern   "true|false|0|1" .
+
+<https://astrea.linkeddata.es/shapes#9d7ff3689486399e6b14742663377f91>
+        a               sh:PropertyShape ;
+        rdfs:label      "modification reason" , "It indicates why an event was modified" ;
+        sh:datatype     xsd:string ;
+        sh:description  "It indicates why an event was modified" ;
+        sh:name         "modification reason" ;
+        sh:nodeKind     sh:Literal ;
+        sh:pattern      ".*" .
+
+<https://astrea.linkeddata.es/shapes#9cb413cb4609b94c98e2559d8a0e5220>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :dataquality .
+
+<https://astrea.linkeddata.es/shapes#790eda9f1006c334de8cd96c41827613>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  "OpenADR 2.0 Demand Response Program Implementation Guide" ;
+        rdfs:label        "Virtual Top Node (VTN)" ;
+        sh:description    "This is the OpenADR Virtual Top Node that is used to interact with the Resources enrolled in the DR Programs." ;
+        sh:name           "Virtual Top Node (VTN)" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    :VTN .
+
+<https://astrea.linkeddata.es/shapes#2ca6e10e1afb9f58c83243900d990fc4>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :hasItemBase .
+
+<https://astrea.linkeddata.es/shapes#9820d9b5dfd2c9e5763a14e3593a1f25>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :includesSignal .
+
+<https://astrea.linkeddata.es/shapes#5caf04389ee30f7267309f4595b758dd>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :expectedResponse .
+
+<https://astrea.linkeddata.es/shapes#561d7681316bbbc7f832f6f814fa96dd>
+        a            sh:PropertyShape ;
+        sh:class     <http://www.w3.org/2003/01/geo/wgs84_pos#Point> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://www.w3.org/2003/01/geo/wgs84_pos#location> .
+
+<https://astrea.linkeddata.es/shapes#60f2debbc1d211ff5065efaa730bd15c>
+        a               sh:PropertyShape ;
+        rdfs:label      "market context" , "A URI identifying a DR Program" ;
+        sh:datatype     xsd:anyURI ;
+        sh:description  "A URI identifying a DR Program" ;
+        sh:name         "market context" ;
+        sh:nodeKind     sh:Literal ;
+        sh:pattern      "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\\?([^#]*))?(#(.*))?" .
+
+<https://astrea.linkeddata.es/shapes#b765c419f68200d177fb014b294619c2>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  "OpenADR 2.0 Demand Response Program Implementation Guide" ;
+        rdfs:label        "Resource" ;
+        sh:description    "Entity that is enrolled in the DR Programs and is capable of delivering some sort of change to their load profile in response to receiving a DR signal from a VTN." ;
+        sh:name           "Resource" ;
+        sh:nodeKind       sh:IRI ;
+        sh:property       <https://astrea.linkeddata.es/shapes#69b7f09cce333ed7e9a0ba0253d822a7> ;
+        sh:targetClass    :Resource .
+
+<https://astrea.linkeddata.es/shapes#5b1d6665b29c40a692eb63c98c0e7b7a>
+        a               sh:PropertyShape ;
+        rdfs:label      "dstart" , "The starting time for the activity, data, or state change" ;
+        sh:datatype     xsd:dateTimeStamp ;
+        sh:description  "The starting time for the activity, data, or state change" ;
+        sh:name         "dstart" ;
+        sh:nodeKind     sh:Literal .
+
+<https://astrea.linkeddata.es/shapes#f1ed01ff4ad7e0110c28d4231cd9616c>
+        a               sh:NodeShape ;
+        rdfs:label      "Interval" ;
+        sh:name         "Interval" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <http://www.w3.org/2006/time#Interval> .
+
+<https://astrea.linkeddata.es/shapes#aaf59a993f9cef84450a198dcdcc0077>
+        a               sh:NodeShape ;
+        rdfs:label      "Signal Payload" ;
+        sh:name         "Signal Payload" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :SignalPayload .
+
+<https://astrea.linkeddata.es/shapes#20b36b1fa4666a319b29cb6a6191f10e>
+        a            sh:PropertyShape ;
+        rdfs:label   "signal name" ;
+        sh:datatype  xsd:string ;
+        sh:name      "signal name" ;
+        sh:nodeKind  sh:Literal ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#1cb0a1024e84e09991f2a0522da55a21>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :ramp_up .
+
+<https://astrea.linkeddata.es/shapes#f5e27add16814bb0c4d4dd4e92286b09>
+        a               sh:PropertyShape ;
+        rdfs:label      "has specifier payload" , "Relation between the specification of a report and its payload" ;
+        sh:class        :SpecifierPayload ;
+        sh:description  "Relation between the specification of a report and its payload" ;
+        sh:name         "has specifier payload" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#02b341e181b7af29e9e1f066905f489e>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  "OpenADR 2.0 Demand Response Program Implementation Guide" ;
+        rdfs:label        "Event descriptor" ;
+        sh:description    "Part of the OpenADR event object that describes metadata about the event, such as program name and event priority" ;
+        sh:name           "Event descriptor" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    :EventDescriptor .
+
+<https://astrea.linkeddata.es/shapes#9a3ddf43d109ad1fb790e2d213da3b88>
+        a               sh:PropertyShape ;
+        rdfs:label      "contains" , "Relation between a target and its components" ;
+        sh:description  "Relation between a target and its components" ;
+        sh:name         "contains" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#09edd93eea135cf3143b288496d440b6>
+        a            sh:PropertyShape ;
+        rdfs:label   "created date time" ;
+        sh:datatype  xsd:dateTimeStamp ;
+        sh:name      "created date time" ;
+        sh:nodeKind  sh:Literal .
+
+<https://astrea.linkeddata.es/shapes#3348f96caa15fb50d86f0a2231585642>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <http://www.opengis.net/ont/geosparql> ;
+        sh:nodeKind       sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#0e5cc3486bdb56702d6be2be99c1fbd5>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  "Target of a signal or event" ;
+        rdfs:label        "Group" ;
+        sh:name           "Group" ;
+        sh:nodeKind       sh:IRI ;
+        sh:property       <https://astrea.linkeddata.es/shapes#de7cf5c312eb50ff04117ccb895f05a6> , <https://astrea.linkeddata.es/shapes#34a864f335a12a13b65a86682d066cbb> ;
+        sh:targetClass    :Group .
+
+<https://astrea.linkeddata.es/shapes#eb2bb154dbbfbb4ed42bbdbcf05d0b1d>
+        a               sh:PropertyShape ;
+        rdfs:label      "event name" , "Name fo an event" ;
+        sh:datatype     owl:rational ;
+        sh:description  "Name fo an event" ;
+        sh:name         "event name" ;
+        sh:nodeKind     sh:Literal .
+
+<https://astrea.linkeddata.es/shapes#f179e08957b065e53feb2b802262bf1b>
+        a            sh:PropertyShape ;
+        rdfs:label   "has signal type" ;
+        sh:datatype  xsd:string ;
+        sh:name      "has signal type" ;
+        sh:nodeKind  sh:Literal ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#f28dbef903d2c6e18dfc93ebf4e283d9>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  "OpenADR 2.0 Demand Response Program Implementation Guide" ;
+        rdfs:label        "Specifier Payload" ;
+        sh:name           "Specifier Payload" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    :SpecifierPayload .
+
+<https://astrea.linkeddata.es/shapes#ffa627c90b2f93431bad38fc95750b9e>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <http://www.w3.org/2003/01/geo/wgs84_pos> ;
+        sh:nodeKind       sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#532124854242e58777154dd1bd47e7d8>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :involvesSubject .
+
+<https://astrea.linkeddata.es/shapes#ebeeb0689d06e67132f7d923dbe0f1a0>
+        a            sh:PropertyShape ;
+        rdfs:label   "has report back duration" ;
+        sh:name      "has report back duration" ;
+        sh:nodeKind  sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#d64aa1c491d0071b2f6426bad64ca3b4>
+        a               sh:PropertyShape ;
+        rdfs:label      "has interval" , "Link between a signal and the  interval where it is active" ;
+        sh:class        :SignalInterval ;
+        sh:description  "Link between a signal and the  interval where it is active" ;
+        sh:name         "has interval" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#525ab941786c78c2e21c9381b6bd0938>
+        a               sh:PropertyShape ;
+        rdfs:label      "report data source" , "Link to the source of a report" ;
+        sh:class        :Group ;
+        sh:description  "Link to the source of a report" ;
+        sh:name         "report data source" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#7931d1d8adb85ed5315c46861fdc9a43>
+        a               sh:PropertyShape ;
+        rdfs:label      "report subject" , "Subject of a report" ;
+        sh:description  "Subject of a report" ;
+        sh:name         "report subject" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#c62491eb3497e805c71c3df45ec82db0>
+        a            sh:PropertyShape ;
+        rdfs:label   "Unavailability of a target" , "is unavailable during" ;
+        sh:name      "Unavailability of a target" , "is unavailable during" ;
+        sh:nodeKind  sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#1277b387effe1ea8b7cf6171d6155a1b>
+        a               sh:NodeShape ;
+        rdfs:label      "Instant" ;
+        sh:name         "Instant" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <http://www.w3.org/2006/time#Instant> .
+
+<https://astrea.linkeddata.es/shapes#56fadafc5c7b566d6f6f0e0b0dac76b4>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :isOnChange .
+
+<https://astrea.linkeddata.es/shapes#86a5331b7c198bf639a6ee9c90bc7b55>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  "OpenADR 2.0 Demand Response Program Implementation Guide" ;
+        rdfs:label        "Opt" ;
+        sh:description    "The expected response from the demand side resource owner upon receipt of an event." ;
+        sh:name           "Opt" ;
+        sh:nodeKind       sh:IRI ;
+        sh:property       <https://astrea.linkeddata.es/shapes#2d33566be0240fcf0045a46247d22eb1> ;
+        sh:targetClass    :Opt .
+
+<https://astrea.linkeddata.es/shapes#3a1c28ad09f862b7f92a6de74adb3b66>
+        a               sh:PropertyShape ;
+        rdfs:label      "has report payload" , "Relation between a report and its payload" ;
+        sh:class        :ReportPayload ;
+        sh:description  "Relation between a report and its payload" ;
+        sh:name         "has report payload" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#230562d9111120e642018a47798a2e24>
+        a               sh:PropertyShape ;
+        rdfs:label      "is reported during interval" , "Reporting interval of a report" ;
+        sh:description  "Reporting interval of a report" ;
+        sh:name         "is reported during interval" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#f2299dd03865b7225c1ac510a246a62c>
+        a            sh:PropertyShape ;
+        rdfs:label   "ramp up" ;
+        sh:name      "ramp up" ;
+        sh:nodeKind  sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#9e81a8547fd8cabc79752e243c8d2b67>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <http://www.opengis.net/ont/geosparql#Geometry> .
+
+<https://astrea.linkeddata.es/shapes#8355820918b8f052e2489eb782a08ab2>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <http://www.opengis.net/ont/geosparql> ;
+        rdfs:label        "contains" , "Exists if the subject SpatialObject spatially contains the object SpatialObject" ;
+        sh:class          <http://www.opengis.net/ont/geosparql#SpatialObject> ;
+        sh:description    "Exists if the subject SpatialObject spatially contains the object SpatialObject" ;
+        sh:name           "contains" ;
+        sh:nodeKind       sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#e170bfa11ccf888dcc579c1032df0b1d>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  "OpenADR 2.0 Demand Response Program Implementation Guide" ;
+        rdfs:label        "Signal" ;
+        sh:description    "The actionable information contained in an event such as electricity pricing or specific levels of load shed requested that typically trigger some preprogrammed load shed behavior by the recipient of the event." ;
+        sh:name           "Signal" ;
+        sh:nodeKind       sh:IRI ;
+        sh:property       <https://astrea.linkeddata.es/shapes#20372a55a5e5ea4af7713e1601387ae8> , <https://astrea.linkeddata.es/shapes#ac0dc9875106eb007194138b41ec1519> ;
+        sh:targetClass    :Signal .
+
+<https://astrea.linkeddata.es/shapes#21bcd4df8e9c3a9750e8e8f804d106d0>
+        a               sh:PropertyShape ;
+        rdfs:label      "payload float" , "Data point value for event signals or for reporting current or historical\nvalues." ;
+        sh:datatype     xsd:float ;
+        sh:description  "Data point value for event signals or for reporting current or historical\nvalues." ;
+        sh:name         "payload float" ;
+        sh:nodeKind     sh:Literal ;
+        sh:pattern      "(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)?|(\\+|-)?INF|NaN" .
+
+<https://astrea.linkeddata.es/shapes#89d9104c3000ed3851445822a164b9f5>
+        a               sh:PropertyShape ;
+        rdfs:label      "scale code" , "A scaling factor for the base unit of measure for a report" ;
+        sh:datatype     xsd:string ;
+        sh:description  "A scaling factor for the base unit of measure for a report" ;
+        sh:name         "scale code" ;
+        sh:nodeKind     sh:Literal ;
+        sh:pattern      ".*" .
+
+<https://astrea.linkeddata.es/shapes#4bf8fa8c873e2bf780acdc0c832befc6>
+        a            sh:PropertyShape ;
+        rdfs:label   "relation between the report and its specification" , "specifies report" ;
+        sh:class     :ReportSpecifier ;
+        sh:name      "relation between the report and its specification" , "specifies report" ;
+        sh:nodeKind  sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#ba7c21b062c212fc6629618be14e32ef>
+        a            sh:PropertyShape ;
+        sh:class     <http://www.w3.org/2006/time#TemporalEntity> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :hasReportBackDuration .
+
+<https://astrea.linkeddata.es/shapes#257be545e0f23772d94b037fcb31560d>
+        a               sh:PropertyShape ;
+        rdfs:label      "modification date time" , "Time of modification of an event" ;
+        sh:datatype     xsd:dateTimeStamp ;
+        sh:description  "Time of modification of an event" ;
+        sh:name         "modification date time" ;
+        sh:nodeKind     sh:Literal .
+
+<https://astrea.linkeddata.es/shapes#7ff1a604a5e53e5aabb460ff59284a8d>
+        a               sh:PropertyShape ;
+        rdfs:label      "event descriptor" , "Relation between an event and its metadata" ;
+        sh:class        :EventDescriptor ;
+        sh:description  "Relation between an event and its metadata" ;
+        sh:name         "event descriptor" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#3f276d64015a02386fdf96695d44878f>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :manages .
+
+<https://astrea.linkeddata.es/shapes#f346f0988ac90c544a3885752334ac98>
+        a               sh:PropertyShape ;
+        rdfs:label      "has payload resource status" , "Relation between an entity and the payload resource status" ;
+        sh:description  "Relation between an entity and the payload resource status" ;
+        sh:name         "has payload resource status" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#f77114428a35ddabff6b2c21cd704664>
+        a            sh:PropertyShape ;
+        rdfs:label   "has item base" ;
+        sh:class     :ItemBase ;
+        sh:name      "has item base" ;
+        sh:nodeKind  sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#c7d1e48689e20b109b2ed978f6c69a94>
+        a            sh:PropertyShape ;
+        rdfs:label   "group name" ;
+        sh:datatype  xsd:string ;
+        sh:name      "group name" ;
+        sh:nodeKind  sh:Literal ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#6eea653865d1216386a8c8e62955d0d8>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :dstart .
+
+<https://astrea.linkeddata.es/shapes#1ca826813b5dbbfe5b6a0b57e866127f>
+        a               sh:PropertyShape ;
+        rdfs:label      "report descriptor" , "Relation between a report and its metadata" ;
+        sh:class        :ReportDescriptor ;
+        sh:description  "Relation between a report and its metadata" ;
+        sh:name         "report descriptor" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#2c129eea08a128c801b062267d703a76>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#4b48788bdfa0ebd478ffa9ff59e32d69> ;
+        sh:targetClass  :Node .
+
+<https://astrea.linkeddata.es/shapes#b64e7b9a7883fa8fcc81acdd304fa60c>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  "OpenADR 2.0 Demand Response Program Implementation Guide" ;
+        rdfs:label        "Event status" ;
+        sh:description    "Status of an OpenADR event" ;
+        sh:name           "Event status" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    :EventStatus .
+
+<https://astrea.linkeddata.es/shapes#67619bc4e9878833e229a0c101266b52>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  "OpenADR 2.0 Demand Response Program Implementation Guide" ;
+        rdfs:label        "Report descriptor" ;
+        sh:description    "Part of the OpenADR report object that describes metadata about the report" ;
+        sh:name           "Report descriptor" ;
+        sh:nodeKind       sh:IRI ;
+        sh:property       <https://astrea.linkeddata.es/shapes#532124854242e58777154dd1bd47e7d8> , <https://astrea.linkeddata.es/shapes#286753dccb859df6466a7e3e715aae06> ;
+        sh:targetClass    :ReportDescriptor .
+
+<https://astrea.linkeddata.es/shapes#abee8dc113660d74cca7b9bf062f0a75>
+        a               sh:PropertyShape ;
+        rdfs:label      "manages" , "Relation between a VEN and a Resource" ;
+        sh:description  "Relation between a VEN and a Resource" ;
+        sh:name         "manages" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#e7b516b5764ab14aac9d4b2dcbe92e80>
+        a            sh:PropertyShape ;
+        sh:class     <http://www.opengis.net/ont/geosparql#SpatialObject> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://www.opengis.net/ont/geosparql#sfContains> .
+
+<https://astrea.linkeddata.es/shapes#3f6891594ac2d163a004bec00f8db48a>
+        a            sh:PropertyShape ;
+        sh:class     <http://www.opengis.net/ont/geosparql#Geometry> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://www.opengis.net/ont/geosparql#hasGeometry> .
+
+<https://astrea.linkeddata.es/shapes#29f06b7c45905fa46c1aebc8070fffe2>
+        a               sh:NodeShape ;
+        rdfs:label      "Signal Interval" ;
+        sh:description  "Interval of time where a signal is active" ;
+        sh:name         "Signal Interval" ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#07329727a6c914bec20d71286536d543> ;
+        sh:targetClass  :SignalInterval .
+
+<https://astrea.linkeddata.es/shapes#de45e4060d4ba000706bc48f6ed90865>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :isAvailableDuring .
+
+<https://astrea.linkeddata.es/shapes#19f9a6bd1b7a71dea861d2e40454a901>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :isActiveDuringPeriod .
+
+<https://astrea.linkeddata.es/shapes#11604e1bfe4dede9cc9ef590b8737696>
+        a               sh:PropertyShape ;
+        rdfs:label      "interval duration" , "Duration of a signal interval" ;
+        sh:description  "Duration of a signal interval" ;
+        sh:name         "interval duration" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#d54ab943480e6e6b1f11317c58d5a4d0>
+        a               sh:PropertyShape ;
+        rdfs:label      "belongs to" , "Relationship between a VE, Resource or Asset with the Group of targets associated" ;
+        sh:description  "Relationship between a VE, Resource or Asset with the Group of targets associated" ;
+        sh:name         "belongs to" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#ed0df5ac6387775640306ab7f4cdcbed>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  "OpenADR 2.0 Demand Response Specification Profile B" ;
+        rdfs:label        "Telemetry report" ;
+        sh:description    "The term telemetry in the context of OpenADR refers to data that is reported periodically in real time" ;
+        sh:name           "Telemetry report" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    :TelemetryReport .
+
+<https://astrea.linkeddata.es/shapes#77f6684a7319f66ab75da4ab9d185c92>
+        a            sh:PropertyShape ;
+        rdfs:label   "recovery" ;
+        sh:name      "recovery" ;
+        sh:nodeKind  sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#1496f5f83f37e3c5b27d9f79c81ecc18>
+        a               sh:PropertyShape ;
+        rdfs:label      "has event status" , "Link between an event and its status" ;
+        sh:class        :EventStatus ;
+        sh:description  "Link between an event and its status" ;
+        sh:name         "has event status" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#c7631f7ea426736bfbe8a2a56c754e2f>
+        a               sh:PropertyShape ;
+        rdfs:label      "has duration" , "Duration of an event" ;
+        sh:description  "Duration of an event" ;
+        sh:name         "has duration" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#21a2c754fc3c2001f6c4e14ae455a2be>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  "OpenADR 2.0 Demand Response Program Implementation Guide" ;
+        rdfs:label        "Asset" ;
+        sh:description    "A type of Resource that represents a specific collection of physical loads.\nResources can be composed of Assets, and an Asset may be Resource, but Assets cannot be further decomposed into multiple Assets or Resources." ;
+        sh:name           "Asset" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    :Asset .
+
+<https://astrea.linkeddata.es/shapes#2459f390f6e21d83ed653211f3721850>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :createdDateTime .
+
+<https://astrea.linkeddata.es/shapes#53c94205740b8281d53af75f30fa9b0d>
+        a               sh:PropertyShape ;
+        rdfs:label      "is measured in" , "Relation to indicate the units of a measurement" ;
+        sh:description  "Relation to indicate the units of a measurement" ;
+        sh:name         "is measured in" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#97eb37200515d8f47795ed3faa404900>
+        a            sh:PropertyShape ;
+        rdfs:label   "has payload" ;
+        sh:name      "has payload" ;
+        sh:nodeKind  sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#51e5a462ec9af0c3f8894fc01438ab79>
+        a            sh:PropertyShape ;
+        sh:class     :PayloadResourceStatus ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :hasPayloadReourceStatus .
+
+<https://astrea.linkeddata.es/shapes#fd0c81bb5f84ab19a3448817712de28b>
+        a               sh:PropertyShape ;
+        rdfs:label      "is response required" , "Attribute to indicate if a response is required to acknowledge the object" ;
+        sh:datatype     xsd:boolean ;
+        sh:description  "Attribute to indicate if a response is required to acknowledge the object" ;
+        sh:name         "is response required" ;
+        sh:nodeKind     sh:Literal ;
+        sh:pattern      "true|false|0|1" .
+
+<https://astrea.linkeddata.es/shapes#e7c6178fca5918e08404ac6f107d89d1>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  "OpenADR 2.0 Demand Response Specification Profile B" ;
+        rdfs:label        "History usage report" ;
+        sh:description    "These are logs of usage data that are typically logged by VEN’s and can be queried by the VTN" ;
+        sh:name           "History usage report" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    :HistoryUsageReport .
+
+<https://astrea.linkeddata.es/shapes#2f2c936a83d55108bddde7a4be377004>
+        a               sh:PropertyShape ;
+        rdfs:label      "has min period" , "Minimum period of time" ;
+        sh:description  "Minimum period of time" ;
+        sh:name         "has min period" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#76cbfb716438388d2885153b0bbb1186>
+        a            sh:PropertyShape ;
+        sh:class     <http://www.w3.org/2006/time#Duration> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :hasDuration .
+
+<https://astrea.linkeddata.es/shapes#fadb43a7f955e5835a53d4de346393f6>
+        a               sh:PropertyShape ;
+        rdfs:label      "modification number" , "Number which is incremented each time an event is modified." ;
+        sh:datatype     xsd:integer ;
+        sh:description  "Number which is incremented each time an event is modified." ;
+        sh:name         "modification number" ;
+        sh:nodeKind     sh:Literal ;
+        sh:pattern      "[\\-+]?[0-9]+" .
+
+<https://astrea.linkeddata.es/shapes#83205bce518651ec3521199ffa4230fd>
+        a               sh:PropertyShape ;
+        rdfs:label      "accuracy" , "Indicates the likely variability of the prediction and the  error of a reading" ;
+        sh:datatype     xsd:string ;
+        sh:description  "Indicates the likely variability of the prediction and the  error of a reading" ;
+        sh:name         "accuracy" ;
+        sh:nodeKind     sh:Literal ;
+        sh:pattern      ".*" .
+
+<https://astrea.linkeddata.es/shapes#0fa989daa82a0862447b78e1b6958cc3>
+        a            sh:PropertyShape ;
+        sh:class     <http://www.w3.org/2006/time#TemporalEntity> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :hasMaxPeriod .
+
+<https://astrea.linkeddata.es/shapes#3ef793712378e097aac823894a277e63>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
+
+<https://astrea.linkeddata.es/shapes#ef08f8c52370eae9512bb1ec26279152>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  "OASIS Energy Market Information Exchange (EMIX)" ;
+        rdfs:label        "Service Area" ;
+        sh:description    "The Service Area expresses locations or geographic regions relevant to price communication" ;
+        sh:name           "Service Area" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    :ServiceArea .
+
+<https://astrea.linkeddata.es/shapes#17255396a5eb2c139783dc47a4deff9e>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :eventDescriptor .
+
+<https://astrea.linkeddata.es/shapes#06d5e09a4c4fb27711dc98571e5e7fbf>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  "OpenADR 2.0 Demand Response Specification Profile B" ;
+        rdfs:label        "Telemetry status report" ;
+        sh:description    "This is usage data that is periodically reported from the VEN to the VTN in real time" ;
+        sh:name           "Telemetry status report" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    :TelemetryStatusReport .
+
+<https://astrea.linkeddata.es/shapes#b6161cc0569b9e5988b3b743c4820485>
+        a            sh:PropertyShape ;
+        sh:class     <http://www.w3.org/2006/time#TemporalEntity> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :hasGranularity .
+
+<https://astrea.linkeddata.es/shapes#2d33566be0240fcf0045a46247d22eb1>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :plans .
+
+<https://astrea.linkeddata.es/shapes#a8a891449ece81fd455a920af672daf0>
+        a            sh:PropertyShape ;
+        rdfs:label   "item description" ;
+        sh:datatype  xsd:string ;
+        sh:name      "item description" ;
+        sh:nodeKind  sh:Literal ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#53f3ddf29cdf906ce3f8f0bf2429a518>
+        a               sh:PropertyShape ;
+        rdfs:label      "refers to target" , "Relation between a target and its availability" ;
+        sh:description  "Relation between a target and its availability" ;
+        sh:name         "refers to target" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#9970ba74e26c0d563708e5875a757007>
+        a               sh:NodeShape ;
+        rdfs:label      "Availability" ;
+        sh:description  "Availability of a target" ;
+        sh:name         "Availability" ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#de45e4060d4ba000706bc48f6ed90865> , <https://astrea.linkeddata.es/shapes#777e87126352d1c1ae3b1238510d2753> , <https://astrea.linkeddata.es/shapes#a1a9e1202c0c9208afee98011e8ce6b9> ;
+        sh:targetClass  :Availability .
+
+<https://astrea.linkeddata.es/shapes#d029fc09099c92b2fbf91e9253bff21c>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  "OpenADR 2.0 Demand Response Specification Profile B" ;
+        rdfs:label        "Report" ;
+        sh:description    "Report sent from a VEN to a VTN to report the energy consumption or the status of Resources connected to the VEN" ;
+        sh:name           "Report" ;
+        sh:nodeKind       sh:IRI ;
+        sh:property       <https://astrea.linkeddata.es/shapes#6eea653865d1216386a8c8e62955d0d8> , <https://astrea.linkeddata.es/shapes#2459f390f6e21d83ed653211f3721850> , <https://astrea.linkeddata.es/shapes#19f9a6bd1b7a71dea861d2e40454a901> , <https://astrea.linkeddata.es/shapes#76cbfb716438388d2885153b0bbb1186> ;
+        sh:targetClass    :Report .
+
+<https://astrea.linkeddata.es/shapes#ac0dc9875106eb007194138b41ec1519>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :isDefinedIn .
+
+<https://astrea.linkeddata.es/shapes#ca6112a48364c73d5d917615ebb07435>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  "OpenADR 2.0 Demand Response Specification Profile B" ;
+        rdfs:label        "Green button report" ;
+        sh:description    "This is usage history that can be transmitted using the well known GREEN BUTTON standard payloads" ;
+        sh:name           "Green button report" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    :GreenButtonReport .
+
+<https://astrea.linkeddata.es/shapes#4f40a61e639b347ca0c79931529aa5f1>
+        a               sh:PropertyShape ;
+        rdfs:label      "has granularity" , "This is the time interval between sampled data in a report request" ;
+        sh:description  "This is the time interval between sampled data in a report request" ;
+        sh:name         "has granularity" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#d40d8a043b648895554a54ba857b1e5a>
+        a            sh:PropertyShape ;
+        sh:class     <http://www.w3.org/2006/time#TemporalEntity> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :hasMinPeriod .
+
+<https://astrea.linkeddata.es/shapes#cf86527ba0fa6f7dabbd0e084e947145>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  "OpenADR 2.0 Demand Response Specification Profile B" , "The metadata report can contain a specification for one or more type of reports, each report having its own set of report descriptors and specifications" ;
+        rdfs:label        "Metadata report" ;
+        sh:name           "Metadata report" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    :MetadataReport .
+
+<https://astrea.linkeddata.es/shapes#d3bf1c595adf04ac7adf79c4ebc0dfd1>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:Literal ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#de7cf5c312eb50ff04117ccb895f05a6>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :appliesTo .
+
+<https://astrea.linkeddata.es/shapes#fbc885fc8419740eda22774416736bfa>
+        a               sh:PropertyShape ;
+        rdfs:label      "has signal payload" , "Relation between a signal and its payload" ;
+        sh:class        :SignalPayload ;
+        sh:description  "Relation between a signal and its payload" ;
+        sh:name         "has signal payload" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#286753dccb859df6466a7e3e715aae06>
+        a            sh:PropertyShape ;
+        sh:class     :SamplingRate ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :hasSamplingRate .
+
+<https://astrea.linkeddata.es/shapes#1a1c8f0b6437c33c74506c92e8115bd7>
+        a               sh:PropertyShape ;
+        rdfs:label      "is managed by" , "Relation between a Resource and a VEN" ;
+        sh:description  "Relation between a Resource and a VEN" ;
+        sh:name         "is managed by" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#16660fa190119b89846b519ab9d6df8b>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  "OpenADR 2.0 Demand Response Specification Profile B" ;
+        rdfs:label        "Telemetry usage report" ;
+        sh:description    "This is the status of a resource, which may be periodically reported from the VEN to the VTN" ;
+        sh:name           "Telemetry usage report" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    :TelemetryUsageReport .
+
+<https://astrea.linkeddata.es/shapes#6c4e74a1f8ac5b9d2b78c328f42c3bd1>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :accuracy .
+
+<https://astrea.linkeddata.es/shapes#ff5051b5afd6b08f41598452177db18b>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :recovery .
+
+<https://astrea.linkeddata.es/shapes#2e02dfdddc00d6039f3812b68177a74c>
+        a               sh:PropertyShape ;
+        rdfs:label      "sends" , "A link between a node and the objects it sends" ;
+        sh:description  "A link between a node and the objects it sends" ;
+        sh:name         "sends" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#4b48788bdfa0ebd478ffa9ff59e32d69>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :sends .
+
+<https://astrea.linkeddata.es/shapes#4ee895947f64a077b87f0a78ba131eea>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  "OpenADR 2.0 Demand Response Program Implementation Guide" ;
+        rdfs:label        "Virtual End Node (VEN)" ;
+        sh:description    "This is the OpenADR Virtual End Node that is used to interact with the VTN" ;
+        sh:name           "Virtual End Node (VEN)" ;
+        sh:nodeKind       sh:IRI ;
+        sh:property       <https://astrea.linkeddata.es/shapes#3f276d64015a02386fdf96695d44878f> ;
+        sh:targetClass    :VEN .
+
+<https://astrea.linkeddata.es/shapes#312cf57997285d4bbfb39135b6e658ed>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  "OpenADR 2.0 Demand Response Specification Profile B" ;
+        rdfs:label        "History report" ;
+        sh:description    "This is a type of data report in which the history of the data point values is logged and can be subsequently requested" ;
+        sh:name           "History report" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    :HistoryReport .
+
+<https://astrea.linkeddata.es/shapes#e611bf730f9b2a32ce9b4b3a81e97406>
+        a               sh:PropertyShape ;
+        rdfs:label      "has sampling rate" , "Indicates the sampling rate of a report" ;
+        sh:description  "Indicates the sampling rate of a report" ;
+        sh:name         "has sampling rate" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
+
+<https://astrea.linkeddata.es/shapes#94ef15d9485b56643ddaef4435b4ec56>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure> .
+
+<https://astrea.linkeddata.es/shapes#6d7d7aa45780ae9a34d11884a779e340>
+        a               sh:PropertyShape ;
+        rdfs:label      "confidence" , "A statistical probability that a reported data point is accurate" ;
+        sh:datatype     xsd:string ;
+        sh:description  "A statistical probability that a reported data point is accurate" ;
+        sh:name         "confidence" ;
+        sh:nodeKind     sh:Literal ;
+        sh:pattern      ".*" .
+
+<https://astrea.linkeddata.es/shapes#1cd352c4c51dcd638c89b4de7937efbd>
+        a            sh:PropertyShape ;
+        sh:class     <http://www.w3.org/2006/time#Interval> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :isReportedDuringInterval .
+
+<https://astrea.linkeddata.es/shapes#777e87126352d1c1ae3b1238510d2753>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :isUnavailableDuring .

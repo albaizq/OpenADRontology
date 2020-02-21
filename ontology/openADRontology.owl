@@ -975,7 +975,11 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
 
 ###  https://w3id.org/def/openadr#VTN
 :VTN rdf:type owl:Class ;
-     rdfs:subClassOf :Node ;
+     rdfs:subClassOf :Node ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :sends ;
+                       owl:someValuesFrom :Event
+                     ] ;
      rdfs:comment "This is the OpenADR Virtual Top Node that is used to interact with the Resources enrolled in the DR Programs." ;
      rdfs:isDefinedBy "OpenADR 2.0 Demand Response Program Implementation Guide" ;
      rdfs:label "Virtual Top Node (VTN)" .
