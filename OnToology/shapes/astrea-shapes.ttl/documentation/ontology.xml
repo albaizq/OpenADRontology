@@ -468,6 +468,17 @@
     
 
 
+    <!-- https://astrea.linkeddata.es/shapes#da41c1dcea4d690d2030c30d8fbbca49 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#da41c1dcea4d690d2030c30d8fbbca49">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#sends"/>
+    </NamedIndividual>
+    
+
+
     <!-- https://astrea.linkeddata.es/shapes#de45e4060d4ba000706bc48f6ed90865 -->
 
 
@@ -1923,6 +1934,7 @@ values.</shacl:description>
         <shacl:description>This is the OpenADR Virtual Top Node that is used to interact with the Resources enrolled in the DR Programs.</shacl:description>
         <shacl:name>Virtual Top Node (VTN)</shacl:name>
         <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#da41c1dcea4d690d2030c30d8fbbca49"/>
         <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#VTN"/>
     </NamedIndividual>
     

@@ -272,6 +272,12 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://astrea.linkeddata.es/shapes#d753265b3d8a20ea903355d07a8bb256> <http://www.w3.org/ns/shacl#name> "expected response" .
 <https://astrea.linkeddata.es/shapes#d753265b3d8a20ea903355d07a8bb256> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
 # 
+# https://astrea.linkeddata.es/shapes#da41c1dcea4d690d2030c30d8fbbca49
+<https://astrea.linkeddata.es/shapes#da41c1dcea4d690d2030c30d8fbbca49> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#da41c1dcea4d690d2030c30d8fbbca49> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://astrea.linkeddata.es/shapes#da41c1dcea4d690d2030c30d8fbbca49> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRIOrLiteral> .
+<https://astrea.linkeddata.es/shapes#da41c1dcea4d690d2030c30d8fbbca49> <http://www.w3.org/ns/shacl#path> <https://w3id.org/def/openadr#sends> .
+# 
 # https://astrea.linkeddata.es/shapes#de45e4060d4ba000706bc48f6ed90865
 <https://astrea.linkeddata.es/shapes#de45e4060d4ba000706bc48f6ed90865> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://astrea.linkeddata.es/shapes#de45e4060d4ba000706bc48f6ed90865> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
@@ -1189,6 +1195,7 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 <https://astrea.linkeddata.es/shapes#790eda9f1006c334de8cd96c41827613> <http://www.w3.org/ns/shacl#description> "This is the OpenADR Virtual Top Node that is used to interact with the Resources enrolled in the DR Programs." .
 <https://astrea.linkeddata.es/shapes#790eda9f1006c334de8cd96c41827613> <http://www.w3.org/ns/shacl#name> "Virtual Top Node (VTN)" .
 <https://astrea.linkeddata.es/shapes#790eda9f1006c334de8cd96c41827613> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://astrea.linkeddata.es/shapes#790eda9f1006c334de8cd96c41827613> <http://www.w3.org/ns/shacl#property> <https://astrea.linkeddata.es/shapes#da41c1dcea4d690d2030c30d8fbbca49> .
 <https://astrea.linkeddata.es/shapes#790eda9f1006c334de8cd96c41827613> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#VTN> .
 # 
 # https://astrea.linkeddata.es/shapes#792f722c19c69d1d86c3fe5400d2a193

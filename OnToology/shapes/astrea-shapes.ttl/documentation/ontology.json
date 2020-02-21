@@ -1301,6 +1301,9 @@
   "http://www.w3.org/ns/shacl#nodeKind" : [ {
     "@id" : "http://www.w3.org/ns/shacl#IRI"
   } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "https://astrea.linkeddata.es/shapes#da41c1dcea4d690d2030c30d8fbbca49"
+  } ],
   "http://www.w3.org/ns/shacl#targetClass" : [ {
     "@id" : "https://w3id.org/def/openadr#VTN"
   } ]
@@ -2139,6 +2142,15 @@
   } ],
   "http://www.w3.org/ns/shacl#nodeKind" : [ {
     "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#da41c1dcea4d690d2030c30d8fbbca49",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://w3id.org/def/openadr#sends"
   } ]
 }, {
   "@id" : "https://astrea.linkeddata.es/shapes#de45e4060d4ba000706bc48f6ed90865",

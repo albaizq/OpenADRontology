@@ -799,6 +799,15 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
     
 
 
+    <!-- https://w3id.org/def/openadr#registrationNumber -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/openadr#registrationNumber">
+        <rdfs:label>registration number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/def/openadr#reportName -->
 
 

@@ -1670,6 +1670,12 @@
     "@value" : "refers to target"
   } ]
 }, {
+  "@id" : "https://w3id.org/def/openadr#registrationNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "registration number"
+  } ]
+}, {
   "@id" : "https://w3id.org/def/openadr#reportDataSource",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {

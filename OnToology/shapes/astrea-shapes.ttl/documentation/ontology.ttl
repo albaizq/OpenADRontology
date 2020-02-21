@@ -304,6 +304,13 @@
                                                                        <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
 
 
+###  https://astrea.linkeddata.es/shapes#da41c1dcea4d690d2030c30d8fbbca49
+<https://astrea.linkeddata.es/shapes#da41c1dcea4d690d2030c30d8fbbca49> rdf:type owl:NamedIndividual ,
+                                                                                <http://www.w3.org/ns/shacl#PropertyShape> ;
+                                                                       <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRIOrLiteral> ;
+                                                                       <http://www.w3.org/ns/shacl#path> <https://w3id.org/def/openadr#sends> .
+
+
 ###  https://astrea.linkeddata.es/shapes#de45e4060d4ba000706bc48f6ed90865
 <https://astrea.linkeddata.es/shapes#de45e4060d4ba000706bc48f6ed90865> rdf:type owl:NamedIndividual ,
                                                                                 <http://www.w3.org/ns/shacl#PropertyShape> ;
@@ -1330,6 +1337,7 @@ values.""" ;
                                                                        <http://www.w3.org/ns/shacl#description> "This is the OpenADR Virtual Top Node that is used to interact with the Resources enrolled in the DR Programs." ;
                                                                        <http://www.w3.org/ns/shacl#name> "Virtual Top Node (VTN)" ;
                                                                        <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ;
+                                                                       <http://www.w3.org/ns/shacl#property> <https://astrea.linkeddata.es/shapes#da41c1dcea4d690d2030c30d8fbbca49> ;
                                                                        <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#VTN> .
 
 
