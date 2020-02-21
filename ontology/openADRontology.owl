@@ -14,7 +14,7 @@
                                 <http://purl.org/dc/terms/title> "OpenADR ontology" ;
                                 rdfs:comment "This ontology describes the openADR protocol based on the documentation provided by the openADR Profile B" ,
                                              "http://purl.org/NET/rdflicense/cc-by4.0" ;
-                                owl:versionInfo "0.1.6" .
+                                owl:versionInfo "0.1.7" .
 
 #################################################################
 #    Annotation properties
@@ -41,7 +41,8 @@
 #################################################################
 
 ###  http://www.opengis.net/ont/geosparql#hasGeometry
-<http://www.opengis.net/ont/geosparql#hasGeometry> rdf:type owl:ObjectProperty .
+<http://www.opengis.net/ont/geosparql#hasGeometry> rdf:type owl:ObjectProperty ;
+                                                   rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> .
 
 
 ###  http://www.opengis.net/ont/geosparql#sfContains
@@ -55,7 +56,8 @@
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#location
-<http://www.w3.org/2003/01/geo/wgs84_pos#location> rdf:type owl:ObjectProperty .
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> rdf:type owl:ObjectProperty ;
+                                                   rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos> .
 
 
 ###  https://w3id.org/def/openadr#SignalIntervalDuration
@@ -110,6 +112,7 @@
 
 ###  https://w3id.org/def/openadr#hasGranularity
 :hasGranularity rdf:type owl:ObjectProperty ;
+                rdfs:comment "This is the time interval between sampled data in a report request" ;
                 rdfs:label "has granularity" .
 
 
@@ -121,11 +124,13 @@
 
 ###  https://w3id.org/def/openadr#hasMaxPeriod
 :hasMaxPeriod rdf:type owl:ObjectProperty ;
+              rdfs:comment "Maximum period of time" ;
               rdfs:label "has max period" .
 
 
 ###  https://w3id.org/def/openadr#hasMinPeriod
 :hasMinPeriod rdf:type owl:ObjectProperty ;
+              rdfs:comment "Minimum period of time" ;
               rdfs:label "has min period" .
 
 
@@ -236,6 +241,7 @@
 
 ###  https://w3id.org/def/openadr#isReportedDuringInterval
 :isReportedDuringInterval rdf:type owl:ObjectProperty ;
+                          rdfs:comment "Reporting interval of a report" ;
                           rdfs:label "is reported during interval" .
 
 
@@ -301,12 +307,10 @@
                   rdfs:domain :Event .
 
 
-###  https://w3id.org/def/openadr#sendEvent
-:sendEvent rdf:type owl:ObjectProperty ;
-           rdfs:domain :VTN ;
-           rdfs:range :Event ;
-           rdfs:comment "A link between a VTN and the event it sends" ;
-           rdfs:label "send" .
+###  https://w3id.org/def/openadr#sends
+:sends rdf:type owl:ObjectProperty ;
+       rdfs:comment "A link between a node and the objects it sends" ;
+       rdfs:label "sends" .
 
 
 ###  https://w3id.org/def/openadr#specifiesReport
@@ -318,7 +322,8 @@
 
 
 ###  https://w3id.org/saref#isMeasuredIn
-<https://w3id.org/saref#isMeasuredIn> rdf:type owl:ObjectProperty .
+<https://w3id.org/saref#isMeasuredIn> rdf:type owl:ObjectProperty ;
+                                      rdfs:isDefinedBy <https://w3id.org/saref> .
 
 
 #################################################################
@@ -328,6 +333,7 @@
 ###  https://w3id.org/def/openadr#accuracy
 :accuracy rdf:type owl:DatatypeProperty ;
           rdfs:range xsd:string ;
+          rdfs:comment "Indicates the likely variability of the prediction and the  error of a reading" ;
           rdfs:label "accuracy" .
 
 
@@ -340,6 +346,7 @@
 ###  https://w3id.org/def/openadr#confidence
 :confidence rdf:type owl:DatatypeProperty ;
             rdfs:range xsd:string ;
+            rdfs:comment "A statistical probability that a reported data point is accurate" ;
             rdfs:label "confidence" .
 
 
@@ -358,6 +365,7 @@
 ###  https://w3id.org/def/openadr#dstart
 :dstart rdf:type owl:DatatypeProperty ;
         rdfs:range xsd:dateTimeStamp ;
+        rdfs:comment "The starting time for the activity, data, or state change" ;
         rdfs:label "dstart" .
 
 
@@ -394,7 +402,9 @@
 ###  https://w3id.org/def/openadr#isResponseRequired
 :isResponseRequired rdf:type owl:DatatypeProperty ;
                     rdfs:domain :EventDescriptor ;
-                    rdfs:range xsd:boolean .
+                    rdfs:range xsd:boolean ;
+                    rdfs:comment "Attribute to indicate if a response is required to acknowledge the object" ;
+                    rdfs:label "is response required" .
 
 
 ###  https://w3id.org/def/openadr#isTestEvent
@@ -407,12 +417,14 @@
 ###  https://w3id.org/def/openadr#itemDescription
 :itemDescription rdf:type owl:DatatypeProperty ;
                  rdfs:domain :ItemBase ;
-                 rdfs:range xsd:string .
+                 rdfs:range xsd:string ;
+                 rdfs:label "item description" .
 
 
 ###  https://w3id.org/def/openadr#marketContext
 :marketContext rdf:type owl:DatatypeProperty ;
                rdfs:range xsd:anyURI ;
+               rdfs:comment "A URI identifying a DR Program" ;
                rdfs:label "market context" .
 
 
@@ -420,38 +432,48 @@
 :modificationDateTime rdf:type owl:DatatypeProperty ;
                       rdfs:domain :EventDescriptor ;
                       rdfs:range xsd:dateTimeStamp ;
+                      rdfs:comment "Time of modification of an event" ;
                       rdfs:label "modification date time" .
 
 
 ###  https://w3id.org/def/openadr#modificationNumber
 :modificationNumber rdf:type owl:DatatypeProperty ;
                     rdfs:domain :EventDescriptor ;
-                    rdfs:range xsd:integer .
+                    rdfs:range xsd:integer ;
+                    rdfs:comment "Number which is incremented each time an event is modified." ;
+                    rdfs:label "modification number" .
 
 
 ###  https://w3id.org/def/openadr#modificationReason
 :modificationReason rdf:type owl:DatatypeProperty ;
                     rdfs:domain :EventDescriptor ;
-                    rdfs:range xsd:string .
+                    rdfs:range xsd:string ;
+                    rdfs:comment "It indicates why an event was modified" ;
+                    rdfs:label "modification reason" .
 
 
 ###  https://w3id.org/def/openadr#nodeName
 :nodeName rdf:type owl:DatatypeProperty ;
           rdfs:domain :Node ;
           rdfs:range owl:rational ;
-          rdfs:label "Node name" .
+          rdfs:label "node name" .
 
 
 ###  https://w3id.org/def/openadr#payloadFloat
 :payloadFloat rdf:type owl:DatatypeProperty ;
               rdfs:range xsd:float ;
-              rdfs:label "paylaod float" .
+              rdfs:comment """Data point value for event signals or for reporting current or historical
+values.""" ;
+              rdfs:label "payload float" .
 
 
 ###  https://w3id.org/def/openadr#priority
 :priority rdf:type owl:DatatypeProperty ;
           rdfs:domain :EventDescriptor ;
-          rdfs:range xsd:integer .
+          rdfs:range xsd:integer ;
+          rdfs:comment """The priority of the event in relation to other events (The lower the number
+higher the priority. A value of zero (0) indicates no priority, which is the lowest priority by default).""" ;
+          rdfs:label "priority" .
 
 
 ###  https://w3id.org/def/openadr#randomization
@@ -463,6 +485,7 @@
 ###  https://w3id.org/def/openadr#readingType
 :readingType rdf:type owl:DatatypeProperty ;
              rdfs:range xsd:string ;
+             rdfs:comment "Metadata about the Readings, such as mean or derived" ;
              rdfs:label "reading type" .
 
 
@@ -473,15 +496,12 @@
             rdfs:label "report name" .
 
 
-###  https://w3id.org/def/openadr#responseRequired
-:responseRequired rdf:type owl:DatatypeProperty ;
-                  rdfs:range xsd:string .
-
-
 ###  https://w3id.org/def/openadr#scaleCode
 :scaleCode rdf:type owl:DatatypeProperty ;
            rdfs:domain :ItemBase ;
-           rdfs:range xsd:string .
+           rdfs:range xsd:string ;
+           rdfs:comment "A scaling factor for the base unit of measure for a report" ;
+           rdfs:label "scale code" .
 
 
 ###  https://w3id.org/def/openadr#signalName
@@ -720,11 +740,11 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
 ###  https://w3id.org/def/openadr#Node
 :Node rdf:type owl:Class ;
       rdfs:subClassOf [ rdf:type owl:Restriction ;
-                        owl:onProperty :sendEvent ;
+                        owl:onProperty :sends ;
                         owl:someValuesFrom :Opt
                       ] ,
                       [ rdf:type owl:Restriction ;
-                        owl:onProperty :sendEvent ;
+                        owl:onProperty :sends ;
                         owl:someValuesFrom :Report
                       ] .
 
