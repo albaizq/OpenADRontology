@@ -16,8 +16,8 @@ node [shape = rectangle, color="orange"]; "base:SignalInterval" "http://www.w3.o
 	"NULL" -> "base:ramp_up" [ label = "owl:onProperty" ];
 	"NULL" -> "xsd:string" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "base:sends" [ label = "owl:onProperty" ];
-	"NULL" -> "xsd:dateTimeStamp" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:hasSamplingRate" [ label = "owl:onProperty" ];
+	"NULL" -> "xsd:dateTimeStamp" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "http://www.w3.org/2006/time#Duration" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:isReportedDuringInterval" [ label = "owl:onProperty" ];
 	"NULL" -> "base:EventDescriptor" [ label = "owl:someValuesFrom" ];
@@ -50,9 +50,9 @@ node [shape = rectangle, color="orange"]; "base:SignalInterval" "http://www.w3.o
 	"NULL" -> "base:ServiceArea" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "http://www.opengis.net/ont/geosparql#Geometry" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "base:hasItemBase" [ label = "owl:onProperty" ];
-	"NULL" -> "base:isOnChange" [ label = "owl:onProperty" ];
-	"NULL" -> "base:VEN" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:SignalInterval" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "base:VEN" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "base:isOnChange" [ label = "owl:onProperty" ];
 	"NULL" -> "base:PayloadResourceStatus" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "base:createdDateTime" [ label = "owl:onProperty" ];
 	"NULL" -> "http://www.w3.org/2006/time#Duration" [ label = "owl:allValuesFrom" ];
@@ -66,6 +66,7 @@ node [shape = rectangle, color="orange"]; "base:SignalInterval" "http://www.w3.o
 	"NULL" -> "base:accuracy" [ label = "owl:onProperty" ];
 	"NULL" -> "http://www.w3.org/2006/time#Interval" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:isUnavailableDuring" [ label = "owl:onProperty" ];
+	"NULL" -> "base:Event" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:SignalInterval" [ label = "owl:onClass" ];
 	"NULL" -> "xsd:string" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:payloadFloat" [ label = "owl:onProperty" ];

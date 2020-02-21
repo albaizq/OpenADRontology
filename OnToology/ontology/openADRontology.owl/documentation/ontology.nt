@@ -867,6 +867,10 @@ _:genid42 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/o
 # https://w3id.org/def/openadr#VTN
 <https://w3id.org/def/openadr#VTN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/openadr#VTN> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/openadr#Node> .
+<https://w3id.org/def/openadr#VTN> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/openadr#sends> .
+_:genid43 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/openadr#Event> .
 <https://w3id.org/def/openadr#VTN> <http://www.w3.org/2000/01/rdf-schema#comment> "This is the OpenADR Virtual Top Node that is used to interact with the Resources enrolled in the DR Programs." .
 <https://w3id.org/def/openadr#VTN> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OpenADR 2.0 Demand Response Program Implementation Guide" .
 <https://w3id.org/def/openadr#VTN> <http://www.w3.org/2000/01/rdf-schema#label> "Virtual Top Node (VTN)" .

@@ -336,6 +336,15 @@
     "@id" : "https://w3id.org/def/openadr#Resource"
   } ]
 }, {
+  "@id" : "_:genid43",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/openadr#sends"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/def/openadr#Event"
+  } ]
+}, {
   "@id" : "_:genid5",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
@@ -1052,6 +1061,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/openadr#Node"
+  }, {
+    "@id" : "_:genid43"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#accuracy",
