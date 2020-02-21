@@ -5,7 +5,7 @@
    <key for="edge" id="d2" yfiles.type="edgegraphics" />
    <key attr.name="description" attr.type="string" for="edge" id="d3" />
    <key for="graphml" id="d4" yfiles.type="resources" />
-   <graph edgedefault="directed" id="G" parse.edges="112" parse.nodes="85" parse.order="free">
+   <graph edgedefault="directed" id="G" parse.edges="113" parse.nodes="85" parse.order="free">
       <node id="nid_http://www.opengis.net/ont/geosparql#Feature">
          <data key="d0">
             <y:ShapeNode>
@@ -1077,6 +1077,17 @@
          </data>
          <data key="d3" />
       </edge>
+    <edge id="eid_owl:allValuesFrom45" source="nid_NULL" target="nid_http://www.opengis.net/ont/geosparql#Geometry">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:allValuesFrom</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
       <node id="nid_base:ServiceArea">
          <data key="d0">
             <y:ShapeNode>
@@ -1089,23 +1100,12 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom45" source="nid_NULL" target="nid_base:ServiceArea">
+    <edge id="eid_owl:someValuesFrom46" source="nid_NULL" target="nid_base:ServiceArea">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
                <y:Arrows source="none" target="normal" />
                <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:someValuesFrom</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-    <edge id="eid_owl:allValuesFrom46" source="nid_NULL" target="nid_http://www.opengis.net/ont/geosparql#Geometry">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:allValuesFrom</y:EdgeLabel>
                <y:BendStyle smoothed="false" />
             </y:PolyLineEdge>
          </data>
@@ -1134,24 +1134,24 @@
          </data>
          <data key="d3" />
       </edge>
-      <node id="nid_base:SignalInterval">
+      <node id="nid_base:isOnChange">
          <data key="d0">
             <y:ShapeNode>
-               <y:Geometry height="30.0" width="190.0" x="0.0" y="0.0" />
+               <y:Geometry height="30.0" width="150.0" x="0.0" y="0.0" />
                <y:Fill color="#FFFFFF" transparent="false" />
                <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">base:SignalInterval</y:NodeLabel>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">base:isOnChange</y:NodeLabel>
                <y:Shape type="rectangle" />
             </y:ShapeNode>
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom48" source="nid_NULL" target="nid_base:SignalInterval">
+    <edge id="eid_owl:onProperty48" source="nid_NULL" target="nid_base:isOnChange">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
                <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:someValuesFrom</y:EdgeLabel>
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:onProperty</y:EdgeLabel>
                <y:BendStyle smoothed="false" />
             </y:PolyLineEdge>
          </data>
@@ -1180,24 +1180,24 @@
          </data>
          <data key="d3" />
       </edge>
-      <node id="nid_base:isOnChange">
+      <node id="nid_base:SignalInterval">
          <data key="d0">
             <y:ShapeNode>
-               <y:Geometry height="30.0" width="150.0" x="0.0" y="0.0" />
+               <y:Geometry height="30.0" width="190.0" x="0.0" y="0.0" />
                <y:Fill color="#FFFFFF" transparent="false" />
                <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">base:isOnChange</y:NodeLabel>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">base:SignalInterval</y:NodeLabel>
                <y:Shape type="rectangle" />
             </y:ShapeNode>
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:onProperty50" source="nid_NULL" target="nid_base:isOnChange">
+    <edge id="eid_owl:someValuesFrom50" source="nid_NULL" target="nid_base:SignalInterval">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
                <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:onProperty</y:EdgeLabel>
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:someValuesFrom</y:EdgeLabel>
                <y:BendStyle smoothed="false" />
             </y:PolyLineEdge>
          </data>
@@ -1501,23 +1501,23 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_owl:onClass65" source="nid_NULL" target="nid_base:SignalInterval">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:onClass</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-    <edge id="eid_owl:someValuesFrom66" source="nid_NULL" target="nid_xsd:string">
+    <edge id="eid_owl:someValuesFrom65" source="nid_NULL" target="nid_xsd:string">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
                <y:Arrows source="none" target="normal" />
                <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:someValuesFrom</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+    <edge id="eid_owl:onClass66" source="nid_NULL" target="nid_base:SignalInterval">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:onClass</y:EdgeLabel>
                <y:BendStyle smoothed="false" />
             </y:PolyLineEdge>
          </data>
@@ -1796,7 +1796,30 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_http://www.opengis.net/ont/geosparql#sfContains82" source="nid_http://www.opengis.net/ont/geosparql#SpatialObject" target="nid_http://www.opengis.net/ont/geosparql#SpatialObject">
+      <node id="nid_base:Node">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="90.0" x="0.0" y="0.0" />
+               <y:Fill color="#FFA500" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">base:Node</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_base:registrationNumber82" source="nid_base:Node" target="nid_xsd:string">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">base:registrationNumber</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+    <edge id="eid_http://www.opengis.net/ont/geosparql#sfContains83" source="nid_http://www.opengis.net/ont/geosparql#SpatialObject" target="nid_http://www.opengis.net/ont/geosparql#SpatialObject">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1807,7 +1830,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:responseRequired83" source="nid_base:Event" target="nid_owl:Thing">
+    <edge id="eid_base:responseRequired84" source="nid_base:Event" target="nid_owl:Thing">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1818,7 +1841,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:groupName84" source="nid_owl:Thing" target="nid_xsd:string">
+    <edge id="eid_base:groupName85" source="nid_owl:Thing" target="nid_xsd:string">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1841,7 +1864,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_base:marketContext85" source="nid_owl:Thing" target="nid_xsd:anyURI">
+    <edge id="eid_base:marketContext86" source="nid_owl:Thing" target="nid_xsd:anyURI">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1864,7 +1887,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_base:modificationNumber86" source="nid_base:EventDescriptor" target="nid_xsd:integer">
+    <edge id="eid_base:modificationNumber87" source="nid_base:EventDescriptor" target="nid_xsd:integer">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1875,7 +1898,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:isResponseRequired87" source="nid_base:EventDescriptor" target="nid_xsd:boolean">
+    <edge id="eid_base:isResponseRequired88" source="nid_base:EventDescriptor" target="nid_xsd:boolean">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1886,7 +1909,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:readingType88" source="nid_owl:Thing" target="nid_xsd:string">
+    <edge id="eid_base:readingType89" source="nid_owl:Thing" target="nid_xsd:string">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1897,7 +1920,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:isTestEvent89" source="nid_base:EventDescriptor" target="nid_xsd:boolean">
+    <edge id="eid_base:isTestEvent90" source="nid_base:EventDescriptor" target="nid_xsd:boolean">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1908,7 +1931,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:createdDateTime90" source="nid_owl:Thing" target="nid_xsd:dateTimeStamp">
+    <edge id="eid_base:createdDateTime91" source="nid_owl:Thing" target="nid_xsd:dateTimeStamp">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1919,7 +1942,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:eventDescriptor91" source="nid_base:Event" target="nid_base:EventDescriptor">
+    <edge id="eid_base:eventDescriptor92" source="nid_base:Event" target="nid_base:EventDescriptor">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1930,7 +1953,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:reportName92" source="nid_base:Report" target="nid_xsd:string">
+    <edge id="eid_base:reportName93" source="nid_base:Report" target="nid_xsd:string">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1953,7 +1976,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_base:hasSignalPayload93" source="nid_base:Signal" target="nid_base:SignalPayload">
+    <edge id="eid_base:hasSignalPayload94" source="nid_base:Signal" target="nid_base:SignalPayload">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1976,7 +1999,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_base:hasEventStatus94" source="nid_base:Event" target="nid_base:EventStatus">
+    <edge id="eid_base:hasEventStatus95" source="nid_base:Event" target="nid_base:EventStatus">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2011,7 +2034,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_base:specifiesReport95" source="nid_base:MetadataReport" target="nid_base:ReportSpecifier">
+    <edge id="eid_base:specifiesReport96" source="nid_base:MetadataReport" target="nid_base:ReportSpecifier">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2022,18 +2045,6 @@
          </data>
          <data key="d3" />
       </edge>
-      <node id="nid_base:Node">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="90.0" x="0.0" y="0.0" />
-               <y:Fill color="#FFA500" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">base:Node</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
       <node id="nid_owl:rational">
          <data key="d0">
             <y:ShapeNode>
@@ -2046,7 +2057,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_base:nodeName96" source="nid_base:Node" target="nid_owl:rational">
+    <edge id="eid_base:nodeName97" source="nid_base:Node" target="nid_owl:rational">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2057,7 +2068,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:isOnChange97" source="nid_base:SamplingRate" target="nid_xsd:boolean">
+    <edge id="eid_base:isOnChange98" source="nid_base:SamplingRate" target="nid_xsd:boolean">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2068,7 +2079,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:version98" source="nid_owl:Thing" target="nid_xsd:string">
+    <edge id="eid_base:version99" source="nid_owl:Thing" target="nid_xsd:string">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2079,7 +2090,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:modificationReason99" source="nid_base:EventDescriptor" target="nid_xsd:string">
+    <edge id="eid_base:modificationReason100" source="nid_base:EventDescriptor" target="nid_xsd:string">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2102,7 +2113,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_base:reportDescriptor100" source="nid_base:Report" target="nid_base:ReportDescriptor">
+    <edge id="eid_base:reportDescriptor101" source="nid_base:Report" target="nid_base:ReportDescriptor">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2113,7 +2124,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:reportDataSource101" source="nid_base:Report" target="nid_base:Group">
+    <edge id="eid_base:reportDataSource102" source="nid_base:Report" target="nid_base:Group">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2124,7 +2135,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:hasSignalType102" source="nid_base:Signal" target="nid_xsd:string">
+    <edge id="eid_base:hasSignalType103" source="nid_base:Signal" target="nid_xsd:string">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2135,7 +2146,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:scaleCode103" source="nid_base:ItemBase" target="nid_xsd:string">
+    <edge id="eid_base:scaleCode104" source="nid_base:ItemBase" target="nid_xsd:string">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2146,7 +2157,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:isDefinedIn104" source="nid_owl:Thing" target="nid_base:SignalInterval">
+    <edge id="eid_base:isDefinedIn105" source="nid_owl:Thing" target="nid_base:SignalInterval">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2169,7 +2180,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_base:hasReportPayload105" source="nid_base:Report" target="nid_base:ReportPayload">
+    <edge id="eid_base:hasReportPayload106" source="nid_base:Report" target="nid_base:ReportPayload">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2180,7 +2191,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:eventName106" source="nid_base:Event" target="nid_owl:rational">
+    <edge id="eid_base:eventName107" source="nid_base:Event" target="nid_owl:rational">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2203,7 +2214,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_base:hasSpecifierPayload107" source="nid_base:ReportSpecifier" target="nid_base:SpecifierPayload">
+    <edge id="eid_base:hasSpecifierPayload108" source="nid_base:ReportSpecifier" target="nid_base:SpecifierPayload">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2214,7 +2225,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:randomization108" source="nid_base:EventDescriptor" target="nid_xsd:string">
+    <edge id="eid_base:randomization109" source="nid_base:EventDescriptor" target="nid_xsd:string">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2225,7 +2236,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:accuracy109" source="nid_owl:Thing" target="nid_xsd:string">
+    <edge id="eid_base:accuracy110" source="nid_owl:Thing" target="nid_xsd:string">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2236,7 +2247,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:priority110" source="nid_base:EventDescriptor" target="nid_xsd:integer">
+    <edge id="eid_base:priority111" source="nid_base:EventDescriptor" target="nid_xsd:integer">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2247,7 +2258,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_base:itemDescription111" source="nid_base:ItemBase" target="nid_xsd:string">
+    <edge id="eid_base:itemDescription112" source="nid_base:ItemBase" target="nid_xsd:string">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
