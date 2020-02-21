@@ -6,7 +6,7 @@
 <https://w3id.org/def/openadr> <http://purl.org/dc/terms/title> "OpenADR ontology" .
 <https://w3id.org/def/openadr> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology describes the openADR protocol based on the documentation provided by the openADR Profile B" .
 <https://w3id.org/def/openadr> <http://www.w3.org/2000/01/rdf-schema#comment> "http://purl.org/NET/rdflicense/cc-by4.0" .
-<https://w3id.org/def/openadr> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.6" .
+<https://w3id.org/def/openadr> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.7" .
 # 
 # 
 # #################################################################
@@ -39,6 +39,7 @@
 # 
 # http://www.opengis.net/ont/geosparql#hasGeometry
 <http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> .
 # 
 # http://www.opengis.net/ont/geosparql#sfContains
 <http://www.opengis.net/ont/geosparql#sfContains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -51,6 +52,7 @@
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#location
 <http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2003/01/geo/wgs84_pos> .
 # 
 # https://w3id.org/def/openadr#SignalIntervalDuration
 <https://w3id.org/def/openadr#SignalIntervalDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -96,6 +98,7 @@
 # 
 # https://w3id.org/def/openadr#hasGranularity
 <https://w3id.org/def/openadr#hasGranularity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/openadr#hasGranularity> <http://www.w3.org/2000/01/rdf-schema#comment> "This is the time interval between sampled data in a report request" .
 <https://w3id.org/def/openadr#hasGranularity> <http://www.w3.org/2000/01/rdf-schema#label> "has granularity" .
 # 
 # https://w3id.org/def/openadr#hasItemBase
@@ -105,10 +108,12 @@
 # 
 # https://w3id.org/def/openadr#hasMaxPeriod
 <https://w3id.org/def/openadr#hasMaxPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/openadr#hasMaxPeriod> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum period of time" .
 <https://w3id.org/def/openadr#hasMaxPeriod> <http://www.w3.org/2000/01/rdf-schema#label> "has max period" .
 # 
 # https://w3id.org/def/openadr#hasMinPeriod
 <https://w3id.org/def/openadr#hasMinPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/openadr#hasMinPeriod> <http://www.w3.org/2000/01/rdf-schema#comment> "Minimum period of time" .
 <https://w3id.org/def/openadr#hasMinPeriod> <http://www.w3.org/2000/01/rdf-schema#label> "has min period" .
 # 
 # https://w3id.org/def/openadr#hasPayload
@@ -202,6 +207,7 @@
 # 
 # https://w3id.org/def/openadr#isReportedDuringInterval
 <https://w3id.org/def/openadr#isReportedDuringInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/openadr#isReportedDuringInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "Reporting interval of a report" .
 <https://w3id.org/def/openadr#isReportedDuringInterval> <http://www.w3.org/2000/01/rdf-schema#label> "is reported during interval" .
 # 
 # https://w3id.org/def/openadr#isUnavailableDuring
@@ -256,12 +262,10 @@
 <https://w3id.org/def/openadr#responseRequired> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/openadr#responseRequired> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/openadr#Event> .
 # 
-# https://w3id.org/def/openadr#sendEvent
-<https://w3id.org/def/openadr#sendEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/openadr#sendEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/openadr#VTN> .
-<https://w3id.org/def/openadr#sendEvent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/openadr#Event> .
-<https://w3id.org/def/openadr#sendEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "A link between a VTN and the event it sends" .
-<https://w3id.org/def/openadr#sendEvent> <http://www.w3.org/2000/01/rdf-schema#label> "send" .
+# https://w3id.org/def/openadr#sends
+<https://w3id.org/def/openadr#sends> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/openadr#sends> <http://www.w3.org/2000/01/rdf-schema#comment> "A link between a node and the objects it sends" .
+<https://w3id.org/def/openadr#sends> <http://www.w3.org/2000/01/rdf-schema#label> "sends" .
 # 
 # https://w3id.org/def/openadr#specifiesReport
 <https://w3id.org/def/openadr#specifiesReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -272,6 +276,7 @@
 # 
 # https://w3id.org/saref#isMeasuredIn
 <https://w3id.org/saref#isMeasuredIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/saref#isMeasuredIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref> .
 # 
 # 
 # 
@@ -285,6 +290,7 @@
 # https://w3id.org/def/openadr#accuracy
 <https://w3id.org/def/openadr#accuracy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/def/openadr#accuracy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/openadr#accuracy> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the likely variability of the prediction and the  error of a reading" .
 <https://w3id.org/def/openadr#accuracy> <http://www.w3.org/2000/01/rdf-schema#label> "accuracy" .
 # 
 # https://w3id.org/def/openadr#comment
@@ -295,6 +301,7 @@
 # https://w3id.org/def/openadr#confidence
 <https://w3id.org/def/openadr#confidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/def/openadr#confidence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/openadr#confidence> <http://www.w3.org/2000/01/rdf-schema#comment> "A statistical probability that a reported data point is accurate" .
 <https://w3id.org/def/openadr#confidence> <http://www.w3.org/2000/01/rdf-schema#label> "confidence" .
 # 
 # https://w3id.org/def/openadr#createdDateTime
@@ -310,6 +317,7 @@
 # https://w3id.org/def/openadr#dstart
 <https://w3id.org/def/openadr#dstart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/def/openadr#dstart> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<https://w3id.org/def/openadr#dstart> <http://www.w3.org/2000/01/rdf-schema#comment> "The starting time for the activity, data, or state change" .
 <https://w3id.org/def/openadr#dstart> <http://www.w3.org/2000/01/rdf-schema#label> "dstart" .
 # 
 # https://w3id.org/def/openadr#eventName
@@ -342,6 +350,8 @@
 <https://w3id.org/def/openadr#isResponseRequired> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/def/openadr#isResponseRequired> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/openadr#EventDescriptor> .
 <https://w3id.org/def/openadr#isResponseRequired> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/def/openadr#isResponseRequired> <http://www.w3.org/2000/01/rdf-schema#comment> "Attribute to indicate if a response is required to acknowledge the object" .
+<https://w3id.org/def/openadr#isResponseRequired> <http://www.w3.org/2000/01/rdf-schema#label> "is response required" .
 # 
 # https://w3id.org/def/openadr#isTestEvent
 <https://w3id.org/def/openadr#isTestEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -353,43 +363,53 @@
 <https://w3id.org/def/openadr#itemDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/def/openadr#itemDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/openadr#ItemBase> .
 <https://w3id.org/def/openadr#itemDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/openadr#itemDescription> <http://www.w3.org/2000/01/rdf-schema#label> "item description" .
 # 
 # https://w3id.org/def/openadr#marketContext
 <https://w3id.org/def/openadr#marketContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/def/openadr#marketContext> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/def/openadr#marketContext> <http://www.w3.org/2000/01/rdf-schema#comment> "A URI identifying a DR Program" .
 <https://w3id.org/def/openadr#marketContext> <http://www.w3.org/2000/01/rdf-schema#label> "market context" .
 # 
 # https://w3id.org/def/openadr#modificationDateTime
 <https://w3id.org/def/openadr#modificationDateTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/def/openadr#modificationDateTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/openadr#EventDescriptor> .
 <https://w3id.org/def/openadr#modificationDateTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<https://w3id.org/def/openadr#modificationDateTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Time of modification of an event" .
 <https://w3id.org/def/openadr#modificationDateTime> <http://www.w3.org/2000/01/rdf-schema#label> "modification date time" .
 # 
 # https://w3id.org/def/openadr#modificationNumber
 <https://w3id.org/def/openadr#modificationNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/def/openadr#modificationNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/openadr#EventDescriptor> .
 <https://w3id.org/def/openadr#modificationNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/def/openadr#modificationNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Number which is incremented each time an event is modified." .
+<https://w3id.org/def/openadr#modificationNumber> <http://www.w3.org/2000/01/rdf-schema#label> "modification number" .
 # 
 # https://w3id.org/def/openadr#modificationReason
 <https://w3id.org/def/openadr#modificationReason> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/def/openadr#modificationReason> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/openadr#EventDescriptor> .
 <https://w3id.org/def/openadr#modificationReason> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/openadr#modificationReason> <http://www.w3.org/2000/01/rdf-schema#comment> "It indicates why an event was modified" .
+<https://w3id.org/def/openadr#modificationReason> <http://www.w3.org/2000/01/rdf-schema#label> "modification reason" .
 # 
 # https://w3id.org/def/openadr#nodeName
 <https://w3id.org/def/openadr#nodeName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/def/openadr#nodeName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/openadr#Node> .
 <https://w3id.org/def/openadr#nodeName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#rational> .
-<https://w3id.org/def/openadr#nodeName> <http://www.w3.org/2000/01/rdf-schema#label> "Node name" .
+<https://w3id.org/def/openadr#nodeName> <http://www.w3.org/2000/01/rdf-schema#label> "node name" .
 # 
 # https://w3id.org/def/openadr#payloadFloat
 <https://w3id.org/def/openadr#payloadFloat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/def/openadr#payloadFloat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<https://w3id.org/def/openadr#payloadFloat> <http://www.w3.org/2000/01/rdf-schema#label> "paylaod float" .
+<https://w3id.org/def/openadr#payloadFloat> <http://www.w3.org/2000/01/rdf-schema#comment> "Data point value for event signals or for reporting current or historical\nvalues." .
+<https://w3id.org/def/openadr#payloadFloat> <http://www.w3.org/2000/01/rdf-schema#label> "payload float" .
 # 
 # https://w3id.org/def/openadr#priority
 <https://w3id.org/def/openadr#priority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/def/openadr#priority> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/openadr#EventDescriptor> .
 <https://w3id.org/def/openadr#priority> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/def/openadr#priority> <http://www.w3.org/2000/01/rdf-schema#comment> "The priority of the event in relation to other events (The lower the number\nhigher the priority. A value of zero (0) indicates no priority, which is the lowest priority by default)." .
+<https://w3id.org/def/openadr#priority> <http://www.w3.org/2000/01/rdf-schema#label> "priority" .
 # 
 # https://w3id.org/def/openadr#randomization
 <https://w3id.org/def/openadr#randomization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -399,6 +419,7 @@
 # https://w3id.org/def/openadr#readingType
 <https://w3id.org/def/openadr#readingType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/def/openadr#readingType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/openadr#readingType> <http://www.w3.org/2000/01/rdf-schema#comment> "Metadata about the Readings, such as mean or derived" .
 <https://w3id.org/def/openadr#readingType> <http://www.w3.org/2000/01/rdf-schema#label> "reading type" .
 # 
 # https://w3id.org/def/openadr#reportName
@@ -407,14 +428,12 @@
 <https://w3id.org/def/openadr#reportName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/def/openadr#reportName> <http://www.w3.org/2000/01/rdf-schema#label> "report name" .
 # 
-# https://w3id.org/def/openadr#responseRequired
-<https://w3id.org/def/openadr#responseRequired> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/openadr#responseRequired> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-# 
 # https://w3id.org/def/openadr#scaleCode
 <https://w3id.org/def/openadr#scaleCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/def/openadr#scaleCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/openadr#ItemBase> .
 <https://w3id.org/def/openadr#scaleCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/openadr#scaleCode> <http://www.w3.org/2000/01/rdf-schema#comment> "A scaling factor for the base unit of measure for a report" .
+<https://w3id.org/def/openadr#scaleCode> <http://www.w3.org/2000/01/rdf-schema#label> "scale code" .
 # 
 # https://w3id.org/def/openadr#signalName
 <https://w3id.org/def/openadr#signalName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -633,11 +652,11 @@ _:genid17 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/o
 <https://w3id.org/def/openadr#Node> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/openadr#Node> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
 _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/openadr#sendEvent> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/openadr#sends> .
 _:genid18 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/openadr#Opt> .
 <https://w3id.org/def/openadr#Node> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/openadr#sendEvent> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/openadr#sends> .
 _:genid19 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/openadr#Report> .
 # 
 # https://w3id.org/def/openadr#Opt
