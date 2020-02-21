@@ -491,6 +491,8 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
 
 ###  https://w3id.org/def/openadr#registrationNumber
 :registrationNumber rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Node ;
+                    rdfs:range xsd:string ;
                     rdfs:label "registration number" .
 
 
