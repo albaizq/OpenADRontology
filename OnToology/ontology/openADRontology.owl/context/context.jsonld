@@ -182,7 +182,7 @@
     },
     "responseRequired" : {
       "@id" : "https://w3id.org/def/openadr#responseRequired",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+      "@type" : "@id"
     },
     "dataquality" : {
       "@id" : "https://w3id.org/def/openadr#dataquality",
@@ -204,10 +204,6 @@
     },
     "TelemetryUsageReport" : {
       "@id" : "https://w3id.org/def/openadr#TelemetryUsageReport"
-    },
-    "sendEvent" : {
-      "@id" : "https://w3id.org/def/openadr#sendEvent",
-      "@type" : "@id"
     },
     "eventName" : {
       "@id" : "https://w3id.org/def/openadr#eventName",
@@ -421,6 +417,10 @@
     },
     "SignalIntervalDuration" : {
       "@id" : "https://w3id.org/def/openadr#SignalIntervalDuration",
+      "@type" : "@id"
+    },
+    "sends" : {
+      "@id" : "https://w3id.org/def/openadr#sends",
       "@type" : "@id"
     },
     "preferredNamespaceUri" : {
