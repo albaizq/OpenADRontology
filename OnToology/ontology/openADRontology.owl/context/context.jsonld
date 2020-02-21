@@ -180,10 +180,6 @@
     "Interval" : {
       "@id" : "http://www.w3.org/2006/time#Interval"
     },
-    "responseRequired" : {
-      "@id" : "https://w3id.org/def/openadr#responseRequired",
-      "@type" : "@id"
-    },
     "dataquality" : {
       "@id" : "https://w3id.org/def/openadr#dataquality",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
@@ -382,6 +378,10 @@
       "@id" : "https://w3id.org/def/openadr#accuracy",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
+    "requires" : {
+      "@id" : "https://w3id.org/def/openadr#requires",
+      "@type" : "@id"
+    },
     "hasSpecifierPayload" : {
       "@id" : "https://w3id.org/def/openadr#hasSpecifierPayload",
       "@type" : "@id"
@@ -418,6 +418,10 @@
     },
     "ReportSpecifier" : {
       "@id" : "https://w3id.org/def/openadr#ReportSpecifier"
+    },
+    "receives" : {
+      "@id" : "https://w3id.org/def/openadr#receives",
+      "@type" : "@id"
     },
     "SignalIntervalDuration" : {
       "@id" : "https://w3id.org/def/openadr#SignalIntervalDuration",

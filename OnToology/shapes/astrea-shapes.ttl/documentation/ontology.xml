@@ -468,6 +468,17 @@
     
 
 
+    <!-- https://astrea.linkeddata.es/shapes#da41c1dcea4d690d2030c30d8fbbca49 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#da41c1dcea4d690d2030c30d8fbbca49">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#sends"/>
+    </NamedIndividual>
+    
+
+
     <!-- https://astrea.linkeddata.es/shapes#de45e4060d4ba000706bc48f6ed90865 -->
 
 
@@ -948,6 +959,20 @@
         <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
         <shacl:name>created date time</shacl:name>
         <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#090f8a6f31379ec1d356d7b448ff7254 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#090f8a6f31379ec1d356d7b448ff7254">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>registration number</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:name>registration number</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:pattern>.*</shacl:pattern>
     </NamedIndividual>
     
 
@@ -1923,6 +1948,7 @@ values.</shacl:description>
         <shacl:description>This is the OpenADR Virtual Top Node that is used to interact with the Resources enrolled in the DR Programs.</shacl:description>
         <shacl:name>Virtual Top Node (VTN)</shacl:name>
         <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#da41c1dcea4d690d2030c30d8fbbca49"/>
         <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#VTN"/>
     </NamedIndividual>
     
