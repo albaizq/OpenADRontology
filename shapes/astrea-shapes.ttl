@@ -320,9 +320,13 @@
         sh:nodeKind       sh:IRI ;
         sh:targetClass    :OptOut .
 
-<https://astrea.linkeddata.es/shapes#86cad30ad540a4059f570fdc7164e3bb>
-        a            sh:PropertyShape ;
-        sh:nodeKind  sh:BlankNodeOrIRI .
+<https://astrea.linkeddata.es/shapes#6dcbd4bf628c88812577413c89f6419a>
+        a               sh:PropertyShape ;
+        rdfs:label      "receives" , "Relation between the node and a report it receives" ;
+        sh:class        :Report ;
+        sh:description  "Relation between the node and a report it receives" ;
+        sh:name         "receives" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
 
 <https://astrea.linkeddata.es/shapes#56e6de9839822f827053c65b43422bdd>
         a            sh:PropertyShape ;
@@ -483,6 +487,14 @@
         sh:description  "Name fo an event" ;
         sh:name         "event name" ;
         sh:nodeKind     sh:Literal .
+
+<https://astrea.linkeddata.es/shapes#33de4e8d10406ce51922c0dae5b4a2de>
+        a               sh:PropertyShape ;
+        rdfs:label      "requires" , "Relation between a node and a report it requires" ;
+        sh:class        :Report ;
+        sh:description  "Relation between a node and a report it requires" ;
+        sh:name         "requires" ;
+        sh:nodeKind     sh:BlankNodeOrIRI .
 
 <https://astrea.linkeddata.es/shapes#f179e08957b065e53feb2b802262bf1b>
         a            sh:PropertyShape ;
