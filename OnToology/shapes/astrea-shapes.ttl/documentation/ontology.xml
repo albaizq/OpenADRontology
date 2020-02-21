@@ -1,0 +1,2263 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:shacl="http://www.w3.org/ns/shacl#">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#class -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#class"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#datatype -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#datatype"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#description -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#description"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#disjoint -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#disjoint"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#name -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#name"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#nodeKind -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#nodeKind"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#path -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#path"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#pattern -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#pattern"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#property -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#property"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#qualifiedMaxCount -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#qualifiedMaxCount"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#qualifiedMinCount -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#qualifiedMinCount"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#qualifiedValueShape -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#qualifiedValueShape"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#targetClass -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#targetClass"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#NodeShape -->
+
+
+    <Class rdf:about="http://www.w3.org/ns/shacl#NodeShape"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#PropertyShape -->
+
+
+    <Class rdf:about="http://www.w3.org/ns/shacl#PropertyShape"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#a1a9e1202c0c9208afee98011e8ce6b9 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#a1a9e1202c0c9208afee98011e8ce6b9">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#refersToTarget"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#a8a891449ece81fd455a920af672daf0 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#a8a891449ece81fd455a920af672daf0">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>item description</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:name>item description</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:pattern>.*</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#aaf59a993f9cef84450a198dcdcc0077 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#aaf59a993f9cef84450a198dcdcc0077">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label>Signal Payload</rdfs:label>
+        <shacl:name>Signal Payload</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#SignalPayload"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#abee8dc113660d74cca7b9bf062f0a75 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#abee8dc113660d74cca7b9bf062f0a75">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Relation between a VEN and a Resource</rdfs:label>
+        <rdfs:label>manages</rdfs:label>
+        <shacl:description>Relation between a VEN and a Resource</shacl:description>
+        <shacl:name>manages</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#ac0dc9875106eb007194138b41ec1519 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#ac0dc9875106eb007194138b41ec1519">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#isDefinedIn"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#b6161cc0569b9e5988b3b743c4820485 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#b6161cc0569b9e5988b3b743c4820485">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:class rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#hasGranularity"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#b64e7b9a7883fa8fcc81acdd304fa60c -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#b64e7b9a7883fa8fcc81acdd304fa60c">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Program Implementation Guide</rdfs:isDefinedBy>
+        <rdfs:label>Event status</rdfs:label>
+        <shacl:description>Status of an OpenADR event</shacl:description>
+        <shacl:name>Event status</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#EventStatus"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#b765c419f68200d177fb014b294619c2 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#b765c419f68200d177fb014b294619c2">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Program Implementation Guide</rdfs:isDefinedBy>
+        <rdfs:label>Resource</rdfs:label>
+        <shacl:description>Entity that is enrolled in the DR Programs and is capable of delivering some sort of change to their load profile in response to receiving a DR signal from a VTN.</shacl:description>
+        <shacl:name>Resource</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#69b7f09cce333ed7e9a0ba0253d822a7"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#Resource"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#ba034472bfa322b258bd14f1472355e6 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#ba034472bfa322b258bd14f1472355e6">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Typical value of an interval</rdfs:label>
+        <rdfs:label>has typical value</rdfs:label>
+        <shacl:description>Typical value of an interval</shacl:description>
+        <shacl:name>has typical value</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#ba7c21b062c212fc6629618be14e32ef -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#ba7c21b062c212fc6629618be14e32ef">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:class rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#hasReportBackDuration"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#bd851bd791b544c23ccdcb0180fd0e3b -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#bd851bd791b544c23ccdcb0180fd0e3b">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/time"/>
+        <rdfs:label>Duration</rdfs:label>
+        <shacl:name>Duration</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="http://www.w3.org/2006/time#Duration"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#c62491eb3497e805c71c3df45ec82db0 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#c62491eb3497e805c71c3df45ec82db0">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Unavailability of a target</rdfs:label>
+        <rdfs:label>is unavailable during</rdfs:label>
+        <shacl:name>Unavailability of a target</shacl:name>
+        <shacl:name>is unavailable during</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#c7631f7ea426736bfbe8a2a56c754e2f -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#c7631f7ea426736bfbe8a2a56c754e2f">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Duration of an event</rdfs:label>
+        <rdfs:label>has duration</rdfs:label>
+        <shacl:description>Duration of an event</shacl:description>
+        <shacl:name>has duration</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#c7d1e48689e20b109b2ed978f6c69a94 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#c7d1e48689e20b109b2ed978f6c69a94">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>group name</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:name>group name</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:pattern>.*</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#ca6112a48364c73d5d917615ebb07435 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#ca6112a48364c73d5d917615ebb07435">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Specification Profile B</rdfs:isDefinedBy>
+        <rdfs:label>Green button report</rdfs:label>
+        <shacl:description>This is usage history that can be transmitted using the well known GREEN BUTTON standard payloads</shacl:description>
+        <shacl:name>Green button report</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#GreenButtonReport"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#cf86527ba0fa6f7dabbd0e084e947145 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#cf86527ba0fa6f7dabbd0e084e947145">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Specification Profile B</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>The metadata report can contain a specification for one or more type of reports, each report having its own set of report descriptors and specifications</rdfs:isDefinedBy>
+        <rdfs:label>Metadata report</rdfs:label>
+        <shacl:name>Metadata report</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#MetadataReport"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#d00afdd6c388b73b21fbf6d7965b7cc1 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#d00afdd6c388b73b21fbf6d7965b7cc1">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>data quality</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:name>data quality</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:pattern>.*</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#d029fc09099c92b2fbf91e9253bff21c -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#d029fc09099c92b2fbf91e9253bff21c">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Specification Profile B</rdfs:isDefinedBy>
+        <rdfs:label>Report</rdfs:label>
+        <shacl:description>Report sent from a VEN to a VTN to report the energy consumption or the status of Resources connected to the VEN</shacl:description>
+        <shacl:name>Report</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#19f9a6bd1b7a71dea861d2e40454a901"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#2459f390f6e21d83ed653211f3721850"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#6eea653865d1216386a8c8e62955d0d8"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#76cbfb716438388d2885153b0bbb1186"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#Report"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#d3bf1c595adf04ac7adf79c4ebc0dfd1 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#d3bf1c595adf04ac7adf79c4ebc0dfd1">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:pattern>.*</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#d40d8a043b648895554a54ba857b1e5a -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#d40d8a043b648895554a54ba857b1e5a">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:class rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#hasMinPeriod"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#d54ab943480e6e6b1f11317c58d5a4d0 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#d54ab943480e6e6b1f11317c58d5a4d0">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Relationship between a VE, Resource or Asset with the Group of targets associated</rdfs:label>
+        <rdfs:label>belongs to</rdfs:label>
+        <shacl:description>Relationship between a VE, Resource or Asset with the Group of targets associated</shacl:description>
+        <shacl:name>belongs to</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#d64aa1c491d0071b2f6426bad64ca3b4 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#d64aa1c491d0071b2f6426bad64ca3b4">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Link between a signal and the  interval where it is active</rdfs:label>
+        <rdfs:label>has interval</rdfs:label>
+        <shacl:class rdf:resource="https://w3id.org/def/openadr#SignalInterval"/>
+        <shacl:description>Link between a signal and the  interval where it is active</shacl:description>
+        <shacl:name>has interval</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#d753265b3d8a20ea903355d07a8bb256 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#d753265b3d8a20ea903355d07a8bb256">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>expected response</rdfs:label>
+        <shacl:name>expected response</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#de45e4060d4ba000706bc48f6ed90865 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#de45e4060d4ba000706bc48f6ed90865">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#isAvailableDuring"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#de7cf5c312eb50ff04117ccb895f05a6 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#de7cf5c312eb50ff04117ccb895f05a6">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#appliesTo"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#e170bfa11ccf888dcc579c1032df0b1d -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#e170bfa11ccf888dcc579c1032df0b1d">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Program Implementation Guide</rdfs:isDefinedBy>
+        <rdfs:label>Signal</rdfs:label>
+        <shacl:description>The actionable information contained in an event such as electricity pricing or specific levels of load shed requested that typically trigger some preprogrammed load shed behavior by the recipient of the event.</shacl:description>
+        <shacl:name>Signal</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#ac0dc9875106eb007194138b41ec1519"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#20372a55a5e5ea4af7713e1601387ae8"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#Signal"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#e611bf730f9b2a32ce9b4b3a81e97406 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#e611bf730f9b2a32ce9b4b3a81e97406">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Indicates the sampling rate of a report</rdfs:label>
+        <rdfs:label>has sampling rate</rdfs:label>
+        <shacl:description>Indicates the sampling rate of a report</shacl:description>
+        <shacl:name>has sampling rate</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#e7b516b5764ab14aac9d4b2dcbe92e80 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#e7b516b5764ab14aac9d4b2dcbe92e80">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:class rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://www.opengis.net/ont/geosparql#sfContains"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#e7c6178fca5918e08404ac6f107d89d1 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#e7c6178fca5918e08404ac6f107d89d1">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Specification Profile B</rdfs:isDefinedBy>
+        <rdfs:label>History usage report</rdfs:label>
+        <shacl:description>These are logs of usage data that are typically logged by VEN’s and can be queried by the VTN</shacl:description>
+        <shacl:name>History usage report</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#HistoryUsageReport"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#eb2bb154dbbfbb4ed42bbdbcf05d0b1d -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#eb2bb154dbbfbb4ed42bbdbcf05d0b1d">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Name fo an event</rdfs:label>
+        <rdfs:label>event name</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+        <shacl:description>Name fo an event</shacl:description>
+        <shacl:name>event name</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#ebeeb0689d06e67132f7d923dbe0f1a0 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#ebeeb0689d06e67132f7d923dbe0f1a0">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>has report back duration</rdfs:label>
+        <shacl:name>has report back duration</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#ed0df5ac6387775640306ab7f4cdcbed -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#ed0df5ac6387775640306ab7f4cdcbed">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Specification Profile B</rdfs:isDefinedBy>
+        <rdfs:label>Telemetry report</rdfs:label>
+        <shacl:description>The term telemetry in the context of OpenADR refers to data that is reported periodically in real time</shacl:description>
+        <shacl:name>Telemetry report</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#TelemetryReport"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#ef08f8c52370eae9512bb1ec26279152 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#ef08f8c52370eae9512bb1ec26279152">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy>OASIS Energy Market Information Exchange (EMIX)</rdfs:isDefinedBy>
+        <rdfs:label>Service Area</rdfs:label>
+        <shacl:description>The Service Area expresses locations or geographic regions relevant to price communication</shacl:description>
+        <shacl:name>Service Area</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#ServiceArea"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#ef496c183d45dc19a639538c7a9bfba0 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#ef496c183d45dc19a639538c7a9bfba0">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Relation between the report and its subject</rdfs:label>
+        <rdfs:label>involves subject</rdfs:label>
+        <shacl:description>Relation between the report and its subject</shacl:description>
+        <shacl:name>involves subject</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#efae60444b11e53deada6fc1dcff6f6b -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#efae60444b11e53deada6fc1dcff6f6b">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Program Implementation Guide</rdfs:isDefinedBy>
+        <rdfs:label>Event</rdfs:label>
+        <shacl:description>An event is a notification from the utility to demand side resources requesting load shed starting at a specific time, over a specified duration, and may include targeting information designating specific resources that should participate in the event</shacl:description>
+        <shacl:name>Event</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#ff5051b5afd6b08f41598452177db18b"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#1cb0a1024e84e09991f2a0522da55a21"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#17255396a5eb2c139783dc47a4deff9e"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#5caf04389ee30f7267309f4595b758dd"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#8cac59f974cb959c2f76daabb90b5ba2"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#9bc46ffbac9f3ad0be4d5a5a845dd699"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#9820d9b5dfd2c9e5763a14e3593a1f25"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#Event"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#f179e08957b065e53feb2b802262bf1b -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#f179e08957b065e53feb2b802262bf1b">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>has signal type</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:name>has signal type</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:pattern>.*</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#f1ed01ff4ad7e0110c28d4231cd9616c -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#f1ed01ff4ad7e0110c28d4231cd9616c">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label>Interval</rdfs:label>
+        <shacl:name>Interval</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="http://www.w3.org/2006/time#Interval"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#f2299dd03865b7225c1ac510a246a62c -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#f2299dd03865b7225c1ac510a246a62c">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>ramp up</rdfs:label>
+        <shacl:name>ramp up</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#f28dbef903d2c6e18dfc93ebf4e283d9 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#f28dbef903d2c6e18dfc93ebf4e283d9">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Program Implementation Guide</rdfs:isDefinedBy>
+        <rdfs:label>Specifier Payload</rdfs:label>
+        <shacl:name>Specifier Payload</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#SpecifierPayload"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#f346f0988ac90c544a3885752334ac98 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#f346f0988ac90c544a3885752334ac98">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Relation between an entity and the payload resource status</rdfs:label>
+        <rdfs:label>has payload resource status</rdfs:label>
+        <shacl:description>Relation between an entity and the payload resource status</shacl:description>
+        <shacl:name>has payload resource status</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#f5e27add16814bb0c4d4dd4e92286b09 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#f5e27add16814bb0c4d4dd4e92286b09">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Relation between the specification of a report and its payload</rdfs:label>
+        <rdfs:label>has specifier payload</rdfs:label>
+        <shacl:class rdf:resource="https://w3id.org/def/openadr#SpecifierPayload"/>
+        <shacl:description>Relation between the specification of a report and its payload</shacl:description>
+        <shacl:name>has specifier payload</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#f6f2b65301484d98cb89f4da714d02d7 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#f6f2b65301484d98cb89f4da714d02d7">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Relation between an entity and its target</rdfs:label>
+        <rdfs:label>has target</rdfs:label>
+        <shacl:description>Relation between an entity and its target</shacl:description>
+        <shacl:name>has target</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#f77114428a35ddabff6b2c21cd704664 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#f77114428a35ddabff6b2c21cd704664">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>has item base</rdfs:label>
+        <shacl:class rdf:resource="https://w3id.org/def/openadr#ItemBase"/>
+        <shacl:name>has item base</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#fadb43a7f955e5835a53d4de346393f6 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#fadb43a7f955e5835a53d4de346393f6">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Number which is incremented each time an event is modified.</rdfs:label>
+        <rdfs:label>modification number</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <shacl:description>Number which is incremented each time an event is modified.</shacl:description>
+        <shacl:name>modification number</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:pattern>[\-+]?[0-9]+</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#fb0788b13f35d1a26a098d460f7fe328 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#fb0788b13f35d1a26a098d460f7fe328">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>comment</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:name>comment</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:pattern>.*</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#fbc885fc8419740eda22774416736bfa -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#fbc885fc8419740eda22774416736bfa">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Relation between a signal and its payload</rdfs:label>
+        <rdfs:label>has signal payload</rdfs:label>
+        <shacl:class rdf:resource="https://w3id.org/def/openadr#SignalPayload"/>
+        <shacl:description>Relation between a signal and its payload</shacl:description>
+        <shacl:name>has signal payload</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#fd0c81bb5f84ab19a3448817712de28b -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#fd0c81bb5f84ab19a3448817712de28b">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Attribute to indicate if a response is required to acknowledge the object</rdfs:label>
+        <rdfs:label>is response required</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <shacl:description>Attribute to indicate if a response is required to acknowledge the object</shacl:description>
+        <shacl:name>is response required</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:pattern>true|false|0|1</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#ff5051b5afd6b08f41598452177db18b -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#ff5051b5afd6b08f41598452177db18b">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#recovery"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#ffa627c90b2f93431bad38fc95750b9e -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#ffa627c90b2f93431bad38fc95750b9e">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#0e5cc3486bdb56702d6be2be99c1fbd5 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#0e5cc3486bdb56702d6be2be99c1fbd5">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy>Target of a signal or event</rdfs:isDefinedBy>
+        <rdfs:label>Group</rdfs:label>
+        <shacl:name>Group</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#de7cf5c312eb50ff04117ccb895f05a6"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#34a864f335a12a13b65a86682d066cbb"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#Group"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#0fa989daa82a0862447b78e1b6958cc3 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#0fa989daa82a0862447b78e1b6958cc3">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:class rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#hasMaxPeriod"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#000f341f6c473c4eb5bc2495d9e8bed5 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#000f341f6c473c4eb5bc2495d9e8bed5">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>version</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:name>version</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:pattern>.*</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#02b341e181b7af29e9e1f066905f489e -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#02b341e181b7af29e9e1f066905f489e">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Program Implementation Guide</rdfs:isDefinedBy>
+        <rdfs:label>Event descriptor</rdfs:label>
+        <shacl:description>Part of the OpenADR event object that describes metadata about the event, such as program name and event priority</shacl:description>
+        <shacl:name>Event descriptor</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#EventDescriptor"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#06d5e09a4c4fb27711dc98571e5e7fbf -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#06d5e09a4c4fb27711dc98571e5e7fbf">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Specification Profile B</rdfs:isDefinedBy>
+        <rdfs:label>Telemetry status report</rdfs:label>
+        <shacl:description>This is usage data that is periodically reported from the VEN to the VTN in real time</shacl:description>
+        <shacl:name>Telemetry status report</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#TelemetryStatusReport"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#06e5c6cdff21342ebcf1ac7a12cb4ed4 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#06e5c6cdff21342ebcf1ac7a12cb4ed4">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Metadata about the Readings, such as mean or derived</rdfs:label>
+        <rdfs:label>reading type</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:description>Metadata about the Readings, such as mean or derived</shacl:description>
+        <shacl:name>reading type</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:pattern>.*</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#07329727a6c914bec20d71286536d543 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#07329727a6c914bec20d71286536d543">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#SignalIntervalDuration"/>
+        <shacl:qualifiedMaxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:qualifiedMaxCount>
+        <shacl:qualifiedMinCount rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</shacl:qualifiedMinCount>
+        <shacl:qualifiedValueShape>
+            <rdf:Description>
+                <shacl:class rdf:resource="https://w3id.org/def/openadr#SignalInterval"/>
+            </rdf:Description>
+        </shacl:qualifiedValueShape>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#09edd93eea135cf3143b288496d440b6 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#09edd93eea135cf3143b288496d440b6">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>created date time</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <shacl:name>created date time</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#1a1c8f0b6437c33c74506c92e8115bd7 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#1a1c8f0b6437c33c74506c92e8115bd7">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Relation between a Resource and a VEN</rdfs:label>
+        <rdfs:label>is managed by</rdfs:label>
+        <shacl:description>Relation between a Resource and a VEN</shacl:description>
+        <shacl:name>is managed by</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#1ca826813b5dbbfe5b6a0b57e866127f -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#1ca826813b5dbbfe5b6a0b57e866127f">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Relation between a report and its metadata</rdfs:label>
+        <rdfs:label>report descriptor</rdfs:label>
+        <shacl:class rdf:resource="https://w3id.org/def/openadr#ReportDescriptor"/>
+        <shacl:description>Relation between a report and its metadata</shacl:description>
+        <shacl:name>report descriptor</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#1cb0a1024e84e09991f2a0522da55a21 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#1cb0a1024e84e09991f2a0522da55a21">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#ramp_up"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#1cd352c4c51dcd638c89b4de7937efbd -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#1cd352c4c51dcd638c89b4de7937efbd">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:class rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#isReportedDuringInterval"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#1ce8aa75bcad9b4023485ecb9f9a7896 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#1ce8aa75bcad9b4023485ecb9f9a7896">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>applies to</rdfs:label>
+        <shacl:name>applies to</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#1060f31bb77710178ed8201af7ef9e56 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#1060f31bb77710178ed8201af7ef9e56">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/saref"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#11604e1bfe4dede9cc9ef590b8737696 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#11604e1bfe4dede9cc9ef590b8737696">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Duration of a signal interval</rdfs:label>
+        <rdfs:label>interval duration</rdfs:label>
+        <shacl:description>Duration of a signal interval</shacl:description>
+        <shacl:name>interval duration</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#1277b387effe1ea8b7cf6171d6155a1b -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#1277b387effe1ea8b7cf6171d6155a1b">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label>Instant</rdfs:label>
+        <shacl:name>Instant</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="http://www.w3.org/2006/time#Instant"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#1496f5f83f37e3c5b27d9f79c81ecc18 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#1496f5f83f37e3c5b27d9f79c81ecc18">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Link between an event and its status</rdfs:label>
+        <rdfs:label>has event status</rdfs:label>
+        <shacl:class rdf:resource="https://w3id.org/def/openadr#EventStatus"/>
+        <shacl:description>Link between an event and its status</shacl:description>
+        <shacl:name>has event status</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#16660fa190119b89846b519ab9d6df8b -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#16660fa190119b89846b519ab9d6df8b">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Specification Profile B</rdfs:isDefinedBy>
+        <rdfs:label>Telemetry usage report</rdfs:label>
+        <shacl:description>This is the status of a resource, which may be periodically reported from the VEN to the VTN</shacl:description>
+        <shacl:name>Telemetry usage report</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#TelemetryUsageReport"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#17f7812bb16e8487a39c921750370a05 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#17f7812bb16e8487a39c921750370a05">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Specification Profile B</rdfs:isDefinedBy>
+        <rdfs:label>Data report</rdfs:label>
+        <shacl:description>These reports are used to report actual data that may be measured or calculated.</shacl:description>
+        <shacl:name>Data report</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#DataReport"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#17255396a5eb2c139783dc47a4deff9e -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#17255396a5eb2c139783dc47a4deff9e">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#eventDescriptor"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#19f9a6bd1b7a71dea861d2e40454a901 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#19f9a6bd1b7a71dea861d2e40454a901">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#isActiveDuringPeriod"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#2c129eea08a128c801b062267d703a76 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#2c129eea08a128c801b062267d703a76">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#4b48788bdfa0ebd478ffa9ff59e32d69"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#Node"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#2ca6e10e1afb9f58c83243900d990fc4 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#2ca6e10e1afb9f58c83243900d990fc4">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#hasItemBase"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#2d33566be0240fcf0045a46247d22eb1 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#2d33566be0240fcf0045a46247d22eb1">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#plans"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#2e02dfdddc00d6039f3812b68177a74c -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#2e02dfdddc00d6039f3812b68177a74c">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>A link between a node and the objects it sends</rdfs:label>
+        <rdfs:label>sends</rdfs:label>
+        <shacl:description>A link between a node and the objects it sends</shacl:description>
+        <shacl:name>sends</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#2f2c936a83d55108bddde7a4be377004 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#2f2c936a83d55108bddde7a4be377004">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Minimum period of time</rdfs:label>
+        <rdfs:label>has min period</rdfs:label>
+        <shacl:description>Minimum period of time</shacl:description>
+        <shacl:name>has min period</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#20b36b1fa4666a319b29cb6a6191f10e -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#20b36b1fa4666a319b29cb6a6191f10e">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>signal name</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:name>signal name</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:pattern>.*</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#200e5a52deea60eb19a89b55f2fc63dd -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#200e5a52deea60eb19a89b55f2fc63dd">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>report name</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:name>report name</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:pattern>.*</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#20372a55a5e5ea4af7713e1601387ae8 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#20372a55a5e5ea4af7713e1601387ae8">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#hasTarget"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#21a2c754fc3c2001f6c4e14ae455a2be -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#21a2c754fc3c2001f6c4e14ae455a2be">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Program Implementation Guide</rdfs:isDefinedBy>
+        <rdfs:label>Asset</rdfs:label>
+        <shacl:description>A type of Resource that represents a specific collection of physical loads.
+Resources can be composed of Assets, and an Asset may be Resource, but Assets cannot be further decomposed into multiple Assets or Resources.</shacl:description>
+        <shacl:name>Asset</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#Asset"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#21bcd4df8e9c3a9750e8e8f804d106d0 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#21bcd4df8e9c3a9750e8e8f804d106d0">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Data point value for event signals or for reporting current or historical
+values.</rdfs:label>
+        <rdfs:label>payload float</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <shacl:description>Data point value for event signals or for reporting current or historical
+values.</shacl:description>
+        <shacl:name>payload float</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:pattern>(\+|-)?([0-9]+(\.[0-9]*)?|\.[0-9]+)([Ee](\+|-)?[0-9]+)?|(\+|-)?INF|NaN</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#230562d9111120e642018a47798a2e24 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#230562d9111120e642018a47798a2e24">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Reporting interval of a report</rdfs:label>
+        <rdfs:label>is reported during interval</rdfs:label>
+        <shacl:description>Reporting interval of a report</shacl:description>
+        <shacl:name>is reported during interval</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#2459f390f6e21d83ed653211f3721850 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#2459f390f6e21d83ed653211f3721850">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#createdDateTime"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#257be545e0f23772d94b037fcb31560d -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#257be545e0f23772d94b037fcb31560d">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Time of modification of an event</rdfs:label>
+        <rdfs:label>modification date time</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <shacl:description>Time of modification of an event</shacl:description>
+        <shacl:name>modification date time</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#286753dccb859df6466a7e3e715aae06 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#286753dccb859df6466a7e3e715aae06">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:class rdf:resource="https://w3id.org/def/openadr#SamplingRate"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#hasSamplingRate"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#29f06b7c45905fa46c1aebc8070fffe2 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#29f06b7c45905fa46c1aebc8070fffe2">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label>Signal Interval</rdfs:label>
+        <shacl:description>Interval of time where a signal is active</shacl:description>
+        <shacl:name>Signal Interval</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#07329727a6c914bec20d71286536d543"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#SignalInterval"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#3a1c28ad09f862b7f92a6de74adb3b66 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#3a1c28ad09f862b7f92a6de74adb3b66">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Relation between a report and its payload</rdfs:label>
+        <rdfs:label>has report payload</rdfs:label>
+        <shacl:class rdf:resource="https://w3id.org/def/openadr#ReportPayload"/>
+        <shacl:description>Relation between a report and its payload</shacl:description>
+        <shacl:name>has report payload</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#3e18b0f9fac2d3bdcd51a2fdadcbda53 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#3e18b0f9fac2d3bdcd51a2fdadcbda53">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/time"/>
+        <rdfs:label>Temporal Entity</rdfs:label>
+        <shacl:name>Temporal Entity</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#3ef793712378e097aac823894a277e63 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#3ef793712378e097aac823894a277e63">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#3f276d64015a02386fdf96695d44878f -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#3f276d64015a02386fdf96695d44878f">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#manages"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#3f6891594ac2d163a004bec00f8db48a -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#3f6891594ac2d163a004bec00f8db48a">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:class rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#312cf57997285d4bbfb39135b6e658ed -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#312cf57997285d4bbfb39135b6e658ed">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Specification Profile B</rdfs:isDefinedBy>
+        <rdfs:label>History report</rdfs:label>
+        <shacl:description>This is a type of data report in which the history of the data point values is logged and can be subsequently requested</shacl:description>
+        <shacl:name>History report</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#HistoryReport"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#3348f96caa15fb50d86f0a2231585642 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#3348f96caa15fb50d86f0a2231585642">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#34a864f335a12a13b65a86682d066cbb -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#34a864f335a12a13b65a86682d066cbb">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#contains"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#4b48788bdfa0ebd478ffa9ff59e32d69 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#4b48788bdfa0ebd478ffa9ff59e32d69">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#sends"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#4b54e26d2161d25dad330cd6f307c184 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#4b54e26d2161d25dad330cd6f307c184">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Relation between Opt and the planification of a target</rdfs:label>
+        <rdfs:label>plans</rdfs:label>
+        <shacl:description>Relation between Opt and the planification of a target</shacl:description>
+        <shacl:name>plans</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#4bf8fa8c873e2bf780acdc0c832befc6 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#4bf8fa8c873e2bf780acdc0c832befc6">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>relation between the report and its specification</rdfs:label>
+        <rdfs:label>specifies report</rdfs:label>
+        <shacl:class rdf:resource="https://w3id.org/def/openadr#ReportSpecifier"/>
+        <shacl:name>relation between the report and its specification</shacl:name>
+        <shacl:name>specifies report</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#4ee895947f64a077b87f0a78ba131eea -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#4ee895947f64a077b87f0a78ba131eea">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Program Implementation Guide</rdfs:isDefinedBy>
+        <rdfs:label>Virtual End Node (VEN)</rdfs:label>
+        <shacl:description>This is the OpenADR Virtual End Node that is used to interact with the VTN</shacl:description>
+        <shacl:name>Virtual End Node (VEN)</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#3f276d64015a02386fdf96695d44878f"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#VEN"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#4f40a61e639b347ca0c79931529aa5f1 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#4f40a61e639b347ca0c79931529aa5f1">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>This is the time interval between sampled data in a report request</rdfs:label>
+        <rdfs:label>has granularity</rdfs:label>
+        <shacl:description>This is the time interval between sampled data in a report request</shacl:description>
+        <shacl:name>has granularity</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#420f3e3cf12dcbfc4eadd72dab28afe7 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#420f3e3cf12dcbfc4eadd72dab28afe7">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Profile B</rdfs:isDefinedBy>
+        <rdfs:label>Opt Out</rdfs:label>
+        <shacl:name>Opt Out</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#OptOut"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#4570d4ab313ee7376d896f5cac207e6f -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#4570d4ab313ee7376d896f5cac207e6f">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#payloadFloat"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#498ecea4906de70915739bdbdf3d1bc0 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#498ecea4906de70915739bdbdf3d1bc0">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:label>SpatialObject</rdfs:label>
+        <shacl:description>The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry.</shacl:description>
+        <shacl:name>SpatialObject</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#e7b516b5764ab14aac9d4b2dcbe92e80"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#561d7681316bbbc7f832f6f814fa96dd"/>
+        <shacl:targetClass rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#5b1d6665b29c40a692eb63c98c0e7b7a -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#5b1d6665b29c40a692eb63c98c0e7b7a">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>The starting time for the activity, data, or state change</rdfs:label>
+        <rdfs:label>dstart</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <shacl:description>The starting time for the activity, data, or state change</shacl:description>
+        <shacl:name>dstart</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#5caf04389ee30f7267309f4595b758dd -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#5caf04389ee30f7267309f4595b758dd">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#expectedResponse"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#5dba68c773f2ac1bfa2cb894767735e2 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#5dba68c773f2ac1bfa2cb894767735e2">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Program Implementation Guide</rdfs:isDefinedBy>
+        <rdfs:label>Report specifier</rdfs:label>
+        <shacl:description>Each report specification specifies reporting capabilities</shacl:description>
+        <shacl:name>Report specifier</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#b6161cc0569b9e5988b3b743c4820485"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#ba7c21b062c212fc6629618be14e32ef"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#1cd352c4c51dcd638c89b4de7937efbd"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#ReportSpecifier"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#508f40d01f1e37d9393250df8cf4099d -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#508f40d01f1e37d9393250df8cf4099d">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Relation between an entity and its signal</rdfs:label>
+        <rdfs:label>has signal</rdfs:label>
+        <shacl:description>Relation between an entity and its signal</shacl:description>
+        <shacl:name>has signal</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#51e5a462ec9af0c3f8894fc01438ab79 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#51e5a462ec9af0c3f8894fc01438ab79">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:class rdf:resource="https://w3id.org/def/openadr#PayloadResourceStatus"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#hasPayloadReourceStatus"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#525ab941786c78c2e21c9381b6bd0938 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#525ab941786c78c2e21c9381b6bd0938">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Link to the source of a report</rdfs:label>
+        <rdfs:label>report data source</rdfs:label>
+        <shacl:class rdf:resource="https://w3id.org/def/openadr#Group"/>
+        <shacl:description>Link to the source of a report</shacl:description>
+        <shacl:name>report data source</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#53c94205740b8281d53af75f30fa9b0d -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#53c94205740b8281d53af75f30fa9b0d">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Relation to indicate the units of a measurement</rdfs:label>
+        <rdfs:label>is measured in</rdfs:label>
+        <shacl:description>Relation to indicate the units of a measurement</shacl:description>
+        <shacl:name>is measured in</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#53f3ddf29cdf906ce3f8f0bf2429a518 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#53f3ddf29cdf906ce3f8f0bf2429a518">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Relation between a target and its availability</rdfs:label>
+        <rdfs:label>refers to target</rdfs:label>
+        <shacl:description>Relation between a target and its availability</shacl:description>
+        <shacl:name>refers to target</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#532124854242e58777154dd1bd47e7d8 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#532124854242e58777154dd1bd47e7d8">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#involvesSubject"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#56e6de9839822f827053c65b43422bdd -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#56e6de9839822f827053c65b43422bdd">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>is test event</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <shacl:name>is test event</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:pattern>true|false|0|1</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#56fadafc5c7b566d6f6f0e0b0dac76b4 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#56fadafc5c7b566d6f6f0e0b0dac76b4">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#isOnChange"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#561d7681316bbbc7f832f6f814fa96dd -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#561d7681316bbbc7f832f6f814fa96dd">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:class rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#6ace7559c09873d57bb26d2909a563c6 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#6ace7559c09873d57bb26d2909a563c6">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
+        <rdfs:label>Spatial thing</rdfs:label>
+        <shacl:description>Anything with spatial extent, i.e. size, shape, or position. e.g. people, places, bowling balls, as well as abstract areas like cubes</shacl:description>
+        <shacl:name>Spatial thing</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#6c4e74a1f8ac5b9d2b78c328f42c3bd1 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#6c4e74a1f8ac5b9d2b78c328f42c3bd1">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#accuracy"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#6d7d7aa45780ae9a34d11884a779e340 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#6d7d7aa45780ae9a34d11884a779e340">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>A statistical probability that a reported data point is accurate</rdfs:label>
+        <rdfs:label>confidence</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:description>A statistical probability that a reported data point is accurate</shacl:description>
+        <shacl:name>confidence</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:pattern>.*</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#6eea653865d1216386a8c8e62955d0d8 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#6eea653865d1216386a8c8e62955d0d8">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#dstart"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#60f2debbc1d211ff5065efaa730bd15c -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#60f2debbc1d211ff5065efaa730bd15c">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>A URI identifying a DR Program</rdfs:label>
+        <rdfs:label>market context</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <shacl:description>A URI identifying a DR Program</shacl:description>
+        <shacl:name>market context</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:pattern>^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#6248d50c6907fde04303bcd5ac1344a9 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#6248d50c6907fde04303bcd5ac1344a9">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Maximum period of time</rdfs:label>
+        <rdfs:label>has max period</rdfs:label>
+        <shacl:description>Maximum period of time</shacl:description>
+        <shacl:name>has max period</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#63fadcd9f02ded96d012ddd437781d20 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#63fadcd9f02ded96d012ddd437781d20">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label>Payload resource status</rdfs:label>
+        <shacl:description>Status of the payload resource</shacl:description>
+        <shacl:name>Payload resource status</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#PayloadResourceStatus"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#6320678fd18b98e3804390bebf11325c -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#6320678fd18b98e3804390bebf11325c">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Relation between an entity an its available period</rdfs:label>
+        <rdfs:label>has active period</rdfs:label>
+        <shacl:description>Relation between an entity an its available period</shacl:description>
+        <shacl:name>has active period</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#67619bc4e9878833e229a0c101266b52 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#67619bc4e9878833e229a0c101266b52">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Program Implementation Guide</rdfs:isDefinedBy>
+        <rdfs:label>Report descriptor</rdfs:label>
+        <shacl:description>Part of the OpenADR report object that describes metadata about the report</shacl:description>
+        <shacl:name>Report descriptor</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#286753dccb859df6466a7e3e715aae06"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#532124854242e58777154dd1bd47e7d8"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#ReportDescriptor"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#69b7f09cce333ed7e9a0ba0253d822a7 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#69b7f09cce333ed7e9a0ba0253d822a7">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#manages"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#7d6a3657bad33da9742576423d6ebf7d -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#7d6a3657bad33da9742576423d6ebf7d">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Profile B</rdfs:isDefinedBy>
+        <rdfs:label>Opt In</rdfs:label>
+        <shacl:name>Opt In</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#OptIn"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#7ff1a604a5e53e5aabb460ff59284a8d -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#7ff1a604a5e53e5aabb460ff59284a8d">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Relation between an event and its metadata</rdfs:label>
+        <rdfs:label>event descriptor</rdfs:label>
+        <shacl:class rdf:resource="https://w3id.org/def/openadr#EventDescriptor"/>
+        <shacl:description>Relation between an event and its metadata</shacl:description>
+        <shacl:name>event descriptor</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#76ad0bd0a09c0e8abee2e0e40ad7e58c -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#76ad0bd0a09c0e8abee2e0e40ad7e58c">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Availability of a target</rdfs:label>
+        <rdfs:label>is available during</rdfs:label>
+        <shacl:description>Availability of a target</shacl:description>
+        <shacl:name>is available during</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#76cbfb716438388d2885153b0bbb1186 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#76cbfb716438388d2885153b0bbb1186">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:class rdf:resource="http://www.w3.org/2006/time#Duration"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#hasDuration"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#77f6684a7319f66ab75da4ab9d185c92 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#77f6684a7319f66ab75da4ab9d185c92">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>recovery</rdfs:label>
+        <shacl:name>recovery</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#777e87126352d1c1ae3b1238510d2753 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#777e87126352d1c1ae3b1238510d2753">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#isUnavailableDuring"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#790eda9f1006c334de8cd96c41827613 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#790eda9f1006c334de8cd96c41827613">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Program Implementation Guide</rdfs:isDefinedBy>
+        <rdfs:label>Virtual Top Node (VTN)</rdfs:label>
+        <shacl:description>This is the OpenADR Virtual Top Node that is used to interact with the Resources enrolled in the DR Programs.</shacl:description>
+        <shacl:name>Virtual Top Node (VTN)</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#VTN"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#792f722c19c69d1d86c3fe5400d2a193 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#792f722c19c69d1d86c3fe5400d2a193">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>node name</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+        <shacl:name>node name</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#7931d1d8adb85ed5315c46861fdc9a43 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#7931d1d8adb85ed5315c46861fdc9a43">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Subject of a report</rdfs:label>
+        <rdfs:label>report subject</rdfs:label>
+        <shacl:description>Subject of a report</shacl:description>
+        <shacl:name>report subject</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#8c8f5b3bfbbb193efd684afd73359ab7 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#8c8f5b3bfbbb193efd684afd73359ab7">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label>Sampling rate</rdfs:label>
+        <shacl:description>The average number of samples obtained in one second</shacl:description>
+        <shacl:name>Sampling rate</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#d40d8a043b648895554a54ba857b1e5a"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#0fa989daa82a0862447b78e1b6958cc3"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#2ca6e10e1afb9f58c83243900d990fc4"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#56fadafc5c7b566d6f6f0e0b0dac76b4"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#SamplingRate"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#8c9f0a3ef50fe390869f7c693885d425 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#8c9f0a3ef50fe390869f7c693885d425">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:label>Feature</rdfs:label>
+        <shacl:description>This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types</shacl:description>
+        <shacl:disjoint rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+        <shacl:name>Feature</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#3f6891594ac2d163a004bec00f8db48a"/>
+        <shacl:targetClass rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#8cac59f974cb959c2f76daabb90b5ba2 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#8cac59f974cb959c2f76daabb90b5ba2">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#version"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#83fb8c5b5ed395573202996919eee9e6 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#83fb8c5b5ed395573202996919eee9e6">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label>Report payload</rdfs:label>
+        <shacl:description>Payload associated to every report</shacl:description>
+        <shacl:name>Report payload</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#4570d4ab313ee7376d896f5cac207e6f"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#51e5a462ec9af0c3f8894fc01438ab79"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#6c4e74a1f8ac5b9d2b78c328f42c3bd1"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#9cb413cb4609b94c98e2559d8a0e5220"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#ReportPayload"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#830f6c599626c2d56e9579e22951ee8b -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#830f6c599626c2d56e9579e22951ee8b">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>The priority of the event in relation to other events (The lower the number
+higher the priority. A value of zero (0) indicates no priority, which is the lowest priority by default).</rdfs:label>
+        <rdfs:label>priority</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <shacl:description>The priority of the event in relation to other events (The lower the number
+higher the priority. A value of zero (0) indicates no priority, which is the lowest priority by default).</shacl:description>
+        <shacl:name>priority</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:pattern>[\-+]?[0-9]+</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#83205bce518651ec3521199ffa4230fd -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#83205bce518651ec3521199ffa4230fd">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Indicates the likely variability of the prediction and the  error of a reading</rdfs:label>
+        <rdfs:label>accuracy</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:description>Indicates the likely variability of the prediction and the  error of a reading</shacl:description>
+        <shacl:name>accuracy</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:pattern>.*</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#8355820918b8f052e2489eb782a08ab2 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#8355820918b8f052e2489eb782a08ab2">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:label>Exists if the subject SpatialObject spatially contains the object SpatialObject</rdfs:label>
+        <rdfs:label>contains</rdfs:label>
+        <shacl:class rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+        <shacl:description>Exists if the subject SpatialObject spatially contains the object SpatialObject</shacl:description>
+        <shacl:name>contains</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#86a5331b7c198bf639a6ee9c90bc7b55 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#86a5331b7c198bf639a6ee9c90bc7b55">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy>OpenADR 2.0 Demand Response Program Implementation Guide</rdfs:isDefinedBy>
+        <rdfs:label>Opt</rdfs:label>
+        <shacl:description>The expected response from the demand side resource owner upon receipt of an event.</shacl:description>
+        <shacl:name>Opt</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#2d33566be0240fcf0045a46247d22eb1"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#Opt"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#86cad30ad540a4059f570fdc7164e3bb -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#86cad30ad540a4059f570fdc7164e3bb">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#88fb339f39e9b91ee4c488eec47705c3 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#88fb339f39e9b91ee4c488eec47705c3">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Attribute to determine whether or not data is sampled as it changes</rdfs:label>
+        <rdfs:label>is on change</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <shacl:description>Attribute to determine whether or not data is sampled as it changes</shacl:description>
+        <shacl:name>is on change</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:pattern>true|false|0|1</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#89d9104c3000ed3851445822a164b9f5 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#89d9104c3000ed3851445822a164b9f5">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>A scaling factor for the base unit of measure for a report</rdfs:label>
+        <rdfs:label>scale code</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:description>A scaling factor for the base unit of measure for a report</shacl:description>
+        <shacl:name>scale code</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:pattern>.*</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#9a3ddf43d109ad1fb790e2d213da3b88 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#9a3ddf43d109ad1fb790e2d213da3b88">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Relation between a target and its components</rdfs:label>
+        <rdfs:label>contains</rdfs:label>
+        <shacl:description>Relation between a target and its components</shacl:description>
+        <shacl:name>contains</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#9bc46ffbac9f3ad0be4d5a5a845dd699 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#9bc46ffbac9f3ad0be4d5a5a845dd699">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#createdDateTime"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#9cb413cb4609b94c98e2559d8a0e5220 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#9cb413cb4609b94c98e2559d8a0e5220">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#dataquality"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#9d7ff3689486399e6b14742663377f91 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#9d7ff3689486399e6b14742663377f91">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>It indicates why an event was modified</rdfs:label>
+        <rdfs:label>modification reason</rdfs:label>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:description>It indicates why an event was modified</shacl:description>
+        <shacl:name>modification reason</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:pattern>.*</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#9e81a8547fd8cabc79752e243c8d2b67 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#9e81a8547fd8cabc79752e243c8d2b67">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#90d0012470ff100a1ba6c6e721bd931e -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#90d0012470ff100a1ba6c6e721bd931e">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy>OASIS Energy Market Information Exchange (eMIX) standard</rdfs:isDefinedBy>
+        <rdfs:label>Item base</rdfs:label>
+        <shacl:description>Units for the data in the report</shacl:description>
+        <shacl:name>Item base</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#ItemBase"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#94ef15d9485b56643ddaef4435b4ec56 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#94ef15d9485b56643ddaef4435b4ec56">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:targetClass rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#97eb37200515d8f47795ed3faa404900 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#97eb37200515d8f47795ed3faa404900">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>has payload</rdfs:label>
+        <shacl:name>has payload</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#9820d9b5dfd2c9e5763a14e3593a1f25 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#9820d9b5dfd2c9e5763a14e3593a1f25">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRIOrLiteral"/>
+        <shacl:path rdf:resource="https://w3id.org/def/openadr#includesSignal"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#9970ba74e26c0d563708e5875a757007 -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#9970ba74e26c0d563708e5875a757007">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:label>Availability</rdfs:label>
+        <shacl:description>Availability of a target</shacl:description>
+        <shacl:name>Availability</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#a1a9e1202c0c9208afee98011e8ce6b9"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#de45e4060d4ba000706bc48f6ed90865"/>
+        <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#777e87126352d1c1ae3b1238510d2753"/>
+        <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#Availability"/>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/ -->
+
+
