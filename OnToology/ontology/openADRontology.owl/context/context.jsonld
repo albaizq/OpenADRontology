@@ -332,6 +332,10 @@
       "@id" : "https://w3id.org/def/openadr#payloadFloat",
       "@type" : "http://www.w3.org/2001/XMLSchema#float"
     },
+    "registrationNumber" : {
+      "@id" : "https://w3id.org/def/openadr#registrationNumber",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
     "EventDescriptor" : {
       "@id" : "https://w3id.org/def/openadr#EventDescriptor"
     },
