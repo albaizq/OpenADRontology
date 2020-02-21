@@ -979,6 +979,17 @@ values.""" ;
                                                                        <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#HistoryReport> .
 
 
+###  https://astrea.linkeddata.es/shapes#33de4e8d10406ce51922c0dae5b4a2de
+<https://astrea.linkeddata.es/shapes#33de4e8d10406ce51922c0dae5b4a2de> rdf:type owl:NamedIndividual ,
+                                                                                <http://www.w3.org/ns/shacl#PropertyShape> ;
+                                                                       rdfs:label "Relation between a node and a report it requires" ,
+                                                                                  "requires" ;
+                                                                       <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Report> ;
+                                                                       <http://www.w3.org/ns/shacl#description> "Relation between a node and a report it requires" ;
+                                                                       <http://www.w3.org/ns/shacl#name> "requires" ;
+                                                                       <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+
+
 ###  https://astrea.linkeddata.es/shapes#3348f96caa15fb50d86f0a2231585642
 <https://astrea.linkeddata.es/shapes#3348f96caa15fb50d86f0a2231585642> rdf:type owl:NamedIndividual ,
                                                                                 <http://www.w3.org/ns/shacl#PropertyShape> ;
@@ -1214,6 +1225,17 @@ values.""" ;
                                                                        <http://www.w3.org/ns/shacl#name> "confidence" ;
                                                                        <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> ;
                                                                        <http://www.w3.org/ns/shacl#pattern> ".*" .
+
+
+###  https://astrea.linkeddata.es/shapes#6dcbd4bf628c88812577413c89f6419a
+<https://astrea.linkeddata.es/shapes#6dcbd4bf628c88812577413c89f6419a> rdf:type owl:NamedIndividual ,
+                                                                                <http://www.w3.org/ns/shacl#PropertyShape> ;
+                                                                       rdfs:label "Relation between the node and a report it receives" ,
+                                                                                  "receives" ;
+                                                                       <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Report> ;
+                                                                       <http://www.w3.org/ns/shacl#description> "Relation between the node and a report it receives" ;
+                                                                       <http://www.w3.org/ns/shacl#name> "receives" ;
+                                                                       <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
 
 
 ###  https://astrea.linkeddata.es/shapes#6eea653865d1216386a8c8e62955d0d8
@@ -1467,12 +1489,6 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
                                                                        <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ;
                                                                        <http://www.w3.org/ns/shacl#property> <https://astrea.linkeddata.es/shapes#2d33566be0240fcf0045a46247d22eb1> ;
                                                                        <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#Opt> .
-
-
-###  https://astrea.linkeddata.es/shapes#86cad30ad540a4059f570fdc7164e3bb
-<https://astrea.linkeddata.es/shapes#86cad30ad540a4059f570fdc7164e3bb> rdf:type owl:NamedIndividual ,
-                                                                                <http://www.w3.org/ns/shacl#PropertyShape> ;
-                                                                       <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
 
 
 ###  https://astrea.linkeddata.es/shapes#88fb339f39e9b91ee4c488eec47705c3

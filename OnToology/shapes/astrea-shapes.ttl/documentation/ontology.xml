@@ -1426,6 +1426,21 @@ values.</shacl:description>
     
 
 
+    <!-- https://astrea.linkeddata.es/shapes#33de4e8d10406ce51922c0dae5b4a2de -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#33de4e8d10406ce51922c0dae5b4a2de">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Relation between a node and a report it requires</rdfs:label>
+        <rdfs:label>requires</rdfs:label>
+        <shacl:class rdf:resource="https://w3id.org/def/openadr#Report"/>
+        <shacl:description>Relation between a node and a report it requires</shacl:description>
+        <shacl:name>requires</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
+    </NamedIndividual>
+    
+
+
     <!-- https://astrea.linkeddata.es/shapes#3348f96caa15fb50d86f0a2231585642 -->
 
 
@@ -1759,6 +1774,21 @@ values.</shacl:description>
         <shacl:name>confidence</shacl:name>
         <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
         <shacl:pattern>.*</shacl:pattern>
+    </NamedIndividual>
+    
+
+
+    <!-- https://astrea.linkeddata.es/shapes#6dcbd4bf628c88812577413c89f6419a -->
+
+
+    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#6dcbd4bf628c88812577413c89f6419a">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label>Relation between the node and a report it receives</rdfs:label>
+        <rdfs:label>receives</rdfs:label>
+        <shacl:class rdf:resource="https://w3id.org/def/openadr#Report"/>
+        <shacl:description>Relation between the node and a report it receives</shacl:description>
+        <shacl:name>receives</shacl:name>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
     </NamedIndividual>
     
 
@@ -2108,16 +2138,6 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
         <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
         <shacl:property rdf:resource="https://astrea.linkeddata.es/shapes#2d33566be0240fcf0045a46247d22eb1"/>
         <shacl:targetClass rdf:resource="https://w3id.org/def/openadr#Opt"/>
-    </NamedIndividual>
-    
-
-
-    <!-- https://astrea.linkeddata.es/shapes#86cad30ad540a4059f570fdc7164e3bb -->
-
-
-    <NamedIndividual rdf:about="https://astrea.linkeddata.es/shapes#86cad30ad540a4059f570fdc7164e3bb">
-        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#BlankNodeOrIRI"/>
     </NamedIndividual>
     
 

@@ -537,10 +537,12 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
          <dt>is in domain of</dt>
          <dd>
             <a href="#nodeName" title="https://w3id.org/def/openadr#nodeName">node name</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#profileName" title="https://w3id.org/def/openadr#profileName">profile name</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#receives" title="https://w3id.org/def/openadr#receives">receives</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#registrationNumber" title="https://w3id.org/def/openadr#registrationNumber">registration number</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#requires" title="https://w3id.org/def/openadr#requires">requires</a>
-            <sup class="type-op" title="object property">op</sup>
+            <sup class="type-op" title="object property">op</sup>, <a href="#transportName" title="https://w3id.org/def/openadr#transportName">transport name</a>
+            <sup class="type-dp" title="data property">dp</sup>
          </dd>
       </dl>
    </div>
@@ -647,12 +649,6 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
             <sup class="type-op" title="object property">op</sup>, <a href="#reportDataSource" title="https://w3id.org/def/openadr#reportDataSource">report data source</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#reportName" title="https://w3id.org/def/openadr#reportName">report name</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#reportSubject" title="https://w3id.org/def/openadr#reportSubject">report subject</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#receives" title="https://w3id.org/def/openadr#receives">receives</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#requires" title="https://w3id.org/def/openadr#requires">requires</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -829,7 +825,10 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
-         <dd/>
+         <dd>
+            <span class="dotted" title="http://org.semanticweb.owlapi/error#Error1">error1</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#isDefinedIn" title="https://w3id.org/def/openadr#isDefinedIn">has interval</a>
@@ -1155,8 +1154,8 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
          <a href="#hasTypicalValue" title="https://w3id.org/def/openadr#hasTypicalValue">has typical value</a>
       </li>
       <li>
-         <a href="#SignalIntervalDuration"
-            title="https://w3id.org/def/openadr#SignalIntervalDuration">interval duration</a>
+         <a href="#hasSignalIntervalDuration"
+            title="https://w3id.org/def/openadr#hasSignalIntervalDuration">interval duration</a>
       </li>
       <li>
          <a href="#involvesSubject" title="https://w3id.org/def/openadr#involvesSubject">involves subject</a>
@@ -1637,13 +1636,13 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
          <span class="markdown">Typical value of an interval</span>
       </div>
    </div>
-   <div class="entity" id="SignalIntervalDuration">
+   <div class="entity" id="hasSignalIntervalDuration">
       <h3>interval duration<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/def/openadr#SignalIntervalDuration</p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#hasSignalIntervalDuration</p>
       <div class="comment">
          <span class="markdown">Duration of a signal interval</span>
       </div>
@@ -1787,18 +1786,13 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
       <p>
          <strong>IRI:</strong> https://w3id.org/def/openadr#receives</p>
       <div class="comment">
-         <span class="markdown">Relation between the node and a report it receives</span>
+         <span class="markdown">Relation between the node and an object  it receives</span>
       </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
                <a href="#Node" title="https://w3id.org/def/openadr#Node">node</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Report" title="https://w3id.org/def/openadr#Report">Report</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -1923,18 +1917,13 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
       <p>
          <strong>IRI:</strong> https://w3id.org/def/openadr#requires</p>
       <div class="comment">
-         <span class="markdown">Relation between a node and a report it requires</span>
+         <span class="markdown">Relation between a node and an object it requires</span>
       </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
                <a href="#Node" title="https://w3id.org/def/openadr#Node">node</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Report" title="https://w3id.org/def/openadr#Report">Report</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -2024,6 +2013,9 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
          <a href="#priority" title="https://w3id.org/def/openadr#priority">priority</a>
       </li>
       <li>
+         <a href="#profileName" title="https://w3id.org/def/openadr#profileName">profile name</a>
+      </li>
+      <li>
          <a href="#randomization" title="https://w3id.org/def/openadr#randomization">
             <span>randomization</span>
          </a>
@@ -2042,6 +2034,9 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
       </li>
       <li>
          <a href="#signalName" title="https://w3id.org/def/openadr#signalName">signal name</a>
+      </li>
+      <li>
+         <a href="#transportName" title="https://w3id.org/def/openadr#transportName">transport name</a>
       </li>
       <li>
          <a href="#version" title="https://w3id.org/def/openadr#version">version</a>
@@ -2464,6 +2459,27 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
          </dl>
       </div>
    </div>
+   <div class="entity" id="profileName">
+      <h3>profile name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#profileName</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Node" title="https://w3id.org/def/openadr#Node">node</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="randomization">
       <h3>randomization<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -2582,6 +2598,27 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
             <dt>has domain</dt>
             <dd>
                <a href="#Signal" title="https://w3id.org/def/openadr#Signal">Signal</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="transportName">
+      <h3>transport name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#transportName</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Node" title="https://w3id.org/def/openadr#Node">node</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
