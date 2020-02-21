@@ -196,6 +196,11 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
             <sup class="type-c" title="class">c</sup>, <a href="#TelemetryReport" title="https://w3id.org/def/openadr#TelemetryReport">Telemetry report</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#specifiesReport" title="https://w3id.org/def/openadr#specifiesReport">relation between the report and its specification</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="http://www.w3.org/2006/time#Duration">
@@ -234,7 +239,6 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
             <a href="#eventDescriptor" title="https://w3id.org/def/openadr#eventDescriptor">event descriptor</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#eventName" title="https://w3id.org/def/openadr#eventName">event name</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#hasEventStatus" title="https://w3id.org/def/openadr#hasEventStatus">has event status</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#responseRequired" title="https://w3id.org/def/openadr#responseRequired">response required</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -509,7 +513,7 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#specifiesReport" title="https://w3id.org/def/openadr#specifiesReport">relation between the report and its specification</a>
+            <a href="#reportDescriptor" title="https://w3id.org/def/openadr#reportDescriptor">report descriptor</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -533,8 +537,10 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
          <dt>is in domain of</dt>
          <dd>
             <a href="#nodeName" title="https://w3id.org/def/openadr#nodeName">node name</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#registrationNumber" title="https://w3id.org/def/openadr#registrationNumber">registration number</a>
-            <sup class="type-dp" title="data property">dp</sup>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#receives" title="https://w3id.org/def/openadr#receives">receives</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#registrationNumber" title="https://w3id.org/def/openadr#registrationNumber">registration number</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#requires" title="https://w3id.org/def/openadr#requires">requires</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -639,9 +645,14 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
          <dd>
             <a href="#hasReportPayload" title="https://w3id.org/def/openadr#hasReportPayload">has report payload</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#reportDataSource" title="https://w3id.org/def/openadr#reportDataSource">report data source</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#reportDescriptor" title="https://w3id.org/def/openadr#reportDescriptor">report descriptor</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#reportName" title="https://w3id.org/def/openadr#reportName">report name</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#reportSubject" title="https://w3id.org/def/openadr#reportSubject">report subject</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#receives" title="https://w3id.org/def/openadr#receives">receives</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#requires" title="https://w3id.org/def/openadr#requires">requires</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -1183,6 +1194,9 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
          <a href="#ramp_up" title="https://w3id.org/def/openadr#ramp_up">ramp up</a>
       </li>
       <li>
+         <a href="#receives" title="https://w3id.org/def/openadr#receives">receives</a>
+      </li>
+      <li>
          <a href="#recovery" title="https://w3id.org/def/openadr#recovery">recovery</a>
       </li>
       <li>
@@ -1201,9 +1215,7 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
          <a href="#reportSubject" title="https://w3id.org/def/openadr#reportSubject">report subject</a>
       </li>
       <li>
-         <a href="#responseRequired" title="https://w3id.org/def/openadr#responseRequired">
-            <span>response required</span>
-         </a>
+         <a href="#requires" title="https://w3id.org/def/openadr#requires">requires</a>
       </li>
       <li>
          <a href="#sends" title="https://w3id.org/def/openadr#sends">sends</a>
@@ -1767,6 +1779,31 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
       <p>
          <strong>IRI:</strong> https://w3id.org/def/openadr#ramp_up</p>
    </div>
+   <div class="entity" id="receives">
+      <h3>receives<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#receives</p>
+      <div class="comment">
+         <span class="markdown">Relation between the node and a report it receives</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Node" title="https://w3id.org/def/openadr#Node">node</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Report" title="https://w3id.org/def/openadr#Report">Report</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="recovery">
       <h3>recovery<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1797,7 +1834,7 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#MetadataReport" title="https://w3id.org/def/openadr#MetadataReport">Metadata report</a>
+               <a href="#DataReport" title="https://w3id.org/def/openadr#DataReport">Data report</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1847,7 +1884,7 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Report" title="https://w3id.org/def/openadr#Report">Report</a>
+               <a href="#MetadataReport" title="https://w3id.org/def/openadr#MetadataReport">Metadata report</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1878,18 +1915,26 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
          </dl>
       </div>
    </div>
-   <div class="entity" id="responseRequired">
-      <h3>response required<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="requires">
+      <h3>requires<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/def/openadr#responseRequired</p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#requires</p>
+      <div class="comment">
+         <span class="markdown">Relation between a node and a report it requires</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Event" title="https://w3id.org/def/openadr#Event">Event</a>
+               <a href="#Node" title="https://w3id.org/def/openadr#Node">node</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Report" title="https://w3id.org/def/openadr#Report">Report</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>

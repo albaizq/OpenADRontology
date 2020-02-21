@@ -446,6 +446,18 @@
     
 
 
+    <!-- https://w3id.org/def/openadr#receives -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#receives">
+        <rdfs:domain rdf:resource="https://w3id.org/def/openadr#Node"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/openadr#Report"/>
+        <rdfs:comment>Relation between the node and a report it receives</rdfs:comment>
+        <rdfs:label>receives</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/def/openadr#recovery -->
 
 
@@ -481,7 +493,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#reportDescriptor">
-        <rdfs:domain rdf:resource="https://w3id.org/def/openadr#Report"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/openadr#MetadataReport"/>
         <rdfs:range rdf:resource="https://w3id.org/def/openadr#ReportDescriptor"/>
         <rdfs:comment>Relation between a report and its metadata</rdfs:comment>
         <rdfs:label>report descriptor</rdfs:label>
@@ -500,11 +512,14 @@
     
 
 
-    <!-- https://w3id.org/def/openadr#responseRequired -->
+    <!-- https://w3id.org/def/openadr#requires -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#responseRequired">
-        <rdfs:domain rdf:resource="https://w3id.org/def/openadr#Event"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#requires">
+        <rdfs:domain rdf:resource="https://w3id.org/def/openadr#Node"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/openadr#Report"/>
+        <rdfs:comment>Relation between a node and a report it requires</rdfs:comment>
+        <rdfs:label>requires</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -523,7 +538,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#specifiesReport">
-        <rdfs:domain rdf:resource="https://w3id.org/def/openadr#MetadataReport"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/openadr#DataReport"/>
         <rdfs:range rdf:resource="https://w3id.org/def/openadr#ReportSpecifier"/>
         <rdfs:label>relation between the report and its specification</rdfs:label>
         <rdfs:label>specifies report</rdfs:label>
