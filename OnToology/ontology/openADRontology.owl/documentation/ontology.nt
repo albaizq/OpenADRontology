@@ -229,6 +229,13 @@
 <https://w3id.org/def/openadr#ramp_up> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/openadr#ramp_up> <http://www.w3.org/2000/01/rdf-schema#label> "ramp up" .
 # 
+# https://w3id.org/def/openadr#receives
+<https://w3id.org/def/openadr#receives> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/openadr#receives> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/openadr#Node> .
+<https://w3id.org/def/openadr#receives> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/openadr#Report> .
+<https://w3id.org/def/openadr#receives> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between the node and a report it receives" .
+<https://w3id.org/def/openadr#receives> <http://www.w3.org/2000/01/rdf-schema#label> "receives" .
+# 
 # https://w3id.org/def/openadr#recovery
 <https://w3id.org/def/openadr#recovery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/openadr#recovery> <http://www.w3.org/2000/01/rdf-schema#label> "recovery" .
@@ -247,7 +254,7 @@
 # 
 # https://w3id.org/def/openadr#reportDescriptor
 <https://w3id.org/def/openadr#reportDescriptor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/openadr#reportDescriptor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/openadr#Report> .
+<https://w3id.org/def/openadr#reportDescriptor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/openadr#MetadataReport> .
 <https://w3id.org/def/openadr#reportDescriptor> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/openadr#ReportDescriptor> .
 <https://w3id.org/def/openadr#reportDescriptor> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a report and its metadata" .
 <https://w3id.org/def/openadr#reportDescriptor> <http://www.w3.org/2000/01/rdf-schema#label> "report descriptor" .
@@ -258,9 +265,12 @@
 <https://w3id.org/def/openadr#reportSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "Subject of a report" .
 <https://w3id.org/def/openadr#reportSubject> <http://www.w3.org/2000/01/rdf-schema#label> "report subject" .
 # 
-# https://w3id.org/def/openadr#responseRequired
-<https://w3id.org/def/openadr#responseRequired> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/openadr#responseRequired> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/openadr#Event> .
+# https://w3id.org/def/openadr#requires
+<https://w3id.org/def/openadr#requires> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/openadr#requires> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/openadr#Node> .
+<https://w3id.org/def/openadr#requires> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/openadr#Report> .
+<https://w3id.org/def/openadr#requires> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a node and a report it requires" .
+<https://w3id.org/def/openadr#requires> <http://www.w3.org/2000/01/rdf-schema#label> "requires" .
 # 
 # https://w3id.org/def/openadr#sends
 <https://w3id.org/def/openadr#sends> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -269,7 +279,7 @@
 # 
 # https://w3id.org/def/openadr#specifiesReport
 <https://w3id.org/def/openadr#specifiesReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/openadr#specifiesReport> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/openadr#MetadataReport> .
+<https://w3id.org/def/openadr#specifiesReport> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/openadr#DataReport> .
 <https://w3id.org/def/openadr#specifiesReport> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/openadr#ReportSpecifier> .
 <https://w3id.org/def/openadr#specifiesReport> <http://www.w3.org/2000/01/rdf-schema#label> "relation between the report and its specification" .
 <https://w3id.org/def/openadr#specifiesReport> <http://www.w3.org/2000/01/rdf-schema#label> "specifies report" .

@@ -268,6 +268,14 @@
          rdfs:label "ramp up" .
 
 
+###  https://w3id.org/def/openadr#receives
+:receives rdf:type owl:ObjectProperty ;
+          rdfs:domain :Node ;
+          rdfs:range :Report ;
+          rdfs:comment "Relation between the node and a report it receives" ;
+          rdfs:label "receives" .
+
+
 ###  https://w3id.org/def/openadr#recovery
 :recovery rdf:type owl:ObjectProperty ;
           rdfs:label "recovery" .
@@ -289,7 +297,7 @@
 
 ###  https://w3id.org/def/openadr#reportDescriptor
 :reportDescriptor rdf:type owl:ObjectProperty ;
-                  rdfs:domain :Report ;
+                  rdfs:domain :MetadataReport ;
                   rdfs:range :ReportDescriptor ;
                   rdfs:comment "Relation between a report and its metadata" ;
                   rdfs:label "report descriptor" .
@@ -302,9 +310,12 @@
                rdfs:label "report subject" .
 
 
-###  https://w3id.org/def/openadr#responseRequired
-:responseRequired rdf:type owl:ObjectProperty ;
-                  rdfs:domain :Event .
+###  https://w3id.org/def/openadr#requires
+:requires rdf:type owl:ObjectProperty ;
+          rdfs:domain :Node ;
+          rdfs:range :Report ;
+          rdfs:comment "Relation between a node and a report it requires" ;
+          rdfs:label "requires" .
 
 
 ###  https://w3id.org/def/openadr#sends
@@ -315,7 +326,7 @@
 
 ###  https://w3id.org/def/openadr#specifiesReport
 :specifiesReport rdf:type owl:ObjectProperty ;
-                 rdfs:domain :MetadataReport ;
+                 rdfs:domain :DataReport ;
                  rdfs:range :ReportSpecifier ;
                  rdfs:label "relation between the report and its specification" ,
                             "specifies report" .
