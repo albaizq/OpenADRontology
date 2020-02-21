@@ -422,6 +422,12 @@
 <https://w3id.org/def/openadr#readingType> <http://www.w3.org/2000/01/rdf-schema#comment> "Metadata about the Readings, such as mean or derived" .
 <https://w3id.org/def/openadr#readingType> <http://www.w3.org/2000/01/rdf-schema#label> "reading type" .
 # 
+# https://w3id.org/def/openadr#registrationNumber
+<https://w3id.org/def/openadr#registrationNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/openadr#registrationNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/openadr#Node> .
+<https://w3id.org/def/openadr#registrationNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/openadr#registrationNumber> <http://www.w3.org/2000/01/rdf-schema#label> "registration number" .
+# 
 # https://w3id.org/def/openadr#reportName
 <https://w3id.org/def/openadr#reportName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/def/openadr#reportName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/openadr#Report> .
