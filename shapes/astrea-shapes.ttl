@@ -73,6 +73,11 @@
         sh:nodeKind  sh:Literal ;
         sh:pattern   ".*" .
 
+<https://astrea.linkeddata.es/shapes#da41c1dcea4d690d2030c30d8fbbca49>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :sends .
+
 <https://astrea.linkeddata.es/shapes#7d6a3657bad33da9742576423d6ebf7d>
         a                 sh:NodeShape ;
         rdfs:isDefinedBy  "OpenADR 2.0 Demand Response Profile B" ;
@@ -348,6 +353,7 @@
         sh:description    "This is the OpenADR Virtual Top Node that is used to interact with the Resources enrolled in the DR Programs." ;
         sh:name           "Virtual Top Node (VTN)" ;
         sh:nodeKind       sh:IRI ;
+        sh:property       <https://astrea.linkeddata.es/shapes#da41c1dcea4d690d2030c30d8fbbca49> ;
         sh:targetClass    :VTN .
 
 <https://astrea.linkeddata.es/shapes#2ca6e10e1afb9f58c83243900d990fc4>
