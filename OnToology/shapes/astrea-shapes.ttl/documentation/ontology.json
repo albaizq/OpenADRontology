@@ -676,6 +676,26 @@
     "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
   } ]
 }, {
+  "@id" : "https://astrea.linkeddata.es/shapes#33de4e8d10406ce51922c0dae5b4a2de",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Relation between a node and a report it requires"
+  }, {
+    "@value" : "requires"
+  } ],
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "https://w3id.org/def/openadr#Report"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Relation between a node and a report it requires"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "requires"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ]
+}, {
   "@id" : "https://astrea.linkeddata.es/shapes#34a864f335a12a13b65a86682d066cbb",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
   "http://www.w3.org/ns/shacl#nodeKind" : [ {
@@ -1243,6 +1263,26 @@
     "@value" : ".*"
   } ]
 }, {
+  "@id" : "https://astrea.linkeddata.es/shapes#6dcbd4bf628c88812577413c89f6419a",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Relation between the node and a report it receives"
+  }, {
+    "@value" : "receives"
+  } ],
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "https://w3id.org/def/openadr#Report"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Relation between the node and a report it receives"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "receives"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ]
+}, {
   "@id" : "https://astrea.linkeddata.es/shapes#6eea653865d1216386a8c8e62955d0d8",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
   "http://www.w3.org/ns/shacl#nodeKind" : [ {
@@ -1514,12 +1554,6 @@
   } ],
   "http://www.w3.org/ns/shacl#targetClass" : [ {
     "@id" : "https://w3id.org/def/openadr#Opt"
-  } ]
-}, {
-  "@id" : "https://astrea.linkeddata.es/shapes#86cad30ad540a4059f570fdc7164e3bb",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
-  "http://www.w3.org/ns/shacl#nodeKind" : [ {
-    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
   } ]
 }, {
   "@id" : "https://astrea.linkeddata.es/shapes#88fb339f39e9b91ee4c488eec47705c3",

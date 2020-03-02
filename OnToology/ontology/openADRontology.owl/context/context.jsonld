@@ -195,6 +195,10 @@
       "@id" : "https://w3id.org/def/openadr#nodeName",
       "@type" : "http://www.w3.org/2002/07/owl#rational"
     },
+    "hasSignalIntervalDuration" : {
+      "@id" : "https://w3id.org/def/openadr#hasSignalIntervalDuration",
+      "@type" : "@id"
+    },
     "creator" : {
       "@id" : "http://purl.org/dc/elements/1.1/creator"
     },
@@ -234,6 +238,9 @@
     "scaleCode" : {
       "@id" : "https://w3id.org/def/openadr#scaleCode",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Error1" : {
+      "@id" : "http://org.semanticweb.owlapi/error#Error1"
     },
     "TemporalEntity" : {
       "@id" : "http://www.w3.org/2006/time#TemporalEntity"
@@ -332,6 +339,10 @@
       "@id" : "https://w3id.org/def/openadr#registrationNumber",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
+    "profileName" : {
+      "@id" : "https://w3id.org/def/openadr#profileName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
     "EventDescriptor" : {
       "@id" : "https://w3id.org/def/openadr#EventDescriptor"
     },
@@ -403,6 +414,10 @@
     "Availability" : {
       "@id" : "https://w3id.org/def/openadr#Availability"
     },
+    "transportName" : {
+      "@id" : "https://w3id.org/def/openadr#transportName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
     "Unit_of_measure" : {
       "@id" : "http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"
     },
@@ -421,10 +436,6 @@
     },
     "receives" : {
       "@id" : "https://w3id.org/def/openadr#receives",
-      "@type" : "@id"
-    },
-    "SignalIntervalDuration" : {
-      "@id" : "https://w3id.org/def/openadr#SignalIntervalDuration",
       "@type" : "@id"
     },
     "sends" : {

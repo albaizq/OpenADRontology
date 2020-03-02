@@ -28,6 +28,9 @@
 # http://purl.org/vocab/vann/preferredNamespaceUri
 <http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://www.w3.org/2002/07/owl#qualifiedCardinality
+<http://www.w3.org/2002/07/owl#qualifiedCardinality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # 
 # 
 # #################################################################
@@ -53,11 +56,6 @@
 # http://www.w3.org/2003/01/geo/wgs84_pos#location
 <http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2003/01/geo/wgs84_pos> .
-# 
-# https://w3id.org/def/openadr#SignalIntervalDuration
-<https://w3id.org/def/openadr#SignalIntervalDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/openadr#SignalIntervalDuration> <http://www.w3.org/2000/01/rdf-schema#comment> "Duration of a signal interval" .
-<https://w3id.org/def/openadr#SignalIntervalDuration> <http://www.w3.org/2000/01/rdf-schema#label> "interval duration" .
 # 
 # https://w3id.org/def/openadr#appliesTo
 <https://w3id.org/def/openadr#appliesTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -141,6 +139,11 @@
 <https://w3id.org/def/openadr#hasSamplingRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/openadr#hasSamplingRate> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the sampling rate of a report" .
 <https://w3id.org/def/openadr#hasSamplingRate> <http://www.w3.org/2000/01/rdf-schema#label> "has sampling rate" .
+# 
+# https://w3id.org/def/openadr#hasSignalIntervalDuration
+<https://w3id.org/def/openadr#hasSignalIntervalDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/openadr#hasSignalIntervalDuration> <http://www.w3.org/2000/01/rdf-schema#comment> "Duration of a signal interval" .
+<https://w3id.org/def/openadr#hasSignalIntervalDuration> <http://www.w3.org/2000/01/rdf-schema#label> "interval duration" .
 # 
 # https://w3id.org/def/openadr#hasSignalPayload
 <https://w3id.org/def/openadr#hasSignalPayload> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -232,8 +235,7 @@
 # https://w3id.org/def/openadr#receives
 <https://w3id.org/def/openadr#receives> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/openadr#receives> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/openadr#Node> .
-<https://w3id.org/def/openadr#receives> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/openadr#Report> .
-<https://w3id.org/def/openadr#receives> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between the node and a report it receives" .
+<https://w3id.org/def/openadr#receives> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between the node and an object  it receives" .
 <https://w3id.org/def/openadr#receives> <http://www.w3.org/2000/01/rdf-schema#label> "receives" .
 # 
 # https://w3id.org/def/openadr#recovery
@@ -268,8 +270,7 @@
 # https://w3id.org/def/openadr#requires
 <https://w3id.org/def/openadr#requires> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/openadr#requires> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/openadr#Node> .
-<https://w3id.org/def/openadr#requires> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/openadr#Report> .
-<https://w3id.org/def/openadr#requires> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a node and a report it requires" .
+<https://w3id.org/def/openadr#requires> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a node and an object it requires" .
 <https://w3id.org/def/openadr#requires> <http://www.w3.org/2000/01/rdf-schema#label> "requires" .
 # 
 # https://w3id.org/def/openadr#sends
@@ -421,6 +422,12 @@
 <https://w3id.org/def/openadr#priority> <http://www.w3.org/2000/01/rdf-schema#comment> "The priority of the event in relation to other events (The lower the number\nhigher the priority. A value of zero (0) indicates no priority, which is the lowest priority by default)." .
 <https://w3id.org/def/openadr#priority> <http://www.w3.org/2000/01/rdf-schema#label> "priority" .
 # 
+# https://w3id.org/def/openadr#profileName
+<https://w3id.org/def/openadr#profileName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/openadr#profileName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/openadr#Node> .
+<https://w3id.org/def/openadr#profileName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/openadr#profileName> <http://www.w3.org/2000/01/rdf-schema#label> "profile name" .
+# 
 # https://w3id.org/def/openadr#randomization
 <https://w3id.org/def/openadr#randomization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/def/openadr#randomization> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/openadr#EventDescriptor> .
@@ -457,6 +464,12 @@
 <https://w3id.org/def/openadr#signalName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/def/openadr#signalName> <http://www.w3.org/2000/01/rdf-schema#label> "signal name" .
 # 
+# https://w3id.org/def/openadr#transportName
+<https://w3id.org/def/openadr#transportName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/openadr#transportName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/openadr#Node> .
+<https://w3id.org/def/openadr#transportName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/openadr#transportName> <http://www.w3.org/2000/01/rdf-schema#label> "transport name" .
+# 
 # https://w3id.org/def/openadr#version
 <https://w3id.org/def/openadr#version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/def/openadr#version> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
@@ -470,6 +483,9 @@
 # #
 # #################################################################
 # 
+# 
+# http://org.semanticweb.owlapi/error#Error1
+<http://org.semanticweb.owlapi/error#Error1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://www.opengis.net/ont/geosparql#Feature
 <http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -831,11 +847,7 @@ _:genid40 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/o
 # 
 # https://w3id.org/def/openadr#SignalInterval
 <https://w3id.org/def/openadr#SignalInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/openadr#SignalInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid41 .
-_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/openadr#SignalIntervalDuration> .
-_:genid41 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid41 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/openadr#SignalInterval> .
+<https://w3id.org/def/openadr#SignalInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://org.semanticweb.owlapi/error#Error1> .
 <https://w3id.org/def/openadr#SignalInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "Interval of time where a signal is active" .
 <https://w3id.org/def/openadr#SignalInterval> <http://www.w3.org/2000/01/rdf-schema#label> "Signal Interval" .
 # 
@@ -872,10 +884,10 @@ _:genid41 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/openadr#
 # https://w3id.org/def/openadr#VEN
 <https://w3id.org/def/openadr#VEN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/openadr#VEN> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/openadr#Node> .
-<https://w3id.org/def/openadr#VEN> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid42 .
-_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/openadr#manages> .
-_:genid42 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/openadr#Resource> .
+<https://w3id.org/def/openadr#VEN> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/openadr#manages> .
+_:genid41 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/openadr#Resource> .
 <https://w3id.org/def/openadr#VEN> <http://www.w3.org/2000/01/rdf-schema#comment> "This is the OpenADR Virtual End Node that is used to interact with the VTN" .
 <https://w3id.org/def/openadr#VEN> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OpenADR 2.0 Demand Response Program Implementation Guide" .
 <https://w3id.org/def/openadr#VEN> <http://www.w3.org/2000/01/rdf-schema#label> "Virtual End Node (VEN)" .
@@ -883,10 +895,10 @@ _:genid42 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/o
 # https://w3id.org/def/openadr#VTN
 <https://w3id.org/def/openadr#VTN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/openadr#VTN> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/openadr#Node> .
-<https://w3id.org/def/openadr#VTN> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid43 .
-_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/openadr#sends> .
-_:genid43 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/openadr#Event> .
+<https://w3id.org/def/openadr#VTN> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/openadr#sends> .
+_:genid42 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/openadr#Event> .
 <https://w3id.org/def/openadr#VTN> <http://www.w3.org/2000/01/rdf-schema#comment> "This is the OpenADR Virtual Top Node that is used to interact with the Resources enrolled in the DR Programs." .
 <https://w3id.org/def/openadr#VTN> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OpenADR 2.0 Demand Response Program Implementation Guide" .
 <https://w3id.org/def/openadr#VTN> <http://www.w3.org/2000/01/rdf-schema#label> "Virtual Top Node (VTN)" .
@@ -919,4 +931,5 @@ _:genid43 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/o
 <https://w3id.org/def/openadr#Near> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/openadr#Near> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/openadr#EventStatus> .
 # 
+_:genid43 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 # Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
