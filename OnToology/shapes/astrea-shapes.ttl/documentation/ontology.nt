@@ -874,6 +874,16 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 <https://astrea.linkeddata.es/shapes#312cf57997285d4bbfb39135b6e658ed> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
 <https://astrea.linkeddata.es/shapes#312cf57997285d4bbfb39135b6e658ed> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#HistoryReport> .
 # 
+# https://astrea.linkeddata.es/shapes#33de4e8d10406ce51922c0dae5b4a2de
+<https://astrea.linkeddata.es/shapes#33de4e8d10406ce51922c0dae5b4a2de> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#33de4e8d10406ce51922c0dae5b4a2de> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://astrea.linkeddata.es/shapes#33de4e8d10406ce51922c0dae5b4a2de> <http://www.w3.org/2000/01/rdf-schema#label> "Relation between a node and a report it requires" .
+<https://astrea.linkeddata.es/shapes#33de4e8d10406ce51922c0dae5b4a2de> <http://www.w3.org/2000/01/rdf-schema#label> "requires" .
+<https://astrea.linkeddata.es/shapes#33de4e8d10406ce51922c0dae5b4a2de> <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Report> .
+<https://astrea.linkeddata.es/shapes#33de4e8d10406ce51922c0dae5b4a2de> <http://www.w3.org/ns/shacl#description> "Relation between a node and a report it requires" .
+<https://astrea.linkeddata.es/shapes#33de4e8d10406ce51922c0dae5b4a2de> <http://www.w3.org/ns/shacl#name> "requires" .
+<https://astrea.linkeddata.es/shapes#33de4e8d10406ce51922c0dae5b4a2de> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+# 
 # https://astrea.linkeddata.es/shapes#3348f96caa15fb50d86f0a2231585642
 <https://astrea.linkeddata.es/shapes#3348f96caa15fb50d86f0a2231585642> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://astrea.linkeddata.es/shapes#3348f96caa15fb50d86f0a2231585642> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
@@ -1085,6 +1095,16 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 <https://astrea.linkeddata.es/shapes#6d7d7aa45780ae9a34d11884a779e340> <http://www.w3.org/ns/shacl#name> "confidence" .
 <https://astrea.linkeddata.es/shapes#6d7d7aa45780ae9a34d11884a779e340> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> .
 <https://astrea.linkeddata.es/shapes#6d7d7aa45780ae9a34d11884a779e340> <http://www.w3.org/ns/shacl#pattern> ".*" .
+# 
+# https://astrea.linkeddata.es/shapes#6dcbd4bf628c88812577413c89f6419a
+<https://astrea.linkeddata.es/shapes#6dcbd4bf628c88812577413c89f6419a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#6dcbd4bf628c88812577413c89f6419a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://astrea.linkeddata.es/shapes#6dcbd4bf628c88812577413c89f6419a> <http://www.w3.org/2000/01/rdf-schema#label> "Relation between the node and a report it receives" .
+<https://astrea.linkeddata.es/shapes#6dcbd4bf628c88812577413c89f6419a> <http://www.w3.org/2000/01/rdf-schema#label> "receives" .
+<https://astrea.linkeddata.es/shapes#6dcbd4bf628c88812577413c89f6419a> <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Report> .
+<https://astrea.linkeddata.es/shapes#6dcbd4bf628c88812577413c89f6419a> <http://www.w3.org/ns/shacl#description> "Relation between the node and a report it receives" .
+<https://astrea.linkeddata.es/shapes#6dcbd4bf628c88812577413c89f6419a> <http://www.w3.org/ns/shacl#name> "receives" .
+<https://astrea.linkeddata.es/shapes#6dcbd4bf628c88812577413c89f6419a> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
 # 
 # https://astrea.linkeddata.es/shapes#6eea653865d1216386a8c8e62955d0d8
 <https://astrea.linkeddata.es/shapes#6eea653865d1216386a8c8e62955d0d8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1312,11 +1332,6 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 <https://astrea.linkeddata.es/shapes#86a5331b7c198bf639a6ee9c90bc7b55> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
 <https://astrea.linkeddata.es/shapes#86a5331b7c198bf639a6ee9c90bc7b55> <http://www.w3.org/ns/shacl#property> <https://astrea.linkeddata.es/shapes#2d33566be0240fcf0045a46247d22eb1> .
 <https://astrea.linkeddata.es/shapes#86a5331b7c198bf639a6ee9c90bc7b55> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#Opt> .
-# 
-# https://astrea.linkeddata.es/shapes#86cad30ad540a4059f570fdc7164e3bb
-<https://astrea.linkeddata.es/shapes#86cad30ad540a4059f570fdc7164e3bb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://astrea.linkeddata.es/shapes#86cad30ad540a4059f570fdc7164e3bb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
-<https://astrea.linkeddata.es/shapes#86cad30ad540a4059f570fdc7164e3bb> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
 # 
 # https://astrea.linkeddata.es/shapes#88fb339f39e9b91ee4c488eec47705c3
 <https://astrea.linkeddata.es/shapes#88fb339f39e9b91ee4c488eec47705c3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
