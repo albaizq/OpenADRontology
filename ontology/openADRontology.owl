@@ -14,7 +14,7 @@
                                 <http://purl.org/dc/terms/title> "OpenADR ontology" ;
                                 rdfs:comment "This ontology describes the openADR protocol based on the documentation provided by the openADR Profile B" ,
                                              "http://purl.org/NET/rdflicense/cc-by4.0" ;
-                                owl:versionInfo "0.1.7" .
+                                owl:versionInfo "0.1.8" .
 
 #################################################################
 #    Annotation properties
@@ -34,6 +34,10 @@
 
 ###  http://purl.org/vocab/vann/preferredNamespaceUri
 <http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#qualifiedCardinality
+owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -58,12 +62,6 @@
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#location
 <http://www.w3.org/2003/01/geo/wgs84_pos#location> rdf:type owl:ObjectProperty ;
                                                    rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos> .
-
-
-###  https://w3id.org/def/openadr#hasSignalIntervalDuration
-:hasSignalIntervalDuration rdf:type owl:ObjectProperty ;
-                        rdfs:comment "Duration of a signal interval" ;
-                        rdfs:label "interval duration" .
 
 
 ###  https://w3id.org/def/openadr#appliesTo
@@ -165,11 +163,16 @@
                  rdfs:label "has sampling rate" .
 
 
+###  https://w3id.org/def/openadr#hasSignalIntervalDuration
+:hasSignalIntervalDuration rdf:type owl:ObjectProperty ;
+                           rdfs:comment "Duration of a signal interval" ;
+                           rdfs:label "interval duration" .
+
+
 ###  https://w3id.org/def/openadr#hasSignalPayload
 :hasSignalPayload rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :hasPayload ;
                   rdfs:domain :Signal ;
-                  rdfs:range :SignalPayload ;
                   rdfs:comment "Relation between a signal and its payload" ;
                   rdfs:label "has signal payload" .
 
@@ -527,11 +530,11 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
            rdfs:label "scale code" .
 
 
-###  https://w3id.org/def/openadr#signalName
-:signalName rdf:type owl:DatatypeProperty ;
+###  https://w3id.org/def/openadr#signalType
+:signalType rdf:type owl:DatatypeProperty ;
             rdfs:domain :Signal ;
             rdfs:range xsd:string ;
-            rdfs:label "signal name" .
+            rdfs:label "signal type" .
 
 
 ###  https://w3id.org/def/openadr#transportName
@@ -649,12 +652,61 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
               rdfs:label "Availability" .
 
 
+###  https://w3id.org/def/openadr#BidEnergySignal
+:BidEnergySignal rdf:type owl:Class ;
+                 rdfs:subClassOf :Signal ;
+                 rdfs:comment "Signal that represents the price that was bid by the resource" ;
+                 rdfs:label "Bid energy signal" .
+
+
+###  https://w3id.org/def/openadr#BidLoadSignal
+:BidLoadSignal rdf:type owl:Class ;
+               rdfs:subClassOf :Signal ;
+               rdfs:comment "Signal that represents the amount of load that was bid by a resource into a program" ;
+               rdfs:label "Bid load signal" .
+
+
+###  https://w3id.org/def/openadr#BidPricesignal
+:BidPricesignal rdf:type owl:Class ;
+                rdfs:subClassOf :Signal ;
+                rdfs:comment "Signal that represents the price that was bid by the resource" ;
+                rdfs:label "Bid price signal" .
+
+
+###  https://w3id.org/def/openadr#ChargeStateSignal
+:ChargeStateSignal rdf:type owl:Class ;
+                   rdfs:subClassOf :Signal ;
+                   rdfs:comment "Signal used  to dispatch storage resources" ;
+                   rdfs:label "Charge state signal" .
+
+
 ###  https://w3id.org/def/openadr#DataReport
 :DataReport rdf:type owl:Class ;
             rdfs:subClassOf :Report ;
             rdfs:comment "These reports are used to report actual data that may be measured or calculated." ;
             rdfs:isDefinedBy "OpenADR 2.0 Demand Response Specification Profile B" ;
             rdfs:label "Data report" .
+
+
+###  https://w3id.org/def/openadr#DemandChargeSignal
+:DemandChargeSignal rdf:type owl:Class ;
+                    rdfs:subClassOf :Signal ;
+                    rdfs:comment "Signal for the demand charge" ;
+                    rdfs:label "Demand charge signal" .
+
+
+###  https://w3id.org/def/openadr#ElectricityPriceSignal
+:ElectricityPriceSignal rdf:type owl:Class ;
+                        rdfs:subClassOf :Signal ;
+                        rdfs:comment "Signal for the price of electricity" ;
+                        rdfs:label "Electricity price signal" .
+
+
+###  https://w3id.org/def/openadr#EnergyPriceSignal
+:EnergyPriceSignal rdf:type owl:Class ;
+                   rdfs:subClassOf :Signal ;
+                   rdfs:label "Energy price signal" ,
+                              "Signal for the price of energy" .
 
 
 ###  https://w3id.org/def/openadr#Event
@@ -757,6 +809,20 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
           rdfs:comment "Units for the data in the report" ;
           rdfs:isDefinedBy "OASIS Energy Market Information Exchange (eMIX) standard" ;
           rdfs:label "Item base" .
+
+
+###  https://w3id.org/def/openadr#LoadControlSignal
+:LoadControlSignal rdf:type owl:Class ;
+                   rdfs:subClassOf :Signal ;
+                   rdfs:label "Load control signal" ,
+                              "Signal for to set the load control to values that are relative to the load controller and its output capacity." .
+
+
+###  https://w3id.org/def/openadr#LoadDispatchSignal
+:LoadDispatchSignal rdf:type owl:Class ;
+                    rdfs:subClassOf :Signal ;
+                    rdfs:comment "Instructions are used to set the load  values that can be expressed in terms of the desired load" ;
+                    rdfs:label "Load dispatch signal" .
 
 
 ###  https://w3id.org/def/openadr#MetadataReport
@@ -939,6 +1005,10 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :isDefinedIn ;
                           owl:someValuesFrom :SignalInterval
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :isMeasuredIn ;
+                          owl:someValuesFrom <http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure>
                         ] ;
         rdfs:comment "The actionable information contained in an event such as electricity pricing or specific levels of load shed requested that typically trigger some preprogrammed load shed behavior by the recipient of the event." ;
         rdfs:isDefinedBy "OpenADR 2.0 Demand Response Program Implementation Guide" ;
@@ -947,18 +1017,15 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
 
 ###  https://w3id.org/def/openadr#SignalInterval
 :SignalInterval rdf:type owl:Class ;
-                rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                  owl:onProperty :haSignalIntervalDuration ;
-                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                  owl:onClass :SignalInterval
-                                ] ;
                 rdfs:comment "Interval of time where a signal is active" ;
                 rdfs:label "Signal Interval" .
 
 
-###  https://w3id.org/def/openadr#SignalPayload
-:SignalPayload rdf:type owl:Class ;
-               rdfs:label "Signal Payload" .
+###  https://w3id.org/def/openadr#SimpleSignal
+:SimpleSignal rdf:type owl:Class ;
+              rdfs:subClassOf :Signal ;
+              rdfs:label "Signal for signal levels" ,
+                         "Simple signal" .
 
 
 ###  https://w3id.org/def/openadr#SpecifierPayload
@@ -1019,6 +1086,14 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
 #    Individuals
 #################################################################
 
+###  http://www.wurvoc.org/vocabularies/om-1.8/United_States_dollar
+<http://www.wurvoc.org/vocabularies/om-1.8/United_States_dollar> rdf:type owl:NamedIndividual .
+
+
+###  http://www.wurvoc.org/vocabularies/om-1.8/kilowatt_hour
+<http://www.wurvoc.org/vocabularies/om-1.8/kilowatt_hour> rdf:type owl:NamedIndividual .
+
+
 ###  http://www.wurvoc.org/vocabularies/om-1.8/watt
 <http://www.wurvoc.org/vocabularies/om-1.8/watt> rdf:type owl:NamedIndividual .
 
@@ -1042,5 +1117,8 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
 :Near rdf:type owl:NamedIndividual ,
                :EventStatus .
 
+
+[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+] .
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
