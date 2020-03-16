@@ -881,8 +881,8 @@ _:genid38 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2006
 _:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid39 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/openadr#refersToTarget> .
 _:genid39 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/openadr#Group> .
-<https://w3id.org/def/openadr#Schedule> <http://www.w3.org/2000/01/rdf-schema#comment> "Availability of a target" .
-<https://w3id.org/def/openadr#Schedule> <http://www.w3.org/2000/01/rdf-schema#label> "Availability" .
+<https://w3id.org/def/openadr#Schedule> <http://www.w3.org/2000/01/rdf-schema#comment> "Schedule of a target" .
+<https://w3id.org/def/openadr#Schedule> <http://www.w3.org/2000/01/rdf-schema#label> "Schedule" .
 # 
 # https://w3id.org/def/openadr#ServiceArea
 <https://w3id.org/def/openadr#ServiceArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

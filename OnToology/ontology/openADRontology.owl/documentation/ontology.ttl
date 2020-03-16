@@ -995,8 +995,8 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
                             owl:onProperty :refersToTarget ;
                             owl:someValuesFrom :Group
                           ] ;
-          rdfs:comment "Availability of a target" ;
-          rdfs:label "Availability" .
+          rdfs:comment "Schedule of a target" ;
+          rdfs:label "Schedule" .
 
 
 ###  https://w3id.org/def/openadr#ServiceArea

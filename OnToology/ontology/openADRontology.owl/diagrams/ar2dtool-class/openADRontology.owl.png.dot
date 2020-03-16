@@ -19,13 +19,13 @@ node [shape = rectangle, color="orange"]; "base:SignalInterval" "http://www.w3.o
 	"NULL" -> "base:ramp_up" [ label = "owl:onProperty" ];
 	"NULL" -> "xsd:string" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "base:sends" [ label = "owl:onProperty" ];
-	"NULL" -> "base:hasSamplingRate" [ label = "owl:onProperty" ];
 	"NULL" -> "xsd:dateTimeStamp" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "base:hasSamplingRate" [ label = "owl:onProperty" ];
 	"NULL" -> "http://www.w3.org/2006/time#Duration" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:isReportedDuringInterval" [ label = "owl:onProperty" ];
 	"NULL" -> "base:EventDescriptor" [ label = "owl:someValuesFrom" ];
-	"NULL" -> "base:isMeasuredIn" [ label = "owl:onProperty" ];
 	"NULL" -> "base:isDefinedIn" [ label = "owl:onProperty" ];
+	"NULL" -> "base:isMeasuredIn" [ label = "owl:onProperty" ];
 	"NULL" -> "xsd:boolean" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:version" [ label = "owl:onProperty" ];
 	"NULL" -> "base:expectedResponse" [ label = "owl:onProperty" ];
