@@ -413,6 +413,17 @@
     
 
 
+    <!-- https://w3id.org/def/openadr#isScheduleOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#isScheduleOf">
+        <rdfs:domain rdf:resource="https://w3id.org/def/openadr#Schedule"/>
+        <rdfs:comment>Relationship between a schedule and a target</rdfs:comment>
+        <rdfs:label>is schedule of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/def/openadr#isUnavailableDuring -->
 
 
@@ -1034,34 +1045,6 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
     
 
 
-    <!-- https://w3id.org/def/openadr#Availability -->
-
-
-    <owl:Class rdf:about="https://w3id.org/def/openadr#Availability">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#isAvailableDuring"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#Interval"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#isUnavailableDuring"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#Interval"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#refersToTarget"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/def/openadr#Group"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment>Availability of a target</rdfs:comment>
-        <rdfs:label>Availability</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/def/openadr#BidEnergySignal -->
 
 
@@ -1368,7 +1351,13 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/def/openadr#plans"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/def/openadr#Availability"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/openadr#Schedule"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#marketContext"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>The expected response from the demand side resource owner upon receipt of an event.</rdfs:comment>
@@ -1578,6 +1567,34 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
         </rdfs:subClassOf>
         <rdfs:comment>The average number of samples obtained in one second</rdfs:comment>
         <rdfs:label>Sampling rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/openadr#Schedule -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/openadr#Schedule">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#isAvailableDuring"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#Interval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#isUnavailableDuring"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#Interval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#refersToTarget"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/openadr#Group"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Availability of a target</rdfs:comment>
+        <rdfs:label>Availability</rdfs:label>
     </owl:Class>
     
 

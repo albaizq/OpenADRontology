@@ -159,6 +159,10 @@
     "OptIn" : {
       "@id" : "https://w3id.org/def/openadr#OptIn"
     },
+    "isScheduleOf" : {
+      "@id" : "https://w3id.org/def/openadr#isScheduleOf",
+      "@type" : "@id"
+    },
     "Signal" : {
       "@id" : "https://w3id.org/def/openadr#Signal"
     },
@@ -389,6 +393,9 @@
       "@id" : "https://w3id.org/def/openadr#hasMinPeriod",
       "@type" : "@id"
     },
+    "Schedule" : {
+      "@id" : "https://w3id.org/def/openadr#Schedule"
+    },
     "comment" : {
       "@id" : "https://w3id.org/def/openadr#comment",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
@@ -431,9 +438,6 @@
     "reportSubject" : {
       "@id" : "https://w3id.org/def/openadr#reportSubject",
       "@type" : "@id"
-    },
-    "Availability" : {
-      "@id" : "https://w3id.org/def/openadr#Availability"
     },
     "BidEnergySignal" : {
       "@id" : "https://w3id.org/def/openadr#BidEnergySignal"

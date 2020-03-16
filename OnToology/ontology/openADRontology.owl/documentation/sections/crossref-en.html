@@ -7,7 +7,7 @@ This section provides details for each class and property defined by OpenADR ont
          <a href="#Asset" title="https://w3id.org/def/openadr#Asset">Asset</a>
       </li>
       <li>
-         <a href="#Availability" title="https://w3id.org/def/openadr#Availability">Availability</a>
+         <a href="#Schedule" title="https://w3id.org/def/openadr#Schedule">Availability</a>
       </li>
       <li>
          <a href="#BidEnergySignal" title="https://w3id.org/def/openadr#BidEnergySignal">Bid energy signal</a>
@@ -183,19 +183,24 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
          </dd>
       </dl>
    </div>
-   <div class="entity" id="Availability">
+   <div class="entity" id="Schedule">
       <h3>Availability<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/def/openadr#Availability</p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#Schedule</p>
       <div class="comment">
          <span class="markdown">Availability of a target</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#isScheduleOf" title="https://w3id.org/def/openadr#isScheduleOf">is schedule of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="BidEnergySignal">
@@ -1373,6 +1378,9 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
             title="https://w3id.org/def/openadr#isReportedDuringInterval">is reported during interval</a>
       </li>
       <li>
+         <a href="#isScheduleOf" title="https://w3id.org/def/openadr#isScheduleOf">is schedule of</a>
+      </li>
+      <li>
          <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#location" title="http://www.w3.org/2003/01/geo/wgs84_pos#location">
             <span>location</span>
          </a>
@@ -1912,6 +1920,26 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
          <strong>IRI:</strong> https://w3id.org/def/openadr#isReportedDuringInterval</p>
       <div class="comment">
          <span class="markdown">Reporting interval of a report</span>
+      </div>
+   </div>
+   <div class="entity" id="isScheduleOf">
+      <h3>is schedule of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#isScheduleOf</p>
+      <div class="comment">
+         <span class="markdown">Relationship between a schedule and a target</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Schedule" title="https://w3id.org/def/openadr#Schedule">Availability</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
       </div>
    </div>
    <div class="entity" id="http://www.w3.org/2003/01/geo/wgs84_pos#location">

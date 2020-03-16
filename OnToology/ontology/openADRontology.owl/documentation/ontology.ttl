@@ -248,6 +248,13 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
                           rdfs:label "is reported during interval" .
 
 
+###  https://w3id.org/def/openadr#isScheduleOf
+:isScheduleOf rdf:type owl:ObjectProperty ;
+              rdfs:domain :Schedule ;
+              rdfs:comment "Relationship between a schedule and a target" ;
+              rdfs:label "is schedule of" .
+
+
 ###  https://w3id.org/def/openadr#isUnavailableDuring
 :isUnavailableDuring rdf:type owl:ObjectProperty ;
                      rdfs:label "Unavailability of a target" ,
@@ -634,24 +641,6 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
        rdfs:label "Asset" .
 
 
-###  https://w3id.org/def/openadr#Availability
-:Availability rdf:type owl:Class ;
-              rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                owl:onProperty :isAvailableDuring ;
-                                owl:someValuesFrom <http://www.w3.org/2006/time#Interval>
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :isUnavailableDuring ;
-                                owl:someValuesFrom <http://www.w3.org/2006/time#Interval>
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :refersToTarget ;
-                                owl:someValuesFrom :Group
-                              ] ;
-              rdfs:comment "Availability of a target" ;
-              rdfs:label "Availability" .
-
-
 ###  https://w3id.org/def/openadr#BidEnergySignal
 :BidEnergySignal rdf:type owl:Class ;
                  rdfs:subClassOf :Signal ;
@@ -849,7 +838,11 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
 :Opt rdf:type owl:Class ;
      rdfs:subClassOf [ rdf:type owl:Restriction ;
                        owl:onProperty :plans ;
-                       owl:someValuesFrom :Availability
+                       owl:someValuesFrom :Schedule
+                     ] ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :marketContext ;
+                       owl:someValuesFrom xsd:anyURI
                      ] ;
      rdfs:comment "The expected response from the demand side resource owner upon receipt of an event." ;
      rdfs:isDefinedBy "OpenADR 2.0 Demand Response Program Implementation Guide" ;
@@ -986,6 +979,24 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
                               ] ;
               rdfs:comment "The average number of samples obtained in one second" ;
               rdfs:label "Sampling rate" .
+
+
+###  https://w3id.org/def/openadr#Schedule
+:Schedule rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :isAvailableDuring ;
+                            owl:someValuesFrom <http://www.w3.org/2006/time#Interval>
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :isUnavailableDuring ;
+                            owl:someValuesFrom <http://www.w3.org/2006/time#Interval>
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :refersToTarget ;
+                            owl:someValuesFrom :Group
+                          ] ;
+          rdfs:comment "Availability of a target" ;
+          rdfs:label "Availability" .
 
 
 ###  https://w3id.org/def/openadr#ServiceArea
