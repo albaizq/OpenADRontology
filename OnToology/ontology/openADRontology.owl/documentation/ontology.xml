@@ -1593,8 +1593,8 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
                 <owl:someValuesFrom rdf:resource="https://w3id.org/def/openadr#Group"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Availability of a target</rdfs:comment>
-        <rdfs:label>Availability</rdfs:label>
+        <rdfs:comment>Schedule of a target</rdfs:comment>
+        <rdfs:label>Schedule</rdfs:label>
     </owl:Class>
     
 

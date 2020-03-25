@@ -1033,10 +1033,10 @@
   "@id" : "https://w3id.org/def/openadr#Schedule",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Availability of a target"
+    "@value" : "Schedule of a target"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Availability"
+    "@value" : "Schedule"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "_:genid37"
