@@ -45,9 +45,6 @@
     "PropertyShape" : {
       "@id" : "http://www.w3.org/ns/shacl#PropertyShape"
     },
-    "qualifiedMaxCount" : {
-      "@id" : "http://www.w3.org/ns/shacl#qualifiedMaxCount"
-    },
     "description" : {
       "@id" : "http://www.w3.org/ns/shacl#description"
     }

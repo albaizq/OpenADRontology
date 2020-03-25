@@ -35,9 +35,6 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://www.w3.org/ns/shacl#property
 <http://www.w3.org/ns/shacl#property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
-# http://www.w3.org/ns/shacl#qualifiedMaxCount
-<http://www.w3.org/ns/shacl#qualifiedMaxCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
 # http://www.w3.org/ns/shacl#qualifiedMinCount
 <http://www.w3.org/ns/shacl#qualifiedMinCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
@@ -71,11 +68,14 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # #################################################################
 # 
 # 
-# https://astrea.linkeddata.es/shapes#a1a9e1202c0c9208afee98011e8ce6b9
-<https://astrea.linkeddata.es/shapes#a1a9e1202c0c9208afee98011e8ce6b9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://astrea.linkeddata.es/shapes#a1a9e1202c0c9208afee98011e8ce6b9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
-<https://astrea.linkeddata.es/shapes#a1a9e1202c0c9208afee98011e8ce6b9> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRIOrLiteral> .
-<https://astrea.linkeddata.es/shapes#a1a9e1202c0c9208afee98011e8ce6b9> <http://www.w3.org/ns/shacl#path> <https://w3id.org/def/openadr#refersToTarget> .
+# https://astrea.linkeddata.es/shapes#a48d92b632913fa5c81a38e5f128f6e7
+<https://astrea.linkeddata.es/shapes#a48d92b632913fa5c81a38e5f128f6e7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#a48d92b632913fa5c81a38e5f128f6e7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://astrea.linkeddata.es/shapes#a48d92b632913fa5c81a38e5f128f6e7> <http://www.w3.org/2000/01/rdf-schema#label> "Electricity price signal" .
+<https://astrea.linkeddata.es/shapes#a48d92b632913fa5c81a38e5f128f6e7> <http://www.w3.org/ns/shacl#description> "Signal for the price of electricity" .
+<https://astrea.linkeddata.es/shapes#a48d92b632913fa5c81a38e5f128f6e7> <http://www.w3.org/ns/shacl#name> "Electricity price signal" .
+<https://astrea.linkeddata.es/shapes#a48d92b632913fa5c81a38e5f128f6e7> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://astrea.linkeddata.es/shapes#a48d92b632913fa5c81a38e5f128f6e7> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#ElectricityPriceSignal> .
 # 
 # https://astrea.linkeddata.es/shapes#a8a891449ece81fd455a920af672daf0
 <https://astrea.linkeddata.es/shapes#a8a891449ece81fd455a920af672daf0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -86,13 +86,14 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://astrea.linkeddata.es/shapes#a8a891449ece81fd455a920af672daf0> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> .
 <https://astrea.linkeddata.es/shapes#a8a891449ece81fd455a920af672daf0> <http://www.w3.org/ns/shacl#pattern> ".*" .
 # 
-# https://astrea.linkeddata.es/shapes#aaf59a993f9cef84450a198dcdcc0077
-<https://astrea.linkeddata.es/shapes#aaf59a993f9cef84450a198dcdcc0077> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://astrea.linkeddata.es/shapes#aaf59a993f9cef84450a198dcdcc0077> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
-<https://astrea.linkeddata.es/shapes#aaf59a993f9cef84450a198dcdcc0077> <http://www.w3.org/2000/01/rdf-schema#label> "Signal Payload" .
-<https://astrea.linkeddata.es/shapes#aaf59a993f9cef84450a198dcdcc0077> <http://www.w3.org/ns/shacl#name> "Signal Payload" .
-<https://astrea.linkeddata.es/shapes#aaf59a993f9cef84450a198dcdcc0077> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
-<https://astrea.linkeddata.es/shapes#aaf59a993f9cef84450a198dcdcc0077> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#SignalPayload> .
+# https://astrea.linkeddata.es/shapes#a8e3545df48c850e0d198d9ff54f4904
+<https://astrea.linkeddata.es/shapes#a8e3545df48c850e0d198d9ff54f4904> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#a8e3545df48c850e0d198d9ff54f4904> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://astrea.linkeddata.es/shapes#a8e3545df48c850e0d198d9ff54f4904> <http://www.w3.org/2000/01/rdf-schema#label> "transport name" .
+<https://astrea.linkeddata.es/shapes#a8e3545df48c850e0d198d9ff54f4904> <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+<https://astrea.linkeddata.es/shapes#a8e3545df48c850e0d198d9ff54f4904> <http://www.w3.org/ns/shacl#name> "transport name" .
+<https://astrea.linkeddata.es/shapes#a8e3545df48c850e0d198d9ff54f4904> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> .
+<https://astrea.linkeddata.es/shapes#a8e3545df48c850e0d198d9ff54f4904> <http://www.w3.org/ns/shacl#pattern> ".*" .
 # 
 # https://astrea.linkeddata.es/shapes#abee8dc113660d74cca7b9bf062f0a75
 <https://astrea.linkeddata.es/shapes#abee8dc113660d74cca7b9bf062f0a75> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -109,12 +110,14 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://astrea.linkeddata.es/shapes#ac0dc9875106eb007194138b41ec1519> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRIOrLiteral> .
 <https://astrea.linkeddata.es/shapes#ac0dc9875106eb007194138b41ec1519> <http://www.w3.org/ns/shacl#path> <https://w3id.org/def/openadr#isDefinedIn> .
 # 
-# https://astrea.linkeddata.es/shapes#b6161cc0569b9e5988b3b743c4820485
-<https://astrea.linkeddata.es/shapes#b6161cc0569b9e5988b3b743c4820485> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://astrea.linkeddata.es/shapes#b6161cc0569b9e5988b3b743c4820485> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
-<https://astrea.linkeddata.es/shapes#b6161cc0569b9e5988b3b743c4820485> <http://www.w3.org/ns/shacl#class> <http://www.w3.org/2006/time#TemporalEntity> .
-<https://astrea.linkeddata.es/shapes#b6161cc0569b9e5988b3b743c4820485> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRIOrLiteral> .
-<https://astrea.linkeddata.es/shapes#b6161cc0569b9e5988b3b743c4820485> <http://www.w3.org/ns/shacl#path> <https://w3id.org/def/openadr#hasGranularity> .
+# https://astrea.linkeddata.es/shapes#b27ff3049cd990f535823fff573959b6
+<https://astrea.linkeddata.es/shapes#b27ff3049cd990f535823fff573959b6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#b27ff3049cd990f535823fff573959b6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://astrea.linkeddata.es/shapes#b27ff3049cd990f535823fff573959b6> <http://www.w3.org/2000/01/rdf-schema#label> "Load dispatch signal" .
+<https://astrea.linkeddata.es/shapes#b27ff3049cd990f535823fff573959b6> <http://www.w3.org/ns/shacl#description> "Instructions are used to set the load  values that can be expressed in terms of the desired load" .
+<https://astrea.linkeddata.es/shapes#b27ff3049cd990f535823fff573959b6> <http://www.w3.org/ns/shacl#name> "Load dispatch signal" .
+<https://astrea.linkeddata.es/shapes#b27ff3049cd990f535823fff573959b6> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://astrea.linkeddata.es/shapes#b27ff3049cd990f535823fff573959b6> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#LoadDispatchSignal> .
 # 
 # https://astrea.linkeddata.es/shapes#b64e7b9a7883fa8fcc81acdd304fa60c
 <https://astrea.linkeddata.es/shapes#b64e7b9a7883fa8fcc81acdd304fa60c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -146,12 +149,11 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://astrea.linkeddata.es/shapes#ba034472bfa322b258bd14f1472355e6> <http://www.w3.org/ns/shacl#name> "has typical value" .
 <https://astrea.linkeddata.es/shapes#ba034472bfa322b258bd14f1472355e6> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
 # 
-# https://astrea.linkeddata.es/shapes#ba7c21b062c212fc6629618be14e32ef
-<https://astrea.linkeddata.es/shapes#ba7c21b062c212fc6629618be14e32ef> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://astrea.linkeddata.es/shapes#ba7c21b062c212fc6629618be14e32ef> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
-<https://astrea.linkeddata.es/shapes#ba7c21b062c212fc6629618be14e32ef> <http://www.w3.org/ns/shacl#class> <http://www.w3.org/2006/time#TemporalEntity> .
-<https://astrea.linkeddata.es/shapes#ba7c21b062c212fc6629618be14e32ef> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRIOrLiteral> .
-<https://astrea.linkeddata.es/shapes#ba7c21b062c212fc6629618be14e32ef> <http://www.w3.org/ns/shacl#path> <https://w3id.org/def/openadr#hasReportBackDuration> .
+# https://astrea.linkeddata.es/shapes#bb645076c91f206129df042936fadc77
+<https://astrea.linkeddata.es/shapes#bb645076c91f206129df042936fadc77> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#bb645076c91f206129df042936fadc77> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://astrea.linkeddata.es/shapes#bb645076c91f206129df042936fadc77> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://astrea.linkeddata.es/shapes#bb645076c91f206129df042936fadc77> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#ReportStatusPayload> .
 # 
 # https://astrea.linkeddata.es/shapes#bd851bd791b544c23ccdcb0180fd0e3b
 <https://astrea.linkeddata.es/shapes#bd851bd791b544c23ccdcb0180fd0e3b> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -162,6 +164,26 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://astrea.linkeddata.es/shapes#bd851bd791b544c23ccdcb0180fd0e3b> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
 <https://astrea.linkeddata.es/shapes#bd851bd791b544c23ccdcb0180fd0e3b> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/2006/time#Duration> .
 # 
+# https://astrea.linkeddata.es/shapes#c02cc761b5b2311fa36e4999879ac5bf
+<https://astrea.linkeddata.es/shapes#c02cc761b5b2311fa36e4999879ac5bf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#c02cc761b5b2311fa36e4999879ac5bf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://astrea.linkeddata.es/shapes#c02cc761b5b2311fa36e4999879ac5bf> <http://www.w3.org/2000/01/rdf-schema#label> "profile name" .
+<https://astrea.linkeddata.es/shapes#c02cc761b5b2311fa36e4999879ac5bf> <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+<https://astrea.linkeddata.es/shapes#c02cc761b5b2311fa36e4999879ac5bf> <http://www.w3.org/ns/shacl#name> "profile name" .
+<https://astrea.linkeddata.es/shapes#c02cc761b5b2311fa36e4999879ac5bf> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> .
+<https://astrea.linkeddata.es/shapes#c02cc761b5b2311fa36e4999879ac5bf> <http://www.w3.org/ns/shacl#pattern> ".*" .
+# 
+# https://astrea.linkeddata.es/shapes#c4dcf8b7a175b506024dce237da314fb
+<https://astrea.linkeddata.es/shapes#c4dcf8b7a175b506024dce237da314fb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#c4dcf8b7a175b506024dce237da314fb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://astrea.linkeddata.es/shapes#c4dcf8b7a175b506024dce237da314fb> <http://www.w3.org/2000/01/rdf-schema#label> "A URI identifying a DR Program" .
+<https://astrea.linkeddata.es/shapes#c4dcf8b7a175b506024dce237da314fb> <http://www.w3.org/2000/01/rdf-schema#label> "market context" .
+<https://astrea.linkeddata.es/shapes#c4dcf8b7a175b506024dce237da314fb> <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://astrea.linkeddata.es/shapes#c4dcf8b7a175b506024dce237da314fb> <http://www.w3.org/ns/shacl#description> "A URI identifying a DR Program" .
+<https://astrea.linkeddata.es/shapes#c4dcf8b7a175b506024dce237da314fb> <http://www.w3.org/ns/shacl#name> "market context" .
+<https://astrea.linkeddata.es/shapes#c4dcf8b7a175b506024dce237da314fb> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> .
+<https://astrea.linkeddata.es/shapes#c4dcf8b7a175b506024dce237da314fb> <http://www.w3.org/ns/shacl#pattern> "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\\?([^#]*))?(#(.*))?" .
+# 
 # https://astrea.linkeddata.es/shapes#c62491eb3497e805c71c3df45ec82db0
 <https://astrea.linkeddata.es/shapes#c62491eb3497e805c71c3df45ec82db0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://astrea.linkeddata.es/shapes#c62491eb3497e805c71c3df45ec82db0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
@@ -171,6 +193,15 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://astrea.linkeddata.es/shapes#c62491eb3497e805c71c3df45ec82db0> <http://www.w3.org/ns/shacl#name> "is unavailable during" .
 <https://astrea.linkeddata.es/shapes#c62491eb3497e805c71c3df45ec82db0> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
 # 
+# https://astrea.linkeddata.es/shapes#c6433fd5f0dae6d55d060a62a7a98bf7
+<https://astrea.linkeddata.es/shapes#c6433fd5f0dae6d55d060a62a7a98bf7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#c6433fd5f0dae6d55d060a62a7a98bf7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://astrea.linkeddata.es/shapes#c6433fd5f0dae6d55d060a62a7a98bf7> <http://www.w3.org/2000/01/rdf-schema#label> "Relationship to cancel a report" .
+<https://astrea.linkeddata.es/shapes#c6433fd5f0dae6d55d060a62a7a98bf7> <http://www.w3.org/2000/01/rdf-schema#label> "cancels" .
+<https://astrea.linkeddata.es/shapes#c6433fd5f0dae6d55d060a62a7a98bf7> <http://www.w3.org/ns/shacl#description> "Relationship to cancel a report" .
+<https://astrea.linkeddata.es/shapes#c6433fd5f0dae6d55d060a62a7a98bf7> <http://www.w3.org/ns/shacl#name> "cancels" .
+<https://astrea.linkeddata.es/shapes#c6433fd5f0dae6d55d060a62a7a98bf7> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+# 
 # https://astrea.linkeddata.es/shapes#c7631f7ea426736bfbe8a2a56c754e2f
 <https://astrea.linkeddata.es/shapes#c7631f7ea426736bfbe8a2a56c754e2f> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://astrea.linkeddata.es/shapes#c7631f7ea426736bfbe8a2a56c754e2f> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
@@ -179,6 +210,12 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://astrea.linkeddata.es/shapes#c7631f7ea426736bfbe8a2a56c754e2f> <http://www.w3.org/ns/shacl#description> "Duration of an event" .
 <https://astrea.linkeddata.es/shapes#c7631f7ea426736bfbe8a2a56c754e2f> <http://www.w3.org/ns/shacl#name> "has duration" .
 <https://astrea.linkeddata.es/shapes#c7631f7ea426736bfbe8a2a56c754e2f> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+# 
+# https://astrea.linkeddata.es/shapes#c7b731bfbf886056199f888f0e4e1f61
+<https://astrea.linkeddata.es/shapes#c7b731bfbf886056199f888f0e4e1f61> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#c7b731bfbf886056199f888f0e4e1f61> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://astrea.linkeddata.es/shapes#c7b731bfbf886056199f888f0e4e1f61> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://astrea.linkeddata.es/shapes#c7b731bfbf886056199f888f0e4e1f61> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#ReportStatusDescriptor> .
 # 
 # https://astrea.linkeddata.es/shapes#c7d1e48689e20b109b2ed978f6c69a94
 <https://astrea.linkeddata.es/shapes#c7d1e48689e20b109b2ed978f6c69a94> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -208,15 +245,6 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://astrea.linkeddata.es/shapes#cf86527ba0fa6f7dabbd0e084e947145> <http://www.w3.org/ns/shacl#name> "Metadata report" .
 <https://astrea.linkeddata.es/shapes#cf86527ba0fa6f7dabbd0e084e947145> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
 <https://astrea.linkeddata.es/shapes#cf86527ba0fa6f7dabbd0e084e947145> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#MetadataReport> .
-# 
-# https://astrea.linkeddata.es/shapes#d00afdd6c388b73b21fbf6d7965b7cc1
-<https://astrea.linkeddata.es/shapes#d00afdd6c388b73b21fbf6d7965b7cc1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://astrea.linkeddata.es/shapes#d00afdd6c388b73b21fbf6d7965b7cc1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
-<https://astrea.linkeddata.es/shapes#d00afdd6c388b73b21fbf6d7965b7cc1> <http://www.w3.org/2000/01/rdf-schema#label> "data quality" .
-<https://astrea.linkeddata.es/shapes#d00afdd6c388b73b21fbf6d7965b7cc1> <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
-<https://astrea.linkeddata.es/shapes#d00afdd6c388b73b21fbf6d7965b7cc1> <http://www.w3.org/ns/shacl#name> "data quality" .
-<https://astrea.linkeddata.es/shapes#d00afdd6c388b73b21fbf6d7965b7cc1> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> .
-<https://astrea.linkeddata.es/shapes#d00afdd6c388b73b21fbf6d7965b7cc1> <http://www.w3.org/ns/shacl#pattern> ".*" .
 # 
 # https://astrea.linkeddata.es/shapes#d029fc09099c92b2fbf91e9253bff21c
 <https://astrea.linkeddata.es/shapes#d029fc09099c92b2fbf91e9253bff21c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -272,17 +300,28 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://astrea.linkeddata.es/shapes#d753265b3d8a20ea903355d07a8bb256> <http://www.w3.org/ns/shacl#name> "expected response" .
 <https://astrea.linkeddata.es/shapes#d753265b3d8a20ea903355d07a8bb256> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
 # 
+# https://astrea.linkeddata.es/shapes#da331a78be448893f019591ceecadbad
+<https://astrea.linkeddata.es/shapes#da331a78be448893f019591ceecadbad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#da331a78be448893f019591ceecadbad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://astrea.linkeddata.es/shapes#da331a78be448893f019591ceecadbad> <http://www.w3.org/2000/01/rdf-schema#label> "includes measurement" .
+<https://astrea.linkeddata.es/shapes#da331a78be448893f019591ceecadbad> <http://www.w3.org/ns/shacl#class> <https://saref.etsi.org/saref#Measurement> .
+<https://astrea.linkeddata.es/shapes#da331a78be448893f019591ceecadbad> <http://www.w3.org/ns/shacl#name> "includes measurement" .
+<https://astrea.linkeddata.es/shapes#da331a78be448893f019591ceecadbad> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+# 
 # https://astrea.linkeddata.es/shapes#da41c1dcea4d690d2030c30d8fbbca49
 <https://astrea.linkeddata.es/shapes#da41c1dcea4d690d2030c30d8fbbca49> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://astrea.linkeddata.es/shapes#da41c1dcea4d690d2030c30d8fbbca49> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
 <https://astrea.linkeddata.es/shapes#da41c1dcea4d690d2030c30d8fbbca49> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRIOrLiteral> .
 <https://astrea.linkeddata.es/shapes#da41c1dcea4d690d2030c30d8fbbca49> <http://www.w3.org/ns/shacl#path> <https://w3id.org/def/openadr#sends> .
 # 
-# https://astrea.linkeddata.es/shapes#de45e4060d4ba000706bc48f6ed90865
-<https://astrea.linkeddata.es/shapes#de45e4060d4ba000706bc48f6ed90865> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://astrea.linkeddata.es/shapes#de45e4060d4ba000706bc48f6ed90865> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
-<https://astrea.linkeddata.es/shapes#de45e4060d4ba000706bc48f6ed90865> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRIOrLiteral> .
-<https://astrea.linkeddata.es/shapes#de45e4060d4ba000706bc48f6ed90865> <http://www.w3.org/ns/shacl#path> <https://w3id.org/def/openadr#isAvailableDuring> .
+# https://astrea.linkeddata.es/shapes#de398d443fa9097a91c18cd8a28ea1f3
+<https://astrea.linkeddata.es/shapes#de398d443fa9097a91c18cd8a28ea1f3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#de398d443fa9097a91c18cd8a28ea1f3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://astrea.linkeddata.es/shapes#de398d443fa9097a91c18cd8a28ea1f3> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRIOrLiteral> .
+<https://astrea.linkeddata.es/shapes#de398d443fa9097a91c18cd8a28ea1f3> <http://www.w3.org/ns/shacl#path> <https://w3id.org/def/openadr#includesMeasurement> .
+<https://astrea.linkeddata.es/shapes#de398d443fa9097a91c18cd8a28ea1f3> <http://www.w3.org/ns/shacl#qualifiedMinCount> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://astrea.linkeddata.es/shapes#de398d443fa9097a91c18cd8a28ea1f3> <http://www.w3.org/ns/shacl#qualifiedValueShape> _:genid2 .
+_:genid2 <http://www.w3.org/ns/shacl#class> <https://saref.etsi.org/saref#Measurement> .
 # 
 # https://astrea.linkeddata.es/shapes#de7cf5c312eb50ff04117ccb895f05a6
 <https://astrea.linkeddata.es/shapes#de7cf5c312eb50ff04117ccb895f05a6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -328,6 +367,16 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://astrea.linkeddata.es/shapes#e7c6178fca5918e08404ac6f107d89d1> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
 <https://astrea.linkeddata.es/shapes#e7c6178fca5918e08404ac6f107d89d1> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#HistoryUsageReport> .
 # 
+# https://astrea.linkeddata.es/shapes#eb103427682b59681883e1aa14df7b2e
+<https://astrea.linkeddata.es/shapes#eb103427682b59681883e1aa14df7b2e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#eb103427682b59681883e1aa14df7b2e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://astrea.linkeddata.es/shapes#eb103427682b59681883e1aa14df7b2e> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OASIS Energy Market Information Exchange (eMIX) standard" .
+<https://astrea.linkeddata.es/shapes#eb103427682b59681883e1aa14df7b2e> <http://www.w3.org/2000/01/rdf-schema#label> "Item" .
+<https://astrea.linkeddata.es/shapes#eb103427682b59681883e1aa14df7b2e> <http://www.w3.org/ns/shacl#description> "Units for the data in the report" .
+<https://astrea.linkeddata.es/shapes#eb103427682b59681883e1aa14df7b2e> <http://www.w3.org/ns/shacl#name> "Item" .
+<https://astrea.linkeddata.es/shapes#eb103427682b59681883e1aa14df7b2e> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://astrea.linkeddata.es/shapes#eb103427682b59681883e1aa14df7b2e> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#Item> .
+# 
 # https://astrea.linkeddata.es/shapes#eb2bb154dbbfbb4ed42bbdbcf05d0b1d
 <https://astrea.linkeddata.es/shapes#eb2bb154dbbfbb4ed42bbdbcf05d0b1d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://astrea.linkeddata.es/shapes#eb2bb154dbbfbb4ed42bbdbcf05d0b1d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
@@ -345,6 +394,12 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://astrea.linkeddata.es/shapes#ebeeb0689d06e67132f7d923dbe0f1a0> <http://www.w3.org/ns/shacl#name> "has report back duration" .
 <https://astrea.linkeddata.es/shapes#ebeeb0689d06e67132f7d923dbe0f1a0> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
 # 
+# https://astrea.linkeddata.es/shapes#ec09cf94c33771905d6826bb9fc5f6bd
+<https://astrea.linkeddata.es/shapes#ec09cf94c33771905d6826bb9fc5f6bd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#ec09cf94c33771905d6826bb9fc5f6bd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://astrea.linkeddata.es/shapes#ec09cf94c33771905d6826bb9fc5f6bd> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://astrea.linkeddata.es/shapes#ec09cf94c33771905d6826bb9fc5f6bd> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#ReportDataPayload> .
+# 
 # https://astrea.linkeddata.es/shapes#ed0df5ac6387775640306ab7f4cdcbed
 <https://astrea.linkeddata.es/shapes#ed0df5ac6387775640306ab7f4cdcbed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://astrea.linkeddata.es/shapes#ed0df5ac6387775640306ab7f4cdcbed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
@@ -354,6 +409,12 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://astrea.linkeddata.es/shapes#ed0df5ac6387775640306ab7f4cdcbed> <http://www.w3.org/ns/shacl#name> "Telemetry report" .
 <https://astrea.linkeddata.es/shapes#ed0df5ac6387775640306ab7f4cdcbed> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
 <https://astrea.linkeddata.es/shapes#ed0df5ac6387775640306ab7f4cdcbed> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#TelemetryReport> .
+# 
+# https://astrea.linkeddata.es/shapes#ee757f2c307ded232a17e77cefc64473
+<https://astrea.linkeddata.es/shapes#ee757f2c307ded232a17e77cefc64473> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#ee757f2c307ded232a17e77cefc64473> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://astrea.linkeddata.es/shapes#ee757f2c307ded232a17e77cefc64473> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRIOrLiteral> .
+<https://astrea.linkeddata.es/shapes#ee757f2c307ded232a17e77cefc64473> <http://www.w3.org/ns/shacl#path> <https://w3id.org/def/openadr#isUnavailableDuring> .
 # 
 # https://astrea.linkeddata.es/shapes#ef08f8c52370eae9512bb1ec26279152
 <https://astrea.linkeddata.es/shapes#ef08f8c52370eae9512bb1ec26279152> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -415,33 +476,14 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://astrea.linkeddata.es/shapes#f2299dd03865b7225c1ac510a246a62c> <http://www.w3.org/ns/shacl#name> "ramp up" .
 <https://astrea.linkeddata.es/shapes#f2299dd03865b7225c1ac510a246a62c> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
 # 
-# https://astrea.linkeddata.es/shapes#f28dbef903d2c6e18dfc93ebf4e283d9
-<https://astrea.linkeddata.es/shapes#f28dbef903d2c6e18dfc93ebf4e283d9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://astrea.linkeddata.es/shapes#f28dbef903d2c6e18dfc93ebf4e283d9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
-<https://astrea.linkeddata.es/shapes#f28dbef903d2c6e18dfc93ebf4e283d9> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OpenADR 2.0 Demand Response Program Implementation Guide" .
-<https://astrea.linkeddata.es/shapes#f28dbef903d2c6e18dfc93ebf4e283d9> <http://www.w3.org/2000/01/rdf-schema#label> "Specifier Payload" .
-<https://astrea.linkeddata.es/shapes#f28dbef903d2c6e18dfc93ebf4e283d9> <http://www.w3.org/ns/shacl#name> "Specifier Payload" .
-<https://astrea.linkeddata.es/shapes#f28dbef903d2c6e18dfc93ebf4e283d9> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
-<https://astrea.linkeddata.es/shapes#f28dbef903d2c6e18dfc93ebf4e283d9> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#SpecifierPayload> .
-# 
-# https://astrea.linkeddata.es/shapes#f346f0988ac90c544a3885752334ac98
-<https://astrea.linkeddata.es/shapes#f346f0988ac90c544a3885752334ac98> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://astrea.linkeddata.es/shapes#f346f0988ac90c544a3885752334ac98> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
-<https://astrea.linkeddata.es/shapes#f346f0988ac90c544a3885752334ac98> <http://www.w3.org/2000/01/rdf-schema#label> "Relation between an entity and the payload resource status" .
-<https://astrea.linkeddata.es/shapes#f346f0988ac90c544a3885752334ac98> <http://www.w3.org/2000/01/rdf-schema#label> "has payload resource status" .
-<https://astrea.linkeddata.es/shapes#f346f0988ac90c544a3885752334ac98> <http://www.w3.org/ns/shacl#description> "Relation between an entity and the payload resource status" .
-<https://astrea.linkeddata.es/shapes#f346f0988ac90c544a3885752334ac98> <http://www.w3.org/ns/shacl#name> "has payload resource status" .
-<https://astrea.linkeddata.es/shapes#f346f0988ac90c544a3885752334ac98> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
-# 
-# https://astrea.linkeddata.es/shapes#f5e27add16814bb0c4d4dd4e92286b09
-<https://astrea.linkeddata.es/shapes#f5e27add16814bb0c4d4dd4e92286b09> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://astrea.linkeddata.es/shapes#f5e27add16814bb0c4d4dd4e92286b09> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
-<https://astrea.linkeddata.es/shapes#f5e27add16814bb0c4d4dd4e92286b09> <http://www.w3.org/2000/01/rdf-schema#label> "Relation between the specification of a report and its payload" .
-<https://astrea.linkeddata.es/shapes#f5e27add16814bb0c4d4dd4e92286b09> <http://www.w3.org/2000/01/rdf-schema#label> "has specifier payload" .
-<https://astrea.linkeddata.es/shapes#f5e27add16814bb0c4d4dd4e92286b09> <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#SpecifierPayload> .
-<https://astrea.linkeddata.es/shapes#f5e27add16814bb0c4d4dd4e92286b09> <http://www.w3.org/ns/shacl#description> "Relation between the specification of a report and its payload" .
-<https://astrea.linkeddata.es/shapes#f5e27add16814bb0c4d4dd4e92286b09> <http://www.w3.org/ns/shacl#name> "has specifier payload" .
-<https://astrea.linkeddata.es/shapes#f5e27add16814bb0c4d4dd4e92286b09> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+# https://astrea.linkeddata.es/shapes#f590341a6b69fe6608eb3292bd1e2cef
+<https://astrea.linkeddata.es/shapes#f590341a6b69fe6608eb3292bd1e2cef> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#f590341a6b69fe6608eb3292bd1e2cef> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://astrea.linkeddata.es/shapes#f590341a6b69fe6608eb3292bd1e2cef> <http://www.w3.org/2000/01/rdf-schema#label> "Bid load signal" .
+<https://astrea.linkeddata.es/shapes#f590341a6b69fe6608eb3292bd1e2cef> <http://www.w3.org/ns/shacl#description> "Signal that represents the amount of load that was bid by a resource into a program" .
+<https://astrea.linkeddata.es/shapes#f590341a6b69fe6608eb3292bd1e2cef> <http://www.w3.org/ns/shacl#name> "Bid load signal" .
+<https://astrea.linkeddata.es/shapes#f590341a6b69fe6608eb3292bd1e2cef> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://astrea.linkeddata.es/shapes#f590341a6b69fe6608eb3292bd1e2cef> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#BidLoadSignal> .
 # 
 # https://astrea.linkeddata.es/shapes#f6f2b65301484d98cb89f4da714d02d7
 <https://astrea.linkeddata.es/shapes#f6f2b65301484d98cb89f4da714d02d7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -456,7 +498,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://astrea.linkeddata.es/shapes#f77114428a35ddabff6b2c21cd704664> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://astrea.linkeddata.es/shapes#f77114428a35ddabff6b2c21cd704664> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
 <https://astrea.linkeddata.es/shapes#f77114428a35ddabff6b2c21cd704664> <http://www.w3.org/2000/01/rdf-schema#label> "has item base" .
-<https://astrea.linkeddata.es/shapes#f77114428a35ddabff6b2c21cd704664> <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#ItemBase> .
+<https://astrea.linkeddata.es/shapes#f77114428a35ddabff6b2c21cd704664> <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Item> .
 <https://astrea.linkeddata.es/shapes#f77114428a35ddabff6b2c21cd704664> <http://www.w3.org/ns/shacl#name> "has item base" .
 <https://astrea.linkeddata.es/shapes#f77114428a35ddabff6b2c21cd704664> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
 # 
@@ -485,10 +527,19 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://astrea.linkeddata.es/shapes#fbc885fc8419740eda22774416736bfa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
 <https://astrea.linkeddata.es/shapes#fbc885fc8419740eda22774416736bfa> <http://www.w3.org/2000/01/rdf-schema#label> "Relation between a signal and its payload" .
 <https://astrea.linkeddata.es/shapes#fbc885fc8419740eda22774416736bfa> <http://www.w3.org/2000/01/rdf-schema#label> "has signal payload" .
-<https://astrea.linkeddata.es/shapes#fbc885fc8419740eda22774416736bfa> <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#SignalPayload> .
 <https://astrea.linkeddata.es/shapes#fbc885fc8419740eda22774416736bfa> <http://www.w3.org/ns/shacl#description> "Relation between a signal and its payload" .
 <https://astrea.linkeddata.es/shapes#fbc885fc8419740eda22774416736bfa> <http://www.w3.org/ns/shacl#name> "has signal payload" .
 <https://astrea.linkeddata.es/shapes#fbc885fc8419740eda22774416736bfa> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+# 
+# https://astrea.linkeddata.es/shapes#fbf664753aa191a16223a4ff3666076e
+<https://astrea.linkeddata.es/shapes#fbf664753aa191a16223a4ff3666076e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#fbf664753aa191a16223a4ff3666076e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://astrea.linkeddata.es/shapes#fbf664753aa191a16223a4ff3666076e> <http://www.w3.org/2000/01/rdf-schema#label> "Energy price signal" .
+<https://astrea.linkeddata.es/shapes#fbf664753aa191a16223a4ff3666076e> <http://www.w3.org/2000/01/rdf-schema#label> "Signal for the price of energy" .
+<https://astrea.linkeddata.es/shapes#fbf664753aa191a16223a4ff3666076e> <http://www.w3.org/ns/shacl#name> "Energy price signal" .
+<https://astrea.linkeddata.es/shapes#fbf664753aa191a16223a4ff3666076e> <http://www.w3.org/ns/shacl#name> "Signal for the price of energy" .
+<https://astrea.linkeddata.es/shapes#fbf664753aa191a16223a4ff3666076e> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://astrea.linkeddata.es/shapes#fbf664753aa191a16223a4ff3666076e> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#EnergyPriceSignal> .
 # 
 # https://astrea.linkeddata.es/shapes#fd0c81bb5f84ab19a3448817712de28b
 <https://astrea.linkeddata.es/shapes#fd0c81bb5f84ab19a3448817712de28b> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -500,6 +551,15 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://astrea.linkeddata.es/shapes#fd0c81bb5f84ab19a3448817712de28b> <http://www.w3.org/ns/shacl#name> "is response required" .
 <https://astrea.linkeddata.es/shapes#fd0c81bb5f84ab19a3448817712de28b> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> .
 <https://astrea.linkeddata.es/shapes#fd0c81bb5f84ab19a3448817712de28b> <http://www.w3.org/ns/shacl#pattern> "true|false|0|1" .
+# 
+# https://astrea.linkeddata.es/shapes#fe5a1b3675c6f46bb72b25f33815fa7c
+<https://astrea.linkeddata.es/shapes#fe5a1b3675c6f46bb72b25f33815fa7c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#fe5a1b3675c6f46bb72b25f33815fa7c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://astrea.linkeddata.es/shapes#fe5a1b3675c6f46bb72b25f33815fa7c> <http://www.w3.org/2000/01/rdf-schema#label> "Bid energy signal" .
+<https://astrea.linkeddata.es/shapes#fe5a1b3675c6f46bb72b25f33815fa7c> <http://www.w3.org/ns/shacl#description> "Signal that represents the price that was bid by the resource" .
+<https://astrea.linkeddata.es/shapes#fe5a1b3675c6f46bb72b25f33815fa7c> <http://www.w3.org/ns/shacl#name> "Bid energy signal" .
+<https://astrea.linkeddata.es/shapes#fe5a1b3675c6f46bb72b25f33815fa7c> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://astrea.linkeddata.es/shapes#fe5a1b3675c6f46bb72b25f33815fa7c> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#BidEnergySignal> .
 # 
 # https://astrea.linkeddata.es/shapes#ff5051b5afd6b08f41598452177db18b
 <https://astrea.linkeddata.es/shapes#ff5051b5afd6b08f41598452177db18b> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -540,6 +600,15 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://astrea.linkeddata.es/shapes#000f341f6c473c4eb5bc2495d9e8bed5> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> .
 <https://astrea.linkeddata.es/shapes#000f341f6c473c4eb5bc2495d9e8bed5> <http://www.w3.org/ns/shacl#pattern> ".*" .
 # 
+# https://astrea.linkeddata.es/shapes#01fad947321ab88225ea900b5cdd7c18
+<https://astrea.linkeddata.es/shapes#01fad947321ab88225ea900b5cdd7c18> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#01fad947321ab88225ea900b5cdd7c18> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://astrea.linkeddata.es/shapes#01fad947321ab88225ea900b5cdd7c18> <http://www.w3.org/2000/01/rdf-schema#label> "signal type" .
+<https://astrea.linkeddata.es/shapes#01fad947321ab88225ea900b5cdd7c18> <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+<https://astrea.linkeddata.es/shapes#01fad947321ab88225ea900b5cdd7c18> <http://www.w3.org/ns/shacl#name> "signal type" .
+<https://astrea.linkeddata.es/shapes#01fad947321ab88225ea900b5cdd7c18> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> .
+<https://astrea.linkeddata.es/shapes#01fad947321ab88225ea900b5cdd7c18> <http://www.w3.org/ns/shacl#pattern> ".*" .
+# 
 # https://astrea.linkeddata.es/shapes#02b341e181b7af29e9e1f066905f489e
 <https://astrea.linkeddata.es/shapes#02b341e181b7af29e9e1f066905f489e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://astrea.linkeddata.es/shapes#02b341e181b7af29e9e1f066905f489e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
@@ -550,6 +619,15 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://astrea.linkeddata.es/shapes#02b341e181b7af29e9e1f066905f489e> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
 <https://astrea.linkeddata.es/shapes#02b341e181b7af29e9e1f066905f489e> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#EventDescriptor> .
 # 
+# https://astrea.linkeddata.es/shapes#0396eb0f7ce4d5463567d8ddbd93039e
+<https://astrea.linkeddata.es/shapes#0396eb0f7ce4d5463567d8ddbd93039e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#0396eb0f7ce4d5463567d8ddbd93039e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://astrea.linkeddata.es/shapes#0396eb0f7ce4d5463567d8ddbd93039e> <http://www.w3.org/2000/01/rdf-schema#label> "Linked between a report and the properties it measure" .
+<https://astrea.linkeddata.es/shapes#0396eb0f7ce4d5463567d8ddbd93039e> <http://www.w3.org/2000/01/rdf-schema#label> "is associated to property" .
+<https://astrea.linkeddata.es/shapes#0396eb0f7ce4d5463567d8ddbd93039e> <http://www.w3.org/ns/shacl#description> "Linked between a report and the properties it measure" .
+<https://astrea.linkeddata.es/shapes#0396eb0f7ce4d5463567d8ddbd93039e> <http://www.w3.org/ns/shacl#name> "is associated to property" .
+<https://astrea.linkeddata.es/shapes#0396eb0f7ce4d5463567d8ddbd93039e> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+# 
 # https://astrea.linkeddata.es/shapes#06d5e09a4c4fb27711dc98571e5e7fbf
 <https://astrea.linkeddata.es/shapes#06d5e09a4c4fb27711dc98571e5e7fbf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://astrea.linkeddata.es/shapes#06d5e09a4c4fb27711dc98571e5e7fbf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
@@ -559,27 +637,6 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://astrea.linkeddata.es/shapes#06d5e09a4c4fb27711dc98571e5e7fbf> <http://www.w3.org/ns/shacl#name> "Telemetry status report" .
 <https://astrea.linkeddata.es/shapes#06d5e09a4c4fb27711dc98571e5e7fbf> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
 <https://astrea.linkeddata.es/shapes#06d5e09a4c4fb27711dc98571e5e7fbf> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#TelemetryStatusReport> .
-# 
-# https://astrea.linkeddata.es/shapes#06e5c6cdff21342ebcf1ac7a12cb4ed4
-<https://astrea.linkeddata.es/shapes#06e5c6cdff21342ebcf1ac7a12cb4ed4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://astrea.linkeddata.es/shapes#06e5c6cdff21342ebcf1ac7a12cb4ed4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
-<https://astrea.linkeddata.es/shapes#06e5c6cdff21342ebcf1ac7a12cb4ed4> <http://www.w3.org/2000/01/rdf-schema#label> "Metadata about the Readings, such as mean or derived" .
-<https://astrea.linkeddata.es/shapes#06e5c6cdff21342ebcf1ac7a12cb4ed4> <http://www.w3.org/2000/01/rdf-schema#label> "reading type" .
-<https://astrea.linkeddata.es/shapes#06e5c6cdff21342ebcf1ac7a12cb4ed4> <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
-<https://astrea.linkeddata.es/shapes#06e5c6cdff21342ebcf1ac7a12cb4ed4> <http://www.w3.org/ns/shacl#description> "Metadata about the Readings, such as mean or derived" .
-<https://astrea.linkeddata.es/shapes#06e5c6cdff21342ebcf1ac7a12cb4ed4> <http://www.w3.org/ns/shacl#name> "reading type" .
-<https://astrea.linkeddata.es/shapes#06e5c6cdff21342ebcf1ac7a12cb4ed4> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> .
-<https://astrea.linkeddata.es/shapes#06e5c6cdff21342ebcf1ac7a12cb4ed4> <http://www.w3.org/ns/shacl#pattern> ".*" .
-# 
-# https://astrea.linkeddata.es/shapes#07329727a6c914bec20d71286536d543
-<https://astrea.linkeddata.es/shapes#07329727a6c914bec20d71286536d543> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://astrea.linkeddata.es/shapes#07329727a6c914bec20d71286536d543> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
-<https://astrea.linkeddata.es/shapes#07329727a6c914bec20d71286536d543> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRIOrLiteral> .
-<https://astrea.linkeddata.es/shapes#07329727a6c914bec20d71286536d543> <http://www.w3.org/ns/shacl#path> <https://w3id.org/def/openadr#SignalIntervalDuration> .
-<https://astrea.linkeddata.es/shapes#07329727a6c914bec20d71286536d543> <http://www.w3.org/ns/shacl#qualifiedMaxCount> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<https://astrea.linkeddata.es/shapes#07329727a6c914bec20d71286536d543> <http://www.w3.org/ns/shacl#qualifiedMinCount> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<https://astrea.linkeddata.es/shapes#07329727a6c914bec20d71286536d543> <http://www.w3.org/ns/shacl#qualifiedValueShape> _:genid2 .
-_:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#SignalInterval> .
 # 
 # https://astrea.linkeddata.es/shapes#09edd93eea135cf3143b288496d440b6
 <https://astrea.linkeddata.es/shapes#09edd93eea135cf3143b288496d440b6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -597,6 +654,12 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 <https://astrea.linkeddata.es/shapes#090f8a6f31379ec1d356d7b448ff7254> <http://www.w3.org/ns/shacl#name> "registration number" .
 <https://astrea.linkeddata.es/shapes#090f8a6f31379ec1d356d7b448ff7254> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> .
 <https://astrea.linkeddata.es/shapes#090f8a6f31379ec1d356d7b448ff7254> <http://www.w3.org/ns/shacl#pattern> ".*" .
+# 
+# https://astrea.linkeddata.es/shapes#1a023ca609e563adba27c5cfb6efac5c
+<https://astrea.linkeddata.es/shapes#1a023ca609e563adba27c5cfb6efac5c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#1a023ca609e563adba27c5cfb6efac5c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://astrea.linkeddata.es/shapes#1a023ca609e563adba27c5cfb6efac5c> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRIOrLiteral> .
+<https://astrea.linkeddata.es/shapes#1a023ca609e563adba27c5cfb6efac5c> <http://www.w3.org/ns/shacl#path> <https://w3id.org/def/openadr#hasDataQuality> .
 # 
 # https://astrea.linkeddata.es/shapes#1a1c8f0b6437c33c74506c92e8115bd7
 <https://astrea.linkeddata.es/shapes#1a1c8f0b6437c33c74506c92e8115bd7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -623,13 +686,6 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 <https://astrea.linkeddata.es/shapes#1cb0a1024e84e09991f2a0522da55a21> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRIOrLiteral> .
 <https://astrea.linkeddata.es/shapes#1cb0a1024e84e09991f2a0522da55a21> <http://www.w3.org/ns/shacl#path> <https://w3id.org/def/openadr#ramp_up> .
 # 
-# https://astrea.linkeddata.es/shapes#1cd352c4c51dcd638c89b4de7937efbd
-<https://astrea.linkeddata.es/shapes#1cd352c4c51dcd638c89b4de7937efbd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://astrea.linkeddata.es/shapes#1cd352c4c51dcd638c89b4de7937efbd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
-<https://astrea.linkeddata.es/shapes#1cd352c4c51dcd638c89b4de7937efbd> <http://www.w3.org/ns/shacl#class> <http://www.w3.org/2006/time#Interval> .
-<https://astrea.linkeddata.es/shapes#1cd352c4c51dcd638c89b4de7937efbd> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRIOrLiteral> .
-<https://astrea.linkeddata.es/shapes#1cd352c4c51dcd638c89b4de7937efbd> <http://www.w3.org/ns/shacl#path> <https://w3id.org/def/openadr#isReportedDuringInterval> .
-# 
 # https://astrea.linkeddata.es/shapes#1ce8aa75bcad9b4023485ecb9f9a7896
 <https://astrea.linkeddata.es/shapes#1ce8aa75bcad9b4023485ecb9f9a7896> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://astrea.linkeddata.es/shapes#1ce8aa75bcad9b4023485ecb9f9a7896> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
@@ -637,20 +693,30 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 <https://astrea.linkeddata.es/shapes#1ce8aa75bcad9b4023485ecb9f9a7896> <http://www.w3.org/ns/shacl#name> "applies to" .
 <https://astrea.linkeddata.es/shapes#1ce8aa75bcad9b4023485ecb9f9a7896> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
 # 
+# https://astrea.linkeddata.es/shapes#1f5e25d8419a8d653b88cac64bc34b63
+<https://astrea.linkeddata.es/shapes#1f5e25d8419a8d653b88cac64bc34b63> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#1f5e25d8419a8d653b88cac64bc34b63> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://astrea.linkeddata.es/shapes#1f5e25d8419a8d653b88cac64bc34b63> <http://www.w3.org/2000/01/rdf-schema#label> "data quality" .
+<https://astrea.linkeddata.es/shapes#1f5e25d8419a8d653b88cac64bc34b63> <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+<https://astrea.linkeddata.es/shapes#1f5e25d8419a8d653b88cac64bc34b63> <http://www.w3.org/ns/shacl#name> "data quality" .
+<https://astrea.linkeddata.es/shapes#1f5e25d8419a8d653b88cac64bc34b63> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> .
+<https://astrea.linkeddata.es/shapes#1f5e25d8419a8d653b88cac64bc34b63> <http://www.w3.org/ns/shacl#pattern> ".*" .
+# 
 # https://astrea.linkeddata.es/shapes#1060f31bb77710178ed8201af7ef9e56
 <https://astrea.linkeddata.es/shapes#1060f31bb77710178ed8201af7ef9e56> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://astrea.linkeddata.es/shapes#1060f31bb77710178ed8201af7ef9e56> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
 <https://astrea.linkeddata.es/shapes#1060f31bb77710178ed8201af7ef9e56> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/saref> .
 <https://astrea.linkeddata.es/shapes#1060f31bb77710178ed8201af7ef9e56> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
 # 
-# https://astrea.linkeddata.es/shapes#11604e1bfe4dede9cc9ef590b8737696
-<https://astrea.linkeddata.es/shapes#11604e1bfe4dede9cc9ef590b8737696> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://astrea.linkeddata.es/shapes#11604e1bfe4dede9cc9ef590b8737696> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
-<https://astrea.linkeddata.es/shapes#11604e1bfe4dede9cc9ef590b8737696> <http://www.w3.org/2000/01/rdf-schema#label> "Duration of a signal interval" .
-<https://astrea.linkeddata.es/shapes#11604e1bfe4dede9cc9ef590b8737696> <http://www.w3.org/2000/01/rdf-schema#label> "interval duration" .
-<https://astrea.linkeddata.es/shapes#11604e1bfe4dede9cc9ef590b8737696> <http://www.w3.org/ns/shacl#description> "Duration of a signal interval" .
-<https://astrea.linkeddata.es/shapes#11604e1bfe4dede9cc9ef590b8737696> <http://www.w3.org/ns/shacl#name> "interval duration" .
-<https://astrea.linkeddata.es/shapes#11604e1bfe4dede9cc9ef590b8737696> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+# https://astrea.linkeddata.es/shapes#111cf903616302c2826bce8f093d7dad
+<https://astrea.linkeddata.es/shapes#111cf903616302c2826bce8f093d7dad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#111cf903616302c2826bce8f093d7dad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://astrea.linkeddata.es/shapes#111cf903616302c2826bce8f093d7dad> <http://www.w3.org/2000/01/rdf-schema#label> "Relation between a payload and its descriptor" .
+<https://astrea.linkeddata.es/shapes#111cf903616302c2826bce8f093d7dad> <http://www.w3.org/2000/01/rdf-schema#label> "is described in" .
+<https://astrea.linkeddata.es/shapes#111cf903616302c2826bce8f093d7dad> <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#ReportDescriptor> .
+<https://astrea.linkeddata.es/shapes#111cf903616302c2826bce8f093d7dad> <http://www.w3.org/ns/shacl#name> "Relation between a payload and its descriptor" .
+<https://astrea.linkeddata.es/shapes#111cf903616302c2826bce8f093d7dad> <http://www.w3.org/ns/shacl#name> "is described in" .
+<https://astrea.linkeddata.es/shapes#111cf903616302c2826bce8f093d7dad> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
 # 
 # https://astrea.linkeddata.es/shapes#1277b387effe1ea8b7cf6171d6155a1b
 <https://astrea.linkeddata.es/shapes#1277b387effe1ea8b7cf6171d6155a1b> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -670,6 +736,15 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 <https://astrea.linkeddata.es/shapes#1496f5f83f37e3c5b27d9f79c81ecc18> <http://www.w3.org/ns/shacl#name> "has event status" .
 <https://astrea.linkeddata.es/shapes#1496f5f83f37e3c5b27d9f79c81ecc18> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
 # 
+# https://astrea.linkeddata.es/shapes#153fb8f534a0a24652fe322e37cf07d3
+<https://astrea.linkeddata.es/shapes#153fb8f534a0a24652fe322e37cf07d3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#153fb8f534a0a24652fe322e37cf07d3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://astrea.linkeddata.es/shapes#153fb8f534a0a24652fe322e37cf07d3> <http://www.w3.org/2000/01/rdf-schema#label> "Duration of a signal interval" .
+<https://astrea.linkeddata.es/shapes#153fb8f534a0a24652fe322e37cf07d3> <http://www.w3.org/2000/01/rdf-schema#label> "interval duration" .
+<https://astrea.linkeddata.es/shapes#153fb8f534a0a24652fe322e37cf07d3> <http://www.w3.org/ns/shacl#description> "Duration of a signal interval" .
+<https://astrea.linkeddata.es/shapes#153fb8f534a0a24652fe322e37cf07d3> <http://www.w3.org/ns/shacl#name> "interval duration" .
+<https://astrea.linkeddata.es/shapes#153fb8f534a0a24652fe322e37cf07d3> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+# 
 # https://astrea.linkeddata.es/shapes#16660fa190119b89846b519ab9d6df8b
 <https://astrea.linkeddata.es/shapes#16660fa190119b89846b519ab9d6df8b> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://astrea.linkeddata.es/shapes#16660fa190119b89846b519ab9d6df8b> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
@@ -688,6 +763,8 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 <https://astrea.linkeddata.es/shapes#17f7812bb16e8487a39c921750370a05> <http://www.w3.org/ns/shacl#description> "These reports are used to report actual data that may be measured or calculated." .
 <https://astrea.linkeddata.es/shapes#17f7812bb16e8487a39c921750370a05> <http://www.w3.org/ns/shacl#name> "Data report" .
 <https://astrea.linkeddata.es/shapes#17f7812bb16e8487a39c921750370a05> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://astrea.linkeddata.es/shapes#17f7812bb16e8487a39c921750370a05> <http://www.w3.org/ns/shacl#property> <https://astrea.linkeddata.es/shapes#de398d443fa9097a91c18cd8a28ea1f3> .
+<https://astrea.linkeddata.es/shapes#17f7812bb16e8487a39c921750370a05> <http://www.w3.org/ns/shacl#property> <https://astrea.linkeddata.es/shapes#9ef959b982bf4ae90b165861713358c2> .
 <https://astrea.linkeddata.es/shapes#17f7812bb16e8487a39c921750370a05> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#DataReport> .
 # 
 # https://astrea.linkeddata.es/shapes#17255396a5eb2c139783dc47a4deff9e
@@ -695,6 +772,12 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 <https://astrea.linkeddata.es/shapes#17255396a5eb2c139783dc47a4deff9e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
 <https://astrea.linkeddata.es/shapes#17255396a5eb2c139783dc47a4deff9e> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRIOrLiteral> .
 <https://astrea.linkeddata.es/shapes#17255396a5eb2c139783dc47a4deff9e> <http://www.w3.org/ns/shacl#path> <https://w3id.org/def/openadr#eventDescriptor> .
+# 
+# https://astrea.linkeddata.es/shapes#18ab5566f2df60066bd0e4d9d706bdc8
+<https://astrea.linkeddata.es/shapes#18ab5566f2df60066bd0e4d9d706bdc8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#18ab5566f2df60066bd0e4d9d706bdc8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://astrea.linkeddata.es/shapes#18ab5566f2df60066bd0e4d9d706bdc8> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://astrea.linkeddata.es/shapes#18ab5566f2df60066bd0e4d9d706bdc8> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#ReportDataDescriptor> .
 # 
 # https://astrea.linkeddata.es/shapes#19f9a6bd1b7a71dea861d2e40454a901
 <https://astrea.linkeddata.es/shapes#19f9a6bd1b7a71dea861d2e40454a901> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -730,6 +813,17 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 <https://astrea.linkeddata.es/shapes#2e02dfdddc00d6039f3812b68177a74c> <http://www.w3.org/ns/shacl#name> "sends" .
 <https://astrea.linkeddata.es/shapes#2e02dfdddc00d6039f3812b68177a74c> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
 # 
+# https://astrea.linkeddata.es/shapes#2e4656bf5b84f5f246dbbf494eb806d5
+<https://astrea.linkeddata.es/shapes#2e4656bf5b84f5f246dbbf494eb806d5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#2e4656bf5b84f5f246dbbf494eb806d5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://astrea.linkeddata.es/shapes#2e4656bf5b84f5f246dbbf494eb806d5> <http://www.w3.org/2000/01/rdf-schema#label> "Metadata about the Readings, such as mean or derived" .
+<https://astrea.linkeddata.es/shapes#2e4656bf5b84f5f246dbbf494eb806d5> <http://www.w3.org/2000/01/rdf-schema#label> "reading type" .
+<https://astrea.linkeddata.es/shapes#2e4656bf5b84f5f246dbbf494eb806d5> <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+<https://astrea.linkeddata.es/shapes#2e4656bf5b84f5f246dbbf494eb806d5> <http://www.w3.org/ns/shacl#description> "Metadata about the Readings, such as mean or derived" .
+<https://astrea.linkeddata.es/shapes#2e4656bf5b84f5f246dbbf494eb806d5> <http://www.w3.org/ns/shacl#name> "reading type" .
+<https://astrea.linkeddata.es/shapes#2e4656bf5b84f5f246dbbf494eb806d5> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> .
+<https://astrea.linkeddata.es/shapes#2e4656bf5b84f5f246dbbf494eb806d5> <http://www.w3.org/ns/shacl#pattern> ".*" .
+# 
 # https://astrea.linkeddata.es/shapes#2f2c936a83d55108bddde7a4be377004
 <https://astrea.linkeddata.es/shapes#2f2c936a83d55108bddde7a4be377004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://astrea.linkeddata.es/shapes#2f2c936a83d55108bddde7a4be377004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
@@ -738,15 +832,6 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 <https://astrea.linkeddata.es/shapes#2f2c936a83d55108bddde7a4be377004> <http://www.w3.org/ns/shacl#description> "Minimum period of time" .
 <https://astrea.linkeddata.es/shapes#2f2c936a83d55108bddde7a4be377004> <http://www.w3.org/ns/shacl#name> "has min period" .
 <https://astrea.linkeddata.es/shapes#2f2c936a83d55108bddde7a4be377004> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
-# 
-# https://astrea.linkeddata.es/shapes#20b36b1fa4666a319b29cb6a6191f10e
-<https://astrea.linkeddata.es/shapes#20b36b1fa4666a319b29cb6a6191f10e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://astrea.linkeddata.es/shapes#20b36b1fa4666a319b29cb6a6191f10e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
-<https://astrea.linkeddata.es/shapes#20b36b1fa4666a319b29cb6a6191f10e> <http://www.w3.org/2000/01/rdf-schema#label> "signal name" .
-<https://astrea.linkeddata.es/shapes#20b36b1fa4666a319b29cb6a6191f10e> <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
-<https://astrea.linkeddata.es/shapes#20b36b1fa4666a319b29cb6a6191f10e> <http://www.w3.org/ns/shacl#name> "signal name" .
-<https://astrea.linkeddata.es/shapes#20b36b1fa4666a319b29cb6a6191f10e> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> .
-<https://astrea.linkeddata.es/shapes#20b36b1fa4666a319b29cb6a6191f10e> <http://www.w3.org/ns/shacl#pattern> ".*" .
 # 
 # https://astrea.linkeddata.es/shapes#200e5a52deea60eb19a89b55f2fc63dd
 <https://astrea.linkeddata.es/shapes#200e5a52deea60eb19a89b55f2fc63dd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -773,16 +858,15 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 <https://astrea.linkeddata.es/shapes#21a2c754fc3c2001f6c4e14ae455a2be> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
 <https://astrea.linkeddata.es/shapes#21a2c754fc3c2001f6c4e14ae455a2be> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#Asset> .
 # 
-# https://astrea.linkeddata.es/shapes#21bcd4df8e9c3a9750e8e8f804d106d0
-<https://astrea.linkeddata.es/shapes#21bcd4df8e9c3a9750e8e8f804d106d0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://astrea.linkeddata.es/shapes#21bcd4df8e9c3a9750e8e8f804d106d0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
-<https://astrea.linkeddata.es/shapes#21bcd4df8e9c3a9750e8e8f804d106d0> <http://www.w3.org/2000/01/rdf-schema#label> "Data point value for event signals or for reporting current or historical\nvalues." .
-<https://astrea.linkeddata.es/shapes#21bcd4df8e9c3a9750e8e8f804d106d0> <http://www.w3.org/2000/01/rdf-schema#label> "payload float" .
-<https://astrea.linkeddata.es/shapes#21bcd4df8e9c3a9750e8e8f804d106d0> <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#float> .
-<https://astrea.linkeddata.es/shapes#21bcd4df8e9c3a9750e8e8f804d106d0> <http://www.w3.org/ns/shacl#description> "Data point value for event signals or for reporting current or historical\nvalues." .
-<https://astrea.linkeddata.es/shapes#21bcd4df8e9c3a9750e8e8f804d106d0> <http://www.w3.org/ns/shacl#name> "payload float" .
-<https://astrea.linkeddata.es/shapes#21bcd4df8e9c3a9750e8e8f804d106d0> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> .
-<https://astrea.linkeddata.es/shapes#21bcd4df8e9c3a9750e8e8f804d106d0> <http://www.w3.org/ns/shacl#pattern> "(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)?|(\\+|-)?INF|NaN" .
+# https://astrea.linkeddata.es/shapes#23acbda0efe191825c2d8660a5ab4ce8
+<https://astrea.linkeddata.es/shapes#23acbda0efe191825c2d8660a5ab4ce8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#23acbda0efe191825c2d8660a5ab4ce8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://astrea.linkeddata.es/shapes#23acbda0efe191825c2d8660a5ab4ce8> <http://www.w3.org/2000/01/rdf-schema#label> "Relationship between reports" .
+<https://astrea.linkeddata.es/shapes#23acbda0efe191825c2d8660a5ab4ce8> <http://www.w3.org/2000/01/rdf-schema#label> "is specifier in" .
+<https://astrea.linkeddata.es/shapes#23acbda0efe191825c2d8660a5ab4ce8> <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#MetadataReport> .
+<https://astrea.linkeddata.es/shapes#23acbda0efe191825c2d8660a5ab4ce8> <http://www.w3.org/ns/shacl#description> "Relationship between reports" .
+<https://astrea.linkeddata.es/shapes#23acbda0efe191825c2d8660a5ab4ce8> <http://www.w3.org/ns/shacl#name> "is specifier in" .
+<https://astrea.linkeddata.es/shapes#23acbda0efe191825c2d8660a5ab4ce8> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
 # 
 # https://astrea.linkeddata.es/shapes#230562d9111120e642018a47798a2e24
 <https://astrea.linkeddata.es/shapes#230562d9111120e642018a47798a2e24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -823,7 +907,6 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 <https://astrea.linkeddata.es/shapes#29f06b7c45905fa46c1aebc8070fffe2> <http://www.w3.org/ns/shacl#description> "Interval of time where a signal is active" .
 <https://astrea.linkeddata.es/shapes#29f06b7c45905fa46c1aebc8070fffe2> <http://www.w3.org/ns/shacl#name> "Signal Interval" .
 <https://astrea.linkeddata.es/shapes#29f06b7c45905fa46c1aebc8070fffe2> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
-<https://astrea.linkeddata.es/shapes#29f06b7c45905fa46c1aebc8070fffe2> <http://www.w3.org/ns/shacl#property> <https://astrea.linkeddata.es/shapes#07329727a6c914bec20d71286536d543> .
 <https://astrea.linkeddata.es/shapes#29f06b7c45905fa46c1aebc8070fffe2> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#SignalInterval> .
 # 
 # https://astrea.linkeddata.es/shapes#3a1c28ad09f862b7f92a6de74adb3b66
@@ -877,12 +960,31 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 # https://astrea.linkeddata.es/shapes#33de4e8d10406ce51922c0dae5b4a2de
 <https://astrea.linkeddata.es/shapes#33de4e8d10406ce51922c0dae5b4a2de> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://astrea.linkeddata.es/shapes#33de4e8d10406ce51922c0dae5b4a2de> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
-<https://astrea.linkeddata.es/shapes#33de4e8d10406ce51922c0dae5b4a2de> <http://www.w3.org/2000/01/rdf-schema#label> "Relation between a node and a report it requires" .
+<https://astrea.linkeddata.es/shapes#33de4e8d10406ce51922c0dae5b4a2de> <http://www.w3.org/2000/01/rdf-schema#label> "Relation between a node and an object it requires" .
 <https://astrea.linkeddata.es/shapes#33de4e8d10406ce51922c0dae5b4a2de> <http://www.w3.org/2000/01/rdf-schema#label> "requires" .
-<https://astrea.linkeddata.es/shapes#33de4e8d10406ce51922c0dae5b4a2de> <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Report> .
-<https://astrea.linkeddata.es/shapes#33de4e8d10406ce51922c0dae5b4a2de> <http://www.w3.org/ns/shacl#description> "Relation between a node and a report it requires" .
+<https://astrea.linkeddata.es/shapes#33de4e8d10406ce51922c0dae5b4a2de> <http://www.w3.org/ns/shacl#description> "Relation between a node and an object it requires" .
 <https://astrea.linkeddata.es/shapes#33de4e8d10406ce51922c0dae5b4a2de> <http://www.w3.org/ns/shacl#name> "requires" .
 <https://astrea.linkeddata.es/shapes#33de4e8d10406ce51922c0dae5b4a2de> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+# 
+# https://astrea.linkeddata.es/shapes#330cb523aecc48a0a3f1ca0293e7b342
+<https://astrea.linkeddata.es/shapes#330cb523aecc48a0a3f1ca0293e7b342> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#330cb523aecc48a0a3f1ca0293e7b342> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://astrea.linkeddata.es/shapes#330cb523aecc48a0a3f1ca0293e7b342> <http://www.w3.org/2000/01/rdf-schema#label> "" .
+<https://astrea.linkeddata.es/shapes#330cb523aecc48a0a3f1ca0293e7b342> <http://www.w3.org/2000/01/rdf-schema#label> "is manual override" .
+<https://astrea.linkeddata.es/shapes#330cb523aecc48a0a3f1ca0293e7b342> <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://astrea.linkeddata.es/shapes#330cb523aecc48a0a3f1ca0293e7b342> <http://www.w3.org/ns/shacl#name> "" .
+<https://astrea.linkeddata.es/shapes#330cb523aecc48a0a3f1ca0293e7b342> <http://www.w3.org/ns/shacl#name> "is manual override" .
+<https://astrea.linkeddata.es/shapes#330cb523aecc48a0a3f1ca0293e7b342> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> .
+<https://astrea.linkeddata.es/shapes#330cb523aecc48a0a3f1ca0293e7b342> <http://www.w3.org/ns/shacl#pattern> "true|false|0|1" .
+# 
+# https://astrea.linkeddata.es/shapes#33266d84520d83037119306869c5d6ac
+<https://astrea.linkeddata.es/shapes#33266d84520d83037119306869c5d6ac> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#33266d84520d83037119306869c5d6ac> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://astrea.linkeddata.es/shapes#33266d84520d83037119306869c5d6ac> <http://www.w3.org/2000/01/rdf-schema#label> "Charge state signal" .
+<https://astrea.linkeddata.es/shapes#33266d84520d83037119306869c5d6ac> <http://www.w3.org/ns/shacl#description> "Signal used  to dispatch storage resources" .
+<https://astrea.linkeddata.es/shapes#33266d84520d83037119306869c5d6ac> <http://www.w3.org/ns/shacl#name> "Charge state signal" .
+<https://astrea.linkeddata.es/shapes#33266d84520d83037119306869c5d6ac> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://astrea.linkeddata.es/shapes#33266d84520d83037119306869c5d6ac> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#ChargeStateSignal> .
 # 
 # https://astrea.linkeddata.es/shapes#3348f96caa15fb50d86f0a2231585642
 <https://astrea.linkeddata.es/shapes#3348f96caa15fb50d86f0a2231585642> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -895,6 +997,15 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 <https://astrea.linkeddata.es/shapes#34a864f335a12a13b65a86682d066cbb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
 <https://astrea.linkeddata.es/shapes#34a864f335a12a13b65a86682d066cbb> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRIOrLiteral> .
 <https://astrea.linkeddata.es/shapes#34a864f335a12a13b65a86682d066cbb> <http://www.w3.org/ns/shacl#path> <https://w3id.org/def/openadr#contains> .
+# 
+# https://astrea.linkeddata.es/shapes#34ecef9d0dd417c20cbc09b9b9c176b0
+<https://astrea.linkeddata.es/shapes#34ecef9d0dd417c20cbc09b9b9c176b0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#34ecef9d0dd417c20cbc09b9b9c176b0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://astrea.linkeddata.es/shapes#34ecef9d0dd417c20cbc09b9b9c176b0> <http://www.w3.org/2000/01/rdf-schema#label> "Bid price signal" .
+<https://astrea.linkeddata.es/shapes#34ecef9d0dd417c20cbc09b9b9c176b0> <http://www.w3.org/ns/shacl#description> "Signal that represents the price that was bid by the resource" .
+<https://astrea.linkeddata.es/shapes#34ecef9d0dd417c20cbc09b9b9c176b0> <http://www.w3.org/ns/shacl#name> "Bid price signal" .
+<https://astrea.linkeddata.es/shapes#34ecef9d0dd417c20cbc09b9b9c176b0> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://astrea.linkeddata.es/shapes#34ecef9d0dd417c20cbc09b9b9c176b0> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#BidPricesignal> .
 # 
 # https://astrea.linkeddata.es/shapes#4b48788bdfa0ebd478ffa9ff59e32d69
 <https://astrea.linkeddata.es/shapes#4b48788bdfa0ebd478ffa9ff59e32d69> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -911,15 +1022,31 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 <https://astrea.linkeddata.es/shapes#4b54e26d2161d25dad330cd6f307c184> <http://www.w3.org/ns/shacl#name> "plans" .
 <https://astrea.linkeddata.es/shapes#4b54e26d2161d25dad330cd6f307c184> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
 # 
+# https://astrea.linkeddata.es/shapes#4bb6ebd1d7afc3f2cc33ae2d0f4a37d4
+<https://astrea.linkeddata.es/shapes#4bb6ebd1d7afc3f2cc33ae2d0f4a37d4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#4bb6ebd1d7afc3f2cc33ae2d0f4a37d4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://astrea.linkeddata.es/shapes#4bb6ebd1d7afc3f2cc33ae2d0f4a37d4> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRIOrLiteral> .
+<https://astrea.linkeddata.es/shapes#4bb6ebd1d7afc3f2cc33ae2d0f4a37d4> <http://www.w3.org/ns/shacl#path> <https://w3id.org/def/openadr#isAvailableDuring> .
+# 
 # https://astrea.linkeddata.es/shapes#4bf8fa8c873e2bf780acdc0c832befc6
 <https://astrea.linkeddata.es/shapes#4bf8fa8c873e2bf780acdc0c832befc6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://astrea.linkeddata.es/shapes#4bf8fa8c873e2bf780acdc0c832befc6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
 <https://astrea.linkeddata.es/shapes#4bf8fa8c873e2bf780acdc0c832befc6> <http://www.w3.org/2000/01/rdf-schema#label> "relation between the report and its specification" .
 <https://astrea.linkeddata.es/shapes#4bf8fa8c873e2bf780acdc0c832befc6> <http://www.w3.org/2000/01/rdf-schema#label> "specifies report" .
-<https://astrea.linkeddata.es/shapes#4bf8fa8c873e2bf780acdc0c832befc6> <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#ReportSpecifier> .
 <https://astrea.linkeddata.es/shapes#4bf8fa8c873e2bf780acdc0c832befc6> <http://www.w3.org/ns/shacl#name> "relation between the report and its specification" .
 <https://astrea.linkeddata.es/shapes#4bf8fa8c873e2bf780acdc0c832befc6> <http://www.w3.org/ns/shacl#name> "specifies report" .
 <https://astrea.linkeddata.es/shapes#4bf8fa8c873e2bf780acdc0c832befc6> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+# 
+# https://astrea.linkeddata.es/shapes#4d30d13f9ffc72a3d70f317efe0145a0
+<https://astrea.linkeddata.es/shapes#4d30d13f9ffc72a3d70f317efe0145a0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#4d30d13f9ffc72a3d70f317efe0145a0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://astrea.linkeddata.es/shapes#4d30d13f9ffc72a3d70f317efe0145a0> <http://www.w3.org/2000/01/rdf-schema#label> "Indicates whether the payload is online" .
+<https://astrea.linkeddata.es/shapes#4d30d13f9ffc72a3d70f317efe0145a0> <http://www.w3.org/2000/01/rdf-schema#label> "is online" .
+<https://astrea.linkeddata.es/shapes#4d30d13f9ffc72a3d70f317efe0145a0> <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://astrea.linkeddata.es/shapes#4d30d13f9ffc72a3d70f317efe0145a0> <http://www.w3.org/ns/shacl#description> "Indicates whether the payload is online" .
+<https://astrea.linkeddata.es/shapes#4d30d13f9ffc72a3d70f317efe0145a0> <http://www.w3.org/ns/shacl#name> "is online" .
+<https://astrea.linkeddata.es/shapes#4d30d13f9ffc72a3d70f317efe0145a0> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> .
+<https://astrea.linkeddata.es/shapes#4d30d13f9ffc72a3d70f317efe0145a0> <http://www.w3.org/ns/shacl#pattern> "true|false|0|1" .
 # 
 # https://astrea.linkeddata.es/shapes#4ee895947f64a077b87f0a78ba131eea
 <https://astrea.linkeddata.es/shapes#4ee895947f64a077b87f0a78ba131eea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -950,11 +1077,11 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 <https://astrea.linkeddata.es/shapes#420f3e3cf12dcbfc4eadd72dab28afe7> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
 <https://astrea.linkeddata.es/shapes#420f3e3cf12dcbfc4eadd72dab28afe7> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#OptOut> .
 # 
-# https://astrea.linkeddata.es/shapes#4570d4ab313ee7376d896f5cac207e6f
-<https://astrea.linkeddata.es/shapes#4570d4ab313ee7376d896f5cac207e6f> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://astrea.linkeddata.es/shapes#4570d4ab313ee7376d896f5cac207e6f> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
-<https://astrea.linkeddata.es/shapes#4570d4ab313ee7376d896f5cac207e6f> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRIOrLiteral> .
-<https://astrea.linkeddata.es/shapes#4570d4ab313ee7376d896f5cac207e6f> <http://www.w3.org/ns/shacl#path> <https://w3id.org/def/openadr#payloadFloat> .
+# https://astrea.linkeddata.es/shapes#4912682a4ac4379b8488b0402e325c81
+<https://astrea.linkeddata.es/shapes#4912682a4ac4379b8488b0402e325c81> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#4912682a4ac4379b8488b0402e325c81> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://astrea.linkeddata.es/shapes#4912682a4ac4379b8488b0402e325c81> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRIOrLiteral> .
+<https://astrea.linkeddata.es/shapes#4912682a4ac4379b8488b0402e325c81> <http://www.w3.org/ns/shacl#path> <https://w3id.org/def/openadr#refersToTarget> .
 # 
 # https://astrea.linkeddata.es/shapes#498ecea4906de70915739bdbdf3d1bc0
 <https://astrea.linkeddata.es/shapes#498ecea4906de70915739bdbdf3d1bc0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -984,19 +1111,6 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 <https://astrea.linkeddata.es/shapes#5caf04389ee30f7267309f4595b758dd> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRIOrLiteral> .
 <https://astrea.linkeddata.es/shapes#5caf04389ee30f7267309f4595b758dd> <http://www.w3.org/ns/shacl#path> <https://w3id.org/def/openadr#expectedResponse> .
 # 
-# https://astrea.linkeddata.es/shapes#5dba68c773f2ac1bfa2cb894767735e2
-<https://astrea.linkeddata.es/shapes#5dba68c773f2ac1bfa2cb894767735e2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://astrea.linkeddata.es/shapes#5dba68c773f2ac1bfa2cb894767735e2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
-<https://astrea.linkeddata.es/shapes#5dba68c773f2ac1bfa2cb894767735e2> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OpenADR 2.0 Demand Response Program Implementation Guide" .
-<https://astrea.linkeddata.es/shapes#5dba68c773f2ac1bfa2cb894767735e2> <http://www.w3.org/2000/01/rdf-schema#label> "Report specifier" .
-<https://astrea.linkeddata.es/shapes#5dba68c773f2ac1bfa2cb894767735e2> <http://www.w3.org/ns/shacl#description> "Each report specification specifies reporting capabilities" .
-<https://astrea.linkeddata.es/shapes#5dba68c773f2ac1bfa2cb894767735e2> <http://www.w3.org/ns/shacl#name> "Report specifier" .
-<https://astrea.linkeddata.es/shapes#5dba68c773f2ac1bfa2cb894767735e2> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
-<https://astrea.linkeddata.es/shapes#5dba68c773f2ac1bfa2cb894767735e2> <http://www.w3.org/ns/shacl#property> <https://astrea.linkeddata.es/shapes#b6161cc0569b9e5988b3b743c4820485> .
-<https://astrea.linkeddata.es/shapes#5dba68c773f2ac1bfa2cb894767735e2> <http://www.w3.org/ns/shacl#property> <https://astrea.linkeddata.es/shapes#ba7c21b062c212fc6629618be14e32ef> .
-<https://astrea.linkeddata.es/shapes#5dba68c773f2ac1bfa2cb894767735e2> <http://www.w3.org/ns/shacl#property> <https://astrea.linkeddata.es/shapes#1cd352c4c51dcd638c89b4de7937efbd> .
-<https://astrea.linkeddata.es/shapes#5dba68c773f2ac1bfa2cb894767735e2> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#ReportSpecifier> .
-# 
 # https://astrea.linkeddata.es/shapes#508f40d01f1e37d9393250df8cf4099d
 <https://astrea.linkeddata.es/shapes#508f40d01f1e37d9393250df8cf4099d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://astrea.linkeddata.es/shapes#508f40d01f1e37d9393250df8cf4099d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
@@ -1005,13 +1119,6 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 <https://astrea.linkeddata.es/shapes#508f40d01f1e37d9393250df8cf4099d> <http://www.w3.org/ns/shacl#description> "Relation between an entity and its signal" .
 <https://astrea.linkeddata.es/shapes#508f40d01f1e37d9393250df8cf4099d> <http://www.w3.org/ns/shacl#name> "has signal" .
 <https://astrea.linkeddata.es/shapes#508f40d01f1e37d9393250df8cf4099d> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
-# 
-# https://astrea.linkeddata.es/shapes#51e5a462ec9af0c3f8894fc01438ab79
-<https://astrea.linkeddata.es/shapes#51e5a462ec9af0c3f8894fc01438ab79> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://astrea.linkeddata.es/shapes#51e5a462ec9af0c3f8894fc01438ab79> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
-<https://astrea.linkeddata.es/shapes#51e5a462ec9af0c3f8894fc01438ab79> <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#PayloadResourceStatus> .
-<https://astrea.linkeddata.es/shapes#51e5a462ec9af0c3f8894fc01438ab79> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRIOrLiteral> .
-<https://astrea.linkeddata.es/shapes#51e5a462ec9af0c3f8894fc01438ab79> <http://www.w3.org/ns/shacl#path> <https://w3id.org/def/openadr#hasPayloadReourceStatus> .
 # 
 # https://astrea.linkeddata.es/shapes#525ab941786c78c2e21c9381b6bd0938
 <https://astrea.linkeddata.es/shapes#525ab941786c78c2e21c9381b6bd0938> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1022,15 +1129,6 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 <https://astrea.linkeddata.es/shapes#525ab941786c78c2e21c9381b6bd0938> <http://www.w3.org/ns/shacl#description> "Link to the source of a report" .
 <https://astrea.linkeddata.es/shapes#525ab941786c78c2e21c9381b6bd0938> <http://www.w3.org/ns/shacl#name> "report data source" .
 <https://astrea.linkeddata.es/shapes#525ab941786c78c2e21c9381b6bd0938> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
-# 
-# https://astrea.linkeddata.es/shapes#53c94205740b8281d53af75f30fa9b0d
-<https://astrea.linkeddata.es/shapes#53c94205740b8281d53af75f30fa9b0d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://astrea.linkeddata.es/shapes#53c94205740b8281d53af75f30fa9b0d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
-<https://astrea.linkeddata.es/shapes#53c94205740b8281d53af75f30fa9b0d> <http://www.w3.org/2000/01/rdf-schema#label> "Relation to indicate the units of a measurement" .
-<https://astrea.linkeddata.es/shapes#53c94205740b8281d53af75f30fa9b0d> <http://www.w3.org/2000/01/rdf-schema#label> "is measured in" .
-<https://astrea.linkeddata.es/shapes#53c94205740b8281d53af75f30fa9b0d> <http://www.w3.org/ns/shacl#description> "Relation to indicate the units of a measurement" .
-<https://astrea.linkeddata.es/shapes#53c94205740b8281d53af75f30fa9b0d> <http://www.w3.org/ns/shacl#name> "is measured in" .
-<https://astrea.linkeddata.es/shapes#53c94205740b8281d53af75f30fa9b0d> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
 # 
 # https://astrea.linkeddata.es/shapes#53f3ddf29cdf906ce3f8f0bf2429a518
 <https://astrea.linkeddata.es/shapes#53f3ddf29cdf906ce3f8f0bf2429a518> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1069,6 +1167,12 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 <https://astrea.linkeddata.es/shapes#561d7681316bbbc7f832f6f814fa96dd> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRIOrLiteral> .
 <https://astrea.linkeddata.es/shapes#561d7681316bbbc7f832f6f814fa96dd> <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2003/01/geo/wgs84_pos#location> .
 # 
+# https://astrea.linkeddata.es/shapes#6a8aff6189a7145ccc42b15fef5ec473
+<https://astrea.linkeddata.es/shapes#6a8aff6189a7145ccc42b15fef5ec473> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#6a8aff6189a7145ccc42b15fef5ec473> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://astrea.linkeddata.es/shapes#6a8aff6189a7145ccc42b15fef5ec473> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://astrea.linkeddata.es/shapes#6a8aff6189a7145ccc42b15fef5ec473> <http://www.w3.org/ns/shacl#targetClass> <https://saref.etsi.org/saref#Measurement> .
+# 
 # https://astrea.linkeddata.es/shapes#6ace7559c09873d57bb26d2909a563c6
 <https://astrea.linkeddata.es/shapes#6ace7559c09873d57bb26d2909a563c6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://astrea.linkeddata.es/shapes#6ace7559c09873d57bb26d2909a563c6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
@@ -1099,10 +1203,9 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 # https://astrea.linkeddata.es/shapes#6dcbd4bf628c88812577413c89f6419a
 <https://astrea.linkeddata.es/shapes#6dcbd4bf628c88812577413c89f6419a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://astrea.linkeddata.es/shapes#6dcbd4bf628c88812577413c89f6419a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
-<https://astrea.linkeddata.es/shapes#6dcbd4bf628c88812577413c89f6419a> <http://www.w3.org/2000/01/rdf-schema#label> "Relation between the node and a report it receives" .
+<https://astrea.linkeddata.es/shapes#6dcbd4bf628c88812577413c89f6419a> <http://www.w3.org/2000/01/rdf-schema#label> "Relation between the node and an object  it receives" .
 <https://astrea.linkeddata.es/shapes#6dcbd4bf628c88812577413c89f6419a> <http://www.w3.org/2000/01/rdf-schema#label> "receives" .
-<https://astrea.linkeddata.es/shapes#6dcbd4bf628c88812577413c89f6419a> <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Report> .
-<https://astrea.linkeddata.es/shapes#6dcbd4bf628c88812577413c89f6419a> <http://www.w3.org/ns/shacl#description> "Relation between the node and a report it receives" .
+<https://astrea.linkeddata.es/shapes#6dcbd4bf628c88812577413c89f6419a> <http://www.w3.org/ns/shacl#description> "Relation between the node and an object  it receives" .
 <https://astrea.linkeddata.es/shapes#6dcbd4bf628c88812577413c89f6419a> <http://www.w3.org/ns/shacl#name> "receives" .
 <https://astrea.linkeddata.es/shapes#6dcbd4bf628c88812577413c89f6419a> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
 # 
@@ -1111,17 +1214,6 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 <https://astrea.linkeddata.es/shapes#6eea653865d1216386a8c8e62955d0d8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
 <https://astrea.linkeddata.es/shapes#6eea653865d1216386a8c8e62955d0d8> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRIOrLiteral> .
 <https://astrea.linkeddata.es/shapes#6eea653865d1216386a8c8e62955d0d8> <http://www.w3.org/ns/shacl#path> <https://w3id.org/def/openadr#dstart> .
-# 
-# https://astrea.linkeddata.es/shapes#60f2debbc1d211ff5065efaa730bd15c
-<https://astrea.linkeddata.es/shapes#60f2debbc1d211ff5065efaa730bd15c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://astrea.linkeddata.es/shapes#60f2debbc1d211ff5065efaa730bd15c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
-<https://astrea.linkeddata.es/shapes#60f2debbc1d211ff5065efaa730bd15c> <http://www.w3.org/2000/01/rdf-schema#label> "A URI identifying a DR Program" .
-<https://astrea.linkeddata.es/shapes#60f2debbc1d211ff5065efaa730bd15c> <http://www.w3.org/2000/01/rdf-schema#label> "market context" .
-<https://astrea.linkeddata.es/shapes#60f2debbc1d211ff5065efaa730bd15c> <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
-<https://astrea.linkeddata.es/shapes#60f2debbc1d211ff5065efaa730bd15c> <http://www.w3.org/ns/shacl#description> "A URI identifying a DR Program" .
-<https://astrea.linkeddata.es/shapes#60f2debbc1d211ff5065efaa730bd15c> <http://www.w3.org/ns/shacl#name> "market context" .
-<https://astrea.linkeddata.es/shapes#60f2debbc1d211ff5065efaa730bd15c> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> .
-<https://astrea.linkeddata.es/shapes#60f2debbc1d211ff5065efaa730bd15c> <http://www.w3.org/ns/shacl#pattern> "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\\?([^#]*))?(#(.*))?" .
 # 
 # https://astrea.linkeddata.es/shapes#6248d50c6907fde04303bcd5ac1344a9
 <https://astrea.linkeddata.es/shapes#6248d50c6907fde04303bcd5ac1344a9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1132,21 +1224,12 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 <https://astrea.linkeddata.es/shapes#6248d50c6907fde04303bcd5ac1344a9> <http://www.w3.org/ns/shacl#name> "has max period" .
 <https://astrea.linkeddata.es/shapes#6248d50c6907fde04303bcd5ac1344a9> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
 # 
-# https://astrea.linkeddata.es/shapes#63fadcd9f02ded96d012ddd437781d20
-<https://astrea.linkeddata.es/shapes#63fadcd9f02ded96d012ddd437781d20> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://astrea.linkeddata.es/shapes#63fadcd9f02ded96d012ddd437781d20> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
-<https://astrea.linkeddata.es/shapes#63fadcd9f02ded96d012ddd437781d20> <http://www.w3.org/2000/01/rdf-schema#label> "Payload resource status" .
-<https://astrea.linkeddata.es/shapes#63fadcd9f02ded96d012ddd437781d20> <http://www.w3.org/ns/shacl#description> "Status of the payload resource" .
-<https://astrea.linkeddata.es/shapes#63fadcd9f02ded96d012ddd437781d20> <http://www.w3.org/ns/shacl#name> "Payload resource status" .
-<https://astrea.linkeddata.es/shapes#63fadcd9f02ded96d012ddd437781d20> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
-<https://astrea.linkeddata.es/shapes#63fadcd9f02ded96d012ddd437781d20> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#PayloadResourceStatus> .
-# 
 # https://astrea.linkeddata.es/shapes#6320678fd18b98e3804390bebf11325c
 <https://astrea.linkeddata.es/shapes#6320678fd18b98e3804390bebf11325c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://astrea.linkeddata.es/shapes#6320678fd18b98e3804390bebf11325c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
-<https://astrea.linkeddata.es/shapes#6320678fd18b98e3804390bebf11325c> <http://www.w3.org/2000/01/rdf-schema#label> "Relation between an entity an its available period" .
+<https://astrea.linkeddata.es/shapes#6320678fd18b98e3804390bebf11325c> <http://www.w3.org/2000/01/rdf-schema#label> "Relation between an entity an its active period" .
 <https://astrea.linkeddata.es/shapes#6320678fd18b98e3804390bebf11325c> <http://www.w3.org/2000/01/rdf-schema#label> "has active period" .
-<https://astrea.linkeddata.es/shapes#6320678fd18b98e3804390bebf11325c> <http://www.w3.org/ns/shacl#description> "Relation between an entity an its available period" .
+<https://astrea.linkeddata.es/shapes#6320678fd18b98e3804390bebf11325c> <http://www.w3.org/ns/shacl#description> "Relation between an entity an its active period" .
 <https://astrea.linkeddata.es/shapes#6320678fd18b98e3804390bebf11325c> <http://www.w3.org/ns/shacl#name> "has active period" .
 <https://astrea.linkeddata.es/shapes#6320678fd18b98e3804390bebf11325c> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
 # 
@@ -1168,6 +1251,22 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 <https://astrea.linkeddata.es/shapes#69b7f09cce333ed7e9a0ba0253d822a7> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRIOrLiteral> .
 <https://astrea.linkeddata.es/shapes#69b7f09cce333ed7e9a0ba0253d822a7> <http://www.w3.org/ns/shacl#path> <https://w3id.org/def/openadr#manages> .
 # 
+# https://astrea.linkeddata.es/shapes#69f7a73490789546b9d0e7a81c6afe49
+<https://astrea.linkeddata.es/shapes#69f7a73490789546b9d0e7a81c6afe49> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#69f7a73490789546b9d0e7a81c6afe49> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://astrea.linkeddata.es/shapes#69f7a73490789546b9d0e7a81c6afe49> <http://www.w3.org/2000/01/rdf-schema#label> "Signal for signal levels" .
+<https://astrea.linkeddata.es/shapes#69f7a73490789546b9d0e7a81c6afe49> <http://www.w3.org/2000/01/rdf-schema#label> "Simple signal" .
+<https://astrea.linkeddata.es/shapes#69f7a73490789546b9d0e7a81c6afe49> <http://www.w3.org/ns/shacl#name> "Signal for signal levels" .
+<https://astrea.linkeddata.es/shapes#69f7a73490789546b9d0e7a81c6afe49> <http://www.w3.org/ns/shacl#name> "Simple signal" .
+<https://astrea.linkeddata.es/shapes#69f7a73490789546b9d0e7a81c6afe49> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://astrea.linkeddata.es/shapes#69f7a73490789546b9d0e7a81c6afe49> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#SimpleSignal> .
+# 
+# https://astrea.linkeddata.es/shapes#7c391f0e2479f54c4c55d2f941f0142f
+<https://astrea.linkeddata.es/shapes#7c391f0e2479f54c4c55d2f941f0142f> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#7c391f0e2479f54c4c55d2f941f0142f> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://astrea.linkeddata.es/shapes#7c391f0e2479f54c4c55d2f941f0142f> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRIOrLiteral> .
+<https://astrea.linkeddata.es/shapes#7c391f0e2479f54c4c55d2f941f0142f> <http://www.w3.org/ns/shacl#path> <https://w3id.org/def/openadr#hasmarketContext> .
+# 
 # https://astrea.linkeddata.es/shapes#7d6a3657bad33da9742576423d6ebf7d
 <https://astrea.linkeddata.es/shapes#7d6a3657bad33da9742576423d6ebf7d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://astrea.linkeddata.es/shapes#7d6a3657bad33da9742576423d6ebf7d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
@@ -1186,6 +1285,25 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 <https://astrea.linkeddata.es/shapes#7ff1a604a5e53e5aabb460ff59284a8d> <http://www.w3.org/ns/shacl#description> "Relation between an event and its metadata" .
 <https://astrea.linkeddata.es/shapes#7ff1a604a5e53e5aabb460ff59284a8d> <http://www.w3.org/ns/shacl#name> "event descriptor" .
 <https://astrea.linkeddata.es/shapes#7ff1a604a5e53e5aabb460ff59284a8d> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
+# 
+# https://astrea.linkeddata.es/shapes#74ee05f0d253220be95961a95c6b8e39
+<https://astrea.linkeddata.es/shapes#74ee05f0d253220be95961a95c6b8e39> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#74ee05f0d253220be95961a95c6b8e39> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://astrea.linkeddata.es/shapes#74ee05f0d253220be95961a95c6b8e39> <http://www.w3.org/2000/01/rdf-schema#label> "Load control signal" .
+<https://astrea.linkeddata.es/shapes#74ee05f0d253220be95961a95c6b8e39> <http://www.w3.org/2000/01/rdf-schema#label> "Signal for to set the load control to values that are relative to the load controller and its output capacity." .
+<https://astrea.linkeddata.es/shapes#74ee05f0d253220be95961a95c6b8e39> <http://www.w3.org/ns/shacl#name> "Load control signal" .
+<https://astrea.linkeddata.es/shapes#74ee05f0d253220be95961a95c6b8e39> <http://www.w3.org/ns/shacl#name> "Signal for to set the load control to values that are relative to the load controller and its output capacity." .
+<https://astrea.linkeddata.es/shapes#74ee05f0d253220be95961a95c6b8e39> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://astrea.linkeddata.es/shapes#74ee05f0d253220be95961a95c6b8e39> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#LoadControlSignal> .
+# 
+# https://astrea.linkeddata.es/shapes#75f20ee78780119dab178ec73a951a14
+<https://astrea.linkeddata.es/shapes#75f20ee78780119dab178ec73a951a14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#75f20ee78780119dab178ec73a951a14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://astrea.linkeddata.es/shapes#75f20ee78780119dab178ec73a951a14> <http://www.w3.org/2000/01/rdf-schema#label> "Relationship between a schedule and a target" .
+<https://astrea.linkeddata.es/shapes#75f20ee78780119dab178ec73a951a14> <http://www.w3.org/2000/01/rdf-schema#label> "is schedule of" .
+<https://astrea.linkeddata.es/shapes#75f20ee78780119dab178ec73a951a14> <http://www.w3.org/ns/shacl#description> "Relationship between a schedule and a target" .
+<https://astrea.linkeddata.es/shapes#75f20ee78780119dab178ec73a951a14> <http://www.w3.org/ns/shacl#name> "is schedule of" .
+<https://astrea.linkeddata.es/shapes#75f20ee78780119dab178ec73a951a14> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
 # 
 # https://astrea.linkeddata.es/shapes#76ad0bd0a09c0e8abee2e0e40ad7e58c
 <https://astrea.linkeddata.es/shapes#76ad0bd0a09c0e8abee2e0e40ad7e58c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1209,12 +1327,6 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 <https://astrea.linkeddata.es/shapes#77f6684a7319f66ab75da4ab9d185c92> <http://www.w3.org/2000/01/rdf-schema#label> "recovery" .
 <https://astrea.linkeddata.es/shapes#77f6684a7319f66ab75da4ab9d185c92> <http://www.w3.org/ns/shacl#name> "recovery" .
 <https://astrea.linkeddata.es/shapes#77f6684a7319f66ab75da4ab9d185c92> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
-# 
-# https://astrea.linkeddata.es/shapes#777e87126352d1c1ae3b1238510d2753
-<https://astrea.linkeddata.es/shapes#777e87126352d1c1ae3b1238510d2753> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://astrea.linkeddata.es/shapes#777e87126352d1c1ae3b1238510d2753> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
-<https://astrea.linkeddata.es/shapes#777e87126352d1c1ae3b1238510d2753> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRIOrLiteral> .
-<https://astrea.linkeddata.es/shapes#777e87126352d1c1ae3b1238510d2753> <http://www.w3.org/ns/shacl#path> <https://w3id.org/def/openadr#isUnavailableDuring> .
 # 
 # https://astrea.linkeddata.es/shapes#790eda9f1006c334de8cd96c41827613
 <https://astrea.linkeddata.es/shapes#790eda9f1006c334de8cd96c41827613> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1276,6 +1388,21 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 <https://astrea.linkeddata.es/shapes#8cac59f974cb959c2f76daabb90b5ba2> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRIOrLiteral> .
 <https://astrea.linkeddata.es/shapes#8cac59f974cb959c2f76daabb90b5ba2> <http://www.w3.org/ns/shacl#path> <https://w3id.org/def/openadr#version> .
 # 
+# https://astrea.linkeddata.es/shapes#8cef7b734321ba1776c31c167c397fc7
+<https://astrea.linkeddata.es/shapes#8cef7b734321ba1776c31c167c397fc7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#8cef7b734321ba1776c31c167c397fc7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://astrea.linkeddata.es/shapes#8cef7b734321ba1776c31c167c397fc7> <http://www.w3.org/2000/01/rdf-schema#label> "Demand charge signal" .
+<https://astrea.linkeddata.es/shapes#8cef7b734321ba1776c31c167c397fc7> <http://www.w3.org/ns/shacl#description> "Signal for the demand charge" .
+<https://astrea.linkeddata.es/shapes#8cef7b734321ba1776c31c167c397fc7> <http://www.w3.org/ns/shacl#name> "Demand charge signal" .
+<https://astrea.linkeddata.es/shapes#8cef7b734321ba1776c31c167c397fc7> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://astrea.linkeddata.es/shapes#8cef7b734321ba1776c31c167c397fc7> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#DemandChargeSignal> .
+# 
+# https://astrea.linkeddata.es/shapes#8ebc44c2069277dfa253d116936ef46a
+<https://astrea.linkeddata.es/shapes#8ebc44c2069277dfa253d116936ef46a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#8ebc44c2069277dfa253d116936ef46a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://astrea.linkeddata.es/shapes#8ebc44c2069277dfa253d116936ef46a> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://astrea.linkeddata.es/shapes#8ebc44c2069277dfa253d116936ef46a> <http://www.w3.org/ns/shacl#targetClass> <https://saref.etsi.org/saref#Property> .
+# 
 # https://astrea.linkeddata.es/shapes#83fb8c5b5ed395573202996919eee9e6
 <https://astrea.linkeddata.es/shapes#83fb8c5b5ed395573202996919eee9e6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://astrea.linkeddata.es/shapes#83fb8c5b5ed395573202996919eee9e6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
@@ -1283,10 +1410,8 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 <https://astrea.linkeddata.es/shapes#83fb8c5b5ed395573202996919eee9e6> <http://www.w3.org/ns/shacl#description> "Payload associated to every report" .
 <https://astrea.linkeddata.es/shapes#83fb8c5b5ed395573202996919eee9e6> <http://www.w3.org/ns/shacl#name> "Report payload" .
 <https://astrea.linkeddata.es/shapes#83fb8c5b5ed395573202996919eee9e6> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
-<https://astrea.linkeddata.es/shapes#83fb8c5b5ed395573202996919eee9e6> <http://www.w3.org/ns/shacl#property> <https://astrea.linkeddata.es/shapes#4570d4ab313ee7376d896f5cac207e6f> .
-<https://astrea.linkeddata.es/shapes#83fb8c5b5ed395573202996919eee9e6> <http://www.w3.org/ns/shacl#property> <https://astrea.linkeddata.es/shapes#51e5a462ec9af0c3f8894fc01438ab79> .
+<https://astrea.linkeddata.es/shapes#83fb8c5b5ed395573202996919eee9e6> <http://www.w3.org/ns/shacl#property> <https://astrea.linkeddata.es/shapes#1a023ca609e563adba27c5cfb6efac5c> .
 <https://astrea.linkeddata.es/shapes#83fb8c5b5ed395573202996919eee9e6> <http://www.w3.org/ns/shacl#property> <https://astrea.linkeddata.es/shapes#6c4e74a1f8ac5b9d2b78c328f42c3bd1> .
-<https://astrea.linkeddata.es/shapes#83fb8c5b5ed395573202996919eee9e6> <http://www.w3.org/ns/shacl#property> <https://astrea.linkeddata.es/shapes#9cb413cb4609b94c98e2559d8a0e5220> .
 <https://astrea.linkeddata.es/shapes#83fb8c5b5ed395573202996919eee9e6> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#ReportPayload> .
 # 
 # https://astrea.linkeddata.es/shapes#830f6c599626c2d56e9579e22951ee8b
@@ -1331,6 +1456,7 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 <https://astrea.linkeddata.es/shapes#86a5331b7c198bf639a6ee9c90bc7b55> <http://www.w3.org/ns/shacl#name> "Opt" .
 <https://astrea.linkeddata.es/shapes#86a5331b7c198bf639a6ee9c90bc7b55> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
 <https://astrea.linkeddata.es/shapes#86a5331b7c198bf639a6ee9c90bc7b55> <http://www.w3.org/ns/shacl#property> <https://astrea.linkeddata.es/shapes#2d33566be0240fcf0045a46247d22eb1> .
+<https://astrea.linkeddata.es/shapes#86a5331b7c198bf639a6ee9c90bc7b55> <http://www.w3.org/ns/shacl#property> <https://astrea.linkeddata.es/shapes#7c391f0e2479f54c4c55d2f941f0142f> .
 <https://astrea.linkeddata.es/shapes#86a5331b7c198bf639a6ee9c90bc7b55> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#Opt> .
 # 
 # https://astrea.linkeddata.es/shapes#88fb339f39e9b91ee4c488eec47705c3
@@ -1364,17 +1490,23 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 <https://astrea.linkeddata.es/shapes#9a3ddf43d109ad1fb790e2d213da3b88> <http://www.w3.org/ns/shacl#name> "contains" .
 <https://astrea.linkeddata.es/shapes#9a3ddf43d109ad1fb790e2d213da3b88> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#BlankNodeOrIRI> .
 # 
+# https://astrea.linkeddata.es/shapes#9b5ecd246470346eb21bd89f25bf027c
+<https://astrea.linkeddata.es/shapes#9b5ecd246470346eb21bd89f25bf027c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#9b5ecd246470346eb21bd89f25bf027c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://astrea.linkeddata.es/shapes#9b5ecd246470346eb21bd89f25bf027c> <http://www.w3.org/2000/01/rdf-schema#label> "Schedule" .
+<https://astrea.linkeddata.es/shapes#9b5ecd246470346eb21bd89f25bf027c> <http://www.w3.org/ns/shacl#description> "Schedule of a target" .
+<https://astrea.linkeddata.es/shapes#9b5ecd246470346eb21bd89f25bf027c> <http://www.w3.org/ns/shacl#name> "Schedule" .
+<https://astrea.linkeddata.es/shapes#9b5ecd246470346eb21bd89f25bf027c> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
+<https://astrea.linkeddata.es/shapes#9b5ecd246470346eb21bd89f25bf027c> <http://www.w3.org/ns/shacl#property> <https://astrea.linkeddata.es/shapes#ee757f2c307ded232a17e77cefc64473> .
+<https://astrea.linkeddata.es/shapes#9b5ecd246470346eb21bd89f25bf027c> <http://www.w3.org/ns/shacl#property> <https://astrea.linkeddata.es/shapes#4bb6ebd1d7afc3f2cc33ae2d0f4a37d4> .
+<https://astrea.linkeddata.es/shapes#9b5ecd246470346eb21bd89f25bf027c> <http://www.w3.org/ns/shacl#property> <https://astrea.linkeddata.es/shapes#4912682a4ac4379b8488b0402e325c81> .
+<https://astrea.linkeddata.es/shapes#9b5ecd246470346eb21bd89f25bf027c> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#Schedule> .
+# 
 # https://astrea.linkeddata.es/shapes#9bc46ffbac9f3ad0be4d5a5a845dd699
 <https://astrea.linkeddata.es/shapes#9bc46ffbac9f3ad0be4d5a5a845dd699> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://astrea.linkeddata.es/shapes#9bc46ffbac9f3ad0be4d5a5a845dd699> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
 <https://astrea.linkeddata.es/shapes#9bc46ffbac9f3ad0be4d5a5a845dd699> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRIOrLiteral> .
 <https://astrea.linkeddata.es/shapes#9bc46ffbac9f3ad0be4d5a5a845dd699> <http://www.w3.org/ns/shacl#path> <https://w3id.org/def/openadr#createdDateTime> .
-# 
-# https://astrea.linkeddata.es/shapes#9cb413cb4609b94c98e2559d8a0e5220
-<https://astrea.linkeddata.es/shapes#9cb413cb4609b94c98e2559d8a0e5220> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://astrea.linkeddata.es/shapes#9cb413cb4609b94c98e2559d8a0e5220> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
-<https://astrea.linkeddata.es/shapes#9cb413cb4609b94c98e2559d8a0e5220> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRIOrLiteral> .
-<https://astrea.linkeddata.es/shapes#9cb413cb4609b94c98e2559d8a0e5220> <http://www.w3.org/ns/shacl#path> <https://w3id.org/def/openadr#dataquality> .
 # 
 # https://astrea.linkeddata.es/shapes#9d7ff3689486399e6b14742663377f91
 <https://astrea.linkeddata.es/shapes#9d7ff3689486399e6b14742663377f91> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1393,15 +1525,12 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 <https://astrea.linkeddata.es/shapes#9e81a8547fd8cabc79752e243c8d2b67> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
 <https://astrea.linkeddata.es/shapes#9e81a8547fd8cabc79752e243c8d2b67> <http://www.w3.org/ns/shacl#targetClass> <http://www.opengis.net/ont/geosparql#Geometry> .
 # 
-# https://astrea.linkeddata.es/shapes#90d0012470ff100a1ba6c6e721bd931e
-<https://astrea.linkeddata.es/shapes#90d0012470ff100a1ba6c6e721bd931e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://astrea.linkeddata.es/shapes#90d0012470ff100a1ba6c6e721bd931e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
-<https://astrea.linkeddata.es/shapes#90d0012470ff100a1ba6c6e721bd931e> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "OASIS Energy Market Information Exchange (eMIX) standard" .
-<https://astrea.linkeddata.es/shapes#90d0012470ff100a1ba6c6e721bd931e> <http://www.w3.org/2000/01/rdf-schema#label> "Item base" .
-<https://astrea.linkeddata.es/shapes#90d0012470ff100a1ba6c6e721bd931e> <http://www.w3.org/ns/shacl#description> "Units for the data in the report" .
-<https://astrea.linkeddata.es/shapes#90d0012470ff100a1ba6c6e721bd931e> <http://www.w3.org/ns/shacl#name> "Item base" .
-<https://astrea.linkeddata.es/shapes#90d0012470ff100a1ba6c6e721bd931e> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
-<https://astrea.linkeddata.es/shapes#90d0012470ff100a1ba6c6e721bd931e> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#ItemBase> .
+# https://astrea.linkeddata.es/shapes#9ef959b982bf4ae90b165861713358c2
+<https://astrea.linkeddata.es/shapes#9ef959b982bf4ae90b165861713358c2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://astrea.linkeddata.es/shapes#9ef959b982bf4ae90b165861713358c2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
+<https://astrea.linkeddata.es/shapes#9ef959b982bf4ae90b165861713358c2> <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#MetadataReport> .
+<https://astrea.linkeddata.es/shapes#9ef959b982bf4ae90b165861713358c2> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRIOrLiteral> .
+<https://astrea.linkeddata.es/shapes#9ef959b982bf4ae90b165861713358c2> <http://www.w3.org/ns/shacl#path> <https://w3id.org/def/openadr#isDescribedIn> .
 # 
 # https://astrea.linkeddata.es/shapes#94ef15d9485b56643ddaef4435b4ec56
 <https://astrea.linkeddata.es/shapes#94ef15d9485b56643ddaef4435b4ec56> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1421,17 +1550,5 @@ _:genid2 <http://www.w3.org/ns/shacl#class> <https://w3id.org/def/openadr#Signal
 <https://astrea.linkeddata.es/shapes#9820d9b5dfd2c9e5763a14e3593a1f25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#PropertyShape> .
 <https://astrea.linkeddata.es/shapes#9820d9b5dfd2c9e5763a14e3593a1f25> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRIOrLiteral> .
 <https://astrea.linkeddata.es/shapes#9820d9b5dfd2c9e5763a14e3593a1f25> <http://www.w3.org/ns/shacl#path> <https://w3id.org/def/openadr#includesSignal> .
-# 
-# https://astrea.linkeddata.es/shapes#9970ba74e26c0d563708e5875a757007
-<https://astrea.linkeddata.es/shapes#9970ba74e26c0d563708e5875a757007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://astrea.linkeddata.es/shapes#9970ba74e26c0d563708e5875a757007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
-<https://astrea.linkeddata.es/shapes#9970ba74e26c0d563708e5875a757007> <http://www.w3.org/2000/01/rdf-schema#label> "Availability" .
-<https://astrea.linkeddata.es/shapes#9970ba74e26c0d563708e5875a757007> <http://www.w3.org/ns/shacl#description> "Availability of a target" .
-<https://astrea.linkeddata.es/shapes#9970ba74e26c0d563708e5875a757007> <http://www.w3.org/ns/shacl#name> "Availability" .
-<https://astrea.linkeddata.es/shapes#9970ba74e26c0d563708e5875a757007> <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> .
-<https://astrea.linkeddata.es/shapes#9970ba74e26c0d563708e5875a757007> <http://www.w3.org/ns/shacl#property> <https://astrea.linkeddata.es/shapes#a1a9e1202c0c9208afee98011e8ce6b9> .
-<https://astrea.linkeddata.es/shapes#9970ba74e26c0d563708e5875a757007> <http://www.w3.org/ns/shacl#property> <https://astrea.linkeddata.es/shapes#de45e4060d4ba000706bc48f6ed90865> .
-<https://astrea.linkeddata.es/shapes#9970ba74e26c0d563708e5875a757007> <http://www.w3.org/ns/shacl#property> <https://astrea.linkeddata.es/shapes#777e87126352d1c1ae3b1238510d2753> .
-<https://astrea.linkeddata.es/shapes#9970ba74e26c0d563708e5875a757007> <http://www.w3.org/ns/shacl#targetClass> <https://w3id.org/def/openadr#Availability> .
 # 
 # Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

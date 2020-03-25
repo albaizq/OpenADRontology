@@ -4,7 +4,7 @@
 }, {
   "@id" : "_:genid2",
   "http://www.w3.org/ns/shacl#class" : [ {
-    "@id" : "https://w3id.org/def/openadr#SignalInterval"
+    "@id" : "https://saref.etsi.org/saref#Measurement"
   } ]
 }, {
   "@id" : "http://www.w3.org/ns/shacl#NodeShape",
@@ -40,9 +40,6 @@
   "@id" : "http://www.w3.org/ns/shacl#property",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://www.w3.org/ns/shacl#qualifiedMaxCount",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
   "@id" : "http://www.w3.org/ns/shacl#qualifiedMinCount",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -62,6 +59,24 @@
   } ],
   "http://www.w3.org/ns/shacl#name" : [ {
     "@value" : "version"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Literal"
+  } ],
+  "http://www.w3.org/ns/shacl#pattern" : [ {
+    "@value" : ".*"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#01fad947321ab88225ea900b5cdd7c18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "signal type"
+  } ],
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "signal type"
   } ],
   "http://www.w3.org/ns/shacl#nodeKind" : [ {
     "@id" : "http://www.w3.org/ns/shacl#Literal"
@@ -91,6 +106,23 @@
     "@id" : "https://w3id.org/def/openadr#EventDescriptor"
   } ]
 }, {
+  "@id" : "https://astrea.linkeddata.es/shapes#0396eb0f7ce4d5463567d8ddbd93039e",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Linked between a report and the properties it measure"
+  }, {
+    "@value" : "is associated to property"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Linked between a report and the properties it measure"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "is associated to property"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ]
+}, {
   "@id" : "https://astrea.linkeddata.es/shapes#06d5e09a4c4fb27711dc98571e5e7fbf",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
@@ -110,49 +142,6 @@
   } ],
   "http://www.w3.org/ns/shacl#targetClass" : [ {
     "@id" : "https://w3id.org/def/openadr#TelemetryStatusReport"
-  } ]
-}, {
-  "@id" : "https://astrea.linkeddata.es/shapes#06e5c6cdff21342ebcf1ac7a12cb4ed4",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Metadata about the Readings, such as mean or derived"
-  }, {
-    "@value" : "reading type"
-  } ],
-  "http://www.w3.org/ns/shacl#datatype" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/ns/shacl#description" : [ {
-    "@value" : "Metadata about the Readings, such as mean or derived"
-  } ],
-  "http://www.w3.org/ns/shacl#name" : [ {
-    "@value" : "reading type"
-  } ],
-  "http://www.w3.org/ns/shacl#nodeKind" : [ {
-    "@id" : "http://www.w3.org/ns/shacl#Literal"
-  } ],
-  "http://www.w3.org/ns/shacl#pattern" : [ {
-    "@value" : ".*"
-  } ]
-}, {
-  "@id" : "https://astrea.linkeddata.es/shapes#07329727a6c914bec20d71286536d543",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
-  "http://www.w3.org/ns/shacl#nodeKind" : [ {
-    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
-  } ],
-  "http://www.w3.org/ns/shacl#path" : [ {
-    "@id" : "https://w3id.org/def/openadr#SignalIntervalDuration"
-  } ],
-  "http://www.w3.org/ns/shacl#qualifiedMaxCount" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/ns/shacl#qualifiedMinCount" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/ns/shacl#qualifiedValueShape" : [ {
-    "@id" : "_:genid2"
   } ]
 }, {
   "@id" : "https://astrea.linkeddata.es/shapes#090f8a6f31379ec1d356d7b448ff7254",
@@ -232,18 +221,20 @@
     "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
   } ]
 }, {
-  "@id" : "https://astrea.linkeddata.es/shapes#11604e1bfe4dede9cc9ef590b8737696",
+  "@id" : "https://astrea.linkeddata.es/shapes#111cf903616302c2826bce8f093d7dad",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Duration of a signal interval"
+    "@value" : "Relation between a payload and its descriptor"
   }, {
-    "@value" : "interval duration"
+    "@value" : "is described in"
   } ],
-  "http://www.w3.org/ns/shacl#description" : [ {
-    "@value" : "Duration of a signal interval"
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "https://w3id.org/def/openadr#ReportDescriptor"
   } ],
   "http://www.w3.org/ns/shacl#name" : [ {
-    "@value" : "interval duration"
+    "@value" : "Relation between a payload and its descriptor"
+  }, {
+    "@value" : "is described in"
   } ],
   "http://www.w3.org/ns/shacl#nodeKind" : [ {
     "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
@@ -279,6 +270,23 @@
   } ],
   "http://www.w3.org/ns/shacl#name" : [ {
     "@value" : "has event status"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#153fb8f534a0a24652fe322e37cf07d3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Duration of a signal interval"
+  }, {
+    "@value" : "interval duration"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Duration of a signal interval"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "interval duration"
   } ],
   "http://www.w3.org/ns/shacl#nodeKind" : [ {
     "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
@@ -331,8 +339,22 @@
   "http://www.w3.org/ns/shacl#nodeKind" : [ {
     "@id" : "http://www.w3.org/ns/shacl#IRI"
   } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "https://astrea.linkeddata.es/shapes#de398d443fa9097a91c18cd8a28ea1f3"
+  }, {
+    "@id" : "https://astrea.linkeddata.es/shapes#9ef959b982bf4ae90b165861713358c2"
+  } ],
   "http://www.w3.org/ns/shacl#targetClass" : [ {
     "@id" : "https://w3id.org/def/openadr#DataReport"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#18ab5566f2df60066bd0e4d9d706bdc8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://w3id.org/def/openadr#ReportDataDescriptor"
   } ]
 }, {
   "@id" : "https://astrea.linkeddata.es/shapes#19f9a6bd1b7a71dea861d2e40454a901",
@@ -342,6 +364,15 @@
   } ],
   "http://www.w3.org/ns/shacl#path" : [ {
     "@id" : "https://w3id.org/def/openadr#isActiveDuringPeriod"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#1a023ca609e563adba27c5cfb6efac5c",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://w3id.org/def/openadr#hasDataQuality"
   } ]
 }, {
   "@id" : "https://astrea.linkeddata.es/shapes#1a1c8f0b6437c33c74506c92e8115bd7",
@@ -390,18 +421,6 @@
     "@id" : "https://w3id.org/def/openadr#ramp_up"
   } ]
 }, {
-  "@id" : "https://astrea.linkeddata.es/shapes#1cd352c4c51dcd638c89b4de7937efbd",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
-  "http://www.w3.org/ns/shacl#class" : [ {
-    "@id" : "http://www.w3.org/2006/time#Interval"
-  } ],
-  "http://www.w3.org/ns/shacl#nodeKind" : [ {
-    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
-  } ],
-  "http://www.w3.org/ns/shacl#path" : [ {
-    "@id" : "https://w3id.org/def/openadr#isReportedDuringInterval"
-  } ]
-}, {
   "@id" : "https://astrea.linkeddata.es/shapes#1ce8aa75bcad9b4023485ecb9f9a7896",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -412,6 +431,24 @@
   } ],
   "http://www.w3.org/ns/shacl#nodeKind" : [ {
     "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#1f5e25d8419a8d653b88cac64bc34b63",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "data quality"
+  } ],
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "data quality"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Literal"
+  } ],
+  "http://www.w3.org/ns/shacl#pattern" : [ {
+    "@value" : ".*"
   } ]
 }, {
   "@id" : "https://astrea.linkeddata.es/shapes#200e5a52deea60eb19a89b55f2fc63dd",
@@ -441,24 +478,6 @@
     "@id" : "https://w3id.org/def/openadr#hasTarget"
   } ]
 }, {
-  "@id" : "https://astrea.linkeddata.es/shapes#20b36b1fa4666a319b29cb6a6191f10e",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "signal name"
-  } ],
-  "http://www.w3.org/ns/shacl#datatype" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/ns/shacl#name" : [ {
-    "@value" : "signal name"
-  } ],
-  "http://www.w3.org/ns/shacl#nodeKind" : [ {
-    "@id" : "http://www.w3.org/ns/shacl#Literal"
-  } ],
-  "http://www.w3.org/ns/shacl#pattern" : [ {
-    "@value" : ".*"
-  } ]
-}, {
   "@id" : "https://astrea.linkeddata.es/shapes#21a2c754fc3c2001f6c4e14ae455a2be",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
@@ -480,29 +499,6 @@
     "@id" : "https://w3id.org/def/openadr#Asset"
   } ]
 }, {
-  "@id" : "https://astrea.linkeddata.es/shapes#21bcd4df8e9c3a9750e8e8f804d106d0",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Data point value for event signals or for reporting current or historical\nvalues."
-  }, {
-    "@value" : "payload float"
-  } ],
-  "http://www.w3.org/ns/shacl#datatype" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ],
-  "http://www.w3.org/ns/shacl#description" : [ {
-    "@value" : "Data point value for event signals or for reporting current or historical\nvalues."
-  } ],
-  "http://www.w3.org/ns/shacl#name" : [ {
-    "@value" : "payload float"
-  } ],
-  "http://www.w3.org/ns/shacl#nodeKind" : [ {
-    "@id" : "http://www.w3.org/ns/shacl#Literal"
-  } ],
-  "http://www.w3.org/ns/shacl#pattern" : [ {
-    "@value" : "(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)?|(\\+|-)?INF|NaN"
-  } ]
-}, {
   "@id" : "https://astrea.linkeddata.es/shapes#230562d9111120e642018a47798a2e24",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -515,6 +511,26 @@
   } ],
   "http://www.w3.org/ns/shacl#name" : [ {
     "@value" : "is reported during interval"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#23acbda0efe191825c2d8660a5ab4ce8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Relationship between reports"
+  }, {
+    "@value" : "is specifier in"
+  } ],
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "https://w3id.org/def/openadr#MetadataReport"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Relationship between reports"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "is specifier in"
   } ],
   "http://www.w3.org/ns/shacl#nodeKind" : [ {
     "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
@@ -575,9 +591,6 @@
   "http://www.w3.org/ns/shacl#nodeKind" : [ {
     "@id" : "http://www.w3.org/ns/shacl#IRI"
   } ],
-  "http://www.w3.org/ns/shacl#property" : [ {
-    "@id" : "https://astrea.linkeddata.es/shapes#07329727a6c914bec20d71286536d543"
-  } ],
   "http://www.w3.org/ns/shacl#targetClass" : [ {
     "@id" : "https://w3id.org/def/openadr#SignalInterval"
   } ]
@@ -629,6 +642,29 @@
     "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
   } ]
 }, {
+  "@id" : "https://astrea.linkeddata.es/shapes#2e4656bf5b84f5f246dbbf494eb806d5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Metadata about the Readings, such as mean or derived"
+  }, {
+    "@value" : "reading type"
+  } ],
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Metadata about the Readings, such as mean or derived"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "reading type"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Literal"
+  } ],
+  "http://www.w3.org/ns/shacl#pattern" : [ {
+    "@value" : ".*"
+  } ]
+}, {
   "@id" : "https://astrea.linkeddata.es/shapes#2f2c936a83d55108bddde7a4be377004",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -667,6 +703,46 @@
     "@id" : "https://w3id.org/def/openadr#HistoryReport"
   } ]
 }, {
+  "@id" : "https://astrea.linkeddata.es/shapes#330cb523aecc48a0a3f1ca0293e7b342",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ""
+  }, {
+    "@value" : "is manual override"
+  } ],
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : ""
+  }, {
+    "@value" : "is manual override"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Literal"
+  } ],
+  "http://www.w3.org/ns/shacl#pattern" : [ {
+    "@value" : "true|false|0|1"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#33266d84520d83037119306869c5d6ac",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Charge state signal"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Signal used  to dispatch storage resources"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Charge state signal"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://w3id.org/def/openadr#ChargeStateSignal"
+  } ]
+}, {
   "@id" : "https://astrea.linkeddata.es/shapes#3348f96caa15fb50d86f0a2231585642",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
@@ -679,15 +755,12 @@
   "@id" : "https://astrea.linkeddata.es/shapes#33de4e8d10406ce51922c0dae5b4a2de",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Relation between a node and a report it requires"
+    "@value" : "Relation between a node and an object it requires"
   }, {
     "@value" : "requires"
   } ],
-  "http://www.w3.org/ns/shacl#class" : [ {
-    "@id" : "https://w3id.org/def/openadr#Report"
-  } ],
   "http://www.w3.org/ns/shacl#description" : [ {
-    "@value" : "Relation between a node and a report it requires"
+    "@value" : "Relation between a node and an object it requires"
   } ],
   "http://www.w3.org/ns/shacl#name" : [ {
     "@value" : "requires"
@@ -703,6 +776,24 @@
   } ],
   "http://www.w3.org/ns/shacl#path" : [ {
     "@id" : "https://w3id.org/def/openadr#contains"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#34ecef9d0dd417c20cbc09b9b9c176b0",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Bid price signal"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Signal that represents the price that was bid by the resource"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Bid price signal"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://w3id.org/def/openadr#BidPricesignal"
   } ]
 }, {
   "@id" : "https://astrea.linkeddata.es/shapes#3a1c28ad09f862b7f92a6de74adb3b66",
@@ -791,13 +882,13 @@
     "@id" : "https://w3id.org/def/openadr#OptOut"
   } ]
 }, {
-  "@id" : "https://astrea.linkeddata.es/shapes#4570d4ab313ee7376d896f5cac207e6f",
+  "@id" : "https://astrea.linkeddata.es/shapes#4912682a4ac4379b8488b0402e325c81",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
   "http://www.w3.org/ns/shacl#nodeKind" : [ {
     "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
   } ],
   "http://www.w3.org/ns/shacl#path" : [ {
-    "@id" : "https://w3id.org/def/openadr#payloadFloat"
+    "@id" : "https://w3id.org/def/openadr#refersToTarget"
   } ]
 }, {
   "@id" : "https://astrea.linkeddata.es/shapes#498ecea4906de70915739bdbdf3d1bc0",
@@ -852,15 +943,21 @@
     "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
   } ]
 }, {
+  "@id" : "https://astrea.linkeddata.es/shapes#4bb6ebd1d7afc3f2cc33ae2d0f4a37d4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://w3id.org/def/openadr#isAvailableDuring"
+  } ]
+}, {
   "@id" : "https://astrea.linkeddata.es/shapes#4bf8fa8c873e2bf780acdc0c832befc6",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "relation between the report and its specification"
   }, {
     "@value" : "specifies report"
-  } ],
-  "http://www.w3.org/ns/shacl#class" : [ {
-    "@id" : "https://w3id.org/def/openadr#ReportSpecifier"
   } ],
   "http://www.w3.org/ns/shacl#name" : [ {
     "@value" : "relation between the report and its specification"
@@ -869,6 +966,29 @@
   } ],
   "http://www.w3.org/ns/shacl#nodeKind" : [ {
     "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#4d30d13f9ffc72a3d70f317efe0145a0",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Indicates whether the payload is online"
+  }, {
+    "@value" : "is online"
+  } ],
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Indicates whether the payload is online"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "is online"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Literal"
+  } ],
+  "http://www.w3.org/ns/shacl#pattern" : [ {
+    "@value" : "true|false|0|1"
   } ]
 }, {
   "@id" : "https://astrea.linkeddata.es/shapes#4ee895947f64a077b87f0a78ba131eea",
@@ -929,18 +1049,6 @@
     "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
   } ]
 }, {
-  "@id" : "https://astrea.linkeddata.es/shapes#51e5a462ec9af0c3f8894fc01438ab79",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
-  "http://www.w3.org/ns/shacl#class" : [ {
-    "@id" : "https://w3id.org/def/openadr#PayloadResourceStatus"
-  } ],
-  "http://www.w3.org/ns/shacl#nodeKind" : [ {
-    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
-  } ],
-  "http://www.w3.org/ns/shacl#path" : [ {
-    "@id" : "https://w3id.org/def/openadr#hasPayloadReourceStatus"
-  } ]
-}, {
   "@id" : "https://astrea.linkeddata.es/shapes#525ab941786c78c2e21c9381b6bd0938",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -968,23 +1076,6 @@
   } ],
   "http://www.w3.org/ns/shacl#path" : [ {
     "@id" : "https://w3id.org/def/openadr#involvesSubject"
-  } ]
-}, {
-  "@id" : "https://astrea.linkeddata.es/shapes#53c94205740b8281d53af75f30fa9b0d",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Relation to indicate the units of a measurement"
-  }, {
-    "@value" : "is measured in"
-  } ],
-  "http://www.w3.org/ns/shacl#description" : [ {
-    "@value" : "Relation to indicate the units of a measurement"
-  } ],
-  "http://www.w3.org/ns/shacl#name" : [ {
-    "@value" : "is measured in"
-  } ],
-  "http://www.w3.org/ns/shacl#nodeKind" : [ {
-    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
   } ]
 }, {
   "@id" : "https://astrea.linkeddata.es/shapes#53f3ddf29cdf906ce3f8f0bf2429a518",
@@ -1072,57 +1163,6 @@
     "@id" : "https://w3id.org/def/openadr#expectedResponse"
   } ]
 }, {
-  "@id" : "https://astrea.linkeddata.es/shapes#5dba68c773f2ac1bfa2cb894767735e2",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@value" : "OpenADR 2.0 Demand Response Program Implementation Guide"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Report specifier"
-  } ],
-  "http://www.w3.org/ns/shacl#description" : [ {
-    "@value" : "Each report specification specifies reporting capabilities"
-  } ],
-  "http://www.w3.org/ns/shacl#name" : [ {
-    "@value" : "Report specifier"
-  } ],
-  "http://www.w3.org/ns/shacl#nodeKind" : [ {
-    "@id" : "http://www.w3.org/ns/shacl#IRI"
-  } ],
-  "http://www.w3.org/ns/shacl#property" : [ {
-    "@id" : "https://astrea.linkeddata.es/shapes#b6161cc0569b9e5988b3b743c4820485"
-  }, {
-    "@id" : "https://astrea.linkeddata.es/shapes#ba7c21b062c212fc6629618be14e32ef"
-  }, {
-    "@id" : "https://astrea.linkeddata.es/shapes#1cd352c4c51dcd638c89b4de7937efbd"
-  } ],
-  "http://www.w3.org/ns/shacl#targetClass" : [ {
-    "@id" : "https://w3id.org/def/openadr#ReportSpecifier"
-  } ]
-}, {
-  "@id" : "https://astrea.linkeddata.es/shapes#60f2debbc1d211ff5065efaa730bd15c",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "A URI identifying a DR Program"
-  }, {
-    "@value" : "market context"
-  } ],
-  "http://www.w3.org/ns/shacl#datatype" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
-  } ],
-  "http://www.w3.org/ns/shacl#description" : [ {
-    "@value" : "A URI identifying a DR Program"
-  } ],
-  "http://www.w3.org/ns/shacl#name" : [ {
-    "@value" : "market context"
-  } ],
-  "http://www.w3.org/ns/shacl#nodeKind" : [ {
-    "@id" : "http://www.w3.org/ns/shacl#Literal"
-  } ],
-  "http://www.w3.org/ns/shacl#pattern" : [ {
-    "@value" : "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\\?([^#]*))?(#(.*))?"
-  } ]
-}, {
   "@id" : "https://astrea.linkeddata.es/shapes#6248d50c6907fde04303bcd5ac1344a9",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -1143,36 +1183,18 @@
   "@id" : "https://astrea.linkeddata.es/shapes#6320678fd18b98e3804390bebf11325c",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Relation between an entity an its available period"
+    "@value" : "Relation between an entity an its active period"
   }, {
     "@value" : "has active period"
   } ],
   "http://www.w3.org/ns/shacl#description" : [ {
-    "@value" : "Relation between an entity an its available period"
+    "@value" : "Relation between an entity an its active period"
   } ],
   "http://www.w3.org/ns/shacl#name" : [ {
     "@value" : "has active period"
   } ],
   "http://www.w3.org/ns/shacl#nodeKind" : [ {
     "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
-  } ]
-}, {
-  "@id" : "https://astrea.linkeddata.es/shapes#63fadcd9f02ded96d012ddd437781d20",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Payload resource status"
-  } ],
-  "http://www.w3.org/ns/shacl#description" : [ {
-    "@value" : "Status of the payload resource"
-  } ],
-  "http://www.w3.org/ns/shacl#name" : [ {
-    "@value" : "Payload resource status"
-  } ],
-  "http://www.w3.org/ns/shacl#nodeKind" : [ {
-    "@id" : "http://www.w3.org/ns/shacl#IRI"
-  } ],
-  "http://www.w3.org/ns/shacl#targetClass" : [ {
-    "@id" : "https://w3id.org/def/openadr#PayloadResourceStatus"
   } ]
 }, {
   "@id" : "https://astrea.linkeddata.es/shapes#67619bc4e9878833e229a0c101266b52",
@@ -1208,6 +1230,34 @@
   } ],
   "http://www.w3.org/ns/shacl#path" : [ {
     "@id" : "https://w3id.org/def/openadr#manages"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#69f7a73490789546b9d0e7a81c6afe49",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Signal for signal levels"
+  }, {
+    "@value" : "Simple signal"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Signal for signal levels"
+  }, {
+    "@value" : "Simple signal"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://w3id.org/def/openadr#SimpleSignal"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#6a8aff6189a7145ccc42b15fef5ec473",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://saref.etsi.org/saref#Measurement"
   } ]
 }, {
   "@id" : "https://astrea.linkeddata.es/shapes#6ace7559c09873d57bb26d2909a563c6",
@@ -1266,15 +1316,12 @@
   "@id" : "https://astrea.linkeddata.es/shapes#6dcbd4bf628c88812577413c89f6419a",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Relation between the node and a report it receives"
+    "@value" : "Relation between the node and an object  it receives"
   }, {
     "@value" : "receives"
   } ],
-  "http://www.w3.org/ns/shacl#class" : [ {
-    "@id" : "https://w3id.org/def/openadr#Report"
-  } ],
   "http://www.w3.org/ns/shacl#description" : [ {
-    "@value" : "Relation between the node and a report it receives"
+    "@value" : "Relation between the node and an object  it receives"
   } ],
   "http://www.w3.org/ns/shacl#name" : [ {
     "@value" : "receives"
@@ -1290,6 +1337,42 @@
   } ],
   "http://www.w3.org/ns/shacl#path" : [ {
     "@id" : "https://w3id.org/def/openadr#dstart"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#74ee05f0d253220be95961a95c6b8e39",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Load control signal"
+  }, {
+    "@value" : "Signal for to set the load control to values that are relative to the load controller and its output capacity."
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Load control signal"
+  }, {
+    "@value" : "Signal for to set the load control to values that are relative to the load controller and its output capacity."
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://w3id.org/def/openadr#LoadControlSignal"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#75f20ee78780119dab178ec73a951a14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Relationship between a schedule and a target"
+  }, {
+    "@value" : "is schedule of"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Relationship between a schedule and a target"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "is schedule of"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
   } ]
 }, {
   "@id" : "https://astrea.linkeddata.es/shapes#76ad0bd0a09c0e8abee2e0e40ad7e58c",
@@ -1319,15 +1402,6 @@
   } ],
   "http://www.w3.org/ns/shacl#path" : [ {
     "@id" : "https://w3id.org/def/openadr#hasDuration"
-  } ]
-}, {
-  "@id" : "https://astrea.linkeddata.es/shapes#777e87126352d1c1ae3b1238510d2753",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
-  "http://www.w3.org/ns/shacl#nodeKind" : [ {
-    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
-  } ],
-  "http://www.w3.org/ns/shacl#path" : [ {
-    "@id" : "https://w3id.org/def/openadr#isUnavailableDuring"
   } ]
 }, {
   "@id" : "https://astrea.linkeddata.es/shapes#77f6684a7319f66ab75da4ab9d185c92",
@@ -1396,6 +1470,15 @@
   } ],
   "http://www.w3.org/ns/shacl#nodeKind" : [ {
     "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#7c391f0e2479f54c4c55d2f941f0142f",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://w3id.org/def/openadr#hasmarketContext"
   } ]
 }, {
   "@id" : "https://astrea.linkeddata.es/shapes#7d6a3657bad33da9742576423d6ebf7d",
@@ -1520,13 +1603,9 @@
     "@id" : "http://www.w3.org/ns/shacl#IRI"
   } ],
   "http://www.w3.org/ns/shacl#property" : [ {
-    "@id" : "https://astrea.linkeddata.es/shapes#4570d4ab313ee7376d896f5cac207e6f"
-  }, {
-    "@id" : "https://astrea.linkeddata.es/shapes#51e5a462ec9af0c3f8894fc01438ab79"
+    "@id" : "https://astrea.linkeddata.es/shapes#1a023ca609e563adba27c5cfb6efac5c"
   }, {
     "@id" : "https://astrea.linkeddata.es/shapes#6c4e74a1f8ac5b9d2b78c328f42c3bd1"
-  }, {
-    "@id" : "https://astrea.linkeddata.es/shapes#9cb413cb4609b94c98e2559d8a0e5220"
   } ],
   "http://www.w3.org/ns/shacl#targetClass" : [ {
     "@id" : "https://w3id.org/def/openadr#ReportPayload"
@@ -1551,6 +1630,8 @@
   } ],
   "http://www.w3.org/ns/shacl#property" : [ {
     "@id" : "https://astrea.linkeddata.es/shapes#2d33566be0240fcf0045a46247d22eb1"
+  }, {
+    "@id" : "https://astrea.linkeddata.es/shapes#7c391f0e2479f54c4c55d2f941f0142f"
   } ],
   "http://www.w3.org/ns/shacl#targetClass" : [ {
     "@id" : "https://w3id.org/def/openadr#Opt"
@@ -1668,25 +1749,31 @@
     "@id" : "https://w3id.org/def/openadr#version"
   } ]
 }, {
-  "@id" : "https://astrea.linkeddata.es/shapes#90d0012470ff100a1ba6c6e721bd931e",
+  "@id" : "https://astrea.linkeddata.es/shapes#8cef7b734321ba1776c31c167c397fc7",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@value" : "OASIS Energy Market Information Exchange (eMIX) standard"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Item base"
+    "@value" : "Demand charge signal"
   } ],
   "http://www.w3.org/ns/shacl#description" : [ {
-    "@value" : "Units for the data in the report"
+    "@value" : "Signal for the demand charge"
   } ],
   "http://www.w3.org/ns/shacl#name" : [ {
-    "@value" : "Item base"
+    "@value" : "Demand charge signal"
   } ],
   "http://www.w3.org/ns/shacl#nodeKind" : [ {
     "@id" : "http://www.w3.org/ns/shacl#IRI"
   } ],
   "http://www.w3.org/ns/shacl#targetClass" : [ {
-    "@id" : "https://w3id.org/def/openadr#ItemBase"
+    "@id" : "https://w3id.org/def/openadr#DemandChargeSignal"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#8ebc44c2069277dfa253d116936ef46a",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://saref.etsi.org/saref#Property"
   } ]
 }, {
   "@id" : "https://astrea.linkeddata.es/shapes#94ef15d9485b56643ddaef4435b4ec56",
@@ -1719,31 +1806,6 @@
     "@id" : "https://w3id.org/def/openadr#includesSignal"
   } ]
 }, {
-  "@id" : "https://astrea.linkeddata.es/shapes#9970ba74e26c0d563708e5875a757007",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Availability"
-  } ],
-  "http://www.w3.org/ns/shacl#description" : [ {
-    "@value" : "Availability of a target"
-  } ],
-  "http://www.w3.org/ns/shacl#name" : [ {
-    "@value" : "Availability"
-  } ],
-  "http://www.w3.org/ns/shacl#nodeKind" : [ {
-    "@id" : "http://www.w3.org/ns/shacl#IRI"
-  } ],
-  "http://www.w3.org/ns/shacl#property" : [ {
-    "@id" : "https://astrea.linkeddata.es/shapes#a1a9e1202c0c9208afee98011e8ce6b9"
-  }, {
-    "@id" : "https://astrea.linkeddata.es/shapes#de45e4060d4ba000706bc48f6ed90865"
-  }, {
-    "@id" : "https://astrea.linkeddata.es/shapes#777e87126352d1c1ae3b1238510d2753"
-  } ],
-  "http://www.w3.org/ns/shacl#targetClass" : [ {
-    "@id" : "https://w3id.org/def/openadr#Availability"
-  } ]
-}, {
   "@id" : "https://astrea.linkeddata.es/shapes#9a3ddf43d109ad1fb790e2d213da3b88",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -1761,6 +1823,31 @@
     "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
   } ]
 }, {
+  "@id" : "https://astrea.linkeddata.es/shapes#9b5ecd246470346eb21bd89f25bf027c",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Schedule"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Schedule of a target"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Schedule"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "https://astrea.linkeddata.es/shapes#ee757f2c307ded232a17e77cefc64473"
+  }, {
+    "@id" : "https://astrea.linkeddata.es/shapes#4bb6ebd1d7afc3f2cc33ae2d0f4a37d4"
+  }, {
+    "@id" : "https://astrea.linkeddata.es/shapes#4912682a4ac4379b8488b0402e325c81"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://w3id.org/def/openadr#Schedule"
+  } ]
+}, {
   "@id" : "https://astrea.linkeddata.es/shapes#9bc46ffbac9f3ad0be4d5a5a845dd699",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
   "http://www.w3.org/ns/shacl#nodeKind" : [ {
@@ -1768,15 +1855,6 @@
   } ],
   "http://www.w3.org/ns/shacl#path" : [ {
     "@id" : "https://w3id.org/def/openadr#createdDateTime"
-  } ]
-}, {
-  "@id" : "https://astrea.linkeddata.es/shapes#9cb413cb4609b94c98e2559d8a0e5220",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
-  "http://www.w3.org/ns/shacl#nodeKind" : [ {
-    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
-  } ],
-  "http://www.w3.org/ns/shacl#path" : [ {
-    "@id" : "https://w3id.org/def/openadr#dataquality"
   } ]
 }, {
   "@id" : "https://astrea.linkeddata.es/shapes#9d7ff3689486399e6b14742663377f91",
@@ -1811,13 +1889,34 @@
     "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
   } ]
 }, {
-  "@id" : "https://astrea.linkeddata.es/shapes#a1a9e1202c0c9208afee98011e8ce6b9",
+  "@id" : "https://astrea.linkeddata.es/shapes#9ef959b982bf4ae90b165861713358c2",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "https://w3id.org/def/openadr#MetadataReport"
+  } ],
   "http://www.w3.org/ns/shacl#nodeKind" : [ {
     "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
   } ],
   "http://www.w3.org/ns/shacl#path" : [ {
-    "@id" : "https://w3id.org/def/openadr#refersToTarget"
+    "@id" : "https://w3id.org/def/openadr#isDescribedIn"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#a48d92b632913fa5c81a38e5f128f6e7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Electricity price signal"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Signal for the price of electricity"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Electricity price signal"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://w3id.org/def/openadr#ElectricityPriceSignal"
   } ]
 }, {
   "@id" : "https://astrea.linkeddata.es/shapes#a8a891449ece81fd455a920af672daf0",
@@ -1838,19 +1937,22 @@
     "@value" : ".*"
   } ]
 }, {
-  "@id" : "https://astrea.linkeddata.es/shapes#aaf59a993f9cef84450a198dcdcc0077",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "@id" : "https://astrea.linkeddata.es/shapes#a8e3545df48c850e0d198d9ff54f4904",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Signal Payload"
+    "@value" : "transport name"
+  } ],
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/ns/shacl#name" : [ {
-    "@value" : "Signal Payload"
+    "@value" : "transport name"
   } ],
   "http://www.w3.org/ns/shacl#nodeKind" : [ {
-    "@id" : "http://www.w3.org/ns/shacl#IRI"
+    "@id" : "http://www.w3.org/ns/shacl#Literal"
   } ],
-  "http://www.w3.org/ns/shacl#targetClass" : [ {
-    "@id" : "https://w3id.org/def/openadr#SignalPayload"
+  "http://www.w3.org/ns/shacl#pattern" : [ {
+    "@value" : ".*"
   } ]
 }, {
   "@id" : "https://astrea.linkeddata.es/shapes#abee8dc113660d74cca7b9bf062f0a75",
@@ -1879,16 +1981,22 @@
     "@id" : "https://w3id.org/def/openadr#isDefinedIn"
   } ]
 }, {
-  "@id" : "https://astrea.linkeddata.es/shapes#b6161cc0569b9e5988b3b743c4820485",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
-  "http://www.w3.org/ns/shacl#class" : [ {
-    "@id" : "http://www.w3.org/2006/time#TemporalEntity"
+  "@id" : "https://astrea.linkeddata.es/shapes#b27ff3049cd990f535823fff573959b6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Load dispatch signal"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Instructions are used to set the load  values that can be expressed in terms of the desired load"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Load dispatch signal"
   } ],
   "http://www.w3.org/ns/shacl#nodeKind" : [ {
-    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
   } ],
-  "http://www.w3.org/ns/shacl#path" : [ {
-    "@id" : "https://w3id.org/def/openadr#hasGranularity"
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://w3id.org/def/openadr#LoadDispatchSignal"
   } ]
 }, {
   "@id" : "https://astrea.linkeddata.es/shapes#b64e7b9a7883fa8fcc81acdd304fa60c",
@@ -1953,16 +2061,13 @@
     "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
   } ]
 }, {
-  "@id" : "https://astrea.linkeddata.es/shapes#ba7c21b062c212fc6629618be14e32ef",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
-  "http://www.w3.org/ns/shacl#class" : [ {
-    "@id" : "http://www.w3.org/2006/time#TemporalEntity"
-  } ],
+  "@id" : "https://astrea.linkeddata.es/shapes#bb645076c91f206129df042936fadc77",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
   "http://www.w3.org/ns/shacl#nodeKind" : [ {
-    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
   } ],
-  "http://www.w3.org/ns/shacl#path" : [ {
-    "@id" : "https://w3id.org/def/openadr#hasReportBackDuration"
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://w3id.org/def/openadr#ReportStatusPayload"
   } ]
 }, {
   "@id" : "https://astrea.linkeddata.es/shapes#bd851bd791b544c23ccdcb0180fd0e3b",
@@ -1983,6 +2088,47 @@
     "@id" : "http://www.w3.org/2006/time#Duration"
   } ]
 }, {
+  "@id" : "https://astrea.linkeddata.es/shapes#c02cc761b5b2311fa36e4999879ac5bf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "profile name"
+  } ],
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "profile name"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Literal"
+  } ],
+  "http://www.w3.org/ns/shacl#pattern" : [ {
+    "@value" : ".*"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#c4dcf8b7a175b506024dce237da314fb",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "A URI identifying a DR Program"
+  }, {
+    "@value" : "market context"
+  } ],
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "A URI identifying a DR Program"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "market context"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Literal"
+  } ],
+  "http://www.w3.org/ns/shacl#pattern" : [ {
+    "@value" : "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\\?([^#]*))?(#(.*))?"
+  } ]
+}, {
   "@id" : "https://astrea.linkeddata.es/shapes#c62491eb3497e805c71c3df45ec82db0",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -1994,6 +2140,23 @@
     "@value" : "Unavailability of a target"
   }, {
     "@value" : "is unavailable during"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#c6433fd5f0dae6d55d060a62a7a98bf7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Relationship to cancel a report"
+  }, {
+    "@value" : "cancels"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Relationship to cancel a report"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "cancels"
   } ],
   "http://www.w3.org/ns/shacl#nodeKind" : [ {
     "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
@@ -2014,6 +2177,15 @@
   } ],
   "http://www.w3.org/ns/shacl#nodeKind" : [ {
     "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#c7b731bfbf886056199f888f0e4e1f61",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://w3id.org/def/openadr#ReportStatusDescriptor"
   } ]
 }, {
   "@id" : "https://astrea.linkeddata.es/shapes#c7d1e48689e20b109b2ed978f6c69a94",
@@ -2073,24 +2245,6 @@
   } ],
   "http://www.w3.org/ns/shacl#targetClass" : [ {
     "@id" : "https://w3id.org/def/openadr#MetadataReport"
-  } ]
-}, {
-  "@id" : "https://astrea.linkeddata.es/shapes#d00afdd6c388b73b21fbf6d7965b7cc1",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "data quality"
-  } ],
-  "http://www.w3.org/ns/shacl#datatype" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/ns/shacl#name" : [ {
-    "@value" : "data quality"
-  } ],
-  "http://www.w3.org/ns/shacl#nodeKind" : [ {
-    "@id" : "http://www.w3.org/ns/shacl#Literal"
-  } ],
-  "http://www.w3.org/ns/shacl#pattern" : [ {
-    "@value" : ".*"
   } ]
 }, {
   "@id" : "https://astrea.linkeddata.es/shapes#d029fc09099c92b2fbf91e9253bff21c",
@@ -2196,6 +2350,21 @@
     "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
   } ]
 }, {
+  "@id" : "https://astrea.linkeddata.es/shapes#da331a78be448893f019591ceecadbad",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "includes measurement"
+  } ],
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "https://saref.etsi.org/saref#Measurement"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "includes measurement"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ]
+}, {
   "@id" : "https://astrea.linkeddata.es/shapes#da41c1dcea4d690d2030c30d8fbbca49",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
   "http://www.w3.org/ns/shacl#nodeKind" : [ {
@@ -2205,13 +2374,20 @@
     "@id" : "https://w3id.org/def/openadr#sends"
   } ]
 }, {
-  "@id" : "https://astrea.linkeddata.es/shapes#de45e4060d4ba000706bc48f6ed90865",
+  "@id" : "https://astrea.linkeddata.es/shapes#de398d443fa9097a91c18cd8a28ea1f3",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
   "http://www.w3.org/ns/shacl#nodeKind" : [ {
     "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
   } ],
   "http://www.w3.org/ns/shacl#path" : [ {
-    "@id" : "https://w3id.org/def/openadr#isAvailableDuring"
+    "@id" : "https://w3id.org/def/openadr#includesMeasurement"
+  } ],
+  "http://www.w3.org/ns/shacl#qualifiedMinCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#qualifiedValueShape" : [ {
+    "@id" : "_:genid2"
   } ]
 }, {
   "@id" : "https://astrea.linkeddata.es/shapes#de7cf5c312eb50ff04117ccb895f05a6",
@@ -2299,6 +2475,27 @@
     "@id" : "https://w3id.org/def/openadr#HistoryUsageReport"
   } ]
 }, {
+  "@id" : "https://astrea.linkeddata.es/shapes#eb103427682b59681883e1aa14df7b2e",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "OASIS Energy Market Information Exchange (eMIX) standard"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Item"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Units for the data in the report"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Item"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://w3id.org/def/openadr#Item"
+  } ]
+}, {
   "@id" : "https://astrea.linkeddata.es/shapes#eb2bb154dbbfbb4ed42bbdbcf05d0b1d",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2331,6 +2528,15 @@
     "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
   } ]
 }, {
+  "@id" : "https://astrea.linkeddata.es/shapes#ec09cf94c33771905d6826bb9fc5f6bd",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://w3id.org/def/openadr#ReportDataPayload"
+  } ]
+}, {
   "@id" : "https://astrea.linkeddata.es/shapes#ed0df5ac6387775640306ab7f4cdcbed",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
@@ -2350,6 +2556,15 @@
   } ],
   "http://www.w3.org/ns/shacl#targetClass" : [ {
     "@id" : "https://w3id.org/def/openadr#TelemetryReport"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#ee757f2c307ded232a17e77cefc64473",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://w3id.org/def/openadr#isUnavailableDuring"
   } ]
 }, {
   "@id" : "https://astrea.linkeddata.es/shapes#ef08f8c52370eae9512bb1ec26279152",
@@ -2471,59 +2686,22 @@
     "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
   } ]
 }, {
-  "@id" : "https://astrea.linkeddata.es/shapes#f28dbef903d2c6e18dfc93ebf4e283d9",
+  "@id" : "https://astrea.linkeddata.es/shapes#f590341a6b69fe6608eb3292bd1e2cef",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@value" : "OpenADR 2.0 Demand Response Program Implementation Guide"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Specifier Payload"
+    "@value" : "Bid load signal"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Signal that represents the amount of load that was bid by a resource into a program"
   } ],
   "http://www.w3.org/ns/shacl#name" : [ {
-    "@value" : "Specifier Payload"
+    "@value" : "Bid load signal"
   } ],
   "http://www.w3.org/ns/shacl#nodeKind" : [ {
     "@id" : "http://www.w3.org/ns/shacl#IRI"
   } ],
   "http://www.w3.org/ns/shacl#targetClass" : [ {
-    "@id" : "https://w3id.org/def/openadr#SpecifierPayload"
-  } ]
-}, {
-  "@id" : "https://astrea.linkeddata.es/shapes#f346f0988ac90c544a3885752334ac98",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Relation between an entity and the payload resource status"
-  }, {
-    "@value" : "has payload resource status"
-  } ],
-  "http://www.w3.org/ns/shacl#description" : [ {
-    "@value" : "Relation between an entity and the payload resource status"
-  } ],
-  "http://www.w3.org/ns/shacl#name" : [ {
-    "@value" : "has payload resource status"
-  } ],
-  "http://www.w3.org/ns/shacl#nodeKind" : [ {
-    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
-  } ]
-}, {
-  "@id" : "https://astrea.linkeddata.es/shapes#f5e27add16814bb0c4d4dd4e92286b09",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Relation between the specification of a report and its payload"
-  }, {
-    "@value" : "has specifier payload"
-  } ],
-  "http://www.w3.org/ns/shacl#class" : [ {
-    "@id" : "https://w3id.org/def/openadr#SpecifierPayload"
-  } ],
-  "http://www.w3.org/ns/shacl#description" : [ {
-    "@value" : "Relation between the specification of a report and its payload"
-  } ],
-  "http://www.w3.org/ns/shacl#name" : [ {
-    "@value" : "has specifier payload"
-  } ],
-  "http://www.w3.org/ns/shacl#nodeKind" : [ {
-    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+    "@id" : "https://w3id.org/def/openadr#BidLoadSignal"
   } ]
 }, {
   "@id" : "https://astrea.linkeddata.es/shapes#f6f2b65301484d98cb89f4da714d02d7",
@@ -2549,7 +2727,7 @@
     "@value" : "has item base"
   } ],
   "http://www.w3.org/ns/shacl#class" : [ {
-    "@id" : "https://w3id.org/def/openadr#ItemBase"
+    "@id" : "https://w3id.org/def/openadr#Item"
   } ],
   "http://www.w3.org/ns/shacl#name" : [ {
     "@value" : "has item base"
@@ -2606,9 +2784,6 @@
   }, {
     "@value" : "has signal payload"
   } ],
-  "http://www.w3.org/ns/shacl#class" : [ {
-    "@id" : "https://w3id.org/def/openadr#SignalPayload"
-  } ],
   "http://www.w3.org/ns/shacl#description" : [ {
     "@value" : "Relation between a signal and its payload"
   } ],
@@ -2617,6 +2792,25 @@
   } ],
   "http://www.w3.org/ns/shacl#nodeKind" : [ {
     "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#fbf664753aa191a16223a4ff3666076e",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Energy price signal"
+  }, {
+    "@value" : "Signal for the price of energy"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Energy price signal"
+  }, {
+    "@value" : "Signal for the price of energy"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://w3id.org/def/openadr#EnergyPriceSignal"
   } ]
 }, {
   "@id" : "https://astrea.linkeddata.es/shapes#fd0c81bb5f84ab19a3448817712de28b",
@@ -2640,6 +2834,24 @@
   } ],
   "http://www.w3.org/ns/shacl#pattern" : [ {
     "@value" : "true|false|0|1"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#fe5a1b3675c6f46bb72b25f33815fa7c",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Bid energy signal"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Signal that represents the price that was bid by the resource"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Bid energy signal"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://w3id.org/def/openadr#BidEnergySignal"
   } ]
 }, {
   "@id" : "https://astrea.linkeddata.es/shapes#ff5051b5afd6b08f41598452177db18b",
