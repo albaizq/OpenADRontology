@@ -6,7 +6,7 @@
 <https://w3id.org/def/openadr> <http://purl.org/dc/terms/title> "OpenADR ontology" .
 <https://w3id.org/def/openadr> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology describes the openADR protocol based on the documentation provided by the openADR Profile B" .
 <https://w3id.org/def/openadr> <http://www.w3.org/2000/01/rdf-schema#comment> "http://purl.org/NET/rdflicense/cc-by4.0" .
-<https://w3id.org/def/openadr> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.8" .
+<https://w3id.org/def/openadr> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.9" .
 # 
 # 
 # #################################################################

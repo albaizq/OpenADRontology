@@ -547,7 +547,7 @@
     "@value" : "http://purl.org/NET/rdflicense/cc-by4.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.1.8"
+    "@value" : "0.1.9"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#Active",

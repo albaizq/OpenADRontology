@@ -17,7 +17,7 @@
         <terms:title>OpenADR ontology</terms:title>
         <rdfs:comment>This ontology describes the openADR protocol based on the documentation provided by the openADR Profile B</rdfs:comment>
         <rdfs:comment>http://purl.org/NET/rdflicense/cc-by4.0</rdfs:comment>
-        <owl:versionInfo>0.1.8</owl:versionInfo>
+        <owl:versionInfo>0.1.9</owl:versionInfo>
     </owl:Ontology>
     
 

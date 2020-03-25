@@ -23,8 +23,8 @@ node [shape = rectangle, color="orange"]; "base:SignalInterval" "http://www.w3.o
 	"NULL" -> "base:includesMeasurement" [ label = "owl:onProperty" ];
 	"NULL" -> "http://www.w3.org/2006/time#Duration" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:EventDescriptor" [ label = "owl:someValuesFrom" ];
-	"NULL" -> "base:isDefinedIn" [ label = "owl:onProperty" ];
 	"NULL" -> "base:MetadataReport" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "base:isDefinedIn" [ label = "owl:onProperty" ];
 	"NULL" -> "xsd:boolean" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:version" [ label = "owl:onProperty" ];
 	"NULL" -> "base:expectedResponse" [ label = "owl:onProperty" ];
@@ -39,8 +39,8 @@ node [shape = rectangle, color="orange"]; "base:SignalInterval" "http://www.w3.o
 	"NULL" -> "base:isAvailableDuring" [ label = "owl:onProperty" ];
 	"NULL" -> "base:hasMinPeriod" [ label = "owl:onProperty" ];
 	"NULL" -> "base:Report" [ label = "owl:someValuesFrom" ];
-	"NULL" -> "http://www.opengis.net/ont/geosparql#SpatialObject" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "base:SamplingRate" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "http://www.opengis.net/ont/geosparql#SpatialObject" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "base:plans" [ label = "owl:onProperty" ];
 	"NULL" -> "base:Item" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:hasTarget" [ label = "owl:onProperty" ];
@@ -50,9 +50,9 @@ node [shape = rectangle, color="orange"]; "base:SignalInterval" "http://www.w3.o
 	"NULL" -> "http://www.opengis.net/ont/geosparql#Geometry" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "base:ServiceArea" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:hasItemBase" [ label = "owl:onProperty" ];
-	"NULL" -> "base:SignalInterval" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:VEN" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:isOnChange" [ label = "owl:onProperty" ];
+	"NULL" -> "base:SignalInterval" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "base:createdDateTime" [ label = "owl:onProperty" ];
 	"NULL" -> "http://www.w3.org/2006/time#Duration" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "base:refersToTarget" [ label = "owl:onProperty" ];
