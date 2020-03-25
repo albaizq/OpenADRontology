@@ -17,7 +17,7 @@
         <terms:title>OpenADR ontology</terms:title>
         <rdfs:comment>This ontology describes the openADR protocol based on the documentation provided by the openADR Profile B</rdfs:comment>
         <rdfs:comment>http://purl.org/NET/rdflicense/cc-by4.0</rdfs:comment>
-        <owl:versionInfo>0.1.8</owl:versionInfo>
+        <owl:versionInfo>0.1.9</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -359,10 +359,10 @@
     
 
 
-    <!-- https://w3id.org/def/openadr#isAssociatedToProperty -->
+    <!-- https://w3id.org/def/openadr#isAssociatedToItem -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#isAssociatedToProperty">
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#isAssociatedToItem">
         <rdfs:comment>Linked between a report and the properties it measure</rdfs:comment>
         <rdfs:label>is associated to property</rdfs:label>
     </owl:ObjectProperty>
@@ -645,16 +645,6 @@
     
 
 
-    <!-- https://w3id.org/def/openadr#dataquality -->
-
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/openadr#dataquality">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>data quality</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/def/openadr#dstart -->
 
 
@@ -689,6 +679,27 @@
     
 
 
+    <!-- https://w3id.org/def/openadr#hasDataQuality -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/openadr#hasDataQuality">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>data quality</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/openadr#hasReadingType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/openadr#hasReadingType">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Metadata about the Readings, such as mean or derived</rdfs:comment>
+        <rdfs:label>reading type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/def/openadr#hasSignalType -->
 
 
@@ -696,6 +707,17 @@
         <rdfs:domain rdf:resource="https://w3id.org/def/openadr#Signal"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>has signal type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/openadr#hasmarketContext -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/openadr#hasmarketContext">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>A URI identifying a DR Program</rdfs:comment>
+        <rdfs:label>market context</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -766,17 +788,6 @@
         <rdfs:domain rdf:resource="https://w3id.org/def/openadr#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>item description</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/def/openadr#marketContext -->
-
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/openadr#marketContext">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-        <rdfs:comment>A URI identifying a DR Program</rdfs:comment>
-        <rdfs:label>market context</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -858,17 +869,6 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
     <owl:DatatypeProperty rdf:about="https://w3id.org/def/openadr#randomization">
         <rdfs:domain rdf:resource="https://w3id.org/def/openadr#EventDescriptor"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/def/openadr#readingType -->
-
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/openadr#readingType">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Metadata about the Readings, such as mean or derived</rdfs:comment>
-        <rdfs:label>reading type</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1417,7 +1417,7 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#marketContext"/>
+                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#hasmarketContext"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1538,7 +1538,7 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#dataquality"/>
+                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#hasDataQuality"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
