@@ -75,6 +75,12 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
            rdfs:label "belongs to" .
 
 
+###  https://w3id.org/def/openadr#cancels
+:cancels rdf:type owl:ObjectProperty ;
+         rdfs:comment "Relationship to cancel a report" ;
+         rdfs:label "cancels" .
+
+
 ###  https://w3id.org/def/openadr#contains
 :contains rdf:type owl:ObjectProperty ;
           rdfs:comment "Relation between a target and its components" ;
@@ -116,7 +122,7 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/def/openadr#hasItemBase
 :hasItemBase rdf:type owl:ObjectProperty ;
-             rdfs:range :ItemBase ;
+             rdfs:range :Item ;
              rdfs:label "has item base" .
 
 
@@ -135,12 +141,6 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/def/openadr#hasPayload
 :hasPayload rdf:type owl:ObjectProperty ;
             rdfs:label "has payload" .
-
-
-###  https://w3id.org/def/openadr#hasPayloadReourceStatus
-:hasPayloadReourceStatus rdf:type owl:ObjectProperty ;
-                         rdfs:comment "Relation between an entity and the payload resource status" ;
-                         rdfs:label "has payload resource status" .
 
 
 ###  https://w3id.org/def/openadr#hasReportBackDuration
@@ -177,15 +177,6 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
                   rdfs:label "has signal payload" .
 
 
-###  https://w3id.org/def/openadr#hasSpecifierPayload
-:hasSpecifierPayload rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf :hasPayload ;
-                     rdfs:domain :ReportSpecifier ;
-                     rdfs:range :SpecifierPayload ;
-                     rdfs:comment "Relation between the specification of a report and its payload" ;
-                     rdfs:label "has specifier payload" .
-
-
 ###  https://w3id.org/def/openadr#hasTarget
 :hasTarget rdf:type owl:ObjectProperty ;
            rdfs:comment "Relation between an entity and its target" ;
@@ -196,6 +187,13 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 :hasTypicalValue rdf:type owl:ObjectProperty ;
                  rdfs:comment "Typical value of an interval" ;
                  rdfs:label "has typical value" .
+
+
+###  https://w3id.org/def/openadr#includesMeasurement
+:includesMeasurement rdf:type owl:ObjectProperty ;
+                     rdfs:domain :ReportDataPayload ;
+                     rdfs:range <https://saref.etsi.org/saref#Measurement> ;
+                     rdfs:label "includes measurement" .
 
 
 ###  https://w3id.org/def/openadr#includesSignal
@@ -212,8 +210,14 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/def/openadr#isActiveDuringPeriod
 :isActiveDuringPeriod rdf:type owl:ObjectProperty ;
-                      rdfs:comment "Relation between an entity an its available period" ;
+                      rdfs:comment "Relation between an entity an its active period" ;
                       rdfs:label "has active period" .
+
+
+###  https://w3id.org/def/openadr#isAssociatedToProperty
+:isAssociatedToProperty rdf:type owl:ObjectProperty ;
+                        rdfs:comment "Linked between a report and the properties it measure" ;
+                        rdfs:label "is associated to property" .
 
 
 ###  https://w3id.org/def/openadr#isAvailableDuring
@@ -229,17 +233,19 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
              rdfs:label "has interval" .
 
 
+###  https://w3id.org/def/openadr#isDescribedIn
+:isDescribedIn rdf:type owl:ObjectProperty ;
+               rdfs:domain :ReportPayload ;
+               rdfs:range :ReportDescriptor ;
+               rdfs:label "Relation between a payload and its descriptor" ,
+                          "is described in" .
+
+
 ###  https://w3id.org/def/openadr#isManagedBy
 :isManagedBy rdf:type owl:ObjectProperty ;
              owl:inverseOf :manages ;
              rdfs:comment "Relation between a Resource and a VEN" ;
              rdfs:label "is managed by" .
-
-
-###  https://w3id.org/def/openadr#isMeasuredIn
-:isMeasuredIn rdf:type owl:ObjectProperty ;
-              rdfs:comment "Relation to indicate the units of a measurement" ;
-              rdfs:label "is measured in" .
 
 
 ###  https://w3id.org/def/openadr#isReportedDuringInterval
@@ -253,6 +259,14 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
               rdfs:domain :Schedule ;
               rdfs:comment "Relationship between a schedule and a target" ;
               rdfs:label "is schedule of" .
+
+
+###  https://w3id.org/def/openadr#isSpecifiedIn
+:isSpecifiedIn rdf:type owl:ObjectProperty ;
+               rdfs:domain :DataReport ;
+               rdfs:range :MetadataReport ;
+               rdfs:comment "Relationship between reports" ;
+               rdfs:label "is specifier in" .
 
 
 ###  https://w3id.org/def/openadr#isUnavailableDuring
@@ -335,7 +349,6 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/def/openadr#specifiesReport
 :specifiesReport rdf:type owl:ObjectProperty ;
                  rdfs:domain :DataReport ;
-                 rdfs:range :ReportSpecifier ;
                  rdfs:label "relation between the report and its specification" ,
                             "specifies report" .
 
@@ -410,12 +423,28 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
                rdfs:label "has signal type" .
 
 
+###  https://w3id.org/def/openadr#isManualOverride
+:isManualOverride rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :ReportStatusPayload ;
+                  rdfs:range xsd:boolean ;
+                  rdfs:label "" ,
+                             "is manual override" .
+
+
 ###  https://w3id.org/def/openadr#isOnChange
 :isOnChange rdf:type owl:DatatypeProperty ;
             rdfs:domain :SamplingRate ;
             rdfs:range xsd:boolean ;
             rdfs:comment "Attribute to determine whether or not data is sampled as it changes" ;
             rdfs:label "is on change" .
+
+
+###  https://w3id.org/def/openadr#isOnline
+:isOnline rdf:type owl:DatatypeProperty ;
+          rdfs:domain :ReportStatusPayload ;
+          rdfs:range xsd:boolean ;
+          rdfs:comment "Indicates whether the payload is online" ;
+          rdfs:label "is online" .
 
 
 ###  https://w3id.org/def/openadr#isResponseRequired
@@ -435,7 +464,7 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/def/openadr#itemDescription
 :itemDescription rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :ItemBase ;
+                 rdfs:domain :Item ;
                  rdfs:range xsd:string ;
                  rdfs:label "item description" .
 
@@ -476,14 +505,6 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
           rdfs:domain :Node ;
           rdfs:range owl:rational ;
           rdfs:label "node name" .
-
-
-###  https://w3id.org/def/openadr#payloadFloat
-:payloadFloat rdf:type owl:DatatypeProperty ;
-              rdfs:range xsd:float ;
-              rdfs:comment """Data point value for event signals or for reporting current or historical
-values.""" ;
-              rdfs:label "payload float" .
 
 
 ###  https://w3id.org/def/openadr#priority
@@ -531,7 +552,7 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
 
 ###  https://w3id.org/def/openadr#scaleCode
 :scaleCode rdf:type owl:DatatypeProperty ;
-           rdfs:domain :ItemBase ;
+           rdfs:domain :Item ;
            rdfs:range xsd:string ;
            rdfs:comment "A scaling factor for the base unit of measure for a report" ;
            rdfs:label "scale code" .
@@ -632,6 +653,14 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
 <http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure> rdf:type owl:Class .
 
 
+###  https://saref.etsi.org/saref#Measurement
+<https://saref.etsi.org/saref#Measurement> rdf:type owl:Class .
+
+
+###  https://saref.etsi.org/saref#Property
+<https://saref.etsi.org/saref#Property> rdf:type owl:Class .
+
+
 ###  https://w3id.org/def/openadr#Asset
 :Asset rdf:type owl:Class ;
        rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
@@ -671,7 +700,16 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
 
 ###  https://w3id.org/def/openadr#DataReport
 :DataReport rdf:type owl:Class ;
-            rdfs:subClassOf :Report ;
+            rdfs:subClassOf :Report ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :isDescribedIn ;
+                              owl:allValuesFrom :MetadataReport
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :includesMeasurement ;
+                              owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass <https://saref.etsi.org/saref#Measurement>
+                            ] ;
             rdfs:comment "These reports are used to report actual data that may be measured or calculated." ;
             rdfs:isDefinedBy "OpenADR 2.0 Demand Response Specification Profile B" ;
             rdfs:label "Data report" .
@@ -793,11 +831,12 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
                     rdfs:label "History usage report" .
 
 
-###  https://w3id.org/def/openadr#ItemBase
-:ItemBase rdf:type owl:Class ;
-          rdfs:comment "Units for the data in the report" ;
-          rdfs:isDefinedBy "OASIS Energy Market Information Exchange (eMIX) standard" ;
-          rdfs:label "Item base" .
+###  https://w3id.org/def/openadr#Item
+:Item rdf:type owl:Class ;
+      rdfs:subClassOf <https://saref.etsi.org/saref#Property> ;
+      rdfs:comment "Units for the data in the report" ;
+      rdfs:isDefinedBy "OASIS Energy Market Information Exchange (eMIX) standard" ;
+      rdfs:label "Item" .
 
 
 ###  https://w3id.org/def/openadr#LoadControlSignal
@@ -863,12 +902,6 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
         rdfs:label "Opt Out" .
 
 
-###  https://w3id.org/def/openadr#PayloadResourceStatus
-:PayloadResourceStatus rdf:type owl:Class ;
-                       rdfs:comment "Status of the payload resource" ;
-                       rdfs:label "Payload resource status" .
-
-
 ###  https://w3id.org/def/openadr#Report
 :Report rdf:type owl:Class ;
         rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -892,6 +925,16 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
         rdfs:label "Report" .
 
 
+###  https://w3id.org/def/openadr#ReportDataDescriptor
+:ReportDataDescriptor rdf:type owl:Class ;
+                      rdfs:subClassOf :ReportDescriptor .
+
+
+###  https://w3id.org/def/openadr#ReportDataPayload
+:ReportDataPayload rdf:type owl:Class ;
+                   rdfs:subClassOf :ReportPayload .
+
+
 ###  https://w3id.org/def/openadr#ReportDescriptor
 :ReportDescriptor rdf:type owl:Class ;
                   rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -910,42 +953,25 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
 ###  https://w3id.org/def/openadr#ReportPayload
 :ReportPayload rdf:type owl:Class ;
                rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasPayloadReourceStatus ;
-                                 owl:allValuesFrom :PayloadResourceStatus
-                               ] ,
-                               [ rdf:type owl:Restriction ;
                                  owl:onProperty :accuracy ;
                                  owl:someValuesFrom xsd:string
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :dataquality ;
                                  owl:someValuesFrom xsd:string
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :payloadFloat ;
-                                 owl:someValuesFrom xsd:float
                                ] ;
                rdfs:comment "Payload associated to every report" ;
                rdfs:label "Report payload" .
 
 
-###  https://w3id.org/def/openadr#ReportSpecifier
-:ReportSpecifier rdf:type owl:Class ;
-                 rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                   owl:onProperty :hasGranularity ;
-                                   owl:allValuesFrom <http://www.w3.org/2006/time#TemporalEntity>
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty :hasReportBackDuration ;
-                                   owl:allValuesFrom <http://www.w3.org/2006/time#TemporalEntity>
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty :isReportedDuringInterval ;
-                                   owl:allValuesFrom <http://www.w3.org/2006/time#Interval>
-                                 ] ;
-                 rdfs:comment "Each report specification specifies reporting capabilities" ;
-                 rdfs:isDefinedBy "OpenADR 2.0 Demand Response Program Implementation Guide" ;
-                 rdfs:label "Report specifier" .
+###  https://w3id.org/def/openadr#ReportStatusDescriptor
+:ReportStatusDescriptor rdf:type owl:Class ;
+                        rdfs:subClassOf :ReportDescriptor .
+
+
+###  https://w3id.org/def/openadr#ReportStatusPayload
+:ReportStatusPayload rdf:type owl:Class ;
+                     rdfs:subClassOf :ReportPayload .
 
 
 ###  https://w3id.org/def/openadr#Resource
@@ -963,7 +989,7 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
 :SamplingRate rdf:type owl:Class ;
               rdfs:subClassOf [ rdf:type owl:Restriction ;
                                 owl:onProperty :hasItemBase ;
-                                owl:someValuesFrom :ItemBase
+                                owl:someValuesFrom :Item
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :hasMaxPeriod ;
@@ -1016,10 +1042,6 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :isDefinedIn ;
                           owl:someValuesFrom :SignalInterval
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :isMeasuredIn ;
-                          owl:someValuesFrom <http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure>
                         ] ;
         rdfs:comment "The actionable information contained in an event such as electricity pricing or specific levels of load shed requested that typically trigger some preprogrammed load shed behavior by the recipient of the event." ;
         rdfs:isDefinedBy "OpenADR 2.0 Demand Response Program Implementation Guide" ;
@@ -1037,12 +1059,6 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
               rdfs:subClassOf :Signal ;
               rdfs:label "Signal for signal levels" ,
                          "Simple signal" .
-
-
-###  https://w3id.org/def/openadr#SpecifierPayload
-:SpecifierPayload rdf:type owl:Class ;
-                  rdfs:isDefinedBy "OpenADR 2.0 Demand Response Program Implementation Guide" ;
-                  rdfs:label "Specifier Payload" .
 
 
 ###  https://w3id.org/def/openadr#TelemetryReport
