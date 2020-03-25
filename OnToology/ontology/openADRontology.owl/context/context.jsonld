@@ -23,10 +23,6 @@
     "ReportDescriptor" : {
       "@id" : "https://w3id.org/def/openadr#ReportDescriptor"
     },
-    "readingType" : {
-      "@id" : "https://w3id.org/def/openadr#readingType",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
-    },
     "hasReportBackDuration" : {
       "@id" : "https://w3id.org/def/openadr#hasReportBackDuration",
       "@type" : "@id"
@@ -169,6 +165,10 @@
     "Signal" : {
       "@id" : "https://w3id.org/def/openadr#Signal"
     },
+    "hasmarketContext" : {
+      "@id" : "https://w3id.org/def/openadr#hasmarketContext",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
     "createdDateTime" : {
       "@id" : "https://w3id.org/def/openadr#createdDateTime",
       "@type" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
@@ -199,10 +199,6 @@
     "Interval" : {
       "@id" : "http://www.w3.org/2006/time#Interval"
     },
-    "dataquality" : {
-      "@id" : "https://w3id.org/def/openadr#dataquality",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
-    },
     "reportDescriptor" : {
       "@id" : "https://w3id.org/def/openadr#reportDescriptor",
       "@type" : "@id"
@@ -223,6 +219,10 @@
     },
     "creator" : {
       "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "isAssociatedToItem" : {
+      "@id" : "https://w3id.org/def/openadr#isAssociatedToItem",
+      "@type" : "@id"
     },
     "TelemetryUsageReport" : {
       "@id" : "https://w3id.org/def/openadr#TelemetryUsageReport"
@@ -267,10 +267,6 @@
     "scaleCode" : {
       "@id" : "https://w3id.org/def/openadr#scaleCode",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "isAssociatedToProperty" : {
-      "@id" : "https://w3id.org/def/openadr#isAssociatedToProperty",
-      "@type" : "@id"
     },
     "TemporalEntity" : {
       "@id" : "http://www.w3.org/2006/time#TemporalEntity"
@@ -332,6 +328,10 @@
       "@id" : "http://www.opengis.net/ont/geosparql#hasGeometry",
       "@type" : "@id"
     },
+    "hasDataQuality" : {
+      "@id" : "https://w3id.org/def/openadr#hasDataQuality",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
     "Property" : {
       "@id" : "https://saref.etsi.org/saref#Property"
     },
@@ -389,6 +389,10 @@
     "EventDescriptor" : {
       "@id" : "https://w3id.org/def/openadr#EventDescriptor"
     },
+    "hasReadingType" : {
+      "@id" : "https://w3id.org/def/openadr#hasReadingType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
     "hasTypicalValue" : {
       "@id" : "https://w3id.org/def/openadr#hasTypicalValue",
       "@type" : "@id"
@@ -398,10 +402,6 @@
     },
     "Resource" : {
       "@id" : "https://w3id.org/def/openadr#Resource"
-    },
-    "marketContext" : {
-      "@id" : "https://w3id.org/def/openadr#marketContext",
-      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
     },
     "hasSignalType" : {
       "@id" : "https://w3id.org/def/openadr#hasSignalType",

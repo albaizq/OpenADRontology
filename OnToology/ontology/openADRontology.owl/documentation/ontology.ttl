@@ -14,7 +14,7 @@
                                 <http://purl.org/dc/terms/title> "OpenADR ontology" ;
                                 rdfs:comment "This ontology describes the openADR protocol based on the documentation provided by the openADR Profile B" ,
                                              "http://purl.org/NET/rdflicense/cc-by4.0" ;
-                                owl:versionInfo "0.1.8" .
+                                owl:versionInfo "0.1.9" .
 
 #################################################################
 #    Annotation properties
@@ -214,10 +214,10 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
                       rdfs:label "has active period" .
 
 
-###  https://w3id.org/def/openadr#isAssociatedToProperty
-:isAssociatedToProperty rdf:type owl:ObjectProperty ;
-                        rdfs:comment "Linked between a report and the properties it measure" ;
-                        rdfs:label "is associated to property" .
+###  https://w3id.org/def/openadr#isAssociatedToItem
+:isAssociatedToItem rdf:type owl:ObjectProperty ;
+                    rdfs:comment "Linked between a report and the properties it measure" ;
+                    rdfs:label "is associated to property" .
 
 
 ###  https://w3id.org/def/openadr#isAvailableDuring
@@ -388,12 +388,6 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
                  rdfs:label "created date time" .
 
 
-###  https://w3id.org/def/openadr#dataquality
-:dataquality rdf:type owl:DatatypeProperty ;
-             rdfs:range xsd:string ;
-             rdfs:label "data quality" .
-
-
 ###  https://w3id.org/def/openadr#dstart
 :dstart rdf:type owl:DatatypeProperty ;
         rdfs:range xsd:dateTimeStamp ;
@@ -416,11 +410,31 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
            rdfs:label "group name" .
 
 
+###  https://w3id.org/def/openadr#hasDataQuality
+:hasDataQuality rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:string ;
+                rdfs:label "data quality" .
+
+
+###  https://w3id.org/def/openadr#hasReadingType
+:hasReadingType rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Metadata about the Readings, such as mean or derived" ;
+                rdfs:label "reading type" .
+
+
 ###  https://w3id.org/def/openadr#hasSignalType
 :hasSignalType rdf:type owl:DatatypeProperty ;
                rdfs:domain :Signal ;
                rdfs:range xsd:string ;
                rdfs:label "has signal type" .
+
+
+###  https://w3id.org/def/openadr#hasmarketContext
+:hasmarketContext rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:anyURI ;
+                  rdfs:comment "A URI identifying a DR Program" ;
+                  rdfs:label "market context" .
 
 
 ###  https://w3id.org/def/openadr#isManualOverride
@@ -467,13 +481,6 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
                  rdfs:domain :Item ;
                  rdfs:range xsd:string ;
                  rdfs:label "item description" .
-
-
-###  https://w3id.org/def/openadr#marketContext
-:marketContext rdf:type owl:DatatypeProperty ;
-               rdfs:range xsd:anyURI ;
-               rdfs:comment "A URI identifying a DR Program" ;
-               rdfs:label "market context" .
 
 
 ###  https://w3id.org/def/openadr#modificationDateTime
@@ -527,13 +534,6 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
 :randomization rdf:type owl:DatatypeProperty ;
                rdfs:domain :EventDescriptor ;
                rdfs:range xsd:string .
-
-
-###  https://w3id.org/def/openadr#readingType
-:readingType rdf:type owl:DatatypeProperty ;
-             rdfs:range xsd:string ;
-             rdfs:comment "Metadata about the Readings, such as mean or derived" ;
-             rdfs:label "reading type" .
 
 
 ###  https://w3id.org/def/openadr#registrationNumber
@@ -880,7 +880,7 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
                        owl:someValuesFrom :Schedule
                      ] ,
                      [ rdf:type owl:Restriction ;
-                       owl:onProperty :marketContext ;
+                       owl:onProperty :hasmarketContext ;
                        owl:someValuesFrom xsd:anyURI
                      ] ;
      rdfs:comment "The expected response from the demand side resource owner upon receipt of an event." ;
@@ -957,7 +957,7 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
                                  owl:someValuesFrom xsd:string
                                ] ,
                                [ rdf:type owl:Restriction ;
-                                 owl:onProperty :dataquality ;
+                                 owl:onProperty :hasDataQuality ;
                                  owl:someValuesFrom xsd:string
                                ] ;
                rdfs:comment "Payload associated to every report" ;
