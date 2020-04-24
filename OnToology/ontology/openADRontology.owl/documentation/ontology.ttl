@@ -126,6 +126,14 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
              rdfs:label "has item base" .
 
 
+###  https://w3id.org/def/openadr#hasLoadControlState
+:hasLoadControlState rdf:type owl:ObjectProperty ;
+                     rdfs:domain :Report ;
+                     rdfs:range :LoadControlState ;
+                     rdfs:comment "Relation between a report and the load control state  to enable a VEN to report on its load control state that corresponds to a LOAD_CONTROL signal that might be sent to a VEN." ;
+                     rdfs:label "has load control state" .
+
+
 ###  https://w3id.org/def/openadr#hasMaxPeriod
 :hasMaxPeriod rdf:type owl:ObjectProperty ;
               rdfs:comment "Maximum period of time" ;
@@ -333,6 +341,12 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
                rdfs:label "report subject" .
 
 
+###  https://w3id.org/def/openadr#requests
+:requests rdf:type owl:ObjectProperty ;
+          rdfs:comment "Relationship between the node and the report it requests" ;
+          rdfs:label "requests" .
+
+
 ###  https://w3id.org/def/openadr#requires
 :requires rdf:type owl:ObjectProperty ;
           rdfs:domain :Node ;
@@ -362,30 +376,10 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 #    Data properties
 #################################################################
 
-###  https://w3id.org/def/openadr#accuracy
-:accuracy rdf:type owl:DatatypeProperty ;
-          rdfs:range xsd:string ;
-          rdfs:comment "Indicates the likely variability of the prediction and the  error of a reading" ;
-          rdfs:label "accuracy" .
-
-
 ###  https://w3id.org/def/openadr#comment
 :comment rdf:type owl:DatatypeProperty ;
          rdfs:range xsd:string ;
          rdfs:label "comment" .
-
-
-###  https://w3id.org/def/openadr#confidence
-:confidence rdf:type owl:DatatypeProperty ;
-            rdfs:range xsd:string ;
-            rdfs:comment "A statistical probability that a reported data point is accurate" ;
-            rdfs:label "confidence" .
-
-
-###  https://w3id.org/def/openadr#createdDateTime
-:createdDateTime rdf:type owl:DatatypeProperty ;
-                 rdfs:range xsd:dateTimeStamp ;
-                 rdfs:label "created date time" .
 
 
 ###  https://w3id.org/def/openadr#dstart
@@ -395,25 +389,133 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
         rdfs:label "dstart" .
 
 
-###  https://w3id.org/def/openadr#eventName
-:eventName rdf:type owl:DatatypeProperty ;
-           rdfs:domain :Event ;
-           rdfs:range owl:rational ;
-           rdfs:comment "Name fo an event" ;
-           rdfs:label "event name" .
+###  https://w3id.org/def/openadr#hasAccuracy
+:hasAccuracy rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Indicates the likely variability of the prediction and the  error of a reading" ;
+             rdfs:label "has accuracy" .
 
 
-###  https://w3id.org/def/openadr#groupName
-:groupName rdf:type owl:DatatypeProperty ;
-           rdfs:subPropertyOf owl:topDataProperty ;
-           rdfs:range xsd:string ;
-           rdfs:label "group name" .
+###  https://w3id.org/def/openadr#hasCapacity
+:hasCapacity rdf:type owl:DatatypeProperty ;
+             rdfs:domain :LoadControlState ;
+             rdfs:range rdfs:Literal ;
+             rdfs:label "has capacity" .
+
+
+###  https://w3id.org/def/openadr#hasConfidence
+:hasConfidence rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:string ;
+               rdfs:comment "A statistical probability that a reported data point is accurate" ;
+               rdfs:label "has confidence" .
+
+
+###  https://w3id.org/def/openadr#hasCreatedDateTime
+:hasCreatedDateTime rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:dateTimeStamp ;
+                    rdfs:label "has created date time" .
 
 
 ###  https://w3id.org/def/openadr#hasDataQuality
 :hasDataQuality rdf:type owl:DatatypeProperty ;
                 rdfs:range xsd:string ;
                 rdfs:label "data quality" .
+
+
+###  https://w3id.org/def/openadr#hasEventName
+:hasEventName rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Event ;
+              rdfs:range owl:rational ;
+              rdfs:comment "Name fo an event" ;
+              rdfs:label "has event name" .
+
+
+###  https://w3id.org/def/openadr#hasGroupName
+:hasGroupName rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:range xsd:string ;
+              rdfs:label "group name" .
+
+
+###  https://w3id.org/def/openadr#hasItemDescription
+:hasItemDescription rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Item ;
+                    rdfs:range xsd:string ;
+                    rdfs:label "has item description" .
+
+
+###  https://w3id.org/def/openadr#hasLevelOffset
+:hasLevelOffset rdf:type owl:DatatypeProperty ;
+                rdfs:domain :LoadControlState ;
+                rdfs:range rdfs:Literal ;
+                rdfs:label "has level offset" .
+
+
+###  https://w3id.org/def/openadr#hasMarketContext
+:hasMarketContext rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:anyURI ;
+                  rdfs:comment "A URI identifying a DR Program" ;
+                  rdfs:label "market context" .
+
+
+###  https://w3id.org/def/openadr#hasModificationDateTime
+:hasModificationDateTime rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :EventDescriptor ;
+                         rdfs:range xsd:dateTimeStamp ;
+                         rdfs:comment "Time of modification of an event" ;
+                         rdfs:label "has modification date time" .
+
+
+###  https://w3id.org/def/openadr#hasModificationNumber
+:hasModificationNumber rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :EventDescriptor ;
+                       rdfs:range xsd:integer ;
+                       rdfs:comment "Number which is incremented each time an event is modified." ;
+                       rdfs:label "has modification number" .
+
+
+###  https://w3id.org/def/openadr#hasModificationReason
+:hasModificationReason rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :EventDescriptor ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "It indicates why an event was modified" ;
+                       rdfs:label "has modification reason" .
+
+
+###  https://w3id.org/def/openadr#hasNodeName
+:hasNodeName rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Node ;
+             rdfs:range owl:rational ;
+             rdfs:label "has node name" .
+
+
+###  https://w3id.org/def/openadr#hasPercentageOffset
+:hasPercentageOffset rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :LoadControlState ;
+                     rdfs:range rdfs:Literal ;
+                     rdfs:label "has percentage offset" .
+
+
+###  https://w3id.org/def/openadr#hasPriority
+:hasPriority rdf:type owl:DatatypeProperty ;
+             rdfs:domain :EventDescriptor ;
+             rdfs:range xsd:integer ;
+             rdfs:comment """The priority of the event in relation to other events (The lower the number
+higher the priority. A value of zero (0) indicates no priority, which is the lowest priority by default).""" ;
+             rdfs:label "has priority" .
+
+
+###  https://w3id.org/def/openadr#hasProfileName
+:hasProfileName rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Node ;
+                rdfs:range xsd:string ;
+                rdfs:label "has profile name" .
+
+
+###  https://w3id.org/def/openadr#hasRandomization
+:hasRandomization rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :EventDescriptor ;
+                  rdfs:range xsd:string .
 
 
 ###  https://w3id.org/def/openadr#hasReadingType
@@ -423,6 +525,50 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
                 rdfs:label "reading type" .
 
 
+###  https://w3id.org/def/openadr#hasRegistrationNumber
+:hasRegistrationNumber rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :Node ;
+                       rdfs:range xsd:string ;
+                       rdfs:label "registration number" .
+
+
+###  https://w3id.org/def/openadr#hasReportId
+:hasReportId rdf:type owl:DatatypeProperty ;
+             rdfs:label "Report identifier" .
+
+
+###  https://w3id.org/def/openadr#hasReportName
+:hasReportName rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Report ;
+               rdfs:range xsd:string ;
+               rdfs:label "has report name" .
+
+
+###  https://w3id.org/def/openadr#hasReportType
+:hasReportType rdf:type owl:DatatypeProperty ;
+               rdfs:label "has report type" .
+
+
+###  https://w3id.org/def/openadr#hasRequestId
+:hasRequestId rdf:type owl:DatatypeProperty ;
+              rdfs:label "has request identifier" .
+
+
+###  https://w3id.org/def/openadr#hasScaleCode
+:hasScaleCode rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Item ;
+              rdfs:range xsd:string ;
+              rdfs:comment "A scaling factor for the base unit of measure for a report" ;
+              rdfs:label "has scale code" .
+
+
+###  https://w3id.org/def/openadr#hasSetPoint
+:hasSetPoint rdf:type owl:DatatypeProperty ;
+             rdfs:domain :LoadControlState ;
+             rdfs:range rdfs:Literal ;
+             rdfs:label "has set point" .
+
+
 ###  https://w3id.org/def/openadr#hasSignalType
 :hasSignalType rdf:type owl:DatatypeProperty ;
                rdfs:domain :Signal ;
@@ -430,11 +576,17 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
                rdfs:label "has signal type" .
 
 
-###  https://w3id.org/def/openadr#hasmarketContext
-:hasmarketContext rdf:type owl:DatatypeProperty ;
-                  rdfs:range xsd:anyURI ;
-                  rdfs:comment "A URI identifying a DR Program" ;
-                  rdfs:label "market context" .
+###  https://w3id.org/def/openadr#hasTransportName
+:hasTransportName rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Node ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "has transport name" .
+
+
+###  https://w3id.org/def/openadr#hasVersion
+:hasVersion rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "has version" .
 
 
 ###  https://w3id.org/def/openadr#isManualOverride
@@ -474,108 +626,6 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
              rdfs:domain :EventDescriptor ;
              rdfs:range xsd:boolean ;
              rdfs:label "is test event" .
-
-
-###  https://w3id.org/def/openadr#itemDescription
-:itemDescription rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :Item ;
-                 rdfs:range xsd:string ;
-                 rdfs:label "item description" .
-
-
-###  https://w3id.org/def/openadr#modificationDateTime
-:modificationDateTime rdf:type owl:DatatypeProperty ;
-                      rdfs:domain :EventDescriptor ;
-                      rdfs:range xsd:dateTimeStamp ;
-                      rdfs:comment "Time of modification of an event" ;
-                      rdfs:label "modification date time" .
-
-
-###  https://w3id.org/def/openadr#modificationNumber
-:modificationNumber rdf:type owl:DatatypeProperty ;
-                    rdfs:domain :EventDescriptor ;
-                    rdfs:range xsd:integer ;
-                    rdfs:comment "Number which is incremented each time an event is modified." ;
-                    rdfs:label "modification number" .
-
-
-###  https://w3id.org/def/openadr#modificationReason
-:modificationReason rdf:type owl:DatatypeProperty ;
-                    rdfs:domain :EventDescriptor ;
-                    rdfs:range xsd:string ;
-                    rdfs:comment "It indicates why an event was modified" ;
-                    rdfs:label "modification reason" .
-
-
-###  https://w3id.org/def/openadr#nodeName
-:nodeName rdf:type owl:DatatypeProperty ;
-          rdfs:domain :Node ;
-          rdfs:range owl:rational ;
-          rdfs:label "node name" .
-
-
-###  https://w3id.org/def/openadr#priority
-:priority rdf:type owl:DatatypeProperty ;
-          rdfs:domain :EventDescriptor ;
-          rdfs:range xsd:integer ;
-          rdfs:comment """The priority of the event in relation to other events (The lower the number
-higher the priority. A value of zero (0) indicates no priority, which is the lowest priority by default).""" ;
-          rdfs:label "priority" .
-
-
-###  https://w3id.org/def/openadr#profileName
-:profileName rdf:type owl:DatatypeProperty ;
-             rdfs:domain :Node ;
-             rdfs:range xsd:string ;
-             rdfs:label "profile name" .
-
-
-###  https://w3id.org/def/openadr#randomization
-:randomization rdf:type owl:DatatypeProperty ;
-               rdfs:domain :EventDescriptor ;
-               rdfs:range xsd:string .
-
-
-###  https://w3id.org/def/openadr#registrationNumber
-:registrationNumber rdf:type owl:DatatypeProperty ;
-                    rdfs:domain :Node ;
-                    rdfs:range xsd:string ;
-                    rdfs:label "registration number" .
-
-
-###  https://w3id.org/def/openadr#reportName
-:reportName rdf:type owl:DatatypeProperty ;
-            rdfs:domain :Report ;
-            rdfs:range xsd:string ;
-            rdfs:label "report name" .
-
-
-###  https://w3id.org/def/openadr#scaleCode
-:scaleCode rdf:type owl:DatatypeProperty ;
-           rdfs:domain :Item ;
-           rdfs:range xsd:string ;
-           rdfs:comment "A scaling factor for the base unit of measure for a report" ;
-           rdfs:label "scale code" .
-
-
-###  https://w3id.org/def/openadr#signalType
-:signalType rdf:type owl:DatatypeProperty ;
-            rdfs:domain :Signal ;
-            rdfs:range xsd:string ;
-            rdfs:label "signal type" .
-
-
-###  https://w3id.org/def/openadr#transportName
-:transportName rdf:type owl:DatatypeProperty ;
-               rdfs:domain :Node ;
-               rdfs:range xsd:string ;
-               rdfs:label "transport name" .
-
-
-###  https://w3id.org/def/openadr#version
-:version rdf:type owl:DatatypeProperty ;
-         rdfs:range xsd:string ;
-         rdfs:label "version" .
 
 
 #################################################################
@@ -759,11 +809,11 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
                          owl:someValuesFrom <http://www.w3.org/2006/time#Duration>
                        ] ,
                        [ rdf:type owl:Restriction ;
-                         owl:onProperty :createdDateTime ;
+                         owl:onProperty :hasCreatedDateTime ;
                          owl:someValuesFrom xsd:dateTimeStamp
                        ] ,
                        [ rdf:type owl:Restriction ;
-                         owl:onProperty :version ;
+                         owl:onProperty :hasVersion ;
                          owl:allValuesFrom xsd:string
                        ] ;
        rdfs:comment "An event is a notification from the utility to demand side resources requesting load shed starting at a specific time, over a specified duration, and may include targeting information designating specific resources that should participate in the event" ;
@@ -846,6 +896,12 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
                               "Signal for to set the load control to values that are relative to the load controller and its output capacity." .
 
 
+###  https://w3id.org/def/openadr#LoadControlState
+:LoadControlState rdf:type owl:Class ;
+                  rdfs:comment "The LoadControlState attributes are meant to mirror the LOAD_CONTROL signal attributes meaning that for each LOAD_CONTROL signal type there is a corresponding attribute in the LoadControlState of a report." ;
+                  rdfs:label "Load control state" .
+
+
 ###  https://w3id.org/def/openadr#LoadDispatchSignal
 :LoadDispatchSignal rdf:type owl:Class ;
                     rdfs:subClassOf :Signal ;
@@ -880,7 +936,7 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
                        owl:someValuesFrom :Schedule
                      ] ,
                      [ rdf:type owl:Restriction ;
-                       owl:onProperty :hasmarketContext ;
+                       owl:onProperty :hasMarketContext ;
                        owl:someValuesFrom xsd:anyURI
                      ] ;
      rdfs:comment "The expected response from the demand side resource owner upon receipt of an event." ;
@@ -910,15 +966,23 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :hasDuration ;
-                          owl:allValuesFrom <http://www.w3.org/2006/time#Duration>
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :createdDateTime ;
-                          owl:someValuesFrom xsd:dateTimeStamp
+                          owl:allValuesFrom <http://www.w3.org/2006/time#TemporalEntity>
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :dstart ;
                           owl:someValuesFrom xsd:dateTimeStamp
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasCreatedDateTime ;
+                          owl:someValuesFrom xsd:dateTimeStamp
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasReportId ;
+                          owl:someValuesFrom rdfs:Literal
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasReportType ;
+                          owl:someValuesFrom rdfs:Literal
                         ] ;
         rdfs:comment "Report sent from a VEN to a VTN to report the energy consumption or the status of Resources connected to the VEN" ;
         rdfs:isDefinedBy "OpenADR 2.0 Demand Response Specification Profile B" ;
@@ -953,7 +1017,7 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
 ###  https://w3id.org/def/openadr#ReportPayload
 :ReportPayload rdf:type owl:Class ;
                rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                 owl:onProperty :accuracy ;
+                                 owl:onProperty :hasAccuracy ;
                                  owl:someValuesFrom xsd:string
                                ] ,
                                [ rdf:type owl:Restriction ;
@@ -1063,7 +1127,11 @@ Resources can be composed of Assets, and an Asset may be Resource, but Assets ca
 
 ###  https://w3id.org/def/openadr#TelemetryReport
 :TelemetryReport rdf:type owl:Class ;
-                 rdfs:subClassOf :DataReport ;
+                 rdfs:subClassOf :DataReport ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasLoadControlState ;
+                                   owl:someValuesFrom :LoadControlState
+                                 ] ;
                  rdfs:comment "The term telemetry in the context of OpenADR refers to data that is reported periodically in real time" ;
                  rdfs:isDefinedBy "OpenADR 2.0 Demand Response Specification Profile B" ;
                  rdfs:label "Telemetry report" .
