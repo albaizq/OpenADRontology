@@ -6,7 +6,7 @@
 <https://w3id.org/def/openadr> <http://purl.org/dc/terms/title> "OpenADR ontology" .
 <https://w3id.org/def/openadr> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology describes the openADR protocol based on the documentation provided by the openADR Profile B" .
 <https://w3id.org/def/openadr> <http://www.w3.org/2000/01/rdf-schema#comment> "http://purl.org/NET/rdflicense/cc-by4.0" .
-<https://w3id.org/def/openadr> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.9" .
+<https://w3id.org/def/openadr> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.10" .
 # 
 # 
 # #################################################################
@@ -469,6 +469,10 @@
 <https://w3id.org/def/openadr#hasReportName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/def/openadr#hasReportName> <http://www.w3.org/2000/01/rdf-schema#label> "has report name" .
 # 
+# https://w3id.org/def/openadr#hasReportOnly
+<https://w3id.org/def/openadr#hasReportOnly> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/openadr#hasReportOnly> <http://www.w3.org/2000/01/rdf-schema#label> "has report only" .
+# 
 # https://w3id.org/def/openadr#hasReportType
 <https://w3id.org/def/openadr#hasReportType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/def/openadr#hasReportType> <http://www.w3.org/2000/01/rdf-schema#label> "has report type" .
@@ -506,6 +510,10 @@
 <https://w3id.org/def/openadr#hasVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/def/openadr#hasVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/def/openadr#hasVersion> <http://www.w3.org/2000/01/rdf-schema#label> "has version" .
+# 
+# https://w3id.org/def/openadr#hasXMLsignature
+<https://w3id.org/def/openadr#hasXMLsignature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/openadr#hasXMLsignature> <http://www.w3.org/2000/01/rdf-schema#label> "has XML signature" .
 # 
 # https://w3id.org/def/openadr#isManualOverride
 <https://w3id.org/def/openadr#isManualOverride> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
