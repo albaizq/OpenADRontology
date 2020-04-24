@@ -12,12 +12,8 @@
       "@id" : "https://w3id.org/def/openadr#isDefinedIn",
       "@type" : "@id"
     },
-    "signalType" : {
-      "@id" : "https://w3id.org/def/openadr#signalType",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "confidence" : {
-      "@id" : "https://w3id.org/def/openadr#confidence",
+    "hasAccuracy" : {
+      "@id" : "https://w3id.org/def/openadr#hasAccuracy",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "ReportDescriptor" : {
@@ -48,6 +44,10 @@
       "@id" : "https://w3id.org/def/openadr#isResponseRequired",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
+    "hasCapacity" : {
+      "@id" : "https://w3id.org/def/openadr#hasCapacity",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
     "license" : {
       "@id" : "http://purl.org/dc/terms/license"
     },
@@ -61,10 +61,6 @@
     },
     "TelemetryReport" : {
       "@id" : "https://w3id.org/def/openadr#TelemetryReport"
-    },
-    "priority" : {
-      "@id" : "https://w3id.org/def/openadr#priority",
-      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
     },
     "isTestEvent" : {
       "@id" : "https://w3id.org/def/openadr#isTestEvent",
@@ -98,18 +94,29 @@
       "@id" : "https://w3id.org/def/openadr#cancels",
       "@type" : "@id"
     },
+    "hasNodeName" : {
+      "@id" : "https://w3id.org/def/openadr#hasNodeName",
+      "@type" : "http://www.w3.org/2002/07/owl#rational"
+    },
+    "hasReportType" : {
+      "@id" : "https://w3id.org/def/openadr#hasReportType"
+    },
+    "hasVersion" : {
+      "@id" : "https://w3id.org/def/openadr#hasVersion",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
     "LoadControlSignal" : {
       "@id" : "https://w3id.org/def/openadr#LoadControlSignal"
     },
     "Geometry" : {
       "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
     },
-    "modificationNumber" : {
-      "@id" : "https://w3id.org/def/openadr#modificationNumber",
-      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
-    },
     "Instant" : {
       "@id" : "http://www.w3.org/2006/time#Instant"
+    },
+    "hasItemDescription" : {
+      "@id" : "https://w3id.org/def/openadr#hasItemDescription",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "hasPayload" : {
       "@id" : "https://w3id.org/def/openadr#hasPayload",
@@ -124,6 +131,10 @@
     "isUnavailableDuring" : {
       "@id" : "https://w3id.org/def/openadr#isUnavailableDuring",
       "@type" : "@id"
+    },
+    "hasSetPoint" : {
+      "@id" : "https://w3id.org/def/openadr#hasSetPoint",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     "contains" : {
       "@id" : "https://w3id.org/def/openadr#contains",
@@ -155,6 +166,9 @@
     "Measurement" : {
       "@id" : "https://saref.etsi.org/saref#Measurement"
     },
+    "hasRequestId" : {
+      "@id" : "https://w3id.org/def/openadr#hasRequestId"
+    },
     "OptIn" : {
       "@id" : "https://w3id.org/def/openadr#OptIn"
     },
@@ -165,27 +179,21 @@
     "Signal" : {
       "@id" : "https://w3id.org/def/openadr#Signal"
     },
-    "hasmarketContext" : {
-      "@id" : "https://w3id.org/def/openadr#hasmarketContext",
-      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    "hasReportId" : {
+      "@id" : "https://w3id.org/def/openadr#hasReportId"
     },
-    "createdDateTime" : {
-      "@id" : "https://w3id.org/def/openadr#createdDateTime",
-      "@type" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
+    "LoadControlState" : {
+      "@id" : "https://w3id.org/def/openadr#LoadControlState"
     },
-    "itemDescription" : {
-      "@id" : "https://w3id.org/def/openadr#itemDescription",
+    "hasScaleCode" : {
+      "@id" : "https://w3id.org/def/openadr#hasScaleCode",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "Event" : {
       "@id" : "https://w3id.org/def/openadr#Event"
     },
-    "reportName" : {
-      "@id" : "https://w3id.org/def/openadr#reportName",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "groupName" : {
-      "@id" : "https://w3id.org/def/openadr#groupName",
+    "hasReportName" : {
+      "@id" : "https://w3id.org/def/openadr#hasReportName",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "hasDuration" : {
@@ -205,10 +213,6 @@
     },
     "Report" : {
       "@id" : "https://w3id.org/def/openadr#Report"
-    },
-    "nodeName" : {
-      "@id" : "https://w3id.org/def/openadr#nodeName",
-      "@type" : "http://www.w3.org/2002/07/owl#rational"
     },
     "ChargeStateSignal" : {
       "@id" : "https://w3id.org/def/openadr#ChargeStateSignal"
@@ -231,27 +235,23 @@
       "@id" : "https://w3id.org/def/openadr#isDescribedIn",
       "@type" : "@id"
     },
-    "eventName" : {
-      "@id" : "https://w3id.org/def/openadr#eventName",
-      "@type" : "http://www.w3.org/2002/07/owl#rational"
-    },
     "LoadDispatchSignal" : {
       "@id" : "https://w3id.org/def/openadr#LoadDispatchSignal"
     },
-    "modificationReason" : {
-      "@id" : "https://w3id.org/def/openadr#modificationReason",
+    "hasRegistrationNumber" : {
+      "@id" : "https://w3id.org/def/openadr#hasRegistrationNumber",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "hasTarget" : {
       "@id" : "https://w3id.org/def/openadr#hasTarget",
       "@type" : "@id"
     },
+    "hasCreatedDateTime" : {
+      "@id" : "https://w3id.org/def/openadr#hasCreatedDateTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
+    },
     "EventStatus" : {
       "@id" : "https://w3id.org/def/openadr#EventStatus"
-    },
-    "randomization" : {
-      "@id" : "https://w3id.org/def/openadr#randomization",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "location" : {
       "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#location",
@@ -264,10 +264,6 @@
       "@id" : "https://w3id.org/def/openadr#refersToTarget",
       "@type" : "@id"
     },
-    "scaleCode" : {
-      "@id" : "https://w3id.org/def/openadr#scaleCode",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
-    },
     "TemporalEntity" : {
       "@id" : "http://www.w3.org/2006/time#TemporalEntity"
     },
@@ -278,12 +274,20 @@
     "ReportDataDescriptor" : {
       "@id" : "https://w3id.org/def/openadr#ReportDataDescriptor"
     },
+    "hasEventName" : {
+      "@id" : "https://w3id.org/def/openadr#hasEventName",
+      "@type" : "http://www.w3.org/2002/07/owl#rational"
+    },
     "ReportStatusPayload" : {
       "@id" : "https://w3id.org/def/openadr#ReportStatusPayload"
     },
     "involvesSubject" : {
       "@id" : "https://w3id.org/def/openadr#involvesSubject",
       "@type" : "@id"
+    },
+    "hasModificationReason" : {
+      "@id" : "https://w3id.org/def/openadr#hasModificationReason",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "isAvailableDuring" : {
       "@id" : "https://w3id.org/def/openadr#isAvailableDuring",
@@ -320,9 +324,17 @@
     "Point" : {
       "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#Point"
     },
+    "hasProfileName" : {
+      "@id" : "https://w3id.org/def/openadr#hasProfileName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
     "hasItemBase" : {
       "@id" : "https://w3id.org/def/openadr#hasItemBase",
       "@type" : "@id"
+    },
+    "hasModificationNumber" : {
+      "@id" : "https://w3id.org/def/openadr#hasModificationNumber",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
     },
     "hasGeometry" : {
       "@id" : "http://www.opengis.net/ont/geosparql#hasGeometry",
@@ -353,19 +365,19 @@
       "@id" : "https://w3id.org/def/openadr#isManualOverride",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
+    "hasPriority" : {
+      "@id" : "https://w3id.org/def/openadr#hasPriority",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
     "SamplingRate" : {
       "@id" : "https://w3id.org/def/openadr#SamplingRate"
     },
-    "version" : {
-      "@id" : "https://w3id.org/def/openadr#version",
+    "hasTransportName" : {
+      "@id" : "https://w3id.org/def/openadr#hasTransportName",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "VEN" : {
       "@id" : "https://w3id.org/def/openadr#VEN"
-    },
-    "modificationDateTime" : {
-      "@id" : "https://w3id.org/def/openadr#modificationDateTime",
-      "@type" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
     },
     "hasSamplingRate" : {
       "@id" : "https://w3id.org/def/openadr#hasSamplingRate",
@@ -375,15 +387,15 @@
       "@id" : "https://w3id.org/def/openadr#expectedResponse",
       "@type" : "@id"
     },
+    "hasLoadControlState" : {
+      "@id" : "https://w3id.org/def/openadr#hasLoadControlState",
+      "@type" : "@id"
+    },
     "BidPricesignal" : {
       "@id" : "https://w3id.org/def/openadr#BidPricesignal"
     },
-    "registrationNumber" : {
-      "@id" : "https://w3id.org/def/openadr#registrationNumber",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "profileName" : {
-      "@id" : "https://w3id.org/def/openadr#profileName",
+    "hasGroupName" : {
+      "@id" : "https://w3id.org/def/openadr#hasGroupName",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "EventDescriptor" : {
@@ -399,6 +411,10 @@
     },
     "SignalInterval" : {
       "@id" : "https://w3id.org/def/openadr#SignalInterval"
+    },
+    "hasRandomization" : {
+      "@id" : "https://w3id.org/def/openadr#hasRandomization",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "Resource" : {
       "@id" : "https://w3id.org/def/openadr#Resource"
@@ -431,16 +447,16 @@
     "Group" : {
       "@id" : "https://w3id.org/def/openadr#Group"
     },
-    "accuracy" : {
-      "@id" : "https://w3id.org/def/openadr#accuracy",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
-    },
     "requires" : {
       "@id" : "https://w3id.org/def/openadr#requires",
       "@type" : "@id"
     },
     "ElectricityPriceSignal" : {
       "@id" : "https://w3id.org/def/openadr#ElectricityPriceSignal"
+    },
+    "hasMarketContext" : {
+      "@id" : "https://w3id.org/def/openadr#hasMarketContext",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
     },
     "reportDataSource" : {
       "@id" : "https://w3id.org/def/openadr#reportDataSource",
@@ -462,10 +478,6 @@
     "BidEnergySignal" : {
       "@id" : "https://w3id.org/def/openadr#BidEnergySignal"
     },
-    "transportName" : {
-      "@id" : "https://w3id.org/def/openadr#transportName",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
-    },
     "BidLoadSignal" : {
       "@id" : "https://w3id.org/def/openadr#BidLoadSignal"
     },
@@ -476,8 +488,20 @@
       "@id" : "https://w3id.org/def/openadr#isActiveDuringPeriod",
       "@type" : "@id"
     },
+    "hasLevelOffset" : {
+      "@id" : "https://w3id.org/def/openadr#hasLevelOffset",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
     "OptOut" : {
       "@id" : "https://w3id.org/def/openadr#OptOut"
+    },
+    "requests" : {
+      "@id" : "https://w3id.org/def/openadr#requests",
+      "@type" : "@id"
+    },
+    "hasPercentageOffset" : {
+      "@id" : "https://w3id.org/def/openadr#hasPercentageOffset",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     "ReportStatusDescriptor" : {
       "@id" : "https://w3id.org/def/openadr#ReportStatusDescriptor"
@@ -507,6 +531,14 @@
     },
     "GreenButtonReport" : {
       "@id" : "https://w3id.org/def/openadr#GreenButtonReport"
+    },
+    "hasConfidence" : {
+      "@id" : "https://w3id.org/def/openadr#hasConfidence",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasModificationDateTime" : {
+      "@id" : "https://w3id.org/def/openadr#hasModificationDateTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
     }
   }
 }
