@@ -7,9 +7,9 @@
 @base <https://w3id.org/def/openadr> .
 
 <https://w3id.org/def/openadr> rdf:type owl:Ontology ;
-                                owl:versionInfo "0.1.9" ;
-                                <http://purl.org/dc/elements/1.1/creator> "Alba Fernández Izquierdo" ,
-                                                                          "Andrea Cimmino" ;
+                                <http://purl.org/dc/elements/1.1/creator> "Alba Fernández Izquierdo" ;
+                                owl:versionInfo "0.1.10" ;
+                                <http://purl.org/dc/elements/1.1/creator> "Andrea Cimmino" ;
                                 rdfs:comment "http://purl.org/NET/rdflicense/cc-by4.0" ;
                                 <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                 rdfs:comment "This ontology describes the openADR protocol based on the documentation provided by the openADR Profile B" ;
@@ -544,6 +544,11 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
                rdfs:label "has report name" .
 
 
+###  https://w3id.org/def/openadr#hasReportOnly
+:hasReportOnly rdf:type owl:DatatypeProperty ;
+               rdfs:label "has report only" .
+
+
 ###  https://w3id.org/def/openadr#hasReportType
 :hasReportType rdf:type owl:DatatypeProperty ;
                rdfs:label "has report type" .
@@ -587,6 +592,11 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
 :hasVersion rdf:type owl:DatatypeProperty ;
             rdfs:range xsd:string ;
             rdfs:label "has version" .
+
+
+###  https://w3id.org/def/openadr#hasXMLsignature
+:hasXMLsignature rdf:type owl:DatatypeProperty ;
+                 rdfs:label "has XML signature" .
 
 
 ###  https://w3id.org/def/openadr#isManualOverride
