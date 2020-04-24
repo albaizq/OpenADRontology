@@ -423,6 +423,9 @@
       "@id" : "https://w3id.org/def/openadr#hasSignalType",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
+    "hasXMLsignature" : {
+      "@id" : "https://w3id.org/def/openadr#hasXMLsignature"
+    },
     "SpatialThing" : {
       "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
     },
@@ -436,6 +439,9 @@
     "comment" : {
       "@id" : "https://w3id.org/def/openadr#comment",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasReportOnly" : {
+      "@id" : "https://w3id.org/def/openadr#hasReportOnly"
     },
     "plans" : {
       "@id" : "https://w3id.org/def/openadr#plans",
