@@ -8,7 +8,7 @@
 
 <https://w3id.org/def/openadr> rdf:type owl:Ontology ;
                                 <http://purl.org/dc/elements/1.1/creator> "Alba Fernández Izquierdo" ;
-                                owl:versionInfo "0.2.0" ;
+                                owl:versionInfo "0.2.1" ;
                                 <http://purl.org/dc/elements/1.1/creator> "Andrea Cimmino" ;
                                 rdfs:comment "http://purl.org/NET/rdflicense/cc-by4.0" ;
                                 <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
@@ -631,6 +631,14 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
              rdfs:label "has set point" .
 
 
+###  https://w3id.org/def/openadr#hasSignalName
+:hasSignalName rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Signal ;
+               rdfs:range rdfs:Literal ;
+               rdfs:comment "Name of a signal" ;
+               rdfs:label "has signal name" .
+
+
 ###  https://w3id.org/def/openadr#hasSignalType
 :hasSignalType rdf:type owl:DatatypeProperty ;
                rdfs:domain :Signal ;
@@ -973,11 +981,11 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
 ###  https://w3id.org/def/openadr#Node
 :Node rdf:type owl:Class ;
       rdfs:subClassOf [ rdf:type owl:Restriction ;
-                        owl:onProperty :sends ;
+                        owl:onProperty :sendsOpt ;
                         owl:someValuesFrom :Opt
                       ] ,
                       [ rdf:type owl:Restriction ;
-                        owl:onProperty :sends ;
+                        owl:onProperty :sendsReport ;
                         owl:someValuesFrom :Report
                       ] ;
       rdfs:comment "Element that interacts with resources in the environment" ;
@@ -1228,7 +1236,7 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
 :VTN rdf:type owl:Class ;
      rdfs:subClassOf :Node ,
                      [ rdf:type owl:Restriction ;
-                       owl:onProperty :sends ;
+                       owl:onProperty :sendsEvent ;
                        owl:someValuesFrom :Event
                      ] ;
      rdfs:comment "This is the OpenADR Virtual Top Node that is used to interact with the Resources enrolled in the DR Programs." ;
