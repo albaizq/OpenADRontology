@@ -16,6 +16,10 @@
       "@id" : "https://w3id.org/def/openadr#hasAccuracy",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
+    "containsResource" : {
+      "@id" : "https://w3id.org/def/openadr#containsResource",
+      "@type" : "@id"
+    },
     "ReportDescriptor" : {
       "@id" : "https://w3id.org/def/openadr#ReportDescriptor"
     },
@@ -66,9 +70,6 @@
       "@id" : "https://w3id.org/def/openadr#isTestEvent",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
-    "Asset" : {
-      "@id" : "https://w3id.org/def/openadr#Asset"
-    },
     "appliesTo" : {
       "@id" : "https://w3id.org/def/openadr#appliesTo",
       "@type" : "@id"
@@ -110,6 +111,10 @@
     },
     "Geometry" : {
       "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
+    },
+    "containsAsset" : {
+      "@id" : "https://w3id.org/def/openadr#containsAsset",
+      "@type" : "@id"
     },
     "Instant" : {
       "@id" : "http://www.w3.org/2006/time#Instant"
@@ -163,9 +168,6 @@
     "EnergyPriceSignal" : {
       "@id" : "https://w3id.org/def/openadr#EnergyPriceSignal"
     },
-    "Measurement" : {
-      "@id" : "https://saref.etsi.org/saref#Measurement"
-    },
     "hasRequestId" : {
       "@id" : "https://w3id.org/def/openadr#hasRequestId"
     },
@@ -200,12 +202,12 @@
       "@id" : "https://w3id.org/def/openadr#hasDuration",
       "@type" : "@id"
     },
-    "dstart" : {
-      "@id" : "https://w3id.org/def/openadr#dstart",
-      "@type" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
-    },
     "Interval" : {
       "@id" : "http://www.w3.org/2006/time#Interval"
+    },
+    "hasGroupTarget" : {
+      "@id" : "https://w3id.org/def/openadr#hasGroupTarget",
+      "@type" : "@id"
     },
     "reportDescriptor" : {
       "@id" : "https://w3id.org/def/openadr#reportDescriptor",
@@ -264,12 +266,24 @@
       "@id" : "https://w3id.org/def/openadr#refersToTarget",
       "@type" : "@id"
     },
+    "sendsOpt" : {
+      "@id" : "https://w3id.org/def/openadr#sendsOpt",
+      "@type" : "@id"
+    },
+    "hasAreaTarget" : {
+      "@id" : "https://w3id.org/def/openadr#hasAreaTarget",
+      "@type" : "@id"
+    },
     "TemporalEntity" : {
       "@id" : "http://www.w3.org/2006/time#TemporalEntity"
     },
     "isOnChange" : {
       "@id" : "https://w3id.org/def/openadr#isOnChange",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "containsVEN" : {
+      "@id" : "https://w3id.org/def/openadr#containsVEN",
+      "@type" : "@id"
     },
     "ReportDataDescriptor" : {
       "@id" : "https://w3id.org/def/openadr#ReportDataDescriptor"
@@ -344,19 +358,12 @@
       "@id" : "https://w3id.org/def/openadr#hasDataQuality",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
-    "Property" : {
-      "@id" : "https://saref.etsi.org/saref#Property"
-    },
     "sfContains" : {
       "@id" : "http://www.opengis.net/ont/geosparql#sfContains",
       "@type" : "@id"
     },
     "title" : {
       "@id" : "http://purl.org/dc/terms/title"
-    },
-    "isMeasuredIn" : {
-      "@id" : "https://w3id.org/saref#isMeasuredIn",
-      "@type" : "@id"
     },
     "SpatialObject" : {
       "@id" : "http://www.opengis.net/ont/geosparql#SpatialObject"
@@ -381,6 +388,10 @@
     },
     "hasSamplingRate" : {
       "@id" : "https://w3id.org/def/openadr#hasSamplingRate",
+      "@type" : "@id"
+    },
+    "sendsReport" : {
+      "@id" : "https://w3id.org/def/openadr#sendsReport",
       "@type" : "@id"
     },
     "expectedResponse" : {
@@ -419,6 +430,10 @@
     "Resource" : {
       "@id" : "https://w3id.org/def/openadr#Resource"
     },
+    "starts" : {
+      "@id" : "https://w3id.org/def/openadr#starts",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
+    },
     "hasSignalType" : {
       "@id" : "https://w3id.org/def/openadr#hasSignalType",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
@@ -449,6 +464,10 @@
     },
     "HistoryUsageReport" : {
       "@id" : "https://w3id.org/def/openadr#HistoryUsageReport"
+    },
+    "sendsEvent" : {
+      "@id" : "https://w3id.org/def/openadr#sendsEvent",
+      "@type" : "@id"
     },
     "Group" : {
       "@id" : "https://w3id.org/def/openadr#Group"

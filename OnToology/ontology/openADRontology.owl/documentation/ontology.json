@@ -11,22 +11,13 @@
   "@id" : "_:genid10",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/openadr#recovery"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2006/time#Duration"
-  } ]
-}, {
-  "@id" : "_:genid11",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/openadr#hasCreatedDateTime"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
   } ]
 }, {
-  "@id" : "_:genid12",
+  "@id" : "_:genid11",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -35,7 +26,7 @@
     "@id" : "https://w3id.org/def/openadr#hasVersion"
   } ]
 }, {
-  "@id" : "_:genid13",
+  "@id" : "_:genid12",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/openadr#appliesTo"
@@ -44,34 +35,7 @@
     "@id" : "https://w3id.org/def/openadr#ServiceArea"
   } ]
 }, {
-  "@id" : "_:genid14",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/openadr#contains"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/def/openadr#Asset"
-  } ]
-}, {
-  "@id" : "_:genid15",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/openadr#contains"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/def/openadr#Resource"
-  } ]
-}, {
-  "@id" : "_:genid16",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/openadr#contains"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/def/openadr#VEN"
-  } ]
-}, {
-  "@id" : "_:genid17",
+  "@id" : "_:genid13",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/openadr#sends"
@@ -80,7 +44,7 @@
     "@id" : "https://w3id.org/def/openadr#Opt"
   } ]
 }, {
-  "@id" : "_:genid18",
+  "@id" : "_:genid14",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/openadr#sends"
@@ -89,13 +53,49 @@
     "@id" : "https://w3id.org/def/openadr#Report"
   } ]
 }, {
-  "@id" : "_:genid19",
+  "@id" : "_:genid15",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/openadr#plans"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "https://w3id.org/def/openadr#Schedule"
+  } ]
+}, {
+  "@id" : "_:genid16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/openadr#hasMarketContext"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/openadr#isActiveDuringPeriod"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2006/time#Interval"
+  } ]
+}, {
+  "@id" : "_:genid18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2006/time#TemporalEntity"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/openadr#hasDuration"
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/openadr#hasCreatedDateTime"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
   } ]
 }, {
   "@id" : "_:genid2",
@@ -110,58 +110,13 @@
   "@id" : "_:genid20",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/openadr#hasMarketContext"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
-  } ]
-}, {
-  "@id" : "_:genid21",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/openadr#isActiveDuringPeriod"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2006/time#Interval"
-  } ]
-}, {
-  "@id" : "_:genid22",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2006/time#TemporalEntity"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/openadr#hasDuration"
-  } ]
-}, {
-  "@id" : "_:genid23",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/openadr#dstart"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
-  } ]
-}, {
-  "@id" : "_:genid24",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/openadr#hasCreatedDateTime"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
-  } ]
-}, {
-  "@id" : "_:genid25",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/openadr#hasReportId"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "_:genid26",
+  "@id" : "_:genid21",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/openadr#hasReportType"
@@ -170,7 +125,16 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "_:genid27",
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/openadr#starts"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
+  } ]
+}, {
+  "@id" : "_:genid23",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/openadr#involvesSubject"
@@ -179,7 +143,7 @@
     "@id" : "https://w3id.org/def/openadr#Group"
   } ]
 }, {
-  "@id" : "_:genid28",
+  "@id" : "_:genid24",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/def/openadr#SamplingRate"
@@ -188,13 +152,49 @@
     "@id" : "https://w3id.org/def/openadr#hasSamplingRate"
   } ]
 }, {
-  "@id" : "_:genid29",
+  "@id" : "_:genid25",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/openadr#hasAccuracy"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid26",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/openadr#hasDataQuality"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid27",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/openadr#hasItemBase"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/def/openadr#Item"
+  } ]
+}, {
+  "@id" : "_:genid28",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2006/time#TemporalEntity"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/openadr#hasMaxPeriod"
+  } ]
+}, {
+  "@id" : "_:genid29",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2006/time#TemporalEntity"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/openadr#hasMinPeriod"
   } ]
 }, {
   "@id" : "_:genid3",
@@ -209,58 +209,13 @@
   "@id" : "_:genid30",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/openadr#hasDataQuality"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "_:genid31",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/openadr#manages"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/def/openadr#Asset"
-  } ]
-}, {
-  "@id" : "_:genid32",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/openadr#hasItemBase"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/def/openadr#Item"
-  } ]
-}, {
-  "@id" : "_:genid33",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2006/time#TemporalEntity"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/openadr#hasMaxPeriod"
-  } ]
-}, {
-  "@id" : "_:genid34",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2006/time#TemporalEntity"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/openadr#hasMinPeriod"
-  } ]
-}, {
-  "@id" : "_:genid35",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/openadr#isOnChange"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ]
 }, {
-  "@id" : "_:genid36",
+  "@id" : "_:genid31",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/openadr#isAvailableDuring"
@@ -269,7 +224,7 @@
     "@id" : "http://www.w3.org/2006/time#Interval"
   } ]
 }, {
-  "@id" : "_:genid37",
+  "@id" : "_:genid32",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/openadr#isUnavailableDuring"
@@ -278,7 +233,7 @@
     "@id" : "http://www.w3.org/2006/time#Interval"
   } ]
 }, {
-  "@id" : "_:genid38",
+  "@id" : "_:genid33",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/openadr#refersToTarget"
@@ -287,13 +242,55 @@
     "@id" : "https://w3id.org/def/openadr#Group"
   } ]
 }, {
-  "@id" : "_:genid39",
+  "@id" : "_:genid34",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/openadr#hasTarget"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "https://w3id.org/def/openadr#Group"
+  } ]
+}, {
+  "@id" : "_:genid35",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/openadr#isDefinedIn"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/def/openadr#SignalInterval"
+  } ]
+}, {
+  "@id" : "_:genid36",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/openadr#hasLoadControlState"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/def/openadr#LoadControlState"
+  } ]
+}, {
+  "@id" : "_:genid37",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/openadr#manages"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/def/openadr#Resource"
+  } ]
+}, {
+  "@id" : "_:genid38",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/openadr#sends"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/def/openadr#Event"
+  } ]
+}, {
+  "@id" : "_:genid39",
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ]
 }, {
   "@id" : "_:genid4",
@@ -305,62 +302,7 @@
     "@id" : "https://w3id.org/def/openadr#isDescribedIn"
   } ]
 }, {
-  "@id" : "_:genid40",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/openadr#isDefinedIn"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/def/openadr#SignalInterval"
-  } ]
-}, {
-  "@id" : "_:genid41",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/openadr#hasLoadControlState"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/def/openadr#LoadControlState"
-  } ]
-}, {
-  "@id" : "_:genid42",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/openadr#manages"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/def/openadr#Resource"
-  } ]
-}, {
-  "@id" : "_:genid43",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/openadr#sends"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/def/openadr#Event"
-  } ]
-}, {
-  "@id" : "_:genid44",
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ]
-}, {
   "@id" : "_:genid5",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "https://saref.etsi.org/saref#Measurement"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/openadr#includesMeasurement"
-  } ]
-}, {
-  "@id" : "_:genid6",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/openadr#eventDescriptor"
@@ -369,7 +311,7 @@
     "@id" : "https://w3id.org/def/openadr#EventDescriptor"
   } ]
 }, {
-  "@id" : "_:genid7",
+  "@id" : "_:genid6",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/openadr#expectedResponse"
@@ -378,7 +320,7 @@
     "@id" : "https://w3id.org/def/openadr#Opt"
   } ]
 }, {
-  "@id" : "_:genid8",
+  "@id" : "_:genid7",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/openadr#includesSignal"
@@ -387,10 +329,19 @@
     "@id" : "https://w3id.org/def/openadr#Signal"
   } ]
 }, {
-  "@id" : "_:genid9",
+  "@id" : "_:genid8",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/openadr#ramp_up"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2006/time#Duration"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/openadr#recovery"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2006/time#Duration"
@@ -429,7 +380,16 @@
   } ]
 }, {
   "@id" : "http://www.opengis.net/ont/geosparql#Geometry",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://www.opengis.net/ont/geosparql"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Geometry"
+  } ]
 }, {
   "@id" : "http://www.opengis.net/ont/geosparql#SpatialObject",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -450,8 +410,14 @@
 }, {
   "@id" : "http://www.opengis.net/ont/geosparql#hasGeometry",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A spatial representation for a given feature."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://www.opengis.net/ont/geosparql"
+    "@id" : "http://www.opengis.net/spec/geosparql"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Geometry"
   } ]
 }, {
   "@id" : "http://www.opengis.net/ont/geosparql#sfContains",
@@ -479,7 +445,16 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#Point",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A point, typically described using a coordinate system relative to Earth, such as WGS84."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://www.w3.org/2003/01/geo/wgs84_pos#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Point"
+  } ]
 }, {
   "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -494,22 +469,25 @@
   } ]
 }, {
   "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#location",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "http://www.w3.org/2006/time#Duration",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://www.w3.org/2006/time"
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Duration of a temporal extent expressed as a number scaled by a temporal unit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Duration"
+    "@value" : "Time duration"
   } ]
 }, {
   "@id" : "http://www.w3.org/2006/time#Instant",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A temporal entity with zero extent or duration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.w3.org/2006/time"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Instant"
   } ],
@@ -519,6 +497,12 @@
 }, {
   "@id" : "http://www.w3.org/2006/time#Interval",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A temporal entity with non-zero extent or duration, for which the value of the beginning and end are different"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.w3.org/2006/time"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Interval"
   } ],
@@ -528,6 +512,9 @@
 }, {
   "@id" : "http://www.w3.org/2006/time#TemporalEntity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A temporal entity with zero extent or duration"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://www.w3.org/2006/time"
   } ],
@@ -536,22 +523,15 @@
   } ]
 }, {
   "@id" : "http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://www.wurvoc.org/vocabularies/om-1.8/United_States_dollar",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
-}, {
-  "@id" : "http://www.wurvoc.org/vocabularies/om-1.8/kilowatt_hour",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
-}, {
-  "@id" : "http://www.wurvoc.org/vocabularies/om-1.8/watt",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
-}, {
-  "@id" : "https://saref.etsi.org/saref#Measurement",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://saref.etsi.org/saref#Property",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A unit of measure is a definite magnitude of a quantity, defined and adopted by convention and/or by law. It is used as a standard for measurement of the same quantity, where any other value of the quantity can be expressed as a simple multiple of the unit of measure. For example, length is a quantity; the metre is a unit of length that represents a definite predetermined length. When we say 10 metre (or 10 m), we actually mean 10 times the definite predetermined length called \"metre\"."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@id" : "http://www.wurvoc.org/vocabularies/om-1.8/"
+  }, {
+    "@value" : "unit of measure"
+  } ]
 }, {
   "@id" : "https://w3id.org/def/openadr",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
@@ -574,26 +554,11 @@
     "@value" : "http://purl.org/NET/rdflicense/cc-by4.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.1.10"
+    "@value" : "0.2.0"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#Active",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#EventStatus" ]
-}, {
-  "@id" : "https://w3id.org/def/openadr#Asset",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A type of Resource that represents a specific collection of physical loads.\nResources can be composed of Assets, and an Asset may be Resource, but Assets cannot be further decomposed into multiple Assets or Resources."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@value" : "OpenADR 2.0 Demand Response Program Implementation Guide"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Asset"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
-  } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#BidEnergySignal",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -661,8 +626,6 @@
     "@id" : "https://w3id.org/def/openadr#Report"
   }, {
     "@id" : "_:genid4"
-  }, {
-    "@id" : "_:genid5"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#DemandChargeSignal",
@@ -712,6 +675,8 @@
     "@value" : "Event"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid5"
+  }, {
     "@id" : "_:genid6"
   }, {
     "@id" : "_:genid7"
@@ -723,8 +688,6 @@
     "@id" : "_:genid10"
   }, {
     "@id" : "_:genid11"
-  }, {
-    "@id" : "_:genid12"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#EventDescriptor",
@@ -778,13 +741,7 @@
     "@value" : "Group"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid13"
-  }, {
-    "@id" : "_:genid14"
-  }, {
-    "@id" : "_:genid15"
-  }, {
-    "@id" : "_:genid16"
+    "@id" : "_:genid12"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#HistoryReport",
@@ -827,9 +784,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Item"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://saref.etsi.org/saref#Property"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#LoadControlSignal",
@@ -883,10 +837,16 @@
 }, {
   "@id" : "https://w3id.org/def/openadr#Node",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Element that interacts with resources in the environment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Node"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid17"
+    "@id" : "_:genid13"
   }, {
-    "@id" : "_:genid18"
+    "@id" : "_:genid14"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#Opt",
@@ -901,9 +861,9 @@
     "@value" : "Opt"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid19"
+    "@id" : "_:genid15"
   }, {
-    "@id" : "_:genid20"
+    "@id" : "_:genid16"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#OptIn",
@@ -942,27 +902,38 @@
     "@value" : "Report"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid17"
+  }, {
+    "@id" : "_:genid18"
+  }, {
+    "@id" : "_:genid19"
+  }, {
+    "@id" : "_:genid20"
+  }, {
     "@id" : "_:genid21"
   }, {
     "@id" : "_:genid22"
-  }, {
-    "@id" : "_:genid23"
-  }, {
-    "@id" : "_:genid24"
-  }, {
-    "@id" : "_:genid25"
-  }, {
-    "@id" : "_:genid26"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#ReportDataDescriptor",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Part of the OpenADR report object that describes the data included in the descriptor report"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Report data descriptor"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/openadr#ReportDescriptor"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#ReportDataPayload",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Part of the OpenADR report object that includes the data sent to a node"
+  }, {
+    "@value" : "Report data payload"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/openadr#ReportPayload"
   } ]
@@ -979,9 +950,9 @@
     "@value" : "Report descriptor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid27"
+    "@id" : "_:genid23"
   }, {
-    "@id" : "_:genid28"
+    "@id" : "_:genid24"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#ReportPayload",
@@ -993,19 +964,31 @@
     "@value" : "Report payload"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid29"
+    "@id" : "_:genid25"
   }, {
-    "@id" : "_:genid30"
+    "@id" : "_:genid26"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#ReportStatusDescriptor",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Part of the OpenADR report object that describes the status of the descriptor report"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Report status descriptor"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/openadr#ReportDescriptor"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#ReportStatusPayload",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Part of the OpenADR report object that includes the status  of the payload report"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Report status payload"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/openadr#ReportPayload"
   } ]
@@ -1020,9 +1003,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Resource"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid31"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#SamplingRate",
@@ -1034,13 +1014,13 @@
     "@value" : "Sampling rate"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid32"
+    "@id" : "_:genid27"
   }, {
-    "@id" : "_:genid33"
+    "@id" : "_:genid28"
   }, {
-    "@id" : "_:genid34"
+    "@id" : "_:genid29"
   }, {
-    "@id" : "_:genid35"
+    "@id" : "_:genid30"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#Schedule",
@@ -1052,11 +1032,11 @@
     "@value" : "Schedule"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid36"
+    "@id" : "_:genid31"
   }, {
-    "@id" : "_:genid37"
+    "@id" : "_:genid32"
   }, {
-    "@id" : "_:genid38"
+    "@id" : "_:genid33"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#ServiceArea",
@@ -1086,9 +1066,9 @@
     "@value" : "Signal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid39"
+    "@id" : "_:genid34"
   }, {
-    "@id" : "_:genid40"
+    "@id" : "_:genid35"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#SignalInterval",
@@ -1125,7 +1105,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/openadr#DataReport"
   }, {
-    "@id" : "_:genid41"
+    "@id" : "_:genid36"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#TelemetryStatusReport",
@@ -1172,7 +1152,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/openadr#Node"
   }, {
-    "@id" : "_:genid42"
+    "@id" : "_:genid37"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#VTN",
@@ -1189,7 +1169,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/openadr#Node"
   }, {
-    "@id" : "_:genid43"
+    "@id" : "_:genid38"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#appliesTo",
@@ -1234,16 +1214,37 @@
     "@value" : "contains"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/openadr#dstart",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The starting time for the activity, data, or state change"
-  } ],
+  "@id" : "https://w3id.org/def/openadr#containsAsset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "dstart"
+    "@value" : "Relation between a target and the asset it contains"
+  }, {
+    "@value" : "contains asset"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/def/openadr#contains"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#containsResource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Relation between a target and the resource it contains"
+  }, {
+    "@value" : "contains resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/def/openadr#contains"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#containsVEN",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Relation between a target and the VEN it contains"
+  }, {
+    "@value" : "contains VEN"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/def/openadr#contains"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#eventDescriptor",
@@ -1277,6 +1278,24 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#hasAreaTarget",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relation between an entity and its service area target"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/openadr#Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has area target"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/def/openadr#ServiceArea"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/def/openadr#hasTarget"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#hasCapacity",
@@ -1379,6 +1398,24 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#hasGroupTarget",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relation between an entity and its group target"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/openadr#Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has group target"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/def/openadr#Group"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/def/openadr#hasTarget"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#hasItemBase",
@@ -1518,6 +1555,9 @@
 }, {
   "@id" : "https://w3id.org/def/openadr#hasPayload",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "Link between a report and its payload"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has payload"
   } ]
@@ -1566,6 +1606,9 @@
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/def/openadr#EventDescriptor"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has randomization"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
@@ -1588,7 +1631,7 @@
     "@id" : "https://w3id.org/def/openadr#Node"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "registration number"
+    "@value" : "has registration number"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -1603,7 +1646,7 @@
   "@id" : "https://w3id.org/def/openadr#hasReportId",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Report identifier"
+    "@value" : "has report identifier"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#hasReportName",
@@ -1773,14 +1816,14 @@
 }, {
   "@id" : "https://w3id.org/def/openadr#includesMeasurement",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Link between a report and the measurement included in the payload"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/def/openadr#ReportDataPayload"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "includes measurement"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://saref.etsi.org/saref#Measurement"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#includesSignal",
@@ -1842,12 +1885,13 @@
 }, {
   "@id" : "https://w3id.org/def/openadr#isDescribedIn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relation between a payload and its descriptor"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/def/openadr#ReportPayload"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Relation between a payload and its descriptor"
-  }, {
     "@value" : "is described in"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
@@ -1872,8 +1916,6 @@
     "@id" : "https://w3id.org/def/openadr#ReportStatusPayload"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : ""
-  }, {
     "@value" : "is manual override"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
@@ -1963,6 +2005,9 @@
 }, {
   "@id" : "https://w3id.org/def/openadr#isTestEvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Attribute to indicate if the event is for testing purposes"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/def/openadr#EventDescriptor"
   } ],
@@ -2104,6 +2149,60 @@
     "@value" : "sends"
   } ]
 }, {
+  "@id" : "https://w3id.org/def/openadr#sendsEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A link between a node and the event it sends"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/openadr#Node"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "sends event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/def/openadr#Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/def/openadr#sends"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#sendsOpt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A link between a node and the opt it sends"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/openadr#Node"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "sends opt"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/def/openadr#Opt"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/def/openadr#sends"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#sendsReport",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A link between a node and the report it sends"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/openadr#Node"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "sends report"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/def/openadr#Report"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/def/openadr#sends"
+  } ]
+}, {
   "@id" : "https://w3id.org/def/openadr#specifiesReport",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -2115,9 +2214,15 @@
     "@value" : "specifies report"
   } ]
 }, {
-  "@id" : "https://w3id.org/saref#isMeasuredIn",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://w3id.org/saref"
+  "@id" : "https://w3id.org/def/openadr#starts",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The starting time for the activity, data, or state change"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "starts"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
   } ]
 } ]
