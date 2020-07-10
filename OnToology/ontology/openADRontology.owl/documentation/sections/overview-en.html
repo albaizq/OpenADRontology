@@ -1,10 +1,11 @@
-<html><h2 id="overv" class="list">OpenADR ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<h2 id="overv" class="list">OpenADR ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
 This ontology has the following classes and properties.</span>
 <h4>Classes</h4>
 <ul class="hlist">
    <li>
-      <a href="#Asset" title="https://w3id.org/def/openadr#Asset">Asset</a>
+      <a href="#http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"
+         title="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"/>
    </li>
    <li>
       <a href="#BidEnergySignal" title="https://w3id.org/def/openadr#BidEnergySignal">Bid energy signal</a>
@@ -25,9 +26,6 @@ This ontology has the following classes and properties.</span>
       <a href="#DemandChargeSignal" title="https://w3id.org/def/openadr#DemandChargeSignal">Demand charge signal</a>
    </li>
    <li>
-      <a href="#http://www.w3.org/2006/time#Duration" title="http://www.w3.org/2006/time#Duration">Duration</a>
-   </li>
-   <li>
       <a href="#ElectricityPriceSignal"
          title="https://w3id.org/def/openadr#ElectricityPriceSignal">Electricity price signal</a>
    </li>
@@ -45,6 +43,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Feature</a>
+   </li>
+   <li>
+      <a href="#http://www.opengis.net/ont/geosparql#Geometry" title="http://www.opengis.net/ont/geosparql#Geometry">Geometry</a>
    </li>
    <li>
       <a href="#GreenButtonReport" title="https://w3id.org/def/openadr#GreenButtonReport">Green button report</a>
@@ -80,9 +81,7 @@ This ontology has the following classes and properties.</span>
       <a href="#MetadataReport" title="https://w3id.org/def/openadr#MetadataReport">Metadata report</a>
    </li>
    <li>
-      <a href="#Node" title="https://w3id.org/def/openadr#Node">
-         <span>node</span>
-      </a>
+      <a href="#Node" title="https://w3id.org/def/openadr#Node">Node</a>
    </li>
    <li>
       <a href="#Opt" title="https://w3id.org/def/openadr#Opt">Opt</a>
@@ -94,18 +93,17 @@ This ontology has the following classes and properties.</span>
       <a href="#OptOut" title="https://w3id.org/def/openadr#OptOut">Opt Out</a>
    </li>
    <li>
+      <a href="#ReportDataPayload" title="https://w3id.org/def/openadr#ReportDataPayload">Part of the OpenADR report object that includes the data sent to a node</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#Point" title="http://www.w3.org/2003/01/geo/wgs84_pos#Point">Point</a>
+   </li>
+   <li>
       <a href="#Report" title="https://w3id.org/def/openadr#Report">Report</a>
    </li>
    <li>
       <a href="#ReportDataDescriptor"
-         title="https://w3id.org/def/openadr#ReportDataDescriptor">
-         <span>report data descriptor</span>
-      </a>
-   </li>
-   <li>
-      <a href="#ReportDataPayload" title="https://w3id.org/def/openadr#ReportDataPayload">
-         <span>report data payload</span>
-      </a>
+         title="https://w3id.org/def/openadr#ReportDataDescriptor">Report data descriptor</a>
    </li>
    <li>
       <a href="#ReportDescriptor" title="https://w3id.org/def/openadr#ReportDescriptor">Report descriptor</a>
@@ -115,15 +113,11 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#ReportStatusDescriptor"
-         title="https://w3id.org/def/openadr#ReportStatusDescriptor">
-         <span>report status descriptor</span>
-      </a>
+         title="https://w3id.org/def/openadr#ReportStatusDescriptor">Report status descriptor</a>
    </li>
    <li>
       <a href="#ReportStatusPayload"
-         title="https://w3id.org/def/openadr#ReportStatusPayload">
-         <span>report status payload</span>
-      </a>
+         title="https://w3id.org/def/openadr#ReportStatusPayload">Report status payload</a>
    </li>
    <li>
       <a href="#Resource" title="https://w3id.org/def/openadr#Resource">Resource</a>
@@ -169,6 +163,9 @@ This ontology has the following classes and properties.</span>
       <a href="#http://www.w3.org/2006/time#TemporalEntity" title="http://www.w3.org/2006/time#TemporalEntity">Temporal Entity</a>
    </li>
    <li>
+      <a href="#http://www.w3.org/2006/time#Duration" title="http://www.w3.org/2006/time#Duration">Time duration</a>
+   </li>
+   <li>
       <a href="#VEN" title="https://w3id.org/def/openadr#VEN">Virtual End Node (VEN)</a>
    </li>
    <li>
@@ -197,8 +194,14 @@ This ontology has the following classes and properties.</span>
       <a href="#expectedResponse" title="https://w3id.org/def/openadr#expectedResponse">expected response</a>
    </li>
    <li>
+      <a href="#http://www.opengis.net/ont/geosparql#hasGeometry" title="http://www.opengis.net/ont/geosparql#hasGeometry">Geometry</a>
+   </li>
+   <li>
       <a href="#isActiveDuringPeriod"
          title="https://w3id.org/def/openadr#isActiveDuringPeriod">has active period</a>
+   </li>
+   <li>
+      <a href="#hasAreaTarget" title="https://w3id.org/def/openadr#hasAreaTarget">has area target</a>
    </li>
    <li>
       <a href="#hasDuration" title="https://w3id.org/def/openadr#hasDuration">has duration</a>
@@ -207,12 +210,10 @@ This ontology has the following classes and properties.</span>
       <a href="#hasEventStatus" title="https://w3id.org/def/openadr#hasEventStatus">has event status</a>
    </li>
    <li>
-      <a href="#http://www.opengis.net/ont/geosparql#hasGeometry" title="http://www.opengis.net/ont/geosparql#hasGeometry">
-         <span>has geometry</span>
-      </a>
+      <a href="#hasGranularity" title="https://w3id.org/def/openadr#hasGranularity">has granularity</a>
    </li>
    <li>
-      <a href="#hasGranularity" title="https://w3id.org/def/openadr#hasGranularity">has granularity</a>
+      <a href="#hasGroupTarget" title="https://w3id.org/def/openadr#hasGroupTarget">has group target</a>
    </li>
    <li>
       <a href="#isDefinedIn" title="https://w3id.org/def/openadr#isDefinedIn">has interval</a>
@@ -271,12 +272,10 @@ This ontology has the following classes and properties.</span>
       <a href="#isAvailableDuring" title="https://w3id.org/def/openadr#isAvailableDuring">is available during</a>
    </li>
    <li>
-      <a href="#isManagedBy" title="https://w3id.org/def/openadr#isManagedBy">is managed by</a>
+      <a href="#isDescribedIn" title="https://w3id.org/def/openadr#isDescribedIn">is described in</a>
    </li>
    <li>
-      <a href="#https://w3id.org/saref#isMeasuredIn" title="https://w3id.org/saref#isMeasuredIn">
-         <span>is measured in</span>
-      </a>
+      <a href="#isManagedBy" title="https://w3id.org/def/openadr#isManagedBy">is managed by</a>
    </li>
    <li>
       <a href="#isReportedDuringInterval"
@@ -287,11 +286,6 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#isSpecifiedIn" title="https://w3id.org/def/openadr#isSpecifiedIn">is specifier in</a>
-   </li>
-   <li>
-      <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#location" title="http://www.w3.org/2003/01/geo/wgs84_pos#location">
-         <span>location</span>
-      </a>
    </li>
    <li>
       <a href="#manages" title="https://w3id.org/def/openadr#manages">manages</a>
@@ -312,7 +306,13 @@ This ontology has the following classes and properties.</span>
       <a href="#refersToTarget" title="https://w3id.org/def/openadr#refersToTarget">refers to target</a>
    </li>
    <li>
-      <a href="#isDescribedIn" title="https://w3id.org/def/openadr#isDescribedIn">Relation between a payload and its descriptor</a>
+      <a href="#containsAsset" title="https://w3id.org/def/openadr#containsAsset">Relation between a target and the asset it contains</a>
+   </li>
+   <li>
+      <a href="#containsResource" title="https://w3id.org/def/openadr#containsResource">Relation between a target and the resource it contains</a>
+   </li>
+   <li>
+      <a href="#containsVEN" title="https://w3id.org/def/openadr#containsVEN">Relation between a target and the VEN it contains</a>
    </li>
    <li>
       <a href="#specifiesReport" title="https://w3id.org/def/openadr#specifiesReport">relation between the report and its specification</a>
@@ -336,20 +336,23 @@ This ontology has the following classes and properties.</span>
       <a href="#sends" title="https://w3id.org/def/openadr#sends">sends</a>
    </li>
    <li>
+      <a href="#sendsEvent" title="https://w3id.org/def/openadr#sendsEvent">sends event</a>
+   </li>
+   <li>
+      <a href="#sendsOpt" title="https://w3id.org/def/openadr#sendsOpt">sends opt</a>
+   </li>
+   <li>
+      <a href="#sendsReport" title="https://w3id.org/def/openadr#sendsReport">sends report</a>
+   </li>
+   <li>
       <a href="#isUnavailableDuring" title="https://w3id.org/def/openadr#isUnavailableDuring">Unavailability of a target</a>
    </li>
 </ul><h4>Data Properties</h4><ul class="hlist">
-   <li>
-      <a href="#isManualOverride" title="https://w3id.org/def/openadr#isManualOverride"/>
-   </li>
    <li>
       <a href="#comment" title="https://w3id.org/def/openadr#comment">comment</a>
    </li>
    <li>
       <a href="#hasDataQuality" title="https://w3id.org/def/openadr#hasDataQuality">data quality</a>
-   </li>
-   <li>
-      <a href="#dstart" title="https://w3id.org/def/openadr#dstart">dstart</a>
    </li>
    <li>
       <a href="#hasGroupName" title="https://w3id.org/def/openadr#hasGroupName">group name</a>
@@ -400,9 +403,14 @@ This ontology has the following classes and properties.</span>
       <a href="#hasProfileName" title="https://w3id.org/def/openadr#hasProfileName">has profile name</a>
    </li>
    <li>
-      <a href="#hasRandomization" title="https://w3id.org/def/openadr#hasRandomization">
-         <span>has randomization</span>
-      </a>
+      <a href="#hasRandomization" title="https://w3id.org/def/openadr#hasRandomization">has randomization</a>
+   </li>
+   <li>
+      <a href="#hasRegistrationNumber"
+         title="https://w3id.org/def/openadr#hasRegistrationNumber">has registration number</a>
+   </li>
+   <li>
+      <a href="#hasReportId" title="https://w3id.org/def/openadr#hasReportId">has report identifier</a>
    </li>
    <li>
       <a href="#hasReportName" title="https://w3id.org/def/openadr#hasReportName">has report name</a>
@@ -423,6 +431,9 @@ This ontology has the following classes and properties.</span>
       <a href="#hasSetPoint" title="https://w3id.org/def/openadr#hasSetPoint">has set point</a>
    </li>
    <li>
+      <a href="#hasSignalName" title="https://w3id.org/def/openadr#hasSignalName">has signal name</a>
+   </li>
+   <li>
       <a href="#hasSignalType" title="https://w3id.org/def/openadr#hasSignalType">has signal type</a>
    </li>
    <li>
@@ -433,6 +444,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#hasXMLsignature" title="https://w3id.org/def/openadr#hasXMLsignature">has XML signature</a>
+   </li>
+   <li>
+      <a href="#isManualOverride" title="https://w3id.org/def/openadr#isManualOverride">is manual override</a>
    </li>
    <li>
       <a href="#isOnChange" title="https://w3id.org/def/openadr#isOnChange">is on change</a>
@@ -453,11 +467,7 @@ This ontology has the following classes and properties.</span>
       <a href="#hasReadingType" title="https://w3id.org/def/openadr#hasReadingType">reading type</a>
    </li>
    <li>
-      <a href="#hasRegistrationNumber"
-         title="https://w3id.org/def/openadr#hasRegistrationNumber">registration number</a>
-   </li>
-   <li>
-      <a href="#hasReportId" title="https://w3id.org/def/openadr#hasReportId">Report identifier</a>
+      <a href="#starts" title="https://w3id.org/def/openadr#starts">starts</a>
    </li>
 </ul><h4>Named Individuals</h4><ul class="hlist">
    <li>
@@ -480,4 +490,4 @@ This ontology has the following classes and properties.</span>
          <span>near</span>
       </a>
    </li>
-</ul></html>
+</ul>
