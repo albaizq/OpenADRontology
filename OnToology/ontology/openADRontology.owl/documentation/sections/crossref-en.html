@@ -141,6 +141,9 @@ This section provides details for each class and property defined by OpenADR ont
          <a href="#SignalInterval" title="https://w3id.org/def/openadr#SignalInterval">Signal Interval</a>
       </li>
       <li>
+         <a href="#SignalType" title="https://w3id.org/def/openadr#SignalType">Signal Type</a>
+      </li>
+      <li>
          <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
             title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">Spatial thing</a>
       </li>
@@ -432,10 +435,12 @@ This section provides details for each class and property defined by OpenADR ont
          </dd>
          <dt>has members</dt>
          <dd>
-            <a href="#Active" title="https://w3id.org/def/openadr#Active">active</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Canceled" title="https://w3id.org/def/openadr#Canceled">canceled</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Far" title="https://w3id.org/def/openadr#Far">far</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Near" title="https://w3id.org/def/openadr#Near">near</a>
+            <a href="#Active" title="https://w3id.org/def/openadr#Active">Active</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Canceled" title="https://w3id.org/def/openadr#Canceled">Canceled</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Completed" title="https://w3id.org/def/openadr#Completed">Completed</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Far" title="https://w3id.org/def/openadr#Far">Far</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Near" title="https://w3id.org/def/openadr#Near">Near</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#None" title="https://w3id.org/def/openadr#None">None</a>
             <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
@@ -697,7 +702,8 @@ This section provides details for each class and property defined by OpenADR ont
          <dd>
             <a href="#hasCapacity" title="https://w3id.org/def/openadr#hasCapacity">has capacity</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#hasLevelOffset" title="https://w3id.org/def/openadr#hasLevelOffset">has level offset</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasPercentageOffset" title="https://w3id.org/def/openadr#hasPercentageOffset">has percentage offset</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasPercentageOffset"
+               title="https://w3id.org/def/openadr#hasPercentageOffset">has percentage offset</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#hasSetPoint" title="https://w3id.org/def/openadr#hasSetPoint">has set point</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
@@ -1176,8 +1182,7 @@ This section provides details for each class and property defined by OpenADR ont
          <dd>
             <a href="#hasSignalName" title="https://w3id.org/def/openadr#hasSignalName">has signal name</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#hasSignalPayload" title="https://w3id.org/def/openadr#hasSignalPayload">has signal payload</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasSignalType" title="https://w3id.org/def/openadr#hasSignalType">has signal type</a>
-            <sup class="type-dp" title="data property">dp</sup>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -1211,6 +1216,38 @@ This section provides details for each class and property defined by OpenADR ont
          <dd>
             <a href="#isDefinedIn" title="https://w3id.org/def/openadr#isDefinedIn">has interval</a>
             <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SignalType">
+      <h3>Signal Type<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#SignalType</p>
+      <div class="comment">
+         <span class="markdown">Type of a signal</span>
+      </div>
+      <dl class="description">
+         <dt>has members</dt>
+         <dd>
+            <a href="#Delta" title="https://w3id.org/def/openadr#Delta">Delta</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Level" title="https://w3id.org/def/openadr#Level">Level</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#xLoadControlCapacity"
+               title="https://w3id.org/def/openadr#xLoadControlCapacity">Load control capacity</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#xLoadControlLevelOffset"
+               title="https://w3id.org/def/openadr#xLoadControlLevelOffset">Load control level offset</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#xLoadControlPercentOffset"
+               title="https://w3id.org/def/openadr#xLoadControlPercentOffset">Load control percent offset</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#xLoadControlSetpoint"
+               title="https://w3id.org/def/openadr#xLoadControlSetpoint">Load control setpoint</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Multiplier" title="https://w3id.org/def/openadr#Multiplier">Multiplier</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Price" title="https://w3id.org/def/openadr#Price">Price</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#PriceMultiplier" title="https://w3id.org/def/openadr#PriceMultiplier">Price multiplier</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#PriceRelative" title="https://w3id.org/def/openadr#PriceRelative">Price relative</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Setpoint" title="https://w3id.org/def/openadr#Setpoint">Setpoint</a>
+            <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
    </div>
@@ -1500,6 +1537,9 @@ This section provides details for each class and property defined by OpenADR ont
       </li>
       <li>
          <a href="#hasSignalPayload" title="https://w3id.org/def/openadr#hasSignalPayload">has signal payload</a>
+      </li>
+      <li>
+         <a href="#hasSignalType" title="https://w3id.org/def/openadr#hasSignalType">has signal type</a>
       </li>
       <li>
          <a href="#hasTarget" title="https://w3id.org/def/openadr#hasTarget">has target</a>
@@ -2056,6 +2096,17 @@ This section provides details for each class and property defined by OpenADR ont
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSignalType">
+      <h3>has signal type<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#hasSignalType</p>
+      <div class="comment">
+         <span class="markdown">Relationship between a signal and its signal type</span>
       </div>
    </div>
    <div class="entity" id="hasTarget">
@@ -2671,7 +2722,8 @@ This section provides details for each class and property defined by OpenADR ont
          <a href="#hasNodeName" title="https://w3id.org/def/openadr#hasNodeName">has node name</a>
       </li>
       <li>
-         <a href="#hasPercentageOffset" title="https://w3id.org/def/openadr#hasPercentageOffset">has percentage offset</a>
+         <a href="#hasPercentageOffset"
+            title="https://w3id.org/def/openadr#hasPercentageOffset">has percentage offset</a>
       </li>
       <li>
          <a href="#hasPriority" title="https://w3id.org/def/openadr#hasPriority">has priority</a>
@@ -2709,9 +2761,6 @@ This section provides details for each class and property defined by OpenADR ont
       </li>
       <li>
          <a href="#hasSignalName" title="https://w3id.org/def/openadr#hasSignalName">has signal name</a>
-      </li>
-      <li>
-         <a href="#hasSignalType" title="https://w3id.org/def/openadr#hasSignalType">has signal type</a>
       </li>
       <li>
          <a href="#hasTransportName" title="https://w3id.org/def/openadr#hasTransportName">has transport name</a>
@@ -2758,7 +2807,9 @@ This section provides details for each class and property defined by OpenADR ont
          <dl>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>
@@ -2774,7 +2825,9 @@ This section provides details for each class and property defined by OpenADR ont
          <dl>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>
@@ -2790,11 +2843,15 @@ This section provides details for each class and property defined by OpenADR ont
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>
@@ -2813,7 +2870,9 @@ This section provides details for each class and property defined by OpenADR ont
          <dl>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>
@@ -2834,7 +2893,9 @@ This section provides details for each class and property defined by OpenADR ont
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Literal"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</a>
             </dd>
          </dl>
       </div>
@@ -2853,7 +2914,9 @@ This section provides details for each class and property defined by OpenADR ont
          <dl>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>
@@ -2869,7 +2932,9 @@ This section provides details for each class and property defined by OpenADR ont
          <dl>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTimeStamp">date time stamp</span>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTimeStamp"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTimeStamp">date time stamp</a>
             </dd>
          </dl>
       </div>
@@ -2893,7 +2958,9 @@ This section provides details for each class and property defined by OpenADR ont
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#rational">rational</span>
+               <a href="http://www.w3.org/2002/07/owl#rational"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#rational">rational</a>
             </dd>
          </dl>
       </div>
@@ -2914,7 +2981,9 @@ This section provides details for each class and property defined by OpenADR ont
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>
@@ -2935,7 +3004,9 @@ This section provides details for each class and property defined by OpenADR ont
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Literal"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</a>
             </dd>
          </dl>
       </div>
@@ -2959,7 +3030,9 @@ This section provides details for each class and property defined by OpenADR ont
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTimeStamp">date time stamp</span>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTimeStamp"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTimeStamp">date time stamp</a>
             </dd>
          </dl>
       </div>
@@ -2983,7 +3056,9 @@ This section provides details for each class and property defined by OpenADR ont
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
             </dd>
          </dl>
       </div>
@@ -3007,7 +3082,9 @@ This section provides details for each class and property defined by OpenADR ont
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>
@@ -3028,7 +3105,9 @@ This section provides details for each class and property defined by OpenADR ont
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#rational">rational</span>
+               <a href="http://www.w3.org/2002/07/owl#rational"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#rational">rational</a>
             </dd>
          </dl>
       </div>
@@ -3049,7 +3128,9 @@ This section provides details for each class and property defined by OpenADR ont
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Literal"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</a>
             </dd>
          </dl>
       </div>
@@ -3074,7 +3155,9 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
             </dd>
          </dl>
       </div>
@@ -3095,7 +3178,9 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>
@@ -3116,7 +3201,9 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>
@@ -3137,7 +3224,9 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>
@@ -3166,7 +3255,9 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>
@@ -3214,7 +3305,9 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>
@@ -3235,7 +3328,9 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Literal"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</a>
             </dd>
          </dl>
       </div>
@@ -3259,28 +3354,9 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasSignalType">
-      <h3>has signal type<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/openadr#hasSignalType</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Signal" title="https://w3id.org/def/openadr#Signal">Signal</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Literal"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</a>
             </dd>
          </dl>
       </div>
@@ -3301,7 +3377,9 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>
@@ -3317,7 +3395,9 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
          <dl>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>
@@ -3347,7 +3427,9 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+               <a href="http://www.w3.org/2001/XMLSchema#boolean"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
             </dd>
          </dl>
       </div>
@@ -3371,7 +3453,9 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+               <a href="http://www.w3.org/2001/XMLSchema#boolean"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
             </dd>
          </dl>
       </div>
@@ -3396,7 +3480,9 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+               <a href="http://www.w3.org/2001/XMLSchema#boolean"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
             </dd>
          </dl>
       </div>
@@ -3420,7 +3506,9 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+               <a href="http://www.w3.org/2001/XMLSchema#boolean"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
             </dd>
          </dl>
       </div>
@@ -3444,7 +3532,9 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+               <a href="http://www.w3.org/2001/XMLSchema#boolean"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
             </dd>
          </dl>
       </div>
@@ -3463,7 +3553,9 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
          <dl>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
+               <a href="http://www.w3.org/2001/XMLSchema#anyURI"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</a>
             </dd>
          </dl>
       </div>
@@ -3482,7 +3574,9 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
          <dl>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>
@@ -3501,7 +3595,9 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
          <dl>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTimeStamp">date time stamp</span>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTimeStamp"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTimeStamp">date time stamp</a>
             </dd>
          </dl>
       </div>
@@ -3510,33 +3606,71 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
    <h3 id="namedindividuals" class="list">Named Individuals</h3>
    <ul class="hlist">
       <li>
-         <a href="#Active" title="https://w3id.org/def/openadr#Active">
-            <span>active</span>
-         </a>
+         <a href="#Active" title="https://w3id.org/def/openadr#Active">Active</a>
       </li>
       <li>
-         <a href="#Canceled" title="https://w3id.org/def/openadr#Canceled">
-            <span>canceled</span>
-         </a>
+         <a href="#Canceled" title="https://w3id.org/def/openadr#Canceled">Canceled</a>
       </li>
       <li>
-         <a href="#Far" title="https://w3id.org/def/openadr#Far">
-            <span>far</span>
-         </a>
+         <a href="#Completed" title="https://w3id.org/def/openadr#Completed">Completed</a>
       </li>
       <li>
-         <a href="#Near" title="https://w3id.org/def/openadr#Near">
-            <span>near</span>
-         </a>
+         <a href="#Delta" title="https://w3id.org/def/openadr#Delta">Delta</a>
+      </li>
+      <li>
+         <a href="#Far" title="https://w3id.org/def/openadr#Far">Far</a>
+      </li>
+      <li>
+         <a href="#Level" title="https://w3id.org/def/openadr#Level">Level</a>
+      </li>
+      <li>
+         <a href="#xLoadControlCapacity"
+            title="https://w3id.org/def/openadr#xLoadControlCapacity">Load control capacity</a>
+      </li>
+      <li>
+         <a href="#xLoadControlLevelOffset"
+            title="https://w3id.org/def/openadr#xLoadControlLevelOffset">Load control level offset</a>
+      </li>
+      <li>
+         <a href="#xLoadControlPercentOffset"
+            title="https://w3id.org/def/openadr#xLoadControlPercentOffset">Load control percent offset</a>
+      </li>
+      <li>
+         <a href="#xLoadControlSetpoint"
+            title="https://w3id.org/def/openadr#xLoadControlSetpoint">Load control setpoint</a>
+      </li>
+      <li>
+         <a href="#Multiplier" title="https://w3id.org/def/openadr#Multiplier">Multiplier</a>
+      </li>
+      <li>
+         <a href="#Near" title="https://w3id.org/def/openadr#Near">Near</a>
+      </li>
+      <li>
+         <a href="#None" title="https://w3id.org/def/openadr#None">None</a>
+      </li>
+      <li>
+         <a href="#Price" title="https://w3id.org/def/openadr#Price">Price</a>
+      </li>
+      <li>
+         <a href="#PriceMultiplier" title="https://w3id.org/def/openadr#PriceMultiplier">Price multiplier</a>
+      </li>
+      <li>
+         <a href="#PriceRelative" title="https://w3id.org/def/openadr#PriceRelative">Price relative</a>
+      </li>
+      <li>
+         <a href="#Setpoint" title="https://w3id.org/def/openadr#Setpoint">Setpoint</a>
       </li>
    </ul>
    <div class="entity" id="Active">
-      <h3>active<sup class="type-ni" title="named individual">ni</sup>
+      <h3>Active<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/openadr#Active</p>
+      <div class="comment">
+         <span class="markdown">Active status</span>
+      </div>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
@@ -3546,27 +3680,69 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
       </dl>
    </div>
    <div class="entity" id="Canceled">
-      <h3>canceled<sup class="type-ni" title="named individual">ni</sup>
+      <h3>Canceled<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/openadr#Canceled</p>
+      <div class="comment">
+         <span class="markdown">Canceled status</span>
+      </div>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
             <a href="#EventStatus" title="https://w3id.org/def/openadr#EventStatus">Event status</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Completed">
+      <h3>Completed<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#Completed</p>
+      <div class="comment">
+         <span class="markdown">Completed status</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#EventStatus" title="https://w3id.org/def/openadr#EventStatus">Event status</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Delta">
+      <h3>Delta<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#Delta</p>
+      <div class="comment">
+         <span class="markdown">Delta type that can be applied to the charge state and load dispatch signal</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#SignalType" title="https://w3id.org/def/openadr#SignalType">Signal Type</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
    <div class="entity" id="Far">
-      <h3>far<sup class="type-ni" title="named individual">ni</sup>
+      <h3>Far<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/openadr#Far</p>
+      <div class="comment">
+         <span class="markdown">Far status</span>
+      </div>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
@@ -3575,17 +3751,219 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
          </dd>
       </dl>
    </div>
+   <div class="entity" id="Level">
+      <h3>Level<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#Level</p>
+      <div class="comment">
+         <span class="markdown">Level type that can be applied to the simple and load dispatch signal. It specifies the value of the signal in in terms of discrete levels.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#SignalType" title="https://w3id.org/def/openadr#SignalType">Signal Type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="xLoadControlCapacity">
+      <h3>Load control capacity<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#xLoadControlCapacity</p>
+      <div class="comment">
+         <span class="markdown">Load control capacity type that can be applied to the load control signal</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#SignalType" title="https://w3id.org/def/openadr#SignalType">Signal Type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="xLoadControlLevelOffset">
+      <h3>Load control level offset<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#xLoadControlLevelOffset</p>
+      <div class="comment">
+         <span class="markdown">Load control level offset type that can be applied to the load control signal</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#SignalType" title="https://w3id.org/def/openadr#SignalType">Signal Type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="xLoadControlPercentOffset">
+      <h3>Load control percent offset<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#xLoadControlPercentOffset</p>
+      <div class="comment">
+         <span class="markdown">Load control percent offset type that can be applied to the load control signal</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#SignalType" title="https://w3id.org/def/openadr#SignalType">Signal Type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="xLoadControlSetpoint">
+      <h3>Load control setpoint<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#xLoadControlSetpoint</p>
+      <div class="comment">
+         <span class="markdown">Load control setpoint type that can be applied to the load control signal</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#SignalType" title="https://w3id.org/def/openadr#SignalType">Signal Type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Multiplier">
+      <h3>Multiplier<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#Multiplier</p>
+      <div class="comment">
+         <span class="markdown">Multiplier type that can be applied to the load dispatch and charge state signal</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#SignalType" title="https://w3id.org/def/openadr#SignalType">Signal Type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="Near">
-      <h3>near<sup class="type-ni" title="named individual">ni</sup>
+      <h3>Near<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/openadr#Near</p>
+      <div class="comment">
+         <span class="markdown">Near status</span>
+      </div>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
             <a href="#EventStatus" title="https://w3id.org/def/openadr#EventStatus">Event status</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="None">
+      <h3>None<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#None</p>
+      <div class="comment">
+         <span class="markdown">None status</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#EventStatus" title="https://w3id.org/def/openadr#EventStatus">Event status</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Price">
+      <h3>Price<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#Price</p>
+      <div class="comment">
+         <span class="markdown">Price type that can be applied to the demand charge, energy price and electricity price signal. It expresses the value of the signal in absolute terms</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#SignalType" title="https://w3id.org/def/openadr#SignalType">Signal Type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PriceMultiplier">
+      <h3>Price multiplier<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#PriceMultiplier</p>
+      <div class="comment">
+         <span class="markdown">Price multiplier type that can be applied to the demand charge, energy price and electricity price signal. It expresses a multipler of the existing value of the signal.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#SignalType" title="https://w3id.org/def/openadr#SignalType">Signal Type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PriceRelative">
+      <h3>Price relative<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#PriceRelative</p>
+      <div class="comment">
+         <span class="markdown">Price relative type that can be applied to the demand charge, energy price and electricity price signal. It expresses a delta change to
+the existing value of the signal</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#SignalType" title="https://w3id.org/def/openadr#SignalType">Signal Type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Setpoint">
+      <h3>Setpoint<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#Setpoint</p>
+      <div class="comment">
+         <span class="markdown">Setpoint type that can be applied to the load dispatch, charge state, bid load and bid energy signal</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#SignalType" title="https://w3id.org/def/openadr#SignalType">Signal Type</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>

@@ -17,7 +17,7 @@
         <terms:title>OpenADR ontology</terms:title>
         <rdfs:comment>This ontology describes the openADR protocol based on the documentation provided by the openADR Profile B</rdfs:comment>
         <rdfs:comment>http://purl.org/NET/rdflicense/cc-by4.0</rdfs:comment>
-        <owl:versionInfo>0.2.1</owl:versionInfo>
+        <owl:versionInfo>0.2.2</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -366,6 +366,16 @@
         <rdfs:domain rdf:resource="https://w3id.org/def/openadr#Signal"/>
         <rdfs:comment>Relation between a signal and its payload</rdfs:comment>
         <rdfs:label>has signal payload</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/openadr#hasSignalType -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#hasSignalType">
+        <rdfs:comment>Relationship between a signal and its signal type</rdfs:comment>
+        <rdfs:label>has signal type</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1031,17 +1041,6 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
     
 
 
-    <!-- https://w3id.org/def/openadr#hasSignalType -->
-
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/openadr#hasSignalType">
-        <rdfs:domain rdf:resource="https://w3id.org/def/openadr#Signal"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>has signal type</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/def/openadr#hasTransportName -->
 
 
@@ -1290,6 +1289,18 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
 
     <owl:Class rdf:about="https://w3id.org/def/openadr#BidEnergySignal">
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#Signal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#hasSignalType"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/def/openadr#Setpoint"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Signal that represents the price that was bid by the resource</rdfs:comment>
         <rdfs:label>Bid energy signal</rdfs:label>
     </owl:Class>
@@ -1301,6 +1312,18 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
 
     <owl:Class rdf:about="https://w3id.org/def/openadr#BidLoadSignal">
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#Signal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#hasSignalType"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/def/openadr#Setpoint"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Signal that represents the amount of load that was bid by a resource into a program</rdfs:comment>
         <rdfs:label>Bid load signal</rdfs:label>
     </owl:Class>
@@ -1312,6 +1335,20 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
 
     <owl:Class rdf:about="https://w3id.org/def/openadr#BidPricesignal">
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#Signal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#hasSignalType"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/def/openadr#Price"/>
+                            <rdf:Description rdf:about="https://w3id.org/def/openadr#PriceMultiplier"/>
+                            <rdf:Description rdf:about="https://w3id.org/def/openadr#PriceRelative"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Signal that represents the price that was bid by the resource</rdfs:comment>
         <rdfs:label>Bid price signal</rdfs:label>
     </owl:Class>
@@ -1323,6 +1360,20 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
 
     <owl:Class rdf:about="https://w3id.org/def/openadr#ChargeStateSignal">
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#Signal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#hasSignalType"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/def/openadr#Delta"/>
+                            <rdf:Description rdf:about="https://w3id.org/def/openadr#Multiplier"/>
+                            <rdf:Description rdf:about="https://w3id.org/def/openadr#Setpoint"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Signal used  to dispatch storage resources</rdfs:comment>
         <rdfs:label>Charge state signal</rdfs:label>
     </owl:Class>
@@ -1352,6 +1403,20 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
 
     <owl:Class rdf:about="https://w3id.org/def/openadr#DemandChargeSignal">
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#Signal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#hasSignalType"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/def/openadr#Price"/>
+                            <rdf:Description rdf:about="https://w3id.org/def/openadr#PriceMultiplier"/>
+                            <rdf:Description rdf:about="https://w3id.org/def/openadr#PriceRelative"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Signal for the demand charge</rdfs:comment>
         <rdfs:label>Demand charge signal</rdfs:label>
     </owl:Class>
@@ -1363,6 +1428,20 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
 
     <owl:Class rdf:about="https://w3id.org/def/openadr#ElectricityPriceSignal">
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#Signal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#hasSignalType"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/def/openadr#Price"/>
+                            <rdf:Description rdf:about="https://w3id.org/def/openadr#PriceMultiplier"/>
+                            <rdf:Description rdf:about="https://w3id.org/def/openadr#PriceRelative"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Signal for the price of electricity</rdfs:comment>
         <rdfs:label>Electricity price signal</rdfs:label>
     </owl:Class>
@@ -1374,6 +1453,20 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
 
     <owl:Class rdf:about="https://w3id.org/def/openadr#EnergyPriceSignal">
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#Signal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#hasSignalType"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/def/openadr#Price"/>
+                            <rdf:Description rdf:about="https://w3id.org/def/openadr#PriceMultiplier"/>
+                            <rdf:Description rdf:about="https://w3id.org/def/openadr#PriceRelative"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label>Energy price signal</rdfs:label>
         <rdfs:label>Signal for the price of energy</rdfs:label>
     </owl:Class>
@@ -1523,6 +1616,21 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
 
     <owl:Class rdf:about="https://w3id.org/def/openadr#LoadControlSignal">
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#Signal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#hasSignalType"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/def/openadr#xLoadControlCapacity"/>
+                            <rdf:Description rdf:about="https://w3id.org/def/openadr#xLoadControlLevelOffset"/>
+                            <rdf:Description rdf:about="https://w3id.org/def/openadr#xLoadControlPercentOffset"/>
+                            <rdf:Description rdf:about="https://w3id.org/def/openadr#xLoadControlSetpoint"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label>Load control signal</rdfs:label>
         <rdfs:label>Signal for to set the load control to values that are relative to the load controller and its output capacity.</rdfs:label>
     </owl:Class>
@@ -1544,6 +1652,21 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
 
     <owl:Class rdf:about="https://w3id.org/def/openadr#LoadDispatchSignal">
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#Signal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#hasSignalType"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/def/openadr#Delta"/>
+                            <rdf:Description rdf:about="https://w3id.org/def/openadr#Level"/>
+                            <rdf:Description rdf:about="https://w3id.org/def/openadr#Multiplier"/>
+                            <rdf:Description rdf:about="https://w3id.org/def/openadr#Setpoint"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Instructions are used to set the load  values that can be expressed in terms of the desired load</rdfs:comment>
         <rdfs:label>Load dispatch signal</rdfs:label>
     </owl:Class>
@@ -1856,6 +1979,12 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
     <owl:Class rdf:about="https://w3id.org/def/openadr#Signal">
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#hasSignalType"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/openadr#SignalType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/def/openadr#hasTarget"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/def/openadr#Group"/>
             </owl:Restriction>
@@ -1883,11 +2012,33 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
     
 
 
+    <!-- https://w3id.org/def/openadr#SignalType -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/openadr#SignalType">
+        <rdfs:comment>Type of a signal</rdfs:comment>
+        <rdfs:label>Signal Type</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/def/openadr#SimpleSignal -->
 
 
     <owl:Class rdf:about="https://w3id.org/def/openadr#SimpleSignal">
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#Signal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#hasSignalType"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/def/openadr#Level"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label>Signal for signal levels</rdfs:label>
         <rdfs:label>Simple signal</rdfs:label>
     </owl:Class>
@@ -1989,6 +2140,8 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/openadr#Active">
         <rdf:type rdf:resource="https://w3id.org/def/openadr#EventStatus"/>
+        <rdfs:comment>Active status</rdfs:comment>
+        <rdfs:label>Active</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1998,6 +2151,30 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/openadr#Canceled">
         <rdf:type rdf:resource="https://w3id.org/def/openadr#EventStatus"/>
+        <rdfs:comment>Canceled status</rdfs:comment>
+        <rdfs:label>Canceled</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/openadr#Completed -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/openadr#Completed">
+        <rdf:type rdf:resource="https://w3id.org/def/openadr#EventStatus"/>
+        <rdfs:comment>Completed status</rdfs:comment>
+        <rdfs:label>Completed</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/openadr#Delta -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/openadr#Delta">
+        <rdf:type rdf:resource="https://w3id.org/def/openadr#SignalType"/>
+        <rdfs:comment>Delta type that can be applied to the charge state and load dispatch signal</rdfs:comment>
+        <rdfs:label>Delta</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2007,6 +2184,30 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/openadr#Far">
         <rdf:type rdf:resource="https://w3id.org/def/openadr#EventStatus"/>
+        <rdfs:comment>Far status</rdfs:comment>
+        <rdfs:label>Far</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/openadr#Level -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/openadr#Level">
+        <rdf:type rdf:resource="https://w3id.org/def/openadr#SignalType"/>
+        <rdfs:comment>Level type that can be applied to the simple and load dispatch signal. It specifies the value of the signal in in terms of discrete levels.</rdfs:comment>
+        <rdfs:label>Level</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/openadr#Multiplier -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/openadr#Multiplier">
+        <rdf:type rdf:resource="https://w3id.org/def/openadr#SignalType"/>
+        <rdfs:comment>Multiplier type that can be applied to the load dispatch and charge state signal</rdfs:comment>
+        <rdfs:label>Multiplier</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2016,6 +2217,108 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/openadr#Near">
         <rdf:type rdf:resource="https://w3id.org/def/openadr#EventStatus"/>
+        <rdfs:comment>Near status</rdfs:comment>
+        <rdfs:label>Near</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/openadr#None -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/openadr#None">
+        <rdf:type rdf:resource="https://w3id.org/def/openadr#EventStatus"/>
+        <rdfs:comment>None status</rdfs:comment>
+        <rdfs:label>None</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/openadr#Price -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/openadr#Price">
+        <rdf:type rdf:resource="https://w3id.org/def/openadr#SignalType"/>
+        <rdfs:comment>Price type that can be applied to the demand charge, energy price and electricity price signal. It expresses the value of the signal in absolute terms</rdfs:comment>
+        <rdfs:label>Price</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/openadr#PriceMultiplier -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/openadr#PriceMultiplier">
+        <rdf:type rdf:resource="https://w3id.org/def/openadr#SignalType"/>
+        <rdfs:comment>Price multiplier type that can be applied to the demand charge, energy price and electricity price signal. It expresses a multipler of the existing value of the signal.</rdfs:comment>
+        <rdfs:label>Price multiplier</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/openadr#PriceRelative -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/openadr#PriceRelative">
+        <rdf:type rdf:resource="https://w3id.org/def/openadr#SignalType"/>
+        <rdfs:comment>Price relative type that can be applied to the demand charge, energy price and electricity price signal. It expresses a delta change to
+the existing value of the signal</rdfs:comment>
+        <rdfs:label>Price relative</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/openadr#Setpoint -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/openadr#Setpoint">
+        <rdf:type rdf:resource="https://w3id.org/def/openadr#SignalType"/>
+        <rdfs:comment>Setpoint type that can be applied to the load dispatch, charge state, bid load and bid energy signal</rdfs:comment>
+        <rdfs:label>Setpoint</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/openadr#xLoadControlCapacity -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/openadr#xLoadControlCapacity">
+        <rdf:type rdf:resource="https://w3id.org/def/openadr#SignalType"/>
+        <rdfs:comment>Load control capacity type that can be applied to the load control signal</rdfs:comment>
+        <rdfs:label>Load control capacity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/openadr#xLoadControlLevelOffset -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/openadr#xLoadControlLevelOffset">
+        <rdf:type rdf:resource="https://w3id.org/def/openadr#SignalType"/>
+        <rdfs:comment>Load control level offset type that can be applied to the load control signal</rdfs:comment>
+        <rdfs:label>Load control level offset</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/openadr#xLoadControlPercentOffset -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/openadr#xLoadControlPercentOffset">
+        <rdf:type rdf:resource="https://w3id.org/def/openadr#SignalType"/>
+        <rdfs:comment>Load control percent offset type that can be applied to the load control signal</rdfs:comment>
+        <rdfs:label>Load control percent offset</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/openadr#xLoadControlSetpoint -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/openadr#xLoadControlSetpoint">
+        <rdf:type rdf:resource="https://w3id.org/def/openadr#SignalType"/>
+        <rdfs:comment>Load control setpoint type that can be applied to the load control signal</rdfs:comment>
+        <rdfs:label>Load control setpoint</rdfs:label>
     </owl:NamedIndividual>
     <rdf:Description>
         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
@@ -2024,6 +2327,6 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
 
 
 
-<!-- Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/ -->
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
 
 

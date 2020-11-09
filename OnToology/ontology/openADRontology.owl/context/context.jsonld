@@ -233,6 +233,9 @@
     "TelemetryUsageReport" : {
       "@id" : "https://w3id.org/def/openadr#TelemetryUsageReport"
     },
+    "SignalType" : {
+      "@id" : "https://w3id.org/def/openadr#SignalType"
+    },
     "isDescribedIn" : {
       "@id" : "https://w3id.org/def/openadr#isDescribedIn",
       "@type" : "@id"
@@ -440,7 +443,7 @@
     },
     "hasSignalType" : {
       "@id" : "https://w3id.org/def/openadr#hasSignalType",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+      "@type" : "@id"
     },
     "hasXMLsignature" : {
       "@id" : "https://w3id.org/def/openadr#hasXMLsignature"
