@@ -245,13 +245,22 @@
   "@id" : "_:genid34",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/openadr#hasSignalType"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/def/openadr#SignalType"
+  } ]
+}, {
+  "@id" : "_:genid35",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/openadr#hasTarget"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "https://w3id.org/def/openadr#Group"
   } ]
 }, {
-  "@id" : "_:genid35",
+  "@id" : "_:genid36",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/openadr#isDefinedIn"
@@ -260,7 +269,7 @@
     "@id" : "https://w3id.org/def/openadr#SignalInterval"
   } ]
 }, {
-  "@id" : "_:genid36",
+  "@id" : "_:genid37",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/openadr#hasLoadControlState"
@@ -269,7 +278,7 @@
     "@id" : "https://w3id.org/def/openadr#LoadControlState"
   } ]
 }, {
-  "@id" : "_:genid37",
+  "@id" : "_:genid38",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/openadr#manages"
@@ -278,19 +287,13 @@
     "@id" : "https://w3id.org/def/openadr#Resource"
   } ]
 }, {
-  "@id" : "_:genid38",
+  "@id" : "_:genid39",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/openadr#sendsEvent"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "https://w3id.org/def/openadr#Event"
-  } ]
-}, {
-  "@id" : "_:genid39",
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
   } ]
 }, {
   "@id" : "_:genid4",
@@ -300,6 +303,12 @@
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/openadr#isDescribedIn"
+  } ]
+}, {
+  "@id" : "_:genid40",
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ]
 }, {
   "@id" : "_:genid5",
@@ -554,11 +563,29 @@
     "@value" : "http://purl.org/NET/rdflicense/cc-by4.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.2.1"
+    "@value" : "0.2.2"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#Active",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#EventStatus" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#EventStatus" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Active status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Active"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#BidEnergySetpointSignal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This is the amount of energy from a resource that was bid into a program"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Bid energy setpoint signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/openadr#BidEnergySignal"
+  } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#BidEnergySignal",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -572,6 +599,18 @@
     "@id" : "https://w3id.org/def/openadr#Signal"
   } ]
 }, {
+  "@id" : "https://w3id.org/def/openadr#BidLoadSetpointSignal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This is the amount of load that was bid by a resource into a program"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Bid load setpoint signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/openadr#BidLoadSignal"
+  } ]
+}, {
   "@id" : "https://w3id.org/def/openadr#BidLoadSignal",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -582,6 +621,18 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/openadr#Signal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#BidPriceAbsoluteSignal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This is the price that was bid by the resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Bid absolute price"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/openadr#BidPricesignal"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#BidPricesignal",
@@ -597,7 +648,49 @@
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#Canceled",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#EventStatus" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#EventStatus" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Canceled status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Canceled"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#ChargeStateDeltaSignal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This is the delta amount of energy that should be contained in a storage resource from where it currently is."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Charge state delta signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/openadr#ChargeStateSignal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#ChargeStateMultiplierSignal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This is the percentage of full charge that the storage resource should be at."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Charge state multiplier signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/openadr#ChargeStateSignal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#ChargeStateSetpointSignal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This is used to either charge or discharge a certain amount of energy from a storage resource until its charge state reaches a certain level."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Charge state setpoint signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/openadr#ChargeStateSignal"
+  } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#ChargeStateSignal",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -609,6 +702,15 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/openadr#Signal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#Completed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#EventStatus" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Completed status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Completed"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#DataReport",
@@ -628,6 +730,51 @@
     "@id" : "_:genid4"
   } ]
 }, {
+  "@id" : "https://w3id.org/def/openadr#Delta",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#SignalType" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Delta type that can be applied to the charge state and load dispatch signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Delta"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#DemandChargePriceAbsoluteSignal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This is the demand charge expressed in absolute terms"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Demand charge absolute price signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/openadr#DemandChargeSignal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#DemandChargePriceMultiplierSignal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This is a multiplier to the existing demand charge"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Demand charge multiplier price signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/openadr#DemandChargeSignal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#DemandChargePriceRelativeSignal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This is a delta change to the existing demand charge"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Demand charge relative price signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/openadr#DemandChargeSignal"
+  } ]
+}, {
   "@id" : "https://w3id.org/def/openadr#DemandChargeSignal",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -640,6 +787,42 @@
     "@id" : "https://w3id.org/def/openadr#Signal"
   } ]
 }, {
+  "@id" : "https://w3id.org/def/openadr#ElectricityPriceAbsoluteSignal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This is the cost of electricity  expressed in absolute terms"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Electicity absolute price signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/openadr#ElectricityPriceSignal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#ElectricityPriceMultiplierSignal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This is a multiplier to the existing cost of electricity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Electricity multiplier price signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/openadr#ElectricityPriceSignal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#ElectricityPriceRelativeSignal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This is a delta change to the existing price of electricity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Electricity  relative price signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/openadr#ElectricityPriceSignal"
+  } ]
+}, {
   "@id" : "https://w3id.org/def/openadr#ElectricityPriceSignal",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -650,6 +833,42 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/openadr#Signal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#EnergyPriceAbsolutePriceSignal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This is the cost of energy expressed in absolute terms"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Energy absolute price signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/openadr#EnergyPriceSignal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#EnergyPriceMultiplierSignal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This is a multiplier to the existing cost of energy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Energy multiplier price signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/openadr#EnergyPriceSignal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#EnergyPriceRelativeSignal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This is a delta change to the existing price of energy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Energy relative price signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/openadr#EnergyPriceSignal"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#EnergyPriceSignal",
@@ -715,7 +934,13 @@
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#Far",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#EventStatus" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#EventStatus" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Far status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Far"
+  } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#GreenButtonReport",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -786,6 +1011,63 @@
     "@value" : "Item"
   } ]
 }, {
+  "@id" : "https://w3id.org/def/openadr#Level",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#SignalType" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Level type that can be applied to the simple and load dispatch signal. It specifies the value of the signal in in terms of discrete levels."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Level"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#LoadControlCapacitySignal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This is an instruction for the load controller to operate at a level that is some percentage of its maximum load consumption capacity. This can be mapped to specific load controllers to do things like duty cycling. Note that 1.0 refers to 100% consumption. In the case of simple ON/OFF type devices then 0 = OFF and 1 = ON."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Load control capacity signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/openadr#LoadControlSignal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#LoadControlLevelOffsetSignal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Discrete integer levels that are relative to normal operations where 0 is normal operations. There is no requirement to link the setpoints to specific load consumption values, but the intention is that the higher the setpoint the less load is consumed. Note that these are controller set points that can be mapped at the VEN side to something as simple as thermostat temperature set point offsets."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Load control level offset  signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/openadr#LoadControlSignal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#LoadControlPercentOffset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Percentage change from normal operations. The percentage does not refer to specific load consumptions values, but to load control operation levels. The lower the percentage the less load is consumed."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Load control percent offset signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/openadr#LoadControlSignal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#LoadControlSetpointSignal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Load controller set points. There is no requirement to link the setpoints to specific load consumption values. Note that these are generic controller set points and can be mapped at the VEN side to something as simple as specific thermostat temperature set points."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Load control setpoint signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/openadr#LoadControlSignal"
+  } ]
+}, {
   "@id" : "https://w3id.org/def/openadr#LoadControlSignal",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -804,6 +1086,54 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Load control state"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#LoadDispatchDeltaSignal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This is used to dispatch loads to some offset from an agreed upon baseline. Note that the baseline may be the current power consumption."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Load dispatch delta signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/openadr#LoadDispatchSignal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#LoadDispatchLevelSignal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This is used to specify the load in terms of discrete levels."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Load dispatch level signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/openadr#LoadDispatchSignal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#LoadDispatchMultiplier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This is used to dispatch loads as some multiple of power against some agreed upon baseline. Note that the baseline may be the current power consumption."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Load dispatch multiplier signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/openadr#LoadDispatchSignal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#LoadDispatchSetpointSignal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This is used to dispatch loads to a specific amount"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Load dispatch setpoint signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/openadr#LoadDispatchSignal"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#LoadDispatchSignal",
@@ -832,8 +1162,23 @@
     "@id" : "https://w3id.org/def/openadr#Report"
   } ]
 }, {
+  "@id" : "https://w3id.org/def/openadr#Multiplier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#SignalType" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Multiplier type that can be applied to the load dispatch and charge state signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Multiplier"
+  } ]
+}, {
   "@id" : "https://w3id.org/def/openadr#Near",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#EventStatus" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#EventStatus" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Near status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Near"
+  } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#Node",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -847,6 +1192,15 @@
     "@id" : "_:genid13"
   }, {
     "@id" : "_:genid14"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#None",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#EventStatus" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "None status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "None"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#Opt",
@@ -890,6 +1244,33 @@
     "@id" : "https://w3id.org/def/openadr#Opt"
   } ]
 }, {
+  "@id" : "https://w3id.org/def/openadr#Price",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#SignalType" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Price type that can be applied to the demand charge, energy price and electricity price signal. It expresses the value of the signal in absolute terms"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Price"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#PriceMultiplier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#SignalType" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Price multiplier type that can be applied to the demand charge, energy price and electricity price signal. It expresses a multipler of the existing value of the signal."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Price multiplier"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#PriceRelative",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#SignalType" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Price relative type that can be applied to the demand charge, energy price and electricity price signal. It expresses a delta change to\nthe existing value of the signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Price relative"
+  } ]
+}, {
   "@id" : "https://w3id.org/def/openadr#Report",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -929,9 +1310,10 @@
 }, {
   "@id" : "https://w3id.org/def/openadr#ReportDataPayload",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Part of the OpenADR report object that includes the data sent to a node"
-  }, {
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Report data payload"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -1054,6 +1436,15 @@
     "@id" : "http://www.opengis.net/ont/geosparql#Feature"
   } ]
 }, {
+  "@id" : "https://w3id.org/def/openadr#Setpoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#SignalType" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Setpoint type that can be applied to the load dispatch, charge state, bid load and bid energy signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Setpoint"
+  } ]
+}, {
   "@id" : "https://w3id.org/def/openadr#Signal",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1069,6 +1460,8 @@
     "@id" : "_:genid34"
   }, {
     "@id" : "_:genid35"
+  }, {
+    "@id" : "_:genid36"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#SignalInterval",
@@ -1080,11 +1473,21 @@
     "@value" : "Signal Interval"
   } ]
 }, {
+  "@id" : "https://w3id.org/def/openadr#SignalType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Type of a signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Signal Type"
+  } ]
+}, {
   "@id" : "https://w3id.org/def/openadr#SimpleSignal",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Signal for signal levels"
-  }, {
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Simple signal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -1105,7 +1508,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/openadr#DataReport"
   }, {
-    "@id" : "_:genid36"
+    "@id" : "_:genid37"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#TelemetryStatusReport",
@@ -1152,7 +1555,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/openadr#Node"
   }, {
-    "@id" : "_:genid37"
+    "@id" : "_:genid38"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#VTN",
@@ -1169,7 +1572,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/openadr#Node"
   }, {
-    "@id" : "_:genid38"
+    "@id" : "_:genid39"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#appliesTo",
@@ -1773,15 +2176,12 @@
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#hasSignalType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/def/openadr#Signal"
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship between a signal and its signal type"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has signal type"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#hasTarget",
@@ -2239,5 +2639,41 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#xLoadControlCapacity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#SignalType" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Load control capacity type that can be applied to the load control signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Load control capacity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#xLoadControlLevelOffset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#SignalType" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Load control level offset type that can be applied to the load control signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Load control level offset"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#xLoadControlPercentOffset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#SignalType" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Load control percent offset type that can be applied to the load control signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Load control percent offset"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/openadr#xLoadControlSetpoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#SignalType" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Load control setpoint type that can be applied to the load control signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Load control setpoint"
   } ]
 } ]
