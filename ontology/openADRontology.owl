@@ -1,17 +1,20 @@
 @prefix : <https://w3id.org/def/openadr#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix terms: <http://purl.org/dc/terms/> .
 @base <https://w3id.org/def/openadr> .
 
 <https://w3id.org/def/openadr> rdf:type owl:Ontology ;
-                                <http://purl.org/dc/elements/1.1/creator> <http://www.garcia-castro.com/foaf.rdf#me> ,
-                                                                          "Alba Fernández Izquierdo" ,
-                                                                          "Andrea Cimmino" ;
-                                <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
-                                <http://purl.org/dc/terms/title> "OpenADR ontology" ;
+                                dc:creator <http://www.garcia-castro.com/foaf.rdf#me> ,
+                                           "Alba Fernández Izquierdo" ,
+                                           "Andrea Cimmino" ;
+                                terms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+                                terms:title "OpenADR ontology" ;
                                 rdfs:comment "This ontology describes the openADR protocol based on the documentation provided by the openADR Profile B" ,
                                              "http://purl.org/NET/rdflicense/cc-by4.0" ;
                                 owl:versionInfo "0.2.2" .
@@ -21,19 +24,19 @@
 #################################################################
 
 ###  http://purl.org/dc/elements/1.1/creator
-<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+dc:creator rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/license
-<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+terms:license rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/title
-<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+terms:title rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespaceUri
-<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2002/07/owl#qualifiedCardinality
@@ -798,62 +801,72 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
                                                                        "unit of measure" .
 
 
+###  https://w3id.org/def/openadr#BidEnergySetpointSignal
+:BidEnergySetpointSignal rdf:type owl:Class ;
+                         rdfs:subClassOf :BidEnergySignal ;
+                         rdfs:comment "This is the amount of energy from a resource that was bid into a program" ;
+                         rdfs:label "Bid energy setpoint signal" .
+
+
 ###  https://w3id.org/def/openadr#BidEnergySignal
 :BidEnergySignal rdf:type owl:Class ;
-                 rdfs:subClassOf :Signal ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty :hasSignalType ;
-                                   owl:allValuesFrom [ rdf:type owl:Class ;
-                                                       owl:oneOf ( :Setpoint
-                                                                 )
-                                                     ]
-                                 ] ;
+                 rdfs:subClassOf :Signal ;
                  rdfs:comment "Signal that represents the price that was bid by the resource" ;
                  rdfs:label "Bid energy signal" .
 
 
+###  https://w3id.org/def/openadr#BidLoadSetpointSignal
+:BidLoadSetpointSignal rdf:type owl:Class ;
+                       rdfs:subClassOf :BidLoadSignal ;
+                       rdfs:comment "This is the amount of load that was bid by a resource into a program" ;
+                       rdfs:label "Bid load setpoint signal" .
+
+
 ###  https://w3id.org/def/openadr#BidLoadSignal
 :BidLoadSignal rdf:type owl:Class ;
-               rdfs:subClassOf :Signal ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasSignalType ;
-                                 owl:allValuesFrom [ rdf:type owl:Class ;
-                                                     owl:oneOf ( :Setpoint
-                                                               )
-                                                   ]
-                               ] ;
+               rdfs:subClassOf :Signal ;
                rdfs:comment "Signal that represents the amount of load that was bid by a resource into a program" ;
                rdfs:label "Bid load signal" .
 
 
+###  https://w3id.org/def/openadr#BidPriceAbsoluteSignal
+:BidPriceAbsoluteSignal rdf:type owl:Class ;
+                        rdfs:subClassOf :BidPricesignal ;
+                        rdfs:comment "This is the price that was bid by the resource" ;
+                        rdfs:label "Bid absolute price" .
+
+
 ###  https://w3id.org/def/openadr#BidPricesignal
 :BidPricesignal rdf:type owl:Class ;
-                rdfs:subClassOf :Signal ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty :hasSignalType ;
-                                  owl:allValuesFrom [ rdf:type owl:Class ;
-                                                      owl:oneOf ( :Price
-                                                                  :PriceMultiplier
-                                                                  :PriceRelative
-                                                                )
-                                                    ]
-                                ] ;
+                rdfs:subClassOf :Signal ;
                 rdfs:comment "Signal that represents the price that was bid by the resource" ;
                 rdfs:label "Bid price signal" .
 
 
+###  https://w3id.org/def/openadr#ChargeStateDeltaSignal
+:ChargeStateDeltaSignal rdf:type owl:Class ;
+                        rdfs:subClassOf :ChargeStateSignal ;
+                        rdfs:comment "This is the delta amount of energy that should be contained in a storage resource from where it currently is." ;
+                        rdfs:label "Charge state delta signal" .
+
+
+###  https://w3id.org/def/openadr#ChargeStateMultiplierSignal
+:ChargeStateMultiplierSignal rdf:type owl:Class ;
+                             rdfs:subClassOf :ChargeStateSignal ;
+                             rdfs:comment "This is the percentage of full charge that the storage resource should be at." ;
+                             rdfs:label "Charge state multiplier signal" .
+
+
+###  https://w3id.org/def/openadr#ChargeStateSetpointSignal
+:ChargeStateSetpointSignal rdf:type owl:Class ;
+                           rdfs:subClassOf :ChargeStateSignal ;
+                           rdfs:comment "This is used to either charge or discharge a certain amount of energy from a storage resource until its charge state reaches a certain level." ;
+                           rdfs:label "Charge state setpoint signal" .
+
+
 ###  https://w3id.org/def/openadr#ChargeStateSignal
 :ChargeStateSignal rdf:type owl:Class ;
-                   rdfs:subClassOf :Signal ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty :hasSignalType ;
-                                     owl:allValuesFrom [ rdf:type owl:Class ;
-                                                         owl:oneOf ( :Delta
-                                                                     :Multiplier
-                                                                     :Setpoint
-                                                                   )
-                                                       ]
-                                   ] ;
+                   rdfs:subClassOf :Signal ;
                    rdfs:comment "Signal used  to dispatch storage resources" ;
                    rdfs:label "Charge state signal" .
 
@@ -870,50 +883,86 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
             rdfs:label "Data report" .
 
 
+###  https://w3id.org/def/openadr#DemandChargePriceAbsoluteSignal
+:DemandChargePriceAbsoluteSignal rdf:type owl:Class ;
+                                 rdfs:subClassOf :DemandChargeSignal ;
+                                 rdfs:comment "This is the demand charge expressed in absolute terms" ;
+                                 rdfs:label "Demand charge absolute price signal" .
+
+
+###  https://w3id.org/def/openadr#DemandChargePriceMultiplierSignal
+:DemandChargePriceMultiplierSignal rdf:type owl:Class ;
+                                   rdfs:subClassOf :DemandChargeSignal ;
+                                   rdfs:comment "This is a multiplier to the existing demand charge" ;
+                                   rdfs:label "Demand charge multiplier price signal" .
+
+
+###  https://w3id.org/def/openadr#DemandChargePriceRelativeSignal
+:DemandChargePriceRelativeSignal rdf:type owl:Class ;
+                                 rdfs:subClassOf :DemandChargeSignal ;
+                                 rdfs:comment "This is a delta change to the existing demand charge" ;
+                                 rdfs:label "Demand charge relative price signal" .
+
+
 ###  https://w3id.org/def/openadr#DemandChargeSignal
 :DemandChargeSignal rdf:type owl:Class ;
-                    rdfs:subClassOf :Signal ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty :hasSignalType ;
-                                      owl:allValuesFrom [ rdf:type owl:Class ;
-                                                          owl:oneOf ( :Price
-                                                                      :PriceMultiplier
-                                                                      :PriceRelative
-                                                                    )
-                                                        ]
-                                    ] ;
+                    rdfs:subClassOf :Signal ;
                     rdfs:comment "Signal for the demand charge" ;
                     rdfs:label "Demand charge signal" .
 
 
+###  https://w3id.org/def/openadr#ElectricityPriceAbsoluteSignal
+:ElectricityPriceAbsoluteSignal rdf:type owl:Class ;
+                                rdfs:subClassOf :ElectricityPriceSignal ;
+                                rdfs:comment "This is the cost of electricity  expressed in absolute terms" ;
+                                rdfs:label "Electicity absolute price signal" .
+
+
+###  https://w3id.org/def/openadr#ElectricityPriceMultiplierSignal
+:ElectricityPriceMultiplierSignal rdf:type owl:Class ;
+                                  rdfs:subClassOf :ElectricityPriceSignal ;
+                                  rdfs:comment "This is a multiplier to the existing cost of electricity" ;
+                                  rdfs:label "Electricity multiplier price signal" .
+
+
+###  https://w3id.org/def/openadr#ElectricityPriceRelativeSignal
+:ElectricityPriceRelativeSignal rdf:type owl:Class ;
+                                rdfs:subClassOf :ElectricityPriceSignal ;
+                                rdfs:comment "This is a delta change to the existing price of electricity" ;
+                                rdfs:label "Electricity  relative price signal" .
+
+
 ###  https://w3id.org/def/openadr#ElectricityPriceSignal
 :ElectricityPriceSignal rdf:type owl:Class ;
-                        rdfs:subClassOf :Signal ,
-                                        [ rdf:type owl:Restriction ;
-                                          owl:onProperty :hasSignalType ;
-                                          owl:allValuesFrom [ rdf:type owl:Class ;
-                                                              owl:oneOf ( :Price
-                                                                          :PriceMultiplier
-                                                                          :PriceRelative
-                                                                        )
-                                                            ]
-                                        ] ;
+                        rdfs:subClassOf :Signal ;
                         rdfs:comment "Signal for the price of electricity" ;
                         rdfs:label "Electricity price signal" .
 
 
+###  https://w3id.org/def/openadr#EnergyPriceAbsolutePriceSignal
+:EnergyPriceAbsolutePriceSignal rdf:type owl:Class ;
+                                rdfs:subClassOf :EnergyPriceSignal ;
+                                rdfs:comment "This is the cost of energy expressed in absolute terms" ;
+                                rdfs:label "Energy absolute price signal" .
+
+
+###  https://w3id.org/def/openadr#EnergyPriceMultiplierSignal
+:EnergyPriceMultiplierSignal rdf:type owl:Class ;
+                             rdfs:subClassOf :EnergyPriceSignal ;
+                             rdfs:comment "This is a multiplier to the existing cost of energy" ;
+                             rdfs:label "Energy multiplier price signal" .
+
+
+###  https://w3id.org/def/openadr#EnergyPriceRelativeSignal
+:EnergyPriceRelativeSignal rdf:type owl:Class ;
+                           rdfs:subClassOf :EnergyPriceSignal ;
+                           rdfs:comment "This is a delta change to the existing price of energy" ;
+                           rdfs:label "Energy relative price signal" .
+
+
 ###  https://w3id.org/def/openadr#EnergyPriceSignal
 :EnergyPriceSignal rdf:type owl:Class ;
-                   rdfs:subClassOf :Signal ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty :hasSignalType ;
-                                     owl:allValuesFrom [ rdf:type owl:Class ;
-                                                         owl:oneOf ( :Price
-                                                                     :PriceMultiplier
-                                                                     :PriceRelative
-                                                                   )
-                                                       ]
-                                   ] ;
+                   rdfs:subClassOf :Signal ;
                    rdfs:label "Energy price signal" ,
                               "Signal for the price of energy" .
 
@@ -1008,19 +1057,37 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
       rdfs:label "Item" .
 
 
+###  https://w3id.org/def/openadr#LoadControlCapacitySignal
+:LoadControlCapacitySignal rdf:type owl:Class ;
+                           rdfs:subClassOf :LoadControlSignal ;
+                           rdfs:comment "This is an instruction for the load controller to operate at a level that is some percentage of its maximum load consumption capacity. This can be mapped to specific load controllers to do things like duty cycling. Note that 1.0 refers to 100% consumption. In the case of simple ON/OFF type devices then 0 = OFF and 1 = ON." ;
+                           rdfs:label "Load control capacity signal" .
+
+
+###  https://w3id.org/def/openadr#LoadControlLevelOffsetSignal
+:LoadControlLevelOffsetSignal rdf:type owl:Class ;
+                              rdfs:subClassOf :LoadControlSignal ;
+                              rdfs:comment "Discrete integer levels that are relative to normal operations where 0 is normal operations. There is no requirement to link the setpoints to specific load consumption values, but the intention is that the higher the setpoint the less load is consumed. Note that these are controller set points that can be mapped at the VEN side to something as simple as thermostat temperature set point offsets." ;
+                              rdfs:label "Load control level offset  signal" .
+
+
+###  https://w3id.org/def/openadr#LoadControlPercentOffset
+:LoadControlPercentOffset rdf:type owl:Class ;
+                          rdfs:subClassOf :LoadControlSignal ;
+                          rdfs:comment "Percentage change from normal operations. The percentage does not refer to specific load consumptions values, but to load control operation levels. The lower the percentage the less load is consumed." ;
+                          rdfs:label "Load control percent offset signal" .
+
+
+###  https://w3id.org/def/openadr#LoadControlSetpointSignal
+:LoadControlSetpointSignal rdf:type owl:Class ;
+                           rdfs:subClassOf :LoadControlSignal ;
+                           rdfs:comment "Load controller set points. There is no requirement to link the setpoints to specific load consumption values. Note that these are generic controller set points and can be mapped at the VEN side to something as simple as specific thermostat temperature set points." ;
+                           rdfs:label "Load control setpoint signal" .
+
+
 ###  https://w3id.org/def/openadr#LoadControlSignal
 :LoadControlSignal rdf:type owl:Class ;
-                   rdfs:subClassOf :Signal ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty :hasSignalType ;
-                                     owl:allValuesFrom [ rdf:type owl:Class ;
-                                                         owl:oneOf ( :xLoadControlCapacity
-                                                                     :xLoadControlLevelOffset
-                                                                     :xLoadControlPercentOffset
-                                                                     :xLoadControlSetpoint
-                                                                   )
-                                                       ]
-                                   ] ;
+                   rdfs:subClassOf :Signal ;
                    rdfs:label "Load control signal" ,
                               "Signal for to set the load control to values that are relative to the load controller and its output capacity." .
 
@@ -1031,19 +1098,37 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
                   rdfs:label "Load control state" .
 
 
+###  https://w3id.org/def/openadr#LoadDispatchDeltaSignal
+:LoadDispatchDeltaSignal rdf:type owl:Class ;
+                         rdfs:subClassOf :LoadDispatchSignal ;
+                         rdfs:comment "This is used to dispatch loads to some offset from an agreed upon baseline. Note that the baseline may be the current power consumption." ;
+                         rdfs:label "Load dispatch delta signal" .
+
+
+###  https://w3id.org/def/openadr#LoadDispatchLevelSignal
+:LoadDispatchLevelSignal rdf:type owl:Class ;
+                         rdfs:subClassOf :LoadDispatchSignal ;
+                         rdfs:comment "This is used to specify the load in terms of discrete levels." ;
+                         rdfs:label "Load dispatch level signal" .
+
+
+###  https://w3id.org/def/openadr#LoadDispatchMultiplier
+:LoadDispatchMultiplier rdf:type owl:Class ;
+                        rdfs:subClassOf :LoadDispatchSignal ;
+                        rdfs:comment "This is used to dispatch loads as some multiple of power against some agreed upon baseline. Note that the baseline may be the current power consumption." ;
+                        rdfs:label "Load dispatch multiplier signal" .
+
+
+###  https://w3id.org/def/openadr#LoadDispatchSetpointSignal
+:LoadDispatchSetpointSignal rdf:type owl:Class ;
+                            rdfs:subClassOf :LoadDispatchSignal ;
+                            rdfs:comment "This is used to dispatch loads to a specific amount" ;
+                            rdfs:label "Load dispatch setpoint signal" .
+
+
 ###  https://w3id.org/def/openadr#LoadDispatchSignal
 :LoadDispatchSignal rdf:type owl:Class ;
-                    rdfs:subClassOf :Signal ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty :hasSignalType ;
-                                      owl:allValuesFrom [ rdf:type owl:Class ;
-                                                          owl:oneOf ( :Delta
-                                                                      :Level
-                                                                      :Multiplier
-                                                                      :Setpoint
-                                                                    )
-                                                        ]
-                                    ] ;
+                    rdfs:subClassOf :Signal ;
                     rdfs:comment "Instructions are used to set the load  values that can be expressed in terms of the desired load" ;
                     rdfs:label "Load dispatch signal" .
 
@@ -1140,8 +1225,8 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
 ###  https://w3id.org/def/openadr#ReportDataPayload
 :ReportDataPayload rdf:type owl:Class ;
                    rdfs:subClassOf :ReportPayload ;
-                   rdfs:label "Part of the OpenADR report object that includes the data sent to a node" ,
-                              "Report data payload" .
+                   rdfs:comment "Part of the OpenADR report object that includes the data sent to a node" ;
+                   rdfs:label "Report data payload" .
 
 
 ###  https://w3id.org/def/openadr#ReportDescriptor
@@ -1275,16 +1360,9 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
 
 ###  https://w3id.org/def/openadr#SimpleSignal
 :SimpleSignal rdf:type owl:Class ;
-              rdfs:subClassOf :Signal ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasSignalType ;
-                                owl:allValuesFrom [ rdf:type owl:Class ;
-                                                    owl:oneOf ( :Level
-                                                              )
-                                                  ]
-                              ] ;
-              rdfs:label "Signal for signal levels" ,
-                         "Simple signal" .
+              rdfs:subClassOf :Signal ;
+              rdfs:comment "Signal for signal levels" ;
+              rdfs:label "Simple signal" .
 
 
 ###  https://w3id.org/def/openadr#TelemetryReport
