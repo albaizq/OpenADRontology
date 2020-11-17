@@ -1,0 +1,37 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"base:Test3" -> "base:TestsuiteOpenADR" [ label = ":belongsTo" ];
+	"base:Test9" -> "base:TestsuiteOpenADR" [ label = ":belongsTo" ];
+	"base:Test29" -> "base:TestsuiteOpenADR" [ label = ":belongsTo" ];
+	"base:Test2" -> "base:TestsuiteOpenADR" [ label = ":belongsTo" ];
+	"base:Test47" -> "base:TestsuiteOpenADR" [ label = ":belongsTo" ];
+	"base:Test8" -> "base:TestsuiteOpenADR" [ label = ":belongsTo" ];
+	"base:Test22" -> "base:TestsuiteOpenADR" [ label = ":belongsTo" ];
+	"base:Test28" -> "base:TestsuiteOpenADR" [ label = ":belongsTo" ];
+	"base:Test50" -> "base:TestsuiteOpenADR" [ label = ":belongsTo" ];
+	"base:TestsuiteOpenADR" -> "https://w3id.org/def/openadr#" [ label = ":source" ];
+	"base:Test31" -> "base:TestsuiteOpenADR" [ label = ":belongsTo" ];
+	"base:Test18" -> "base:TestsuiteOpenADR" [ label = ":belongsTo" ];
+	"base:Test1" -> "base:TestsuiteOpenADR" [ label = ":belongsTo" ];
+	"base:Test46" -> "base:TestsuiteOpenADR" [ label = ":belongsTo" ];
+	"base:Test21" -> "base:TestsuiteOpenADR" [ label = ":belongsTo" ];
+	"base:Test30" -> "base:TestsuiteOpenADR" [ label = ":belongsTo" ];
+	"base:Test36" -> "base:TestsuiteOpenADR" [ label = ":belongsTo" ];
+	"base:Test11" -> "base:TestsuiteOpenADR" [ label = ":belongsTo" ];
+	"base:Test17" -> "base:TestsuiteOpenADR" [ label = ":belongsTo" ];
+	"base:Test20" -> "base:TestsuiteOpenADR" [ label = ":belongsTo" ];
+	"base:Test26" -> "base:TestsuiteOpenADR" [ label = ":belongsTo" ];
+	"base:Test35" -> "base:TestsuiteOpenADR" [ label = ":belongsTo" ];
+	"base:Test10" -> "base:TestsuiteOpenADR" [ label = ":belongsTo" ];
+	"base:Test5" -> "base:TestsuiteOpenADR" [ label = ":belongsTo" ];
+	"base:Test53" -> "base:TestsuiteOpenADR" [ label = ":belongsTo" ];
+	"base:Test34" -> "base:TestsuiteOpenADR" [ label = ":belongsTo" ];
+	"base:Test15" -> "base:TestsuiteOpenADR" [ label = ":belongsTo" ];
+	"base:Test4" -> "base:TestsuiteOpenADR" [ label = ":belongsTo" ];
+	"base:Test24" -> "base:TestsuiteOpenADR" [ label = ":belongsTo" ];
+	"base:Test52" -> "base:TestsuiteOpenADR" [ label = ":belongsTo" ];
+	"base:Test33" -> "base:TestsuiteOpenADR" [ label = ":belongsTo" ];
+	"base:Test14" -> "base:TestsuiteOpenADR" [ label = ":belongsTo" ];
+
+}

@@ -1,0 +1,448 @@
+[ {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "Each interval in a signal is related to a typical value"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "SignalInterval subClassOf hasTypicalValue only Value"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "Assets are physical entities"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Asset subclassOf SpatialThing"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "Each signal has the following attributes: name, type and item base"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Signal subclassOf hasSignalInterval only SignalInterval"
+  }, {
+    "@value" : "Signal subclassOf signalName only string"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "Each signal element contains a signalType such as level or price"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "EnergyPriceSignal subClassOf Signal"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "The type of schedules that a VEN is allowed to issue: optIn, optOut, or both"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "OptIn subClassOf Opt"
+  }, {
+    "@value" : "OptOut subClassOf Opt"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "A sampling rate has an attribute to determine whether or not data is sampled as it changes"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "SamplingRate subClassOf isOnChange some boolean"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "A sampling rate has a minimum and maximum period"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "SamplingRate subClassOf hasMaxPeriod only TemporalEntity"
+  }, {
+    "@value" : "SamplingRate subClassOf hasMinPeriod only TemporalEntity"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "A signal  can have more than one interval"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Signal subClassOf isDefinedIn some SignalInterval"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test20",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "A report defines a sampling rate"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "ReportDescriptor subClassOf hasSamplingRate only SamplingRate"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test21",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "A report includes the following atributes: id and duration"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Report subClassOf hasDuration only Duration"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "The data report can be of type history report and  telemetry report"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "HistoryReport subclassOf Report"
+  }, {
+    "@value" : "TelemetryReport subclassOf Report"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test24",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "There are three two types of reports: metada and data report"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "DataReport subClassOf Report"
+  }, {
+    "@value" : "MetadataReport subClassOf Report"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test26",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "There are different types of signals"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "BidLoadSignal subclassOf Signal"
+  }, {
+    "@value" : "EnergyPriceSignal subClassOf Signal"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test28",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "A VEN is a communication endpoint that represents one or more logical resources"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "VEN type Class"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test29",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "Event signals may contain target elements"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Signal subClassOf hasTarget some Group"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "A report can have more than one report descriptors"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Report subClassOf reportDescriptor some ReportDescriptor"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test30",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "Events may contain multiple event signals"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Event subClassOf includesSignal min 1 Signal"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test31",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "An event also defines a ramp up and recovery period"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Event subClassOf ramp_up some Duration"
+  }, {
+    "@value" : "Event subClassOf recovery some Duration"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test33",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "An event includes a signal"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Event subClassOf includesSignal only Signal"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test34",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "The event also defines a randomization time window"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "EventDescriptor subClassOf hasRandomization only string"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test35",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "A active period defines the start time and duration of the event"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Event subclassOf hasActivePeriod only TemporalEntity"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test36",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "An event includes the following attributes: modificationNumber, modificationDateTime, modificationReason, priority, marketContext, createdDateTime, eventStatus, testEvent, comment"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Event subclassOf eventDescriptor only EventDescriptor"
+  }, {
+    "@value" : "EventDescriptor subclassOf  hasMarketContext only string"
+  }, {
+    "@value" : "EventDescriptor subclassOf comment only string"
+  }, {
+    "@value" : "EventDescriptor subclassOf createdDateTime only date"
+  }, {
+    "@value" : "EventDescriptor subclassOf hasEventStatus only string"
+  }, {
+    "@value" : "EventDescriptor subclassOf hasModificationDateTime only date"
+  }, {
+    "@value" : "EventDescriptor subclassOf hasModificationNumber only string"
+  }, {
+    "@value" : "EventDescriptor subclassOf hasModificationReason only string"
+  }, {
+    "@value" : "EventDescriptor subclassOf hasPriority only integer"
+  }, {
+    "@value" : "EventDescriptor subclassOf isTestEvent only boolean"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "An event can have more than one event descriptros"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Event subclassOf eventDescriptor some EventDescriptor"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test46",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "Events are included in the distribute event"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "DistributeEvent subclassOf containsEvent only Event"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test47",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "Ia response is required, the VEN acknowledges its opt-in or out-out disposition"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Event subClassOf expectedResponse only Opt"
+  }, {
+    "@value" : "OptIn type Class"
+  }, {
+    "@value" : "OptOut type Class"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "Each signal, event and report has a market context"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Event subClassOf hasMarketContext only string"
+  }, {
+    "@value" : "Report subClassOf hasMarketContext only string"
+  }, {
+    "@value" : "Signal subClassOf hasMarketContext only string"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test50",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "A target includes a resource and its VEN"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Group subclassOf containsResource some Resource"
+  }, {
+    "@value" : "Group subclassOf containsVEN some VEN"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test52",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "Events are sent to targets"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Event subClassOf hasGroupTarget only Group"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test53",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "Events are generated by the VTN"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "VTN subClassOf sendsEvent some Event"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "An resource may be managet by the VEN"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "VEN subClassOf manages some Resource"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "An asset comprise a resource"
+  } ],
+  "http://w3id.org/def/vtc#belongsTo" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Resource subClassOf manages some Asset"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestSuite" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@id" : "https://w3id.org/def/openadr#"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testuite-openadr.ttl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This is the set of tests extracted from the requirements identified for the openADR  ontology."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "OpenADR 2.0 Profile Specification B Profile"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/source",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://w3id.org/def/vtc#TestCaseDesign",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/def/vtc#TestSuite",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/def/vtc#belongsTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://w3id.org/def/vtc#desiredBehaviour",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+} ]

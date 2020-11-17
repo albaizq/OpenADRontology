@@ -1,0 +1,328 @@
+@prefix : <http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://delta.iot.linkeddata.es/tests/testuite-openadr.ttl> .
+
+<http://delta.iot.linkeddata.es/tests/testuite-openadr.ttl> rdf:type owl:Ontology ;
+                                                             rdfs:seeAlso "OpenADR 2.0 Profile Specification B Profile" ;
+                                                             rdfs:comment "This is the set of tests extracted from the requirements identified for the openADR  ontology." .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> rdf:type owl:AnnotationProperty .
+
+
+###  http://w3id.org/def/vtc#belongsTo
+<http://w3id.org/def/vtc#belongsTo> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://w3id.org/def/vtc#desiredBehaviour
+<http://w3id.org/def/vtc#desiredBehaviour> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://w3id.org/def/vtc#TestCaseDesign
+<http://w3id.org/def/vtc#TestCaseDesign> rdf:type owl:Class .
+
+
+###  http://w3id.org/def/vtc#TestSuite
+<http://w3id.org/def/vtc#TestSuite> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test1
+:Test1 rdf:type owl:NamedIndividual ,
+                <http://w3id.org/def/vtc#TestCaseDesign> ;
+       <http://w3id.org/def/vtc#desiredBehaviour> "SignalInterval subClassOf hasTypicalValue only Value"^^xsd:string ;
+       <http://purl.org/dc/elements/1.1/description> "Each interval in a signal is related to a typical value" ;
+       <http://w3id.org/def/vtc#belongsTo> :TestsuiteOpenADR .
+
+
+###  http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test10
+:Test10 rdf:type owl:NamedIndividual ,
+                 <http://w3id.org/def/vtc#TestCaseDesign> ;
+        <http://w3id.org/def/vtc#desiredBehaviour> "Asset subclassOf SpatialThing"^^xsd:string ;
+        <http://purl.org/dc/elements/1.1/description> "Assets are physical entities" ;
+        <http://w3id.org/def/vtc#belongsTo> :TestsuiteOpenADR .
+
+
+###  http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test11
+:Test11 rdf:type owl:NamedIndividual ,
+                 <http://w3id.org/def/vtc#TestCaseDesign> ;
+        <http://w3id.org/def/vtc#desiredBehaviour> "Signal subclassOf hasSignalInterval only SignalInterval" ,
+                                                   "Signal subclassOf signalName only string" ;
+        <http://purl.org/dc/elements/1.1/description> "Each signal has the following attributes: name, type and item base" ;
+        <http://w3id.org/def/vtc#belongsTo> :TestsuiteOpenADR .
+
+
+###  http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test14
+:Test14 rdf:type owl:NamedIndividual ,
+                 <http://w3id.org/def/vtc#TestCaseDesign> ;
+        <http://w3id.org/def/vtc#desiredBehaviour> "EnergyPriceSignal subClassOf Signal"^^xsd:string ;
+        <http://purl.org/dc/elements/1.1/description> "Each signal element contains a signalType such as level or price" ;
+        <http://w3id.org/def/vtc#belongsTo> :TestsuiteOpenADR .
+
+
+###  http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test15
+:Test15 rdf:type owl:NamedIndividual ,
+                 <http://w3id.org/def/vtc#TestCaseDesign> ;
+        <http://w3id.org/def/vtc#desiredBehaviour> "OptIn subClassOf Opt" ,
+                                                   "OptOut subClassOf Opt"^^xsd:string ;
+        <http://purl.org/dc/elements/1.1/description> "The type of schedules that a VEN is allowed to issue: optIn, optOut, or both" ;
+        <http://w3id.org/def/vtc#belongsTo> :TestsuiteOpenADR .
+
+
+###  http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test17
+:Test17 rdf:type owl:NamedIndividual ,
+                 <http://w3id.org/def/vtc#TestCaseDesign> ;
+        <http://w3id.org/def/vtc#desiredBehaviour> "SamplingRate subClassOf isOnChange some boolean"^^xsd:string ;
+        <http://purl.org/dc/elements/1.1/description> "A sampling rate has an attribute to determine whether or not data is sampled as it changes" ;
+        <http://w3id.org/def/vtc#belongsTo> :TestsuiteOpenADR .
+
+
+###  http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test18
+:Test18 rdf:type owl:NamedIndividual ,
+                 <http://w3id.org/def/vtc#TestCaseDesign> ;
+        <http://w3id.org/def/vtc#desiredBehaviour> "SamplingRate subClassOf hasMaxPeriod only TemporalEntity"^^xsd:string ,
+                                                   "SamplingRate subClassOf hasMinPeriod only TemporalEntity" ;
+        <http://purl.org/dc/elements/1.1/description> "A sampling rate has a minimum and maximum period" ;
+        <http://w3id.org/def/vtc#belongsTo> :TestsuiteOpenADR .
+
+
+###  http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test2
+:Test2 rdf:type owl:NamedIndividual ,
+                <http://w3id.org/def/vtc#TestCaseDesign> ;
+       <http://w3id.org/def/vtc#desiredBehaviour> "Signal subClassOf isDefinedIn some SignalInterval"^^xsd:string ;
+       <http://purl.org/dc/elements/1.1/description> "A signal  can have more than one interval" ;
+       <http://w3id.org/def/vtc#belongsTo> :TestsuiteOpenADR .
+
+
+###  http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test20
+:Test20 rdf:type owl:NamedIndividual ,
+                 <http://w3id.org/def/vtc#TestCaseDesign> ;
+        <http://w3id.org/def/vtc#desiredBehaviour> "ReportDescriptor subClassOf hasSamplingRate only SamplingRate"^^xsd:string ;
+        <http://purl.org/dc/elements/1.1/description> "A report defines a sampling rate" ;
+        <http://w3id.org/def/vtc#belongsTo> :TestsuiteOpenADR .
+
+
+###  http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test21
+:Test21 rdf:type owl:NamedIndividual ,
+                 <http://w3id.org/def/vtc#TestCaseDesign> ;
+        <http://w3id.org/def/vtc#desiredBehaviour> "Report subClassOf hasDuration only Duration"^^xsd:string ;
+        <http://purl.org/dc/elements/1.1/description> "A report includes the following atributes: id and duration" ;
+        <http://w3id.org/def/vtc#belongsTo> :TestsuiteOpenADR .
+
+
+###  http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test22
+:Test22 rdf:type owl:NamedIndividual ,
+                 <http://w3id.org/def/vtc#TestCaseDesign> ;
+        <http://w3id.org/def/vtc#desiredBehaviour> "HistoryReport subclassOf Report" ,
+                                                   "TelemetryReport subclassOf Report"^^xsd:string ;
+        <http://purl.org/dc/elements/1.1/description> "The data report can be of type history report and  telemetry report" ;
+        <http://w3id.org/def/vtc#belongsTo> :TestsuiteOpenADR .
+
+
+###  http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test24
+:Test24 rdf:type owl:NamedIndividual ,
+                 <http://w3id.org/def/vtc#TestCaseDesign> ;
+        <http://w3id.org/def/vtc#desiredBehaviour> "DataReport subClassOf Report"^^xsd:string ,
+                                                   "MetadataReport subClassOf Report" ;
+        <http://purl.org/dc/elements/1.1/description> "There are three two types of reports: metada and data report" ;
+        <http://w3id.org/def/vtc#belongsTo> :TestsuiteOpenADR .
+
+
+###  http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test26
+:Test26 rdf:type owl:NamedIndividual ,
+                 <http://w3id.org/def/vtc#TestCaseDesign> ;
+        <http://w3id.org/def/vtc#desiredBehaviour> "BidLoadSignal subclassOf Signal"^^xsd:string ,
+                                                   "EnergyPriceSignal subClassOf Signal" ;
+        <http://purl.org/dc/elements/1.1/description> "There are different types of signals" ;
+        <http://w3id.org/def/vtc#belongsTo> :TestsuiteOpenADR .
+
+
+###  http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test28
+:Test28 rdf:type owl:NamedIndividual ,
+                 <http://w3id.org/def/vtc#TestCaseDesign> ;
+        <http://w3id.org/def/vtc#desiredBehaviour> "VEN type Class"^^xsd:string ;
+        <http://purl.org/dc/elements/1.1/description> "A VEN is a communication endpoint that represents one or more logical resources" ;
+        <http://w3id.org/def/vtc#belongsTo> :TestsuiteOpenADR .
+
+
+###  http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test29
+:Test29 rdf:type owl:NamedIndividual ,
+                 <http://w3id.org/def/vtc#TestCaseDesign> ;
+        <http://w3id.org/def/vtc#desiredBehaviour> "Signal subClassOf hasTarget some Group"^^xsd:string ;
+        <http://purl.org/dc/elements/1.1/description> "Event signals may contain target elements" ;
+        <http://w3id.org/def/vtc#belongsTo> :TestsuiteOpenADR .
+
+
+###  http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test3
+:Test3 rdf:type owl:NamedIndividual ,
+                <http://w3id.org/def/vtc#TestCaseDesign> ;
+       <http://w3id.org/def/vtc#desiredBehaviour> "Report subClassOf reportDescriptor some ReportDescriptor"^^xsd:string ;
+       <http://purl.org/dc/elements/1.1/description> "A report can have more than one report descriptors" ;
+       <http://w3id.org/def/vtc#belongsTo> :TestsuiteOpenADR .
+
+
+###  http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test30
+:Test30 rdf:type owl:NamedIndividual ,
+                 <http://w3id.org/def/vtc#TestCaseDesign> ;
+        <http://w3id.org/def/vtc#desiredBehaviour> "Event subClassOf includesSignal min 1 Signal"^^xsd:string ;
+        <http://purl.org/dc/elements/1.1/description> "Events may contain multiple event signals" ;
+        <http://w3id.org/def/vtc#belongsTo> :TestsuiteOpenADR .
+
+
+###  http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test31
+:Test31 rdf:type owl:NamedIndividual ,
+                 <http://w3id.org/def/vtc#TestCaseDesign> ;
+        <http://w3id.org/def/vtc#desiredBehaviour> "Event subClassOf ramp_up some Duration" ,
+                                                   "Event subClassOf recovery some Duration"^^xsd:string ;
+        <http://purl.org/dc/elements/1.1/description> "An event also defines a ramp up and recovery period" ;
+        <http://w3id.org/def/vtc#belongsTo> :TestsuiteOpenADR .
+
+
+###  http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test33
+:Test33 rdf:type owl:NamedIndividual ,
+                 <http://w3id.org/def/vtc#TestCaseDesign> ;
+        <http://w3id.org/def/vtc#desiredBehaviour> "Event subClassOf includesSignal only Signal"^^xsd:string ;
+        <http://purl.org/dc/elements/1.1/description> "An event includes a signal" ;
+        <http://w3id.org/def/vtc#belongsTo> :TestsuiteOpenADR .
+
+
+###  http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test34
+:Test34 rdf:type owl:NamedIndividual ,
+                 <http://w3id.org/def/vtc#TestCaseDesign> ;
+        <http://w3id.org/def/vtc#desiredBehaviour> "EventDescriptor subClassOf hasRandomization only string"^^xsd:string ;
+        <http://purl.org/dc/elements/1.1/description> "The event also defines a randomization time window" ;
+        <http://w3id.org/def/vtc#belongsTo> :TestsuiteOpenADR .
+
+
+###  http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test35
+:Test35 rdf:type owl:NamedIndividual ,
+                 <http://w3id.org/def/vtc#TestCaseDesign> ;
+        <http://w3id.org/def/vtc#desiredBehaviour> "Event subclassOf hasActivePeriod only TemporalEntity"^^xsd:string ;
+        <http://purl.org/dc/elements/1.1/description> "A active period defines the start time and duration of the event" ;
+        <http://w3id.org/def/vtc#belongsTo> :TestsuiteOpenADR .
+
+
+###  http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test36
+:Test36 rdf:type owl:NamedIndividual ,
+                 <http://w3id.org/def/vtc#TestCaseDesign> ;
+        <http://w3id.org/def/vtc#desiredBehaviour> "Event subclassOf eventDescriptor only EventDescriptor" ,
+                                                   "EventDescriptor subclassOf  hasMarketContext only string" ,
+                                                   "EventDescriptor subclassOf comment only string"^^xsd:string ,
+                                                   "EventDescriptor subclassOf createdDateTime only date" ,
+                                                   "EventDescriptor subclassOf hasEventStatus only string" ,
+                                                   "EventDescriptor subclassOf hasModificationDateTime only date" ,
+                                                   "EventDescriptor subclassOf hasModificationNumber only string" ,
+                                                   "EventDescriptor subclassOf hasModificationReason only string" ,
+                                                   "EventDescriptor subclassOf hasPriority only integer" ,
+                                                   "EventDescriptor subclassOf isTestEvent only boolean" ;
+        <http://purl.org/dc/elements/1.1/description> "An event includes the following attributes: modificationNumber, modificationDateTime, modificationReason, priority, marketContext, createdDateTime, eventStatus, testEvent, comment" ;
+        <http://w3id.org/def/vtc#belongsTo> :TestsuiteOpenADR .
+
+
+###  http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test4
+:Test4 rdf:type owl:NamedIndividual ,
+                <http://w3id.org/def/vtc#TestCaseDesign> ;
+       <http://w3id.org/def/vtc#desiredBehaviour> "Event subclassOf eventDescriptor some EventDescriptor"^^xsd:string ;
+       <http://purl.org/dc/elements/1.1/description> "An event can have more than one event descriptros" ;
+       <http://w3id.org/def/vtc#belongsTo> :TestsuiteOpenADR .
+
+
+###  http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test46
+:Test46 rdf:type owl:NamedIndividual ,
+                 <http://w3id.org/def/vtc#TestCaseDesign> ;
+        <http://w3id.org/def/vtc#desiredBehaviour> "DistributeEvent subclassOf containsEvent only Event"^^xsd:string ;
+        <http://purl.org/dc/elements/1.1/description> "Events are included in the distribute event" ;
+        <http://w3id.org/def/vtc#belongsTo> :TestsuiteOpenADR .
+
+
+###  http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test47
+:Test47 rdf:type owl:NamedIndividual ,
+                 <http://w3id.org/def/vtc#TestCaseDesign> ;
+        <http://w3id.org/def/vtc#desiredBehaviour> "Event subClassOf expectedResponse only Opt" ,
+                                                   "OptIn type Class" ,
+                                                   "OptOut type Class"^^xsd:string ;
+        <http://purl.org/dc/elements/1.1/description> "Ia response is required, the VEN acknowledges its opt-in or out-out disposition" ;
+        <http://w3id.org/def/vtc#belongsTo> :TestsuiteOpenADR .
+
+
+###  http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test5
+:Test5 rdf:type owl:NamedIndividual ,
+                <http://w3id.org/def/vtc#TestCaseDesign> ;
+       <http://w3id.org/def/vtc#desiredBehaviour> "Event subClassOf hasMarketContext only string" ,
+                                                  "Report subClassOf hasMarketContext only string"^^xsd:string ,
+                                                  "Signal subClassOf hasMarketContext only string" ;
+       <http://purl.org/dc/elements/1.1/description> "Each signal, event and report has a market context" ;
+       <http://w3id.org/def/vtc#belongsTo> :TestsuiteOpenADR .
+
+
+###  http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test50
+:Test50 rdf:type owl:NamedIndividual ,
+                 <http://w3id.org/def/vtc#TestCaseDesign> ;
+        <http://w3id.org/def/vtc#desiredBehaviour> "Group subclassOf containsResource some Resource"^^xsd:string ,
+                                                   "Group subclassOf containsVEN some VEN" ;
+        <http://purl.org/dc/elements/1.1/description> "A target includes a resource and its VEN" ;
+        <http://w3id.org/def/vtc#belongsTo> :TestsuiteOpenADR .
+
+
+###  http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test52
+:Test52 rdf:type owl:NamedIndividual ,
+                 <http://w3id.org/def/vtc#TestCaseDesign> ;
+        <http://w3id.org/def/vtc#desiredBehaviour> "Event subClassOf hasGroupTarget only Group"^^xsd:string ;
+        <http://purl.org/dc/elements/1.1/description> "Events are sent to targets" ;
+        <http://w3id.org/def/vtc#belongsTo> :TestsuiteOpenADR .
+
+
+###  http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test53
+:Test53 rdf:type owl:NamedIndividual ,
+                 <http://w3id.org/def/vtc#TestCaseDesign> ;
+        <http://w3id.org/def/vtc#desiredBehaviour> "VTN subClassOf sendsEvent some Event"^^xsd:string ;
+        <http://purl.org/dc/elements/1.1/description> "Events are generated by the VTN" ;
+        <http://w3id.org/def/vtc#belongsTo> :TestsuiteOpenADR .
+
+
+###  http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test8
+:Test8 rdf:type owl:NamedIndividual ,
+                <http://w3id.org/def/vtc#TestCaseDesign> ;
+       <http://w3id.org/def/vtc#desiredBehaviour> "VEN subClassOf manages some Resource"^^xsd:string ;
+       <http://purl.org/dc/elements/1.1/description> "An resource may be managet by the VEN" ;
+       <http://w3id.org/def/vtc#belongsTo> :TestsuiteOpenADR .
+
+
+###  http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#Test9
+:Test9 rdf:type owl:NamedIndividual ,
+                <http://w3id.org/def/vtc#TestCaseDesign> ;
+       <http://w3id.org/def/vtc#desiredBehaviour> "Resource subClassOf manages some Asset"^^xsd:string ;
+       <http://purl.org/dc/elements/1.1/description> "An asset comprise a resource" ;
+       <http://w3id.org/def/vtc#belongsTo> :TestsuiteOpenADR .
+
+
+###  http://delta.iot.linkeddata.es/tests/testsuite-openadr.ttl#TestsuiteOpenADR
+:TestsuiteOpenADR rdf:type owl:NamedIndividual ,
+                           <http://w3id.org/def/vtc#TestSuite> ;
+                  <http://purl.org/dc/terms/source> <https://w3id.org/def/openadr#> .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
