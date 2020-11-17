@@ -2285,17 +2285,6 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
     
 
 
-    <!-- https://w3id.org/def/openadr#Delta -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/def/openadr#Delta">
-        <rdf:type rdf:resource="https://w3id.org/def/openadr#SignalType"/>
-        <rdfs:comment>Delta type that can be applied to the charge state and load dispatch signal</rdfs:comment>
-        <rdfs:label>Delta</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://w3id.org/def/openadr#Far -->
 
 
@@ -2303,28 +2292,6 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
         <rdf:type rdf:resource="https://w3id.org/def/openadr#EventStatus"/>
         <rdfs:comment>Far status</rdfs:comment>
         <rdfs:label>Far</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/def/openadr#Level -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/def/openadr#Level">
-        <rdf:type rdf:resource="https://w3id.org/def/openadr#SignalType"/>
-        <rdfs:comment>Level type that can be applied to the simple and load dispatch signal. It specifies the value of the signal in in terms of discrete levels.</rdfs:comment>
-        <rdfs:label>Level</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/def/openadr#Multiplier -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/def/openadr#Multiplier">
-        <rdf:type rdf:resource="https://w3id.org/def/openadr#SignalType"/>
-        <rdfs:comment>Multiplier type that can be applied to the load dispatch and charge state signal</rdfs:comment>
-        <rdfs:label>Multiplier</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2347,95 +2314,6 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
         <rdf:type rdf:resource="https://w3id.org/def/openadr#EventStatus"/>
         <rdfs:comment>None status</rdfs:comment>
         <rdfs:label>None</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/def/openadr#Price -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/def/openadr#Price">
-        <rdf:type rdf:resource="https://w3id.org/def/openadr#SignalType"/>
-        <rdfs:comment>Price type that can be applied to the demand charge, energy price and electricity price signal. It expresses the value of the signal in absolute terms</rdfs:comment>
-        <rdfs:label>Price</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/def/openadr#PriceMultiplier -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/def/openadr#PriceMultiplier">
-        <rdf:type rdf:resource="https://w3id.org/def/openadr#SignalType"/>
-        <rdfs:comment>Price multiplier type that can be applied to the demand charge, energy price and electricity price signal. It expresses a multipler of the existing value of the signal.</rdfs:comment>
-        <rdfs:label>Price multiplier</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/def/openadr#PriceRelative -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/def/openadr#PriceRelative">
-        <rdf:type rdf:resource="https://w3id.org/def/openadr#SignalType"/>
-        <rdfs:comment>Price relative type that can be applied to the demand charge, energy price and electricity price signal. It expresses a delta change to
-the existing value of the signal</rdfs:comment>
-        <rdfs:label>Price relative</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/def/openadr#Setpoint -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/def/openadr#Setpoint">
-        <rdf:type rdf:resource="https://w3id.org/def/openadr#SignalType"/>
-        <rdfs:comment>Setpoint type that can be applied to the load dispatch, charge state, bid load and bid energy signal</rdfs:comment>
-        <rdfs:label>Setpoint</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/def/openadr#xLoadControlCapacity -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/def/openadr#xLoadControlCapacity">
-        <rdf:type rdf:resource="https://w3id.org/def/openadr#SignalType"/>
-        <rdfs:comment>Load control capacity type that can be applied to the load control signal</rdfs:comment>
-        <rdfs:label>Load control capacity</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/def/openadr#xLoadControlLevelOffset -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/def/openadr#xLoadControlLevelOffset">
-        <rdf:type rdf:resource="https://w3id.org/def/openadr#SignalType"/>
-        <rdfs:comment>Load control level offset type that can be applied to the load control signal</rdfs:comment>
-        <rdfs:label>Load control level offset</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/def/openadr#xLoadControlPercentOffset -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/def/openadr#xLoadControlPercentOffset">
-        <rdf:type rdf:resource="https://w3id.org/def/openadr#SignalType"/>
-        <rdfs:comment>Load control percent offset type that can be applied to the load control signal</rdfs:comment>
-        <rdfs:label>Load control percent offset</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/def/openadr#xLoadControlSetpoint -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/def/openadr#xLoadControlSetpoint">
-        <rdf:type rdf:resource="https://w3id.org/def/openadr#SignalType"/>
-        <rdfs:comment>Load control setpoint type that can be applied to the load control signal</rdfs:comment>
-        <rdfs:label>Load control setpoint</rdfs:label>
     </owl:NamedIndividual>
     <rdf:Description>
         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
