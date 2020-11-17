@@ -730,15 +730,6 @@
     "@id" : "_:genid4"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/openadr#Delta",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#SignalType" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Delta type that can be applied to the charge state and load dispatch signal"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Delta"
-  } ]
-}, {
   "@id" : "https://w3id.org/def/openadr#DemandChargePriceAbsoluteSignal",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1011,15 +1002,6 @@
     "@value" : "Item"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/openadr#Level",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#SignalType" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Level type that can be applied to the simple and load dispatch signal. It specifies the value of the signal in in terms of discrete levels."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Level"
-  } ]
-}, {
   "@id" : "https://w3id.org/def/openadr#LoadControlCapacitySignal",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1162,15 +1144,6 @@
     "@id" : "https://w3id.org/def/openadr#Report"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/openadr#Multiplier",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#SignalType" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Multiplier type that can be applied to the load dispatch and charge state signal"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Multiplier"
-  } ]
-}, {
   "@id" : "https://w3id.org/def/openadr#Near",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#EventStatus" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1242,33 +1215,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/openadr#Opt"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/openadr#Price",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#SignalType" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Price type that can be applied to the demand charge, energy price and electricity price signal. It expresses the value of the signal in absolute terms"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Price"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/openadr#PriceMultiplier",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#SignalType" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Price multiplier type that can be applied to the demand charge, energy price and electricity price signal. It expresses a multipler of the existing value of the signal."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Price multiplier"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/openadr#PriceRelative",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#SignalType" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Price relative type that can be applied to the demand charge, energy price and electricity price signal. It expresses a delta change to\nthe existing value of the signal"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Price relative"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#Report",
@@ -1434,15 +1380,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.opengis.net/ont/geosparql#Feature"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/openadr#Setpoint",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#SignalType" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Setpoint type that can be applied to the load dispatch, charge state, bid load and bid energy signal"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Setpoint"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#Signal",
@@ -2639,41 +2576,5 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/openadr#xLoadControlCapacity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#SignalType" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Load control capacity type that can be applied to the load control signal"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Load control capacity"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/openadr#xLoadControlLevelOffset",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#SignalType" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Load control level offset type that can be applied to the load control signal"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Load control level offset"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/openadr#xLoadControlPercentOffset",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#SignalType" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Load control percent offset type that can be applied to the load control signal"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Load control percent offset"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/openadr#xLoadControlSetpoint",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/openadr#SignalType" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Load control setpoint type that can be applied to the load control signal"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Load control setpoint"
   } ]
 } ]

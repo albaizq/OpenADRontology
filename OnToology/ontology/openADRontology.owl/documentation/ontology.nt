@@ -1272,29 +1272,11 @@ _:genid39 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/o
 <https://w3id.org/def/openadr#Completed> <http://www.w3.org/2000/01/rdf-schema#comment> "Completed status" .
 <https://w3id.org/def/openadr#Completed> <http://www.w3.org/2000/01/rdf-schema#label> "Completed" .
 # 
-# https://w3id.org/def/openadr#Delta
-<https://w3id.org/def/openadr#Delta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/openadr#Delta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/openadr#SignalType> .
-<https://w3id.org/def/openadr#Delta> <http://www.w3.org/2000/01/rdf-schema#comment> "Delta type that can be applied to the charge state and load dispatch signal" .
-<https://w3id.org/def/openadr#Delta> <http://www.w3.org/2000/01/rdf-schema#label> "Delta" .
-# 
 # https://w3id.org/def/openadr#Far
 <https://w3id.org/def/openadr#Far> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/openadr#Far> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/openadr#EventStatus> .
 <https://w3id.org/def/openadr#Far> <http://www.w3.org/2000/01/rdf-schema#comment> "Far status" .
 <https://w3id.org/def/openadr#Far> <http://www.w3.org/2000/01/rdf-schema#label> "Far" .
-# 
-# https://w3id.org/def/openadr#Level
-<https://w3id.org/def/openadr#Level> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/openadr#Level> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/openadr#SignalType> .
-<https://w3id.org/def/openadr#Level> <http://www.w3.org/2000/01/rdf-schema#comment> "Level type that can be applied to the simple and load dispatch signal. It specifies the value of the signal in in terms of discrete levels." .
-<https://w3id.org/def/openadr#Level> <http://www.w3.org/2000/01/rdf-schema#label> "Level" .
-# 
-# https://w3id.org/def/openadr#Multiplier
-<https://w3id.org/def/openadr#Multiplier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/openadr#Multiplier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/openadr#SignalType> .
-<https://w3id.org/def/openadr#Multiplier> <http://www.w3.org/2000/01/rdf-schema#comment> "Multiplier type that can be applied to the load dispatch and charge state signal" .
-<https://w3id.org/def/openadr#Multiplier> <http://www.w3.org/2000/01/rdf-schema#label> "Multiplier" .
 # 
 # https://w3id.org/def/openadr#Near
 <https://w3id.org/def/openadr#Near> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1307,54 +1289,6 @@ _:genid39 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/o
 <https://w3id.org/def/openadr#None> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/openadr#EventStatus> .
 <https://w3id.org/def/openadr#None> <http://www.w3.org/2000/01/rdf-schema#comment> "None status" .
 <https://w3id.org/def/openadr#None> <http://www.w3.org/2000/01/rdf-schema#label> "None" .
-# 
-# https://w3id.org/def/openadr#Price
-<https://w3id.org/def/openadr#Price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/openadr#Price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/openadr#SignalType> .
-<https://w3id.org/def/openadr#Price> <http://www.w3.org/2000/01/rdf-schema#comment> "Price type that can be applied to the demand charge, energy price and electricity price signal. It expresses the value of the signal in absolute terms" .
-<https://w3id.org/def/openadr#Price> <http://www.w3.org/2000/01/rdf-schema#label> "Price" .
-# 
-# https://w3id.org/def/openadr#PriceMultiplier
-<https://w3id.org/def/openadr#PriceMultiplier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/openadr#PriceMultiplier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/openadr#SignalType> .
-<https://w3id.org/def/openadr#PriceMultiplier> <http://www.w3.org/2000/01/rdf-schema#comment> "Price multiplier type that can be applied to the demand charge, energy price and electricity price signal. It expresses a multipler of the existing value of the signal." .
-<https://w3id.org/def/openadr#PriceMultiplier> <http://www.w3.org/2000/01/rdf-schema#label> "Price multiplier" .
-# 
-# https://w3id.org/def/openadr#PriceRelative
-<https://w3id.org/def/openadr#PriceRelative> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/openadr#PriceRelative> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/openadr#SignalType> .
-<https://w3id.org/def/openadr#PriceRelative> <http://www.w3.org/2000/01/rdf-schema#comment> "Price relative type that can be applied to the demand charge, energy price and electricity price signal. It expresses a delta change to\nthe existing value of the signal" .
-<https://w3id.org/def/openadr#PriceRelative> <http://www.w3.org/2000/01/rdf-schema#label> "Price relative" .
-# 
-# https://w3id.org/def/openadr#Setpoint
-<https://w3id.org/def/openadr#Setpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/openadr#Setpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/openadr#SignalType> .
-<https://w3id.org/def/openadr#Setpoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Setpoint type that can be applied to the load dispatch, charge state, bid load and bid energy signal" .
-<https://w3id.org/def/openadr#Setpoint> <http://www.w3.org/2000/01/rdf-schema#label> "Setpoint" .
-# 
-# https://w3id.org/def/openadr#xLoadControlCapacity
-<https://w3id.org/def/openadr#xLoadControlCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/openadr#xLoadControlCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/openadr#SignalType> .
-<https://w3id.org/def/openadr#xLoadControlCapacity> <http://www.w3.org/2000/01/rdf-schema#comment> "Load control capacity type that can be applied to the load control signal" .
-<https://w3id.org/def/openadr#xLoadControlCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "Load control capacity" .
-# 
-# https://w3id.org/def/openadr#xLoadControlLevelOffset
-<https://w3id.org/def/openadr#xLoadControlLevelOffset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/openadr#xLoadControlLevelOffset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/openadr#SignalType> .
-<https://w3id.org/def/openadr#xLoadControlLevelOffset> <http://www.w3.org/2000/01/rdf-schema#comment> "Load control level offset type that can be applied to the load control signal" .
-<https://w3id.org/def/openadr#xLoadControlLevelOffset> <http://www.w3.org/2000/01/rdf-schema#label> "Load control level offset" .
-# 
-# https://w3id.org/def/openadr#xLoadControlPercentOffset
-<https://w3id.org/def/openadr#xLoadControlPercentOffset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/openadr#xLoadControlPercentOffset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/openadr#SignalType> .
-<https://w3id.org/def/openadr#xLoadControlPercentOffset> <http://www.w3.org/2000/01/rdf-schema#comment> "Load control percent offset type that can be applied to the load control signal" .
-<https://w3id.org/def/openadr#xLoadControlPercentOffset> <http://www.w3.org/2000/01/rdf-schema#label> "Load control percent offset" .
-# 
-# https://w3id.org/def/openadr#xLoadControlSetpoint
-<https://w3id.org/def/openadr#xLoadControlSetpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/openadr#xLoadControlSetpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/openadr#SignalType> .
-<https://w3id.org/def/openadr#xLoadControlSetpoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Load control setpoint type that can be applied to the load control signal" .
-<https://w3id.org/def/openadr#xLoadControlSetpoint> <http://www.w3.org/2000/01/rdf-schema#label> "Load control setpoint" .
 # 
 _:genid40 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 # Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
