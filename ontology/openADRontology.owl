@@ -10,14 +10,14 @@
 @base <https://w3id.org/def/openadr> .
 
 <https://w3id.org/def/openadr> rdf:type owl:Ontology ;
-                                dc:creator <http://www.garcia-castro.com/foaf.rdf#me> ,
-                                           "Alba Fernández Izquierdo" ,
-                                           "Andrea Cimmino" ;
+                                dc:creator "Alba Fernández Izquierdo" ;
+                                owl:versionInfo "0.2.2" ;
+                                dc:creator "Andrea Cimmino" ;
+                                rdfs:comment "http://purl.org/NET/rdflicense/cc-by4.0" ;
                                 terms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-                                terms:title "OpenADR ontology" ;
-                                rdfs:comment "This ontology describes the openADR protocol based on the documentation provided by the openADR Profile B" ,
-                                             "http://purl.org/NET/rdflicense/cc-by4.0" ;
-                                owl:versionInfo "0.2.2" .
+                                rdfs:comment "This ontology describes the openADR protocol based on the documentation provided by the openADR Profile B" ;
+                                dc:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
+                                terms:title "OpenADR ontology" .
 
 #################################################################
 #    Annotation properties
@@ -1442,32 +1442,11 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
            rdfs:label "Completed" .
 
 
-###  https://w3id.org/def/openadr#Delta
-:Delta rdf:type owl:NamedIndividual ,
-                :SignalType ;
-       rdfs:comment "Delta type that can be applied to the charge state and load dispatch signal" ;
-       rdfs:label "Delta" .
-
-
 ###  https://w3id.org/def/openadr#Far
 :Far rdf:type owl:NamedIndividual ,
               :EventStatus ;
      rdfs:comment "Far status" ;
      rdfs:label "Far" .
-
-
-###  https://w3id.org/def/openadr#Level
-:Level rdf:type owl:NamedIndividual ,
-                :SignalType ;
-       rdfs:comment "Level type that can be applied to the simple and load dispatch signal. It specifies the value of the signal in in terms of discrete levels." ;
-       rdfs:label "Level" .
-
-
-###  https://w3id.org/def/openadr#Multiplier
-:Multiplier rdf:type owl:NamedIndividual ,
-                     :SignalType ;
-            rdfs:comment "Multiplier type that can be applied to the load dispatch and charge state signal" ;
-            rdfs:label "Multiplier" .
 
 
 ###  https://w3id.org/def/openadr#Near
@@ -1484,64 +1463,7 @@ higher the priority. A value of zero (0) indicates no priority, which is the low
       rdfs:label "None" .
 
 
-###  https://w3id.org/def/openadr#Price
-:Price rdf:type owl:NamedIndividual ,
-                :SignalType ;
-       rdfs:comment "Price type that can be applied to the demand charge, energy price and electricity price signal. It expresses the value of the signal in absolute terms" ;
-       rdfs:label "Price" .
-
-
-###  https://w3id.org/def/openadr#PriceMultiplier
-:PriceMultiplier rdf:type owl:NamedIndividual ,
-                          :SignalType ;
-                 rdfs:comment "Price multiplier type that can be applied to the demand charge, energy price and electricity price signal. It expresses a multipler of the existing value of the signal." ;
-                 rdfs:label "Price multiplier" .
-
-
-###  https://w3id.org/def/openadr#PriceRelative
-:PriceRelative rdf:type owl:NamedIndividual ,
-                        :SignalType ;
-               rdfs:comment """Price relative type that can be applied to the demand charge, energy price and electricity price signal. It expresses a delta change to
-the existing value of the signal""" ;
-               rdfs:label "Price relative" .
-
-
-###  https://w3id.org/def/openadr#Setpoint
-:Setpoint rdf:type owl:NamedIndividual ,
-                   :SignalType ;
-          rdfs:comment "Setpoint type that can be applied to the load dispatch, charge state, bid load and bid energy signal" ;
-          rdfs:label "Setpoint" .
-
-
-###  https://w3id.org/def/openadr#xLoadControlCapacity
-:xLoadControlCapacity rdf:type owl:NamedIndividual ,
-                               :SignalType ;
-                      rdfs:comment "Load control capacity type that can be applied to the load control signal" ;
-                      rdfs:label "Load control capacity" .
-
-
-###  https://w3id.org/def/openadr#xLoadControlLevelOffset
-:xLoadControlLevelOffset rdf:type owl:NamedIndividual ,
-                                  :SignalType ;
-                         rdfs:comment "Load control level offset type that can be applied to the load control signal" ;
-                         rdfs:label "Load control level offset" .
-
-
-###  https://w3id.org/def/openadr#xLoadControlPercentOffset
-:xLoadControlPercentOffset rdf:type owl:NamedIndividual ,
-                                    :SignalType ;
-                           rdfs:comment "Load control percent offset type that can be applied to the load control signal" ;
-                           rdfs:label "Load control percent offset" .
-
-
-###  https://w3id.org/def/openadr#xLoadControlSetpoint
-:xLoadControlSetpoint rdf:type owl:NamedIndividual ,
-                               :SignalType ;
-                      rdfs:comment "Load control setpoint type that can be applied to the load control signal" ;
-                      rdfs:label "Load control setpoint" .
-
-
 [ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
 ] .
 
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
